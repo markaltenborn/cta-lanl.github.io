@@ -1,0 +1,354 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+	<title>Transient Research @ LANL's Center for Theoretical Astrophysics</title>
+
+	<!-- Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="Transient work at LANL CTA ">
+		<script type="application/x-javascript"> addEventListener("load", function() { 
+                setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+        </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Custom-Theme-Files -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css" 			type="text/css" media="all"> <!-- Page-Styling -->
+		<link rel="stylesheet" href="css/chocolat.css" 		type="text/css" media="all"> <!-- Gallery-Popup-CSS --> 	
+	<!-- //Custom-Theme-Files -->
+
+	<!-- Web-Fonts -->
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" 	type="text/css">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" 				type="text/css">
+	<!-- //Web-Fonts -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<!-- //Head -->
+
+
+
+<!-- Body -->
+<body>
+
+	<!-- Header -->
+	<div class="header" id="home">
+		<!-- Top-Bar -->
+		<div class="top-bar">
+			<div class="container">
+				<!-- Logo -->
+				<div class="logo">
+					<p><a href="#">Astrophysical Transients</a></p>
+                                        
+                    <br>
+                    <br>
+                    <p class="subtitle"><a href="https://ccsweb.lanl.gov/astro/index.html">Los Alamos Center for Theoretical Astrophysics</a></p>
+				</div>
+				<!-- //Logo -->
+				<div class="info">
+					<!-- Email -->
+					<div class="email">
+						<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:fryer@lanl.gov">fryer@lanl.gov</a></p>
+					</div>
+					<!-- //Email -->
+				</div>
+			</div>
+		</div>
+		<!-- //Top-Bar -->
+	</div>
+	<!-- //Header -->
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- Navbar-Collapse -->
+			<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+				<nav class="menu menu--francisco">
+					<ul class="nav navbar-nav menu__list">
+						<li class="menu__item"><a href="#about" class="menu__link"><span class="menu__helper">ABOUT</span></a></li>
+						<li class="menu__item"><a href="#codes" class="menu__link"><span class="menu__helper">CODES</span></a></li>
+						<li class="menu__item"><a href="#data" class="menu__link"><span class="menu__helper">DATA</span></a></li>
+						<li class="menu__item"><a href="#gallery" class="menu__link"><span class="menu__helper">GALLERY</span></a></li>
+						<li class="menu__item"><a href="#team" class="menu__link"><span class="menu__helper">TEAM</span></a></li>
+						<li class="menu__item"><a href="#contact" class="menu__link"><span class="menu__helper">CONTACT</span></a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- //Navbar-Collapse -->
+		</div>
+	</nav>
+	<!-- //Navbar -->
+
+	<!-- About -->
+	<div class="about" id="about">
+		<div class="container">
+			<h1>ABOUT - Under Construction</h1>
+			<p>LANL models transient light-curves and using a broad set of astrophysical codes:</p>
+			<div class="underline1"></div>
+			<div class="about-grids" style="background: url('images/roundworld.jpg') no-repeat; background-position:100% 0%;background-size: 40%">
+				<div class="col-md-6 col-sm-6 about-grid about-info">
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- //About -->
+    <!-- CODES -->
+	<div class="about" id="codes">
+		<div class="container">
+
+			<h1>Codes</h1>
+			<p>CTA scientists use a variety of codes to model radiation transport.  Some are in open repositories and we hope to make more available.
+			<div class="underline1"></div>
+
+            <div class="projlist">
+            <ul>
+	      <li class="projtitle"> <h4>Semi-Analytic  <a href="http://adsabs.harvard.edu/abs/2017ApJ...850..133D"> code reference  </a>
+ </h4> Semi-Analytic is 1-temperature diffusion code running on top of homologous outflows.  This code is very quick and can run large grids of models to get first pass light-curves.
+</li>
+	      <li class="projtitle"> <h4>Spectrum + RAGE/Cassio  <a href="http://adsabs.harvard.edu/abs/2013ApJS..204...16F"> code reference  </a>
+ </h4> Spectrum is a post-process spectra code using LANL opacities and building upon the radiation-hydrodynamics codes (<a href="http://adsabs.harvard.edu/abs/2008CS%26D....1a5005G"> RAGE/Cassio </a>) at LANL.  This code is ideal for problems where shock heating is important.
+</li>
+	      <li class="projtitle"> <h4>SuperNu                   <a href="https://bitbucket.org/drrossum/supernu/wiki/Home"> code link  </a>
+ </h4> SuperNu is a program for
+                simulating time-dependent radiation transport in local
+                thermodynamic equilibrium with matter.  It applies the
+                methods of Implicit Monte Carlo (IMC) and Discrete
+                Diffusion Monte Carlo (DDMC) for static or
+                homologously expanding spatial grids.  The radiation
+                field affects material temperature but does not affect
+                the motion of the fluid.  SuperNu may be applied to
+                simulate radiation transport for supernovae with
+                ejecta velocities that are not affected by radiation
+                momentum.  The physical opacity calculation includes
+                elements from Hydrogen up to Cobalt.  SuperNu is
+                motivated by the ongoing research into the effect of
+                variation in the structure of progenitor star
+                explosions on observables: the brightness and shape of
+                light curves and the temporal evolution of the
+                spectra.  Consequently, the code may be used to
+                post-process data from hydrodynamic simulations.
+                SuperNu does not include any capabilities or methods
+                that allow for non-trivial hydrodynamics.
+</li>
+
+<br>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- DATA -->
+	<div class="about" id="data">
+		<div class="container">
+
+			<h1>DATA</h1>
+			<p>CTA scientists are engaged in a wide variety of projects, producing different data sets.  The links below download tar files of this data:</p>
+			<div class="underline1"></div>
+
+            <div class="projlist">
+            <ul>
+                <li class="projtitle"> <a href="macronova_models_wollaeger2017.tgz"> Kilonova models  </a> from <a href="http://adsabs.harvard.edu/abs/2018MNRAS.478.3298W"> Wollaeger et al. (2018) </a> LAUR-17-27847 </li>
+<br>
+                <li class="projtitle"> <a href="remnant_source.tar.gz">
+ Source term study </a> Kilonova models including additional source terms from either a pulsar or fallback accretion from <a href="http://adsabs.harvard.edu/abs/2019arXiv190405934W"> Wollaeger et al. (2019) </a> LAUR-19-22878 </li>
+<br>
+                <li class="projtitle"> <a href="composition_sensitivity.tar.gz">
+ Source term study </a> Kilonova models varying individual lanthanide abundances from <a href="https://arxiv.org/abs/1904.13298"> Even et al. (2019) </a> LAUR-19-22878 </li>
+<br>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Gallery -->
+	<div class="about" id="gallery">
+		<div class="container">
+
+			<h1>Gallery</h1>
+			<p> Cool plots here</p>
+			<div class="underline1"></div>
+            <div class="projlist">
+            <ul>
+<br>
+            </ul>
+            </div>
+        </div>
+    </div>
+	<!-- Contact -->
+	<div class="contact" id="contact">
+		<div class="container">
+
+			<h3>CONTACT</h3>
+			<p>For more information on any of our activities or to inquire about opportunities to work with our team, please use the contact information below.</p>
+			<div class="underline1"></div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="center">
+                <ul class="address">
+                    <li>Chris L. Fryer</li>
+					<li class="sticky"><a href="mailto:fryer@lanl.gov"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>&nbsp;fryer@lanl.gov</li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="center">
+                <ul class="address">
+                    <li>PO Box 1663</li>
+                    <li>MS B265</li>
+                    <li>Los Alamos National Laboratory</li>
+                    <li>Los Alamos, NM 87545</li>
+                </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+	<!-- //Contact -->
+
+
+
+	<!-- Footer -->
+	<div class="footer">
+		<div class="container">
+
+			<div class="copyright">
+				<p>Design by <a href="http://w3layouts.com/"> W3layouts </a></p>
+			</div>
+			
+		</div>
+	</div>
+	<!-- //Footer -->
+
+
+
+	<!-- Custom-JavaScript-File-Links -->
+
+		<!-- Necessary-JavaScript-File-For-Bootstrap <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+        <!-- Latest compiled JavaScript -->
+        <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+		<!-- Slider-JavaScript -->
+			<script src="js/responsiveslides.min.js"></script>
+			<script>
+				$(function () {
+					$("#slider").responsiveSlides({
+						auto: true,
+						pager: true,
+						nav: true,
+						speed: 1000,
+						namespace: "callbacks",
+						before: function () {
+							$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+							$('.events').append("<li>after event fired.</li>");
+						}
+					});
+				});
+			</script>
+		<!-- //Slider-JavaScript -->
+
+		<!-- Gallery-Tab-JavaScript -->
+			<script src="js/cbpFWTabs.js"></script>
+			<script>
+				(function() {
+					[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+						new CBPFWTabs( el );
+					});
+				})();
+			</script>
+		<!-- //Gallery-Tab-JavaScript -->
+
+		<!-- Popup-Box-JavaScript -->
+			<script src="js/modernizr.custom.97074.js"></script>
+			<script src="js/jquery.chocolat.js"></script>
+			<script type="text/javascript">
+				$(function() {
+					$('.gallery-item a').Chocolat();
+				});
+			</script>
+		<!-- //Popup-Box-JavaScript -->
+
+		<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
+			<script type="text/javascript">
+				$(document).ready(function() {
+					var defaults = {
+						containerID: 'toTop', // fading element id
+						containerHoverID: 'toTopHover', // fading element hover id
+						scrollSpeed: 100,
+						easingType: 'linear'
+					};
+					$().UItoTop({ easingType: 'easeOutQuart' });
+				});
+			</script>
+			<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
+		<!-- //Slide-To-Top JavaScript -->
+
+		<!-- Smooth-Scrolling-JavaScript -->
+			<script type="text/javascript" src="js/move-top.js"></script>
+			<script type="text/javascript" src="js/easing.js"></script>
+			<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll, .navbar li a, .footer li a").click(function(event){
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+			</script>
+		<!-- //Smooth-Scrolling-JavaScript -->
+		
+		<!-- FlexSlider-JavaScript -->
+			<script defer src="js/jquery.flexslider.js"></script>
+			<script type="text/javascript">
+				$(function(){
+					SyntaxHighlighter.all();
+				});
+				$(window).load(function(){
+					$('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+							$('body').removeClass('loading');
+						}
+					});
+				});
+			</script>
+		<!-- //FlexSlider-JavaScript -->
+
+	<!-- //Custom-JavaScript-File-Links -->
+
+
+
+</body>
+<!-- //Body -->
+
+
+
+</html>

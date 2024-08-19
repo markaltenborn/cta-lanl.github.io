@@ -1,0 +1,68 @@
+remnant source
+fallback
+ 1D
+1D spherical models with fallback accretion source luminosity at center of ejecta. Model names are gen-
+erally: akn ng1024 x128 fallb fix mc3 m$fig mdot$fjg, where: the numbers following ng and x imply
+1024 wavelength groups and 128 radial spatial cells, respectively, and the numbers following m and mdot
+(denoted $fig and $fjg) are the ejecta mass in M and remnant accretion rate in M/s, respectively.
+ 2D
+2D axisymmetric models with fallback accretion source luminosity at center of ejecta. Model names are
+generally: akn ng1024 x149y298 fallb fix m$fig mdot$fjg, where: the numbers following ng, x, and
+y imply 1024 wavelength groups, 149 radial, and 298 axial spatial cells, respectively, and the numbers
+following m and mdot are the ejecta mass in M and remnant accretion rate in M/s, respectively.
+
+pulsar/
+ 1D
+1D spherical models with a simple pulsar dipole source luminosity at the center of the ejecta. Model
+generally have the following nomenclature:
+akn ng1024 x64 SAFe pulsar tcut$fig mass$fjg plum$fkg
+or
+akn ng1024 x64 SAFeNd pulsar tcut$fig mass$fjg plum$fkg
+where the numbers following ng and x are the number of groups and spatial cells, respectively. The SAFe
+label indicates a semi-analytic model with pure Fe, and SAFeNd is the same model but with 10#4 mass 
+fraction of Fe replaced with Nd. The numbers following tcut, mass, and plum are remnant cuto time (s),
+ejecta mass (M), and initial pulsar luminosity (erg/s).
+ 2D
+2D axisymmetric models with a pulsar source luminosity. Model names are generally: akn ng1024 x149y298 2D remn where: the numbers following ng, x, and y imply 1024 wavelength groups, 149 radial, and 298 axial spatial
+cells, respectively, and the numbers following m and plum are the ejecta mass in M and pulsar luminosity
+in erg/s, respectively.
+
+Data file formats:
+1. Luminosity for spherically-symmetric models:
+
+<model name> lums yyyy-mm-dd.dat where <model name> is a name (of any
+length) of the model and y, m, d are each one digit of the year,
+month, and day respectively.  
+      1:time[d], 2:bolometric luminosity[erg/s]
+
+The first block of data is luminosity, the subsequent blocks are
+placeholders for broadband magnitudes, which are located in a separate
+file (see next point).  
+
+2. Broadband magnitudes for spherically-symmetric models: <model name> mags yyyy-mm-dd.dat 
+Format of the columns: 1:time[d] 2-9: AB magnitudes in eight bands: grizyJHK
+
+3. Spectra for spherically-symmetric models: 
+    <model name> spec yyyy-mm-dd.dat 
+
+Data is organized in blocks, separated by two empty lines. Each block corresponds 
+to a single timestep, starts with an header line. Columns in each block: 
+
+   1-2: wavelength bin[cm], 3: flux at R=10pc [erg/(s*Angstrom*cm2)]  
+
+4. Luminosity for axisymmetric modes: Data is organized in blocks, separated by two empty lines. The 
+first block represents bolometric luminosity as a function of time. The rest eight blocks are placeholders 
+for broadband magnitudes (grizyJHK). Format of the columns in the first block: 
+  1:iteration, 2:time[d] 3-56: bolometric luminosity in k-th angular bin [erg/s]
+
+5. Broadband magnitudes for axisymmetric models: <model name> mags yyyy-mm-dd.dat 
+
+The eight blocks are broadband magnitudes (grizyJHK). Format of the columns in the blocks: 1:iteration 2:time[d]
+3-56: AB magnitude for k-th angular bin 
+
+6. Spectra for axisymmetric models: <model name> spec yyyy-mm-dd.dat 
+
+Data is organized in blocks, separated by two empty lines. Each block corresponds to a single timestep, 
+starts with an header line. Format of the columns in each block: 
+
+  1-2: wavelength bin [cm] 3-56: flux into angular bin at R=10pc [erg/(s*Angstrom*cm2)]
