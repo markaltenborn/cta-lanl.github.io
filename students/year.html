@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Students — Year</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/student.css">
+	<link rel="stylesheet" href="/css/student_year.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+
+</head>
+<body>
+	<!-- Compact Header -->
+	<div class="header page-strap" id="home">
+		<div class="top-bar">
+			<div class="container">
+				<!-- Logo -->
+				<div class="logo">
+					<p><a href="/index.html">Center for Theoretical<br />Astrophysics</a></p>
+					<br>
+					<p class="subtitle"><a href="http://cta.lanl.gov">Los Alamos National Laboratory</a></p>
+				</div>
+				<!-- //Logo -->
+				<div class="info">
+					<!-- Email -->
+					<div class="email">
+						<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a></p>
+					</div>
+					<!-- //Email -->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="strap-bg" aria-hidden="true"></div>
+	</div>
+	<!-- //Compact Header -->
+	<!-- Team -->
+	<div class="team" id="team">
+		<div class="container">
+			<p style="text-align:left;margin:12px 0 10px;"><a href="/students/students.html">&larr; Back to Students</a></p>
+			<h3 class="title">Student Year <span id="year"></span></h3>
+			<p class="underline1"></p>
+			<div class="student-card-grid" id="grid"></div>
+		</div>
+	</div>
+	<!-- //Team -->
+	<!-- Contact -->
+	<div class="contact" id="contact">
+		<div class="container">
+			<h3>CONTACT</h3>
+			<p>For more information on any of our activities or to inquire about opportunities to work with our team, please use the contact information below or contact the appropriate team member directly.</p>
+			<div class="underline1"></div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="center">
+				<ul class="address">
+					<li>Wes Even (Director)</li>
+					<li class="sticky"><a href="mailto:even@lanl.gov"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>&nbsp;even@lanl.gov</li>
+					<li class="sticky"><a href="mailto:CTA_recruitment@lanl.gov"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>&nbsp;CTA_recruitment@lanl.gov</li>
+					<li class="sticky"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;+1 (505) 665-5269</li>
+				</ul>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="center">
+				<ul class="address">
+					<li>PO Box 1663</li>
+					<li>MS D409</li>
+					<li>Los Alamos National Laboratory</li>
+					<li>Los Alamos, NM 87545</li>
+				</ul>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>	
+	</div>
+	<!-- //Contact -->
+	<!-- Footer -->
+	<div class="footer">
+	<div class="container">
+		<div class="copyright">
+			<p>Design by <a href="http://w3layouts.com/"> W3layouts </a></p>
+		</div>
+	</div>
+	</div>
+	<!-- //Footer -->
+	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script>
+	(function(){
+		const DATA_BASE    = '/data';
+		const IMG_ROSTER   = '/students/images/roster';
+		const IMG_YEARS    = '/students/images';
+		const DEFAULT_IMG  = '/students/images/cta-default.jpg';
+
+		function qs(s){
+			return document.querySelector(s);
+		}
+		function el(t,a={},c=[]){ const n=document.createElement(t);
+			Object.entries(a).forEach(([k,v])=>v!=null&&n.setAttribute(k,v));
+			(Array.isArray(c)?c:[c]).forEach(x=>{
+				if(x!=null) n.appendChild(typeof x==='string'?document.createTextNode(x):x); 
+			});
+			return n;
+		}
+		async function fetchYAML(p){
+			const r=await fetch(p,{cache:'no-store'});
+			const t=await r.text();
+			return jsyaml.load(t)||{};
+		}
+		function imageCandidates(slug, person, stint, years){
+			const exts = ['.jpg', '.png', '.jpeg'];
+			const out = [];
+			// 1) explicit per-year override
+			if (stint && stint.card_image) out.push(stint.card_image);
+			if (stint && stint.photo_override) out.push(stint.photo_override); // alias, if present
+			// 2) roster-provided photo
+			if (person && person.photo) out.push(person.photo);
+			// 3) canonical roster folder
+			for (const ext of exts) out.push(`${IMG_ROSTER}/${slug}${ext}`);
+			// 4) scan each year folder (use given order in `years`; newest to oldest)
+			for (const y of years) for (const ext of exts)
+				out.push(`${IMG_YEARS}/${y}/${slug}${ext}`);
+			// 5) default
+			out.push(DEFAULT_IMG);
+			return Array.from(new Set(out.filter(Boolean)));
+		}
+		function firstReachable(urls){
+			return new Promise(resolve=>{
+				let i=0,img=new Image();
+				const next=()=>{
+					if(i>=urls.length) return resolve(DEFAULT_IMG);
+					const u=urls[i++];
+					img.onload=()=>resolve(u);
+					img.onerror=next;
+					img.src=u;
+				};
+				next();
+			});
+		}
+		function sortKey(stint, bySlug){
+			const p=bySlug[stint.slug]||{}; 
+			return (p.sort_key||p.display_name||stint.slug||'').toLowerCase();
+		}
+		function card(stint, person, years){
+			const slug=stint.slug, name=(person && (person.display_name||person.name))||slug;
+			const href = 'profile.html?slug=' + encodeURIComponent(slug);
+			const node = el('div',{class:'student-card-wrap'},[
+				el('a',{class:'student-card',href},[
+					el('img',{class:'student-photo',src:DEFAULT_IMG,alt:name,loading:'lazy'}),
+					el('div',{class:'student-meta'},[
+						el('h4',{class:'student-name'},name),
+						stint.university?el('span',{class:'student-univ'},stint.university):null,
+						stint.role?el('span',{class:'student-role'},stint.role):null,
+						(stint.division||stint.group_code)?el('span',{class:'student-group'},
+							`${stint.division||''}${(stint.division&&stint.group_code)?', ':''}${stint.group_code||''}`):null,
+						stint.focus?el('p',{class:'student-focus'},stint.focus):null
+					])
+				])
+			]);
+			firstReachable(imageCandidates(slug, person, stint, years)).then(u=>{ node.querySelector('img').src=u; });
+			return node;
+		}
+		async function main(){
+			const params = new URL(location.href).searchParams;
+			const y = params.get('y');
+			if(!y){ location.replace('/students/students.html'); return; }
+			qs('#year').textContent = y;
+			const years = (await fetchYAML(`${DATA_BASE}/student_years.yml`)).years || [];
+			const roster = await fetchYAML(`${DATA_BASE}/student_roster.yml`);
+			const bySlug = Object.fromEntries((Array.isArray(roster)?roster:[]).map(p=>[p.slug,p]));
+			const stints = await fetchYAML(`${DATA_BASE}/students_${y}.yml`);
+			const grid = qs('#grid');
+			(Array.isArray(stints)?stints:[]).slice()
+				.sort((a,b)=>sortKey(a, bySlug).localeCompare(sortKey(b, bySlug)))
+				.forEach(stint=>grid.appendChild(card(stint, bySlug[stint.slug], years)));
+		}
+		main().catch(console.error);
+	})();
+	</script>
+	<script>
+		(function syncStrap(){
+			function update(){
+				var tb = document.querySelector('.page-strap .top-bar');
+				var bg = document.querySelector('.page-strap .strap-bg');
+				if (tb && bg) bg.style.height = tb.offsetHeight + 'px';
+			}
+			window.addEventListener('load', update);
+			window.addEventListener('resize', update);
+		})();
+	</script>
+</body>
+</html>
