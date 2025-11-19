@@ -143,8 +143,18 @@
 			const p=bySlug[stint.slug]||{}; 
 			return (p.sort_key||p.display_name||stint.slug||'').toLowerCase();
 		}
+		function formatNameFromSlug(str) {
+			return str
+			.split('-')
+			.map(word => {
+				if (!word) return ''; // Handle empty segments safely
+				const lower = word.toLowerCase();
+				return lower.charAt(0).toUpperCase() + lower.slice(1);
+			})
+			.join(' ');
+		}
 		function card(stint, person, years){
-			const slug=stint.slug, name=(person && (person.display_name||person.name))||slug;
+			const slug=stint.slug, name=(person && (person.display_name||person.name))||formatNameFromSlug(slug);
 			const href = 'profile.html?slug=' + encodeURIComponent(slug);
 			const node = el('div',{class:'student-card-wrap'},[
 				el('a',{class:'student-card',href},[
