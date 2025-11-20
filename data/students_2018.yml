@@ -1,0 +1,111 @@
+- slug: timothy-araujo
+  university: New Mexico Institute of Mining and Technology
+  role: Undergraduate
+  division: Theoretical Design
+  group_code: XTD
+  focus: Nucelosynthesis, neutron stars, and supernovae
+  card_image: "/students/images/2018/timothy-araujo.jpg"
+
+- slug: william-black
+  university: University of Michigan
+  role: Graduate
+  division: Theoretical Design
+  group_code: XTD
+  focus: Primdordial balck holes, progenitors of supermassive black holes, cosmology
+  card_image: "/students/images/2018/william-black.jpg"
+
+- slug: travis-court
+  university: Allegheny College
+  role: Post-Bac
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Binary mergers, common envelope evolution, supernova progenitors
+  card_image: "/students/images/2018/travis-court.jpg"
+
+- slug: austin-davis
+  university: University of Victoria
+  role: Post-Masters
+  division: Physics
+  group_code: P-23
+  focus: Experimental turbulence, computational hydrodynamics, data analysis techniques, convection, and stellar evolution
+  card_image: "/students/images/2018/austin-davis.jpg"
+
+- slug: ebraheem-farag
+  university: Ohio State University
+  role: Undergraduate
+  division: Theoretical Design
+  group_code: XTD
+  focus: Solar calibration, stellar interior structure & evolution, stellar mass loss, helioseismology
+  card_image: "/students/images/2018/ebraheem-farag.jpg"
+
+- slug: carl-fields
+  university: Michigan State University
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-7
+  focus: Core-collapse supernovae, nuclear astrophysics, gravitational waves, and stellar hydrodynamics
+  card_image: "/students/images/2018/carl-fields.jpg"
+
+- slug: alexander-gagliano
+  university: University of Illinois
+  role: Graduate
+  division: Theoretical Design
+  group_code: XTD
+  focus: Astrochemistry, Large-scale structure, and machine learning algorithms
+  card_image: "/students/images/2018/alexander-gagliano.jpg"
+
+- slug: alexander-kaltenborn
+  university: The George Washington University
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Compact object mergers, White Dwarfs, Neutron Stars, HPC, Radhydro  
+  card_image: "/students/images/2018/alexander-kaltenborn.jpg"
+
+- slug: hyun-lim
+  university: Brigham Young University
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Numerical relativity, binary compact object mergers, numerical methods and algorithms, and HPC
+  card_image: "/students/images/2018/hyun-lim.jpg"
+
+- slug: quintin-mabanta
+  university: Florida State University
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Core-collapse supernovae, cosmology, non-linear systems, radiation transport
+  card_image: "/students/images/2018/quintin-mabanta.jpg"
+
+- slug: sarah-stangl
+  university: University of Oklahoma
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Core-collapse supernova explosions, supernova dust formation, very massive Stars
+  card_image: "/students/images/2018/sarah-stangl.jpg"
+
+- slug: morgan-taylor
+  university: Southern Utah University
+  role: Undergraduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Galaxy evolution, supernovae, and transient light curves
+  card_image: "/students/images/2018/morgan-taylor.jpg"
+
+- slug: chris-torres
+  university: University of New Mexico Los Alamos
+  role: Undergraduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: 
+  card_image: "/students/images/2018/chris-torres.jpg"
+
+- slug: greg-vance
+  university: Arizona State University
+  role: Graduate
+  division: Theoretical
+  group_code: T-CNLS
+  focus: Supernova, hydrodynamics, and nucleosynthesis
+  card_image: "/students/images/2018/greg-vance.jpg"

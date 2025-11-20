@@ -1,0 +1,111 @@
+- slug: timothy-araujo
+  university: New Mexico Institute of Mining and Technology
+  role: Undergraduate
+  division: Theoretical Design
+  group_code: XTD
+  focus: Nucelosynthesis, neutron stars, and supernovae
+  card_image: "/students/images/2018/timothy-araujo.jpg"
+
+- slug: ezra-brooker
+  university: Florida State University
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Core-collapse supernovae, young supernova remnants, dust formation in SN ejecta
+  card_image: "/students/images/2019/ezra-brooker.jpg"
+
+- slug: naia-butler-craig
+  university: Georgia Institute of Technology
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Plasma physics, electric propulsion, gamma-ray bursts, astrophysical outflows, particle-in-cell simulations
+  card_image: "/students/images/2019/naia-butler-craig.jpg"
+
+- slug: elizabeth-carlson
+  university: University of Nebraska-Lincoln
+  role: Graduate
+  division: 
+  group_code: Codesign Summer School
+  focus: Mathematical fluid dynamics, atmospheric and ocean flow, data assimilation and parameter recovery
+  card_image: "/students/images/2019/elizabeth-carlson.jpg"
+
+- slug: austin-davis
+  university: University of Victoria
+  role: Graduate
+  division: Physics
+  group_code: P-23
+  focus: Experimental turbulence, computational hydrodynamics, data analysis techniques, convection, and stellar evolution
+  card_image: "/students/images/2018/austin-davis.jpg"
+
+- slug: ebraheem-farag
+  university: Ohio State University
+  role: Undergraduate
+  division: Theoretical Design
+  group_code: XTD
+  focus: Solar calibration, stellar interior structure & evolution, stellar mass loss, helioseismology
+  card_image: "/students/images/2018/ebraheem-farag.jpg"
+
+- slug: carl-fields
+  university: Michigan State University
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-7
+  focus: Core-collapse supernovae, nuclear astrophysics, gravitational waves, and stellar hydrodynamics
+  card_image: "/students/images/2018/carl-fields.jpg"
+
+- slug: steve-fromm
+  university: Michigan State University
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-7
+  focus: Compact object mergers, r-process nucleosynthesis, neutrino radiative transport, numerical relativity, numerical methods
+  card_image: "/students/images/2019/steven-fromm.jpg"
+
+- slug: vasu-jaganath
+  university: University of Wyoming
+  role: Graduate
+  division: 
+  group_code: Codesign Summer School
+  focus: Stochastic Modeling, Tubulent Combustion, HPC
+  card_image: "/students/images/2019/vasu-jaganath.jpg"
+
+- slug: alexander-kaltenborn
+  university: The George Washington University
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Compact object mergers, White Dwarfs, Neutron Stars, HPC, Radhydro 
+  card_image: "/students/images/2018/alexander-kaltenborn.jpg"
+
+- slug: hyun-lim
+  university: Brigham Young University
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Numerical relativity, binary compact object mergers, numerical methods and algorithms, and HPC
+  card_image: "/students/images/2018/hyun-lim.jpg"
+
+- slug: rathish-previn
+  university: Newcastle University
+  role: Graduate
+  division: 
+  group_code: Codesign Summer School
+  focus: Stellar astrophysics
+  card_image: "/students/images/2019/rathish-previn.jpg"
+
+- slug: sarah-stangl
+  university: University of Oklahoma
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Core-collapse supernova explosions, supernova dust formation, very massive Stars
+  card_image: "/students/images/2019/sarah-stangl.jpg"
+
+- slug: morgan-taylor
+  university: Southern Utah University
+  role: Undergraduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Galaxy evolution, supernovae, and transient light curves
+  card_image: "/students/images/2018/morgan-taylor.jpg"

@@ -1,0 +1,144 @@
+- slug: madison-reuter
+  university: Texas A&M University
+  role: Post-bac
+  division: Theoretical
+  group_code: T-5
+  focus: Neutron star mergers, Kilonovae
+  card_image: "/students/images/2024/madison-reuter.jpg"   # if included it is the default photo used on the student landing page (if most recent) and yearly pages
+
+- slug: laura-hernandez
+  university: University of California Los Angeles
+  role: Undergraduate
+  division: Theoretical
+  group_code: T-5
+  focus: Binary white dwarf mergers
+  card_image: "/students/images/2025/laura-hernandez.jpg"
+
+- slug: lucian-sahd
+  university: New Mexico Institute of Mining and Technology
+  role: Graduate
+  division: Theoretical
+  group_code: T-5
+  focus: Plasma physics, dark energy
+  card_image: "/students/images/2025/lucian-sahd.png"
+
+- slug: evan-semenak
+  university: University of Tennessee Knoxville
+  role: Undergraduate
+  division: Computational Physics (CPW)
+  group_code: XCP-DO
+  focus: Core-collapse supernova, neutrino flavor oscillation, early universe/inflation
+  card_image: "/students/images/2025/evan-semenak.png"
+
+- slug: lindsey-gordon
+  university: University of Minnesota
+  role: Graduate
+  division: Theoretical
+  group_code: T-2
+  focus: AGN jets, radio galaxies, ICM properties, HPC, AI for science
+  card_image: "/students/images/2024/lindsey-gordon.jpg"
+
+- slug: claire-whitley
+  university: University of New Mexico
+  role: Undergraduate
+  division: Theoretical Design
+  group_code: XTD-NTA
+  focus: Quasar Black Holes, Alpha Cygni Stars (Deneb)
+  card_image: "/students/images/2025/claire-whitley.jpg"
+
+- slug: ainslee-heffelfinger
+  university: University of California, Santa Cruz
+  role: Undergraduate
+  division: Theoretical
+  group_code: T-5
+  focus: White Dwarf Systems and Mergers
+  card_image: "/students/images/2024/ainslee-heffelfinger.jpg"
+
+- slug: brendan-king
+  university: 
+  role: Graduate
+  division: Theoretical
+  group_code: T-5
+  focus: 
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: ayanah-cason
+  university: Fisk-Vanderbilt Bridge Program
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: Compact binary systems, high-energy astrophysical transients
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: ethan-fisk
+  university: Rensselaer Polytechnic Institute
+  role: Undergraduate
+  division: Theoretical Design
+  group_code: XTD-NTA
+  focus: Star Formation, AGN
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: charles-gardner
+  university: Rice University
+  role: Graduate
+  division: Theoretical
+  group_code: T-2
+  focus: Planet formation, circumstellar and circumplanetary disks, planet formation
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: trevor-gravely
+  university: Vanderbilt University
+  role: Graduate
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: general relativity and black holes
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: abhishek-joshi
+  university: University of Illinois Urbana-Champaign
+  role: Graduate
+  division: Theoretical
+  group_code: T-2
+  focus: Horizon-scale accretion disks and radiative processes around supermassive black hole environments
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: sudat-khan
+  university: University of Nevada, Las Vegas
+  role: Graduate
+  division: Computational Physics (CPW)
+  group_code: XCP-DO
+  focus: Protoplanetary disks, circumplanetary disks, radiation hydrodynamics simulations
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: mark-meana
+  university: University of New Mexico
+  role: Undergraduate
+  division: Theoretical Design
+  group_code: XTD-NTA
+  focus: Stellar evolution
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: pedro-motta
+  university: Universidade de São Paulo
+  role: Graduate
+  division: Computational and Statistical Sciences / Theoretical
+  group_code: CCS-2/T-CNLS
+  focus: Julia, supermassive black holes
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: amanda-stricklan
+  university: New Mexico State University
+  role: Graduate
+  division: Computational Physics
+  group_code: XCP-1
+  focus: Solar atmospheric physics
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: elisea-jackson
+  university: 
+  role: 
+  division: 
+  group_code: 
+  focus:  
+  card_image: "/students/images/cta-default.jpg"
+

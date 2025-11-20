@@ -1,0 +1,71 @@
+- slug: lindsey-gordon
+  university: University of Minnesota
+  role: Graduate
+  division: Theoretical
+  group_code: T-2
+  focus: AGN jets, radio galaxies, ICM properties, HPC, AI for science
+  card_image: "/students/images/2024/lindsey-gordon.jpg"
+
+- slug: madison-reuter
+  university: Texas A&M University
+  role: Post-bac
+  division: Theoretical
+  group_code: T-5
+  focus: Neutron star mergers, kilonovae
+  card_image: "/students/images/2024/madison-reuter.jpg"
+
+- slug: brendan-king
+  university: 
+  role: Graduate
+  division: Theoretical
+  group_code: T-5
+  focus: 
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: afton-gustafson
+  university: 
+  role: 
+  division: Computational Physics
+  group_code: XCP-8
+  focus: 
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: alexander-dittmann
+  university: 
+  role: Graduate
+  division: Theoretical
+  group_code: T-2
+  focus: 
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: gwen-galleher
+  university: 
+  role: Post-Bac
+  division: Computational and Statistical Sciences
+  group_code: CCS-2
+  focus: 
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: kaitlyn-leffler
+  university: 
+  role: 
+  division: Computational Physics
+  group_code: XCP-8
+  focus: 
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: lauren-elicker
+  university: 
+  role: 
+  division: Computational Physics
+  group_code: XCP-8
+  focus: 
+  card_image: "/students/images/cta-default.jpg"
+
+- slug: ainslee-heffelfinger
+  university: University of California, Santa Cruz
+  role: Undergraduate
+  division: Theoretical
+  group_code: T-5
+  focus: White Dwarf Systems and Mergers
+  card_image: "/students/images/2024/ainslee-heffelfinger.jpg"

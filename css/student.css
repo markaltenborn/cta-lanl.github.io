@@ -1,0 +1,180 @@
+/* ===== Students ===== */
+#team { 
+    background:#EEE;
+}
+
+/* --- Current-year grid & cards --- */
+.student-card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+@media (max-width: 991px) {
+    .student-card-grid { 
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 480px) {
+    .student-card-grid { 
+        grid-template-columns: 1fr;
+    }
+}
+
+.student-card-grid .student-card-wrap { 
+    margin: 0;
+}
+
+.student-card{
+    display: flex;
+    flex-direction: column;
+    background:#FFF;
+    border:1px solid #e6e6e6;
+    border-radius:8px;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    min-height: 480px;
+    box-shadow:0 1px 2px rgba(0,0,0,.06);
+    transition:transform .15s ease, box-shadow .15s ease;
+}
+.student-card:hover,
+.student-card:focus{
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.student-card .student-photo{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio: 4 / 5;
+    object-fit:cover;
+    object-position:50% 20%;
+}
+
+.student-card .student-meta{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    padding:12px 14px 14px;
+    flex: 0 1 auto;
+}
+
+.student-card .student-name{
+    margin:6px 0 8px;
+    font-size:20px;
+    color:#777;
+    text-align:left;
+}
+.student-card .student-univ,
+.student-card .student-role,
+.student-card .student-group{
+    display:block;
+    font-size:14px;
+    color:#666;
+    margin:0 0 2px;
+    text-align:left;
+}
+.student-card .student-univ{ 
+    font-weight:700;
+    color:#444;
+}
+
+.student-card .student-focus{
+    margin-top: 8px;
+    font-size: 13px;
+    color: #777;
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    -webkit-box-orient: unset !important;
+    overflow: visible !important;
+    max-height: none !important;
+    white-space: normal;
+    text-align: left;
+}
+
+.year-list{ 
+    margin-bottom:30px;
+}
+
+.student-list{
+    list-style:none !important;
+    list-style-type:none !important;
+    margin:0;
+    padding:0;
+    text-align:left;
+}
+.student-list li{ 
+    margin:6px 0;
+}
+.student-list a{
+    color:#028fcc;
+    text-decoration:none;
+}
+.student-list a:hover{ 
+    color:red;
+    text-decoration:none;
+}
+.student-list .name-col{ 
+    padding-left:15px;
+    padding-right:15px;
+    text-align:left;
+}
+
+.year-left{ 
+    text-align:left !important;
+}
+.year-left + .underline1{ 
+    margin:20px 0 16px 0;
+}
+
+#team .title { 
+    text-align: center;
+}
+#team .title + .underline1 { 
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.years-grid{
+    display:grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    column-gap: 125px;
+    row-gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.years-grid li{
+    text-align: center;
+}
+.years-grid a{
+    background: none;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    color: #028fcc;
+    font-weight: 700;
+    text-decoration: none;
+}
+.years-grid a:hover{ 
+    color: red;
+}
+
+@media (max-width: 991px){ 
+    .years-grid{ 
+        grid-template-columns: repeat(3, auto);
+    } 
+}
+@media (max-width: 640px){ 
+    .years-grid{ 
+        grid-template-columns: repeat(2, auto);
+    } 
+}
+@media (max-width: 400px){ 
+    .years-grid{ 
+        grid-template-columns: auto;
+    } 
+}
