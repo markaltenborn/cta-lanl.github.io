@@ -151,6 +151,16 @@
 			out.push(DEFAULT_IMG);
 			return Array.from(new Set(out.filter(Boolean)));
 		}
+		function formatNameFromSlug(str) {
+			return str
+			.split('-') // Split by hyphen
+			.map(word => {
+				if (!word) return ''; // Handle empty segments safely
+				const lower = word.toLowerCase(); // Normalize to lowercase
+				return lower.charAt(0).toUpperCase() + lower.slice(1);
+			})
+			.join(' ');
+		}
 		function firstReachable(urls){
 			return new Promise(resolve=>{
 				let i=0,img=new Image();
@@ -172,8 +182,8 @@
 		}
 		const roster = await fetchYAML(`${DATA_BASE}/student_roster.yml`);
 		const person = (Array.isArray(roster)?roster:[]).find(p=>p.slug===slug) || {};
-		document.title = `${person.display_name || slug} — CTA Profile`;
-		document.getElementById('profile-name').textContent = person.display_name || slug;
+		document.title = `${person.display_name || formatNameFromSlug(slug)} — CTA Profile`;
+		document.getElementById('profile-name').textContent = person.display_name || formatNameFromSlug(slug);
 		const years = (await fetchYAML(`${DATA_BASE}/student_years.yml`)).years || [];
 		// Photo
 		const imgEl = document.getElementById('profile-photo'); imgEl.src = DEFAULT_IMG;
