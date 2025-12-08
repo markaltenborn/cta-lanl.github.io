@@ -1,0 +1,54 @@
+- slug: amaya-andrews
+  display_name: "Amaya Andrews"
+  sort_key: "andrews, amaya"
+  email: aandrews@lanl.gov
+  photo: "/emeritus/images/amaya-andrews.jpg"
+  scholar: 
+  ads: 
+  bio: 
+  interests: 
+    - Computational astrophysics
+    - Core-collapse supernovae
+    - Radiation hydrodynamics
+    - Nucleosynthesis
+    - Code modernization
+    - Verification & validation
+  leadership: 
+  university: 
+  role: Scientist
+  division: Computing and Artificial Intelligence
+  focus: 
+
+- slug: roseanne-cheng
+  display_name: "Roseanne Cheng"
+  sort_key: "cheng, roseanne"
+  email: 
+  photo: "/emeritus/images/roseanne-cheng.jpg"
+  scholar: 
+  ads: 
+  bio: 
+  interests: 
+    - Tidal disruption events
+    - Overset mesh methods
+  leadership: 
+  university: 
+  role: Scientist
+  division: Theoretical
+  focus: 
+
+- slug: jonas-lippuner
+  display_name: "Jonas Lippuner"
+  sort_key: "lippuner, jonas"
+  email: 
+  photo: "/emeritus/images/jonas-lippuner.jpg"
+  scholar: 
+  ads: 
+  bio: 
+  interests: 
+    - Tidal disruption events
+    - Overset mesh methods
+  leadership: 
+  university: 
+  role: Scientist
+  division: Theoretical
+  focus: 

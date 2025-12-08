@@ -1,0 +1,580 @@
+- slug: brandon-barker
+  display_name: "Brandon Barker"
+  sort_key: "barker, brandon"
+  photo: "/postdocs/images/brandon-barker.jpg"     # if included it is the default photo used on the student profile page
+  email: "barker@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+- slug: madeline-marshall
+  display_name: "Madeline Marshall"
+  sort_key: "marshall, madeline"
+  photo: "/postdocs/images/madeline-marshall.jpg"     # if included it is the default photo used on the student profile page
+  email: "mmarshall@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: marko-ristic
+  display_name: "Marko Ristic"
+  sort_key: "ristic, marko"
+  photo: "/postdocs/images/marko-ristic.jpg"     # if included it is the default photo used on the student profile page
+  email: "mristic@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: makana-silva
+  display_name: "Makana Silva"
+  sort_key: "silva, makana"
+  photo: "/postdocs/images/makana-silva.jpg"     # if included it is the default photo used on the student profile page
+  email: "makanas@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: sarah-stangl
+  display_name: "Sarah Stangl"
+  sort_key: "stangl, sarah"
+  photo: "/postdocs/images/sarah-stangl.jpg"     # if included it is the default photo used on the student profile page
+  email: "sarahstangl@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: alejandro-cardenas-avendano
+  display_name: "Alejandro Cardenas-Avendano"
+  sort_key: "cardenas-avendano, alejandro"
+  photo: "/postdocs/images/alejandro-cardenas-avendano.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: shengqi-yang
+  display_name: "Shengqi Yang"
+  sort_key: "yang, shengqi"
+  photo: "/postdocs/images/shengqi-yang.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: alexander-kaltenborn
+  display_name: "Alexander Kaltenborn"
+  sort_key: "kaltenborn, alexander"
+  photo: "/postdocs/images/alexander-kaltenborn.jpg"     # if included it is the default photo used on the student profile page
+  email: "markaltenborn@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: carl-fields
+  display_name: "carl-fields"
+  sort_key: "carl-fields"
+  photo: "/postdocs/images/carl-fields.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: phoebe-upton-sanderbeck
+  display_name: "phoebe-upton-sanderbeck"
+  sort_key: "phoebe-upton-sanderbeck"
+  photo: "/postdocs/images/phoebe-upton-sanderbeck.jpg"     # if included it is the default photo used on the student profile page
+  email: "phoebeu@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: philipp-edelmann
+  display_name: "Philipp Edelmann"
+  sort_key: "edelmann, philipp"
+  photo: "/postdocs/images/philipp-edelmann.jpg"     # if included it is the default photo used on the student profile page
+  email: "pedelmann@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: rachel-smullen
+  display_name: "Rachel Smullen"
+  sort_key: "smullen, rachel"
+  photo: "/postdocs/images/rachel-smullen.jpg"     # if included it is the default photo used on the student profile page
+  email: "rsmullen@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: brooks-kinch
+  display_name: "Brooks Kinch"
+  sort_key: "kinch, brooks"
+  photo: "/postdocs/images/brooks-kinch.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: hyun-lim
+  display_name: "Hyun Lim"
+  sort_key: "lim, hyun"
+  photo: "/postdocs/images/hyun-lim.jpg"     # if included it is the default photo used on the student profile page
+  email: "hyunlim@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: grant-meadors
+  display_name: "Grant Meadors"
+  sort_key: "meadors, grant"
+  photo: "/postdocs/images/grant-meadors.jpg"     # if included it is the default photo used on the student profile page
+  email: "gdmeadors@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: greg-salvesen
+  display_name: "Greg Salvesen"
+  sort_key: "salvesen, greg"
+  photo: "/postdocs/images/greg-salvesen.jpg"     # if included it is the default photo used on the student profile page
+  email: "salvesen@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: dennis-bowen
+  display_name: "Dennis Bowen"
+  sort_key: "bowen, dennis"
+  photo: "/postdocs/images/dennis-bowen.jpg"     # if included it is the default photo used on the student profile page
+  email: "dbowen@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: matt-gilmer
+  display_name: "Matt Gilmer"
+  sort_key: "gilmer, matt"
+  photo: "/postdocs/images/matt-gilmer.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: ben-ryan
+  display_name: "Ben Ryan"
+  sort_key: "ryan, ben"
+  photo: "/postdocs/images/ben-ryan.jpg"     # if included it is the default photo used on the student profile page
+  email: "brryan@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: ingo-tews
+  display_name: "ingo-tews"
+  sort_key: "ingo-tews"
+  photo: "/postdocs/images/ingo-tews.jpg"     # if included it is the default photo used on the student profile page
+  email: "itews@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: aycin-aykutalp
+  display_name: "Aycin Aykutalp"
+  sort_key: "aykutalp, aycin"
+  photo: "/postdocs/images/aycin-aykutalp.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: roseanne-cheng
+  display_name: "Roseanne Cheng"
+  sort_key: "cheng, roseanne"
+  photo: "/postdocs/images/roseanne-cheng.jpg"     # if included it is the default photo used on the student profile page
+  email: "rmcheng@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: erica-fogerty
+  display_name: "Erica Fogerty"
+  sort_key: "fogerty, erica"
+  photo: "/postdocs/images/erica-fogerty.jpg"     # if included it is the default photo used on the student profile page
+  email: "efogerty@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: daniel-holladay
+  display_name: "Daniel Holladay"
+  sort_key: "holladay, daniel"
+  photo: "/postdocs/images/daniel-holladay.jpg"     # if included it is the default photo used on the student profile page
+  email: "danl@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: jonas-lippuner
+  display_name: "Jonas Lippuner"
+  sort_key: "lippuner, jonas"
+  photo: "/postdocs/images/jonas-lippuner.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: chris-mauney
+  display_name: "Chris Mauney"
+  sort_key: "mauney, chris"
+  photo: "/postdocs/images/chris-mauney.jpg"     # if included it is the default photo used on the student profile page
+  email: "mauneyc@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: jonah-miller
+  display_name: "Jonah Miller"
+  sort_key: "miller, jonah"
+  photo: "/postdocs/images/jonah-miller.jpg"     # if included it is the default photo used on the student profile page
+  email: "jonahm@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: peter-polko
+  display_name: "Peter Polko"
+  sort_key: "polko, peter"
+  photo: "/postdocs/images/peter-polko.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: alex-spacek
+  display_name: "Alex Spacek"
+  sort_key: "spacek, alex"
+  photo: "/postdocs/images/alex-spacek.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: amanda-truitt
+  display_name: "Amanda Truitt"
+  sort_key: "truitt, amanda"
+  photo: "/postdocs/images/amanda-truitt.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: tim-waters
+  display_name: "Tim Waters"
+  sort_key: "waters, tim"
+  photo: "/postdocs/images/tim-waters.jpg"     # if included it is the default photo used on the student profile page
+  email: "waters@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: suzannah-wood
+  display_name: "Suzannah Wood"
+  sort_key: "wood, suzannah"
+  photo: "/postdocs/images/suzannah-wood.jpg"     # if included it is the default photo used on the student profile page
+  email: "suzannah@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: sam-jones
+  display_name: "Sam Jones"
+  sort_key: "jones, sam"
+  photo: "/postdocs/images/sam-jones.jpg"     # if included it is the default photo used on the student profile page
+  email: "swj@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: carola-ellinger
+  display_name: "Carola Ellinger"
+  sort_key: "ellinger, carola"
+  photo: "/postdocs/images/carola-ellinger.jpg"     # if included it is the default photo used on the student profile page
+  email: "cellinger@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: oleg-korobkin
+  display_name: "Oleg Korobkin"
+  sort_key: "korobkin, oleg"
+  photo: "/postdocs/images/oleg-korobkin.jpg"     # if included it is the default photo used on the student profile page
+  email: "korobkin@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: matthew-mumpower
+  display_name: "Matthew Mumpower"
+  sort_key: "mumpower, matthew"
+  photo: "/postdocs/images/matthew-mumpower.jpg"     # if included it is the default photo used on the student profile page
+  email: "mumpower@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: irina-sagert
+  display_name: "Irina Sagert"
+  sort_key: "sagert, irina"
+  photo: "/postdocs/images/irina-sagert.jpg"     # if included it is the default photo used on the student profile page
+  email: "sagert@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: josh-dolence
+  display_name: "Josh Dolence"
+  sort_key: "dolence, josh"
+  photo: "/postdocs/images/josh-dolence.jpg"     # if included it is the default photo used on the student profile page
+  email: "jdolence@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: brendan-krueger
+  display_name: "Brendan Krueger"
+  sort_key: "krueger, brendan"
+  photo: "/postdocs/images/brendan-krueger.jpg"     # if included it is the default photo used on the student profile page
+  email: "bkkrueger@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: ryan-wollaeger
+  display_name: "Ryan Wollaeger"
+  sort_key: "wollaeger, ryan"
+  photo: "/postdocs/images/ryan-wollaeger.jpg"     # if included it is the default photo used on the student profile page
+  email: "wollaeger@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: chris-malone
+  display_name: "Chris Malone"
+  sort_key: "malone, chris"
+  photo: "/postdocs/images/chris-malone.jpg"     # if included it is the default photo used on the student profile page
+  email: "cmalone@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: nick-nelson
+  display_name: "Nick Nelson"
+  sort_key: "nelson, nick"
+  photo: "/postdocs/images/nick-nelson.jpg"     # if included it is the default photo used on the student profile page
+  email:
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: jen-donnely # Misspelled?
+  display_name: "Jen Donnely"
+  sort_key: "donnely, jen"
+  photo: "/postdocs/images/jen-donnely.jpg"     # if included it is the default photo used on the student profile page
+  email: # jdonley@lanl.gov? 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: kris-eriksen
+  display_name: "Kris Eriksen"
+  sort_key: "eriksen, kris"
+  photo: "/postdocs/images/kris-eriksen.jpg"     # if included it is the default photo used on the student profile page
+  email: "keriksen@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: jarrett-johnson
+  display_name: "Jarrett Johnson"
+  sort_key: "johnson, jarrett"
+  photo: "/postdocs/images/jarrett-johnson.jpg"     # if included it is the default photo used on the student profile page
+  email: "jlj@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: joe-smidt
+  display_name: "Joe Smidt"
+  sort_key: "smidt, joe"
+  photo: "/postdocs/images/joe-smidt.jpg"     # if included it is the default photo used on the student profile page
+  email: "jsmidt@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: michael-bertolli
+  display_name: "Michael Bertolli"
+  sort_key: "bertolli, michael"
+  photo: "/postdocs/images/michael-bertolli.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: zach-medin
+  display_name: "Zach Medin"
+  sort_key: "medin, zach"
+  photo: "/postdocs/images/zach-medin.jpg"     # if included it is the default photo used on the student profile page
+  email: "zmedin@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: david-collins
+  display_name: "David Collins"
+  sort_key: "collins, david"
+  photo: "/postdocs/images/david-collins.jpg"     # if included it is the default photo used on the student profile page
+  email: "dcollins@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: wes-even
+  display_name: "Wes Even"
+  sort_key: "even, wes"
+  photo: "/postdocs/images/wes-even.jpg"     # if included it is the default photo used on the student profile page
+  email: "even@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: candace-joggerst
+  display_name: "Candace Joggerst"
+  sort_key: "joggerst, candace"
+  photo: "/postdocs/images/candace-joggerst.jpg"     # if included it is the default photo used on the student profile page
+  email: "church@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: catherine-lovekin
+  display_name: "Catherine Lovekin"
+  sort_key: "lovekin, catherine"
+  photo: "/postdocs/images/catherine-lovekin.jpg"     # if included it is the default photo used on the student profile page
+  email: 
+  scholar: 
+  ads: 
+  bio: 
+  interests:
+
+
+- slug: terrance-strother
+  display_name: "Terrance Strother"
+  sort_key: "strother, terrance"
+  photo: "/postdocs/images/terrance-strother.jpg"     # if included it is the default photo used on the student profile page
+  email: "terrance@lanl.gov"
+  scholar: 
+  ads: 
+  bio: 
+  interests:

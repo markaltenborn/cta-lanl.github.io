@@ -3,8 +3,9 @@
   sort_key: "reuter, madison"
   photo: "/students/images/madison-reuter.jpg"     # if included it is the default photo used on the student profile page
   email: "mreuter@lanl.gov"
-  scholar: 
+  scholar: ""
   ads: "https://ui.adsabs.harvard.edu/search?q=author%3A%22Reuter%2C%20M%22"
+  bio: "Here is a test bio."
   interests:
     - Neutron star mergers
     - Kilonovae

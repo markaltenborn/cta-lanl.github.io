@@ -1,0 +1,202 @@
+/* ===== Member card styles ===== */
+
+/* Grids */
+.staff-card-grid,
+.postdoc-card-grid,
+.student-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+/* Remove any clearfix pseudo-elements that might be injected */
+.staff-card-grid::before,
+.staff-card-grid::after,
+.postdoc-card-grid::before,
+.postdoc-card-grid::after,
+.student-card-grid::before,
+.student-card-grid::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Card wrappers */
+.staff-card-wrap,
+.postdoc-card-wrap,
+.student-card-wrap {
+    flex: 0 1 calc(25% - 24px);
+    max-width: 260px;
+}
+
+@media (max-width: 991px) {
+    .staff-card-wrap,
+    .postdoc-card-wrap,
+    .student-card-wrap {
+        flex: 0 1 calc(50% - 24px);
+    }
+}
+
+@media (max-width: 480px) {
+    .staff-card-wrap,
+    .postdoc-card-wrap,
+    .student-card-wrap {
+        flex: 0 1 100%;
+        max-width: 340px;
+    }
+}
+
+/* Card containers */
+.staff-card,
+.postdoc-card,
+.student-card {
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    min-height: 360px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.06);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.staff-card:hover,
+.postdoc-card:hover,
+.student-card:hover,
+.staff-card:focus-within,
+.postdoc-card:focus-within,
+.student-card:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.12);
+}
+
+/* Photos */
+.staff-photo-wrap,
+.postdoc-photo-wrap,
+.student-photo-wrap {
+    position: relative;
+}
+
+.staff-photo,
+.postdoc-photo,
+.student-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+/* Shared meta area */
+.staff-meta,
+.postdoc-meta,
+.student-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px 14px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Name line – LaTeX \textsc-style small caps */
+.staff-meta h4,
+.postdoc-meta h4,
+.student-meta h4 {
+    margin: 6px 0 4px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #444;
+    font-family: 'Open Sans', sans-serif;
+    font-variant: small-caps;   /* \textsc-like */
+    text-transform: none;
+    letter-spacing: 0.04em;
+}
+
+/* Name links (when the name itself is wrapped in an <a>) */
+.staff-meta h4 a,
+.postdoc-meta h4 a,
+.student-meta h4 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.staff-meta h4 a:hover,
+.postdoc-meta h4 a:hover,
+.student-meta h4 a:hover {
+    text-decoration: underline;
+}
+
+/* Leadership / role / group / division-like lines */
+.staff-leadership,
+.staff-role,
+.staff-division,
+.postdoc-univ,
+.postdoc-role,
+.postdoc-group,
+.student-univ,
+.student-role,
+.student-group {
+    margin: 2px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Interests / focus */
+.staff-interests,
+.postdoc-focus,
+.student-focus {
+    margin-top: 8px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #777;
+}
+
+/* Email lines */
+.staff-email,
+.postdoc-email,
+.student-email {
+    margin-top: 10px;
+    font-size: 10px;
+    text-align: left;
+}
+
+.staff-email a,
+.postdoc-email a,
+.student-email a {
+    color: #028fcc;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.staff-email a:hover,
+.postdoc-email a:hover,
+.student-email a:hover {
+    color: red;
+}
+
+/* ---- Override generic .team p styles from style.css ---- */
+/* style.css sets `.team p` to centered & narrow; card text must be full-width, left. */
+.team p.staff-interests,
+.team p.postdoc-focus,
+.team p.student-focus {
+    width: 100%;
+    margin: 0;
+    font-size: 12px;
+    text-align: left;
+}
+
+.team p.staff-email,
+.team p.postdoc-email,
+.team p.student-email {
+    width: 100%;
+    margin: 0;
+    font-size: 11px;
+    text-align: left;
+}

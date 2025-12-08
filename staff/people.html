@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CTA Members — Center for Theoretical Astrophysics</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css"  type="text/css" media="all">
+	<link rel="stylesheet" href="/css/cards.css"  type="text/css" media="all">
+	<link rel="stylesheet" href="/css/staff.css"  type="text/css" media="all">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+	<!-- Compact Header (strap) -->
+	<div class="header page-strap" id="home">
+		<div class="top-bar">
+			<div class="container">
+				<div class="logo">
+					<p><a href="/index.html">Center for Theoretical<br />Astrophysics</a></p>
+					<br>
+					<p class="subtitle"><a href="https://www.lanl.gov/">Los Alamos National Laboratory</a></p>
+				</div>
+				<div class="info">
+					<div class="email">
+						<p>
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+							<a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a>
+						</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="strap-bg" aria-hidden="true"></div>
+	</div>
+	<!-- //Compact Header -->
+
+	<!-- Team -->
+	<div class="team" id="team">
+		<div class="container">
+			<p style="text-align:left;margin:12px 0 10px;">
+				<a href="/index.html">&larr; Back to CTA home</a>
+			</p>
+
+			<h1 class="title">CTA MEMBERS</h1>
+            <p class="underline1"></p>
+
+			<!-- Leadership -->
+			<h2>LEADERSHIP</h2>
+			<div class="underline1"></div>
+			<div class="staff-card-grid" id="staff-leadership-grid"></div>
+
+			<!-- Members -->
+			<h2 style="margin-top:28px;">MEMBERS</h2>
+            <div class="underline1"></div>
+			<div class="staff-card-grid" id="staff-members-grid"></div>
+		</div>
+	</div>
+	<!-- //Team -->
+
+	<!-- Contact -->
+	<div id="cta-contact"></div>
+	<!-- //Contact -->
+
+	<!-- Footer -->
+	<div id="cta-footer"></div>
+	<!-- //Footer -->
+
+	<!-- JS dependencies -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
+	<script>
+	(function () {
+	    const DATA_BASE    = '/data';
+	    const DEFAULT_IMG  = '/staff/images/cta-default.jpg';
+	    const IMG_ROSTER   = '/staff/images/roster';
+	    const IMG_ROOT     = '/staff/images';
+
+	    function el(tag, attrs = {}, children = []) {
+	        const n = document.createElement(tag);
+	        Object.entries(attrs).forEach(([k, v]) => {
+	            if (v != null) n.setAttribute(k, v);
+	        });
+	        (Array.isArray(children) ? children : [children]).forEach(c => {
+	            if (c == null) return;
+	            n.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+	        });
+	        return n;
+	    }
+
+	    async function fetchYAML(path) {
+	        const res = await fetch(path, { cache: 'no-store' });
+	        const txt = await res.text();
+	        return jsyaml.load(txt) || [];
+	    }
+
+	    function imageCandidates(slug, person) {
+	        const exts = ['.jpg', '.png', '.jpeg'];
+	        const out = [];
+	        // Explicit photo from roster, if given
+	        if (person && person.photo) out.push(person.photo);
+	        // Canonical roster folder
+	        for (const ext of exts) out.push(`${IMG_ROSTER}/${slug}${ext}`);
+	        // Flat staff image folder
+	        for (const ext of exts) out.push(`${IMG_ROOT}/${slug}${ext}`);
+	        // Default
+	        out.push(DEFAULT_IMG);
+	        return Array.from(new Set(out.filter(Boolean)));
+	    }
+
+	    function firstReachable(urls) {
+	        return new Promise(resolve => {
+	            let i = 0, img = new Image();
+	            const next = () => {
+	                if (i >= urls.length) return resolve(DEFAULT_IMG);
+	                const u = urls[i++];
+	                img.onload = () => resolve(u);
+	                img.onerror = next;
+	                img.src = u;
+	            };
+	            next();
+	        });
+	    }
+
+	    function normalizeLeadership(str) {
+	        if (!str) return '';
+	        return String(str).trim().toLowerCase();
+	    }
+
+	    const LEADERSHIP_ORDER = {
+	        'director': 1,
+	        'co-director': 2,
+	        'deputy director': 2,
+	        'coordinator': 3,
+	        'co-coordinator': 4,
+	        'outreach coordinator': 5
+	    };
+
+	    function leadershipPriority(person) {
+	        const key = normalizeLeadership(person.leadership);
+	        if (!key) return Infinity; // non-leadership
+	        if (Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, key)) {
+	            return LEADERSHIP_ORDER[key];
+	        }
+	        return 100; // unknown leadership role, but still leadership
+	    }
+
+	    function sortKey(person) {
+	        return (person.sort_key || person.display_name || person.name || person.slug || '')
+	            .toLowerCase();
+	    }
+
+	    function buildSocialList(person) {
+	        const items = [];
+	        if (person.lanl) {
+	            items.push(
+	                el('li', {}, el('a', {
+	                    href: person.lanl,
+	                    class: 'lanl',
+	                    title: 'LANL Profile Page',
+	                    target: '_blank',
+	                    rel: 'noopener'
+	                }))
+	            );
+	        }
+	        if (person.ads) {
+	            items.push(
+	                el('li', {}, el('a', {
+	                    href: person.ads,
+	                    class: 'ads',
+	                    title: 'ADS Publication List',
+	                    target: '_blank',
+	                    rel: 'noopener'
+	                }))
+	            );
+	        }
+	        if (person.scholar) {
+	            items.push(
+	                el('li', {}, el('a', {
+	                    href: person.scholar,
+	                    class: 'gscholar',
+	                    title: 'Google Scholar Profile',
+	                    target: '_blank',
+	                    rel: 'noopener'
+	                }))
+	            );
+	        }
+	        if (!items.length) return null;
+	        return el('ul', { class: 'social' }, items);
+	    }
+
+	    function formatName(raw) {
+	        if (!raw) return '';
+	        const trimmed = String(raw).trim();
+	        if (trimmed === trimmed.toUpperCase()) {
+	            return trimmed.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+	        }
+	        return trimmed;
+	    }
+
+	    function staffCard(person) {
+	        const slug     = person.slug;
+	        const rawName  = person.display_name || person.name || slug;
+	        const name     = formatName(rawName);
+	        const imgUrls  = imageCandidates(slug, person);
+	        const leadershipText =
+	            person.leadership && String(person.leadership).trim()
+	                ? person.leadership
+	                : '';
+	        const roleText =
+	            person.role && String(person.role).trim()
+	                ? person.role
+	                : '';
+	        const divisionText =
+	            person.division && String(person.division).trim()
+	                ? person.division
+	                : '';
+	        // Interests list (preferred) or fallback to `focus`
+	        let interestsText = '';
+	        if (Array.isArray(person.interests) && person.interests.length) {
+	            interestsText = person.interests
+	                .map(s => String(s).trim())
+	                .filter(Boolean)
+	                .join(', ');
+	        } else if (person.focus && String(person.focus).trim()) {
+	            interestsText = String(person.focus).trim();
+	        }
+
+	        // Email line at bottom
+	        let emailNode = null;
+	        if (person.email) {
+	            emailNode = el('p', { class: 'staff-email' }, [
+	                el('a', { href: `mailto:${person.email}` }, [
+	                    el('span', {
+	                        class: 'glyphicon glyphicon-envelope',
+	                        'aria-hidden': 'true'
+	                    }),
+	                    '\u00A0',
+	                    person.email
+	                ])
+	            ]);
+	        }
+
+	        const href = '/staff/profile.html?slug=' + encodeURIComponent(slug);
+
+	        const card = el('div', { class: 'staff-card-wrap' }, [
+	            el('a', { class: 'staff-card', href }, [
+	                el('div', { class: 'staff-photo-wrap view view-seventh' }, [
+	                    el('img', {
+	                        class: 'staff-photo',
+	                        src: DEFAULT_IMG,
+	                        alt: name,
+	                        loading: 'lazy'
+	                    }),
+	                    el('div', { class: 'mask' }, buildSocialList(person))
+	                ]),
+	                el('div', { class: 'staff-meta' }, [
+	                    // Name – styled via cards.css (.staff-meta h4 small caps)
+	                    el('h4', {}, name),
+	                    leadershipText
+	                        ? el('div', { class: 'staff-leadership' }, leadershipText)
+	                        : null,
+	                    roleText
+	                        ? el('div', { class: 'staff-role' }, roleText)
+	                        : null,
+	                    divisionText
+	                        ? el('div', { class: 'staff-division' }, divisionText)
+	                        : null,
+	                    interestsText
+	                        ? el('p', { class: 'staff-interests' }, interestsText)
+	                        : null,
+	                    emailNode
+	                ])
+	            ])
+	        ]);
+
+	        const imgEl = card.querySelector('img.staff-photo');
+	        firstReachable(imgUrls).then(u => { imgEl.src = u; });
+	        return card;
+	    }
+
+	    async function main() {
+	        const roster = await fetchYAML(`${DATA_BASE}/staff/staff_roster.yml`);
+	        const people = Array.isArray(roster) ? roster : [];
+	        if (!people.length) return;
+
+	        const leadership = people.filter(p => normalizeLeadership(p.leadership));
+	        const members    = people.filter(p => !normalizeLeadership(p.leadership));
+
+	        leadership.sort((a, b) => {
+	            const pa = leadershipPriority(a);
+	            const pb = leadershipPriority(b);
+	            if (pa !== pb) return pa - pb;
+	            return sortKey(a).localeCompare(sortKey(b));
+	        });
+
+	        members.sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+
+	        const leadGrid    = document.getElementById('staff-leadership-grid');
+	        const membersGrid = document.getElementById('staff-members-grid');
+	        if (!leadGrid || !membersGrid) return;
+
+	        leadership.forEach(p => leadGrid.appendChild(staffCard(p)));
+	        members.forEach(p   => membersGrid.appendChild(staffCard(p)));
+	    }
+
+	    main().catch(err => console.error('Staff page render error:', err));
+	})();
+	</script>
+
+	<script>
+	$(function () {
+	    $("#cta-contact").load("/partials/contact.html");
+	});
+	</script>
+	<script>
+	$(function () {
+	    $("#cta-footer").load("/partials/footer.html");
+	});
+	</script>
+</body>
+</html>

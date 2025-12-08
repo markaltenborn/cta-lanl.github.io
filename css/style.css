@@ -2701,3 +2701,55 @@ ul.social li a.gscholar:hover {
     .auto-clear .col-xs-6:nth-child(odd){clear:left;}
 }
 /*-- //Responsive-Code --*/
+
+/*-- Homepage Students/Postdocs Styling--*/
+.cta-section > h3 {
+    margin-bottom: 10px;
+}
+
+.cta-section > p {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.cta-section .cta-features {
+    margin-top: 30px;
+}
+
+.cta-section .cta-feature {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.cta-section .cta-feature h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #004393;
+}
+
+.cta-section .cta-feature ul,
+.cta-section .cta-feature ol {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 14px;
+    color: #555;
+}
+
+.cta-section .cta-links {
+    margin-top: 20px;
+    width: 70%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+}
+
+/* Extra spacing for the home-page sections only */
+#cta-members-home,
+#cta-postdocs-home,
+#cta-students-home {
+    margin-top: 60px;
+}
+
+/*-- //Homepage Postdocs Styling--*/

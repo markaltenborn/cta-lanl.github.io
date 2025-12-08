@@ -1,0 +1,31 @@
+- slug: dennis-bowen
+  university: 
+  role: Postdoc
+  division: Computational Physics
+  group_code: XCP
+  focus: 
+  card_image: "/postdocs/images/2018/dennis-bowen.jpg"
+
+- slug: matt-gilmer
+  university: 
+  role: Postdoc
+  division: Theoretical Design
+  group_code: XTD
+  focus: 
+  card_image: "/postdocs/images/2018/matt-gilmer.jpg"
+
+- slug: ben-ryan
+  university: 
+  role: Postdoc
+  division: Computer, Computational & Statistical Sciences
+  group_code: CCS-2
+  focus: 
+  card_image: "/postdocs/images/2018/ben-ryan.jpg"
+
+- slug: ingo-tews
+  university: 
+  role: Postdoc
+  division: Theoretical
+  group_code: T-2
+  focus: 
+  card_image: "/postdocs/images/2018/ingo-tews.jpg"

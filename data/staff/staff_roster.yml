@@ -1,0 +1,640 @@
+- slug: wes-even
+  display_name: "Wes Even"
+  sort_key: "even, wes"
+  email: even@lanl.gov
+  photo: "/staff/images/wes-even.jpg"
+  scholar: "https://scholar.google.com/citations?user=BVH-rEQAAAAJ&hl=en&oi=ao"
+  ads: "https://ui.adsabs.harvard.edu/#search/fq=database%3A%20(astronomy%20or%20physics)&fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=database%3A%20(astronomy%20or%20physics)&q=pubdate%3A%5B2000-01%20TO%209999-12%5D%20author%3A(%22Even%2C%20W%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  lanl_profile: "http://www.lanl.gov/expertise/profiles/view/wesley-even"
+  bio: 
+  interests: 
+    - Transient light curves
+    - Compact mergers
+    - Supernovae
+    - Nucleosynthesis
+  leadership: Director
+  university: Louisiana State University
+  role: Group Leader
+  division: Theoretical
+  focus: 
+
+- slug: alexander-kaltenborn
+  display_name: "Alexander Kaltenborn"
+  sort_key: "kaltenborn, alexander"
+  email: markaltenborn@lanl.gov
+  photo: "/staff/images/alexander-kaltenborn.jpg"
+  scholar: "https://scholar.google.com/citations?user=3OUPGc0AAAAJ&hl=en&oi=ao"
+  ads: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=author%3A%22Kaltenborn%2C%20M.%20Alexander%20R.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Compact binary mergers
+    - National and International Security Policy
+  leadership: Coordinator
+  university: George Washington University
+  role: R&D Scientist
+  division: Theoretical
+  focus: 
+
+- slug: makana-silva
+  display_name: "Makana Silva"
+  sort_key: "silva, makana"
+  email: makanas@lanl.gov
+  photo: "/postdocs/images/2025/makana-silva.jpg"
+  scholar: "https://scholar.google.com/citations?hl=en&user=UbqEYOQAAAAJ"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Silva%2C%20Makana%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+  leadership: Co-Coordinator
+  university: The Ohio State University
+  role: Postdoc
+  division: Computing and Artificial Intelligence
+  focus: 
+
+- slug: nicole-lloyd-ronning
+  display_name: "Nicole Lloyd-Ronning"
+  sort_key: "lloyd-ronning, nicole"
+  email: lloyd-ronning@lanl.gov
+  photo: "/staff/images/nicole-lloyd-ronning.jpg"
+  scholar: "https://scholar.google.com/citations?hl=en&user=7d6Ru8UAAAAJ"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Lloyd-Ronning%2C%20Nicole%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Gamma-ray bursts
+    - Transients
+  leadership: Outreach Coordinator
+  university: Stanford University
+  role: Deputy Group Leader
+  division: Computing and Artificial Intelligence
+  focus: Gamma-ray bursts and their emission physics, and their use as cosmological tools
+
+- slug: rachel-smullen
+  display_name: "Rachel Smullen"
+  sort_key: "smullen, rachel"
+  email: rsmullen@lanl.gov
+  photo: "/staff/images/rachel-smullen.jpg"
+  scholar: 
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Smullen%2C%20Rachel%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Star and planet formation
+    - Orbital dynamics
+  leadership: 
+  university: 
+  role: R&D Scientist
+  division: Theoretical Design
+  focus: 
+
+- slug: chris-fryer
+  display_name: "Chris Fryer"
+  sort_key: "fryer, chris"
+  email: fryer@lanl.gov
+  photo: "/staff/images/chris-fryer.jpg"
+  scholar: "https://scholar.google.com/citations?hl=en&user=ZZZorWwAAAAJ"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Fryer%2C%20Chris%20L.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Radiation-hydrodynamics
+    - Reaction networks
+  leadership: 
+  university: University of Arizona
+  role: Director, Center for NonLinear Studies
+  division: Theoretical
+  focus: 
+
+- slug: josh-dolence
+  display_name: "Josh Dolence"
+  sort_key: "dolence, josh"
+  email: jdolence@lanl.gov
+  photo: "/staff/images/josh-dolence.jpg"
+  scholar: "https://scholar.google.com/citations?hl=en&user=znZemloAAAAJ"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Dolence%2C%20Josh%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: "I am a staff R&D Scientist in the Computational Physics and Methods Group (CAI-2) at Los Alamos National Laboratory. I have broad scientific interests, but find myself drawn to solving some of Nature's most complex problems on some of Earth's biggest computers. This interest first developed while I earned B.S. degress in Physics and in Space Sciences at Florida Institute of Technology. I followed this pursuit in my Ph.D. work in astrophysics at the University of Illinois at Urbana-Champaign as a NASA Earth and Space Science Fellow, then as a postdoc at Princeton University before coming to LANL as a Nicholas C. Metropolis Fellow."
+  interests: 
+    - Black Hole Accretion
+    - Core-collapse Supernovae
+    - Multiphysics Numerical Methods
+  leadership: 
+  university: University of Illinois at Urbana-Champaign
+  role: R&D Scientist
+  division: Computing and Artificial Intelligence
+  focus: 
+
+- slug: aimee-hungerford
+  display_name: "Aimee Hungerford"
+  sort_key: "hungerford, aimee"
+  email: aimee@lanl.gov
+  photo: "/staff/images/.jpg"
+  scholar: "https://scholar.google.com/citations?user=v5jSagUAAAAJ&hl=en&oi=ao"
+  ads: "http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?author=Hungerford,%20A"
+  bio: "Aimee Hungerford received her PhD from the University of Arizona in Astrophysics and was awarded a Director's Postdoctoral Fellow at Los Alamos National Lab in 2004. In 2005 she was hired into a staff R&D Scientist position in LANL's Computer and Computational Sciences (CCS) Division. She has remained at LANL since that time and has served in a variety of technical leadership roles across CCS, X-Theoretical Design and X-Computational Physics divisions. Her technical expertise includes astrophysics (computational modeling of supernovae), weapons assessment, and multiphysics code development. She has served as project lead for projects in Defense Program's Office of Experimental Sciences (OES), and Advanced Simulation and Computing (ASC). She is currently LANL's Deputy Division Leader for the CAI Division."
+  interests: 
+    - Gamma-ray astronomy
+    - Supernovae
+    - Monte Carlo transport
+  leadership: 
+  university: University of Arizona
+  role: Deputy Division Leader
+  division: Computing and Artificial Intelligence
+  focus: 
+
+- slug: denis-bowen
+  display_name: "Denis Bowen"
+  sort_key: "bowen, denis"
+  email: dbowen@lanl.gov
+  photo: "/staff/images/.jpg"
+  scholar: 
+  ads: 
+  bio: 
+  interests: 
+    - General relativity
+    - MHD
+    - Accretion disks
+  leadership: 
+  university: 
+  role: R&D Scientist
+  division: Computational Physics
+  focus: 
+
+- slug: soumi-de
+  display_name: "Soumi De"
+  sort_key: "de, soumi"
+  email: soumide@lanl.gov
+  photo: "/staff/images/soumi-de.jpg"
+  scholar: "https://scholar.google.com/citations?hl=en&user=gUdtY_EAAAAJ"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22De%2C%20Soumi%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Multimessenger astrophysics
+    - Gravitational wave observations
+    - Machine learning
+    - Data analysis
+  leadership: 
+  university: Syracuse University
+  role: R&D Scientist
+  division: Theoretical
+  focus: 
+
+- slug: philipp-edelmann
+  display_name: "Philipp Edelmann"
+  sort_key: "edelmann, philipp"
+  email: pedelmann@lanl.gov
+  photo: "/staff/images/philipp-edelmann.jpg"
+  scholar: "https://scholar.google.com/citations?hl=en&user=cRMDv1oAAAAJ"
+  ads: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=author%3A%22edelmann%2C%20Philipp"
+  bio: "My background is in computational stellar astrophysics. I have developed and worked on several codes for large scale simulations of the interiors of stars. I am one of the main developers of the SLH code, which was one of the first to achieve fully implicit three-dimensional simulations of a star at scale, which including other relevant physics such as radiation and nuclear reactions. I have been at LANL since 2020 and a staff member since 2022. I am currently working on developing multiphysics codes using modern techniques from computer science, such as task-based parallelism."
+  interests: 
+    - Stellar astrophysics
+    - Low-Mach-number hydrodynamics
+    - Nucleosynthesis
+    - Asteroseismology
+    - Numerical methods
+  leadership: 
+  university: Max-Planck-Institut für Astrophysik
+  role: R&D Scientist
+  division: Computing and Artificial Intelligence
+  focus: 
+
+- slug: erica-fogerty
+  display_name: "Erica Fogerty"
+  sort_key: "fogerty, erica"
+  email: efogerty@lanl.gov
+  photo: "/staff/images/erica-fogerty.jpg"
+  scholar: "https://scholar.google.com/citations?user=QYxF6QQAAAAJ&hl=en"
+  ads: "https://ui.adsabs.harvard.edu/search/p_=0&q=author%3A%22Fogerty%2C%20Erica%22&sort=date%20desc%2C%20bibcode%20desc"
+  bio: 
+  interests: 
+    - Formation of molecular clouds, stars and planets
+    - MHD
+    - Radiation transport
+    - HEDP
+  leadership: 
+  university: University of Rochester
+  role: R&D Scientist
+  division: Theoretical Design
+  focus: 
+
+- slug: chris-fontes
+  display_name: "Chris Fontes"
+  sort_key: "fontes, chris"
+  email: cjf@lanl.gov
+  photo: "/staff/images/chris-fontes.jpg"
+  scholar: "https://scholar.google.com/citations?user=ZnrcypIAAAAJ&hl=en"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Fontes%2C%20C.%20J.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Theoretical atomic physics
+    - Radiative opacities
+    - Transient light curves
+  leadership: 
+  university: 
+  role: R&D Scientist
+  division: Computational Physics
+  focus: 
+
+- slug: fan-guo
+  display_name: "Fan Guo"
+  sort_key: "guo, fan"
+  email: guofan@lanl.gov
+  photo: "/staff/images/fan-guo.jpg"
+  scholar: "https://scholar.google.com/citations?hl=en&user=Q7O6SyUAAAAJ"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Guo%2C%20Fan%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Charged particle transport
+    - Magnetic reconnection and turbulence
+    - Collisionless shocks
+    - Wave and particle interaction
+  leadership: 
+  university: 
+  role: R&D Scientist
+  division: Theoretical 
+  focus: 
+
+- slug: joyce-guzik
+  display_name: "Joyce Guzik"
+  sort_key: "guzik, joyce"
+  email: joy@lanl.gov
+  photo: "/staff/images/joyce-guzik.jpg"
+  scholar: "https://scholar.google.com/citations?hl=en&user=X81R1HUAAAAJ"
+  ads: "https://ui.adsabs.harvard.edu/search/p_=0&q=author%3A%22Guzik%2C%20Joyce%22&sort=date%20desc%2C%20bibcode%20desc"
+  bio: 
+  interests: 
+    - Stellar Evolution
+    - Asteroseismology
+    - Stellar Pulsations
+  leadership: 
+  university: 
+  role: LANL Fellow
+  division: Theoretical Design
+  focus: 
+
+- slug: daniel-holladay
+  display_name: "Daniel Holladay"
+  sort_key: "holladay, daniel"
+  email: danl@lanl.gov
+  photo: "/staff/images/daniel-holladay.jpg"
+  scholar: "https://scholar.google.com/citations?user=MRXuVNkAAAAJ&hl=en"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Holladay%2C%20Daniel%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - nLTE opacities
+    - Radiation transport
+    - HPC
+    - Heterogeneous computing
+  leadership: 
+  university: 
+  role: R&D Scientist
+  division: Computing and Artificial Intelligence
+  focus: 
+
+- slug: jarrett-johnson
+  display_name: "Jarrett Johnson"
+  sort_key: "johnson, jarrett"
+  email: jlj@lanl.gov
+  photo: "/staff/images/.jpg"
+  scholar: "https://scholar.google.com/citations?user=Ya3JBO0AAAAJ&hl=en"
+  ads: "https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&filter_author_facet_hier_fq_author=author_facet_hier%3A%221%2FJohnson%2C%20J%2FJohnson%2C%20J%20%20L%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq_author=(author_facet_hier%3A%221%2FJohnson%2C%20J%2FJohnson%2C%20J%20%20L%22)&q=author%3A%22Johnson%2C%20J.%20L.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - First Stars
+    - Planets
+    - Galaxies
+    - Supernovae
+    - Black Holes
+  leadership: 
+  university: The University of Texas at Austin
+  role: Deputy Group Leader
+  division: Theoretical Design
+  focus: 
+
+- slug: sam-jones
+  display_name: "Sam Jones"
+  sort_key: "jones, sam"
+  email: swjones@lanl.gov
+  photo: "/staff/images/sam-jones.jpg"
+  scholar: "https://scholar.google.com/citations?hl=en&user=DcRbD8AAAAAJ"
+  ads: "https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-3970-1843&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: "I am a musician, physicist and astrophysicist originally from Walsall, a town in the Black Country region of the UK. Currently I live in Santa Fe, New Mexico (USA) working as a staff R&D Scientist in the Theoretical Division at Los Alamos National Laboratory."
+  interests: 
+    - Supernovae
+    - Numerical methods
+    - Hydrodynamics
+    - Nucleosynthesis
+    - Stellar evolution
+  leadership: 
+  university: Keele University 
+  role: R&D Scientist
+  division: Theoretical
+  focus: 
+
+- slug: oleg-korobkin
+  display_name: "Oleg Korobkin"
+  sort_key: "korobkin, oleg"
+  email: korobkin@lanl.gov
+  photo: "/staff/images/oleg-korobkin.jpg"
+  scholar: "https://scholar.google.com/citations?user=Ql3IcEwAAAAJ&hl=en&oi=ao"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Korobkin%2C%20Oleg%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Neutron star mergers
+    - r-process
+    - Hydrodynamics
+    - HPC
+    - General relativity
+  leadership: 
+  university: Louisiana State University
+  role: R&D Scientist
+  division: Theoretical
+  focus: 
+
+- slug: brendan-krueger
+  display_name: "Brendan Krueger"
+  sort_key: "krueger, brendan"
+  email: bkkrueger@lanl.gov
+  photo: "/staff/images/brendan-krueger.jpg"
+  scholar: "https://scholar.google.com/citations?user=45ZSMjAAAAAJ&hl=en"
+  ads: "https://ui.adsabs.harvard.edu/search/p_=0&q=author%3A%22Krueger%2C%20Brendan%22&sort=date%20desc%2C%20bibcode%20desc"
+  bio: 
+  interests: 
+    - Supernovae
+    - Computational methods
+    - Code development
+  leadership: 
+  university: 
+  role: R&D Scientist
+  division: Computing and Artificial Intelligence
+  focus: 
+
+- slug: hyun-lim
+  display_name: "Hyun Lim"
+  sort_key: "lim, hyun"
+  email: hyunlim@lanl.gov
+  photo: "/staff/images/hyun-lim.jpg"
+  scholar: 
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22lim%2C%20hyun%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: "I am a theoretical/computational physicist who has background on gravitational physics and astrophysics. My previous works include simulating mergers of compact objects such as black holes and neutron stars, exploring stable dynamics in beyond general relativity theories, studying preconditioner and solvers for partial differential equations. I am currently working as a staff R&D Scientist at Los Alamos National Laboratory to work on various multi-physics code development projects as well as studying inverse problem using machine learning."
+  interests: 
+    - Numerical relativity
+    - Binary compact object mergers
+    - Numerical methods and algorithms
+    - HPC
+  leadership: 
+  university: 
+  role: R&D Scientist
+  division: Computing and Artificial Intelligence
+  focus: 
+
+- slug: chris-malone
+  display_name: "Chris Malone"
+  sort_key: "malone, chris"
+  email: cmalone@lanl.gov
+  photo: "/staff/images/chris-malone.jpg"
+  scholar: "https://scholar.google.com/citations?user=NOZnIw8AAAAJ&hl=en"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Malone%2C%20chris%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Type Ia supernovae
+  leadership: 
+  university: Stony Brook University
+  role: R&D Scientist
+  division: Computational Physics
+  focus: 
+
+- slug: chris-mauney
+  display_name: "Chris Mauney"
+  sort_key: "mauney, chris"
+  email: mauneyc@lanl.gov
+  photo: "/staff/images/chris-mauney.jpg"
+  scholar: "https://scholar.google.com/citations?hl=en&user=V-DR7k0AAAAJ"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Mauney%2C%20C.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Dust formation
+    - Supernovae
+    - Density functional theory
+  leadership: 
+  university: North Carolina State University
+  role: Engineer
+  division: High Performance Computing
+  focus: 
+
+- slug: grant-meadors
+  display_name: "Grant Meadors"
+  sort_key: "meadors, grant"
+  email: gdmeadors@lanl.gov
+  photo: "/staff/images/grant-meadors.jpg"
+  scholar: "https://scholar.google.com/citations?user=XUfF2A0AAAAJ&hl=en&oi=ao"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Meadors%2C%20Grant%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Gravitational wave interferometers
+    - Black hole mergers
+    - Neutron stars
+    - White dwarfs
+    - Space weather
+  leadership: 
+  university: University of Michigan
+  role: R&D Scientist
+  division: Intelligence & Space Research
+  focus: 
+
+- slug: zach-medin
+  display_name: "Zach Medin"
+  sort_key: "medin, zach"
+  email: zmedin@lanl.gov
+  photo: "/staff/images/zach-medin.jpg"
+  scholar: "https://scholar.google.com/citations?user=vaNWpukAAAAJ&hl=en"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22medin%2C%20zach%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - X-ray bursts
+  leadership: 
+  university: 
+  role: R&D Scientist
+  division: Computational Physics
+  focus: 
+
+- slug: jonah-miller
+  display_name: "Jonah Miller"
+  sort_key: "miller, jonah"
+  email: jonahm@lanl.gov
+  photo: "/staff/images/jonah-miller.jpg"
+  scholar: "https://scholar.google.com/citations?user=oQbwqPIAAAAJ&hl=en&oi=ao"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Miller%2C%20Jonah%20M.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: "My name is Jonah Miller. I'm a staff R&D Scientist at Los Alamos National Laboratory, where I work in computational physics. I graduated summa cum laude from the University of Colorado at Boulder, with a bachelors degree in math and physics. I got my Ph.D. in numerical relativity at the Guelph-Waterloo Physics Institute and at the Perimeter Institute for Theoretical Physics. My PhD advisor was Erik Schnetter. In addition to general knowledge about both fields I study, I have specialized knowledge and interest in differential geometry, general and special relativity, lasers, astrophysics, and high-performance computing. I've done research on ultrafast optics, Cartan's Method of Moving Frames, and quantum gravity. I’m a Linux hobbyist, I like science fiction, and I write fiction for fun."
+  interests: 
+    - Numerical relativity
+    - Numerical methods
+    - Hydrodynamics
+  leadership: 
+  university: Guelph-Waterloo Physics Institute
+  role: R&D Scientist
+  division: Computing and Artificial Intelligence
+  focus: 
+
+- slug: matthew-mumpower
+  display_name: "Matthew Mumpower"
+  sort_key: "mumpower, matthew"
+  email: mumpower@lanl.gov
+  photo: "/staff/images/matthew-mumpower.jpg"
+  scholar: "https://scholar.google.com/citations?user=wYeD79MAAAAJ&hl=en"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Mumpower%2C%20Matthew%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: "I'm a theoretical physicist working at Los Alamos National Lab. My research interests are in nuclear structure and reaction mechanisms with applications to nuclear astrophysics. I received my PhD at North Carolina State University under the direction of Gail McLaughlin. At the University of Notre Dame I worked under the direction of Ani Aprahamian and Rebecca Surman. The study of nuclear models has a wide range of applicability from nuclear medicine, to stockpile stewardship and even the cosmos."
+  interests: 
+    - Nuclear physics
+    - Nucleosynthesis
+    - Beta-decay
+    - Fission
+  leadership: 
+  university: North Carolina State University
+  role: R&D Scientist
+  division: Theoretical
+  focus: 
+
+- slug: ben-ryan
+  display_name: "Ben Ryan"
+  sort_key: "ryan, ben"
+  email: brryan@lanl.gov
+  photo: "/staff/images/ben-ryan.jpg"
+  scholar: 
+  ads: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&p_=0&q=author%3A%22Ryan%2C%20Ben%20R.%22&sort=date%20desc%2C%20bibcode%20desc"
+  bio: 
+  interests: 
+    - Black hole astrophysics
+    - Radiation transport
+    - Magnetohydrodynamics
+    - Numerical methods
+  leadership: 
+  university: University of Illinois at Urbana-Champaign
+  role: Contractor
+  division: High Performance Computing
+  focus: 
+
+- slug: irina-sagert
+  display_name: "Irina Sagert"
+  sort_key: "sagert, irina"
+  email: sagert@lanl.gov
+  photo: "/staff/images/irina-sagert.jpg"
+  scholar: "https://scholar.google.com/citations?user=UmprtE8AAAAJ&hl=en&oi=ao"
+  ads: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=author%3A%22Sagert%2C%20Irina%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Kinetic transport simulation
+    - Nuclear astrophysics
+    - Hydrodynamics
+  leadership: 
+  university: Goethe University Frankfurt
+  role: R&D Scientist
+  division: Computing and Artificial Intelligence
+  focus: 
+
+- slug: greg-salvesen
+  display_name: "Greg Salvesen"
+  sort_key: "salvesen, greg"
+  email: salvesen@lanl.gov
+  photo: "/staff/images/greg-salvesen.jpg"
+  scholar: "https://scholar.google.com/citations?hl=en&user=Oy8TCoIAAAAJ"
+  ads: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=author%3A%22Salvesen%2C%20Greg%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Black Holes
+    - X-ray Binaries
+    - Accretion Disks
+    - Outflows
+  leadership: 
+  university: University of Colorado Boulder
+  role: R&D Scientist
+  division: Computational Physics
+  focus: 
+
+- slug: ingo-tews
+  display_name: "Ingo Tews"
+  sort_key: "tews, ingo"
+  email: itews@lanl.gov
+  photo: "/staff/images/ingo-tews.jpg"
+  scholar: "https://scholar.google.com/citations?user=8yw2adYAAAAJ&hl=en" 
+  ads: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=author%3A%22Tews%2C%20Ingo%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: "I have over five years of experience as a Staff R&D Scientist at LANL, where I apply my skills and knowledge in theoretical nuclear physics to study the fundamental interactions between neutrons and protons in atomic nuclei and neutron stars. I use high-performance computing and machine learning to solve the nuclear many-body problem and to study gravitational waves from neutron-star mergers, which are one of the most exciting phenomena in modern astrophysics. I am passionate about advancing our understanding of nature and exploring the mysteries of the cosmos."
+  interests: 
+    - Neutron Matter
+    - Chiral EFT
+    - Multimessenger astrophysics
+  leadership: 
+  university: Technische Universität Darmstadt
+  role: R&D Scientist
+  division: Theoretical
+  focus: 
+
+- slug: phoebe-upton-sanderbeck
+  display_name: "Phoebe Upton Sanderbeck"
+  sort_key: "upton sanderbeck, phoebe"
+  email: phoebeu@lanl.gov
+  photo: "/staff/images/phoebe-upton-sanderbeck.jpg"
+  scholar: 
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Upton%20Sanderbeck%2C%20Phoebe%20R.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: "My name is Phoebe R. Upton Sanderbeck and I am currently a R&D Scientist at Los Alamos National Lab. Previously, I held a Director's Postdoctoral Fellow at LANL and a postdoctoral position in the Physics & Astronomy Department at the University of California, Riverside. I earned my PhD from the University of Washington in 2018. My research interests encompass theoretical astrophysics, radiation backgrounds, the intergalactic medium, circumgalactic medium, black holes, cosmology, and more."
+  interests: 
+    - Galaxy formation
+    - Reionization
+    - Supermassive black holes
+    - Radiation backgrounds
+    - Intergalactic medium
+    - Circumgalactic medium
+    - Cosmology
+  leadership: 
+  university: University of Washington
+  role: R&D Scientist
+  division: Analytics, Intelligence and Technology
+  focus: 
+
+- slug: tim-waters
+  display_name: "Tim Waters"
+  sort_key: "waters, tim"
+  email: waters@lanl.gov
+  photo: "/staff/images/tim-waters.jpg"
+  scholar: "https://scholar.google.com/citations?user=GVhqFGIAAAAJ&hl=en"
+  ads: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&p_=0&q=%20author%3A%22tim%20waters%22&sort=date%20desc%2C%20bibcode%20desc"
+  bio: "I'm a computational R&D Scientist in the Lagrangian Codes group of the XCP Division at Los Alamos National Laboratory. After obtaining a PhD in Physics in 2017 from the University of Nevada Las Vegas (UNLV), where I was supervised by Daniel Proga, I joined LANL as a postdoc in the Theortical Division, where I worked with Hui Li, Jarrett Johnson, and Joe Smidt. Before returning to LANL in 2022, I spent the entirety of the pandemic back at UNLV, again working in Daniel Proga's group but this time as an aging postdoc."
+  interests: 
+    - Black hole astrophysics​
+    - Multiphase gas dynamics
+    - Radiation magnetohydrodynamics
+  leadership: 
+  university: University of Nevada, Las Vegas
+  role: R&D Scientist
+  division: Computational Physics
+  focus: 
+
+- slug: ryan-wollaeger
+  display_name: "Ryan Wollaeger"
+  sort_key: "wollaeger, ryan"
+  email: wollaeger@lanl.gov
+  photo: "/staff/images/ryan-wollaeger.jpg"
+  scholar: "https://scholar.google.com/citations?user=3OImwa8AAAAJ&hl=en"
+  ads: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22Wollaeger%2C%20Ryan%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Transient light curves
+    - Radiation transport methods
+  leadership: 
+  university: Louisiana State University
+  role: R&D Scientist
+  division: Computing and Artificial Intelligence
+  focus: 
+
+- slug: suzannah-wood
+  display_name: "Suzannah Wood"
+  sort_key: "wood, suzannah"
+  email: suzannah@lanl.gov
+  photo: "/staff/images/suzannah-wood.jpg"
+  scholar: "https://scholar.google.com/citations?user=QMY2adsAAAAJ&hl=en"
+  ads: "https://ui.adsabs.harvard.edu/search/q=author%3A%22Wood%2C%20Suzannah%20R.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+  bio: 
+  interests: 
+    - Laboratory astrophysics
+    - High-energy-density physics
+  leadership: 
+  university: University of Oregon
+  role: R&D Scientist
+  division: Theoretical Design
+  focus: 

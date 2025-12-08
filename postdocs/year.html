@@ -2,12 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Students — Year</title>
+	<title>Postdocs — Year</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style.css"				type="text/css" media="all">
 	<link rel="stylesheet" href="/css/cards.css"				type="text/css" media="all">
-	<link rel="stylesheet" href="/css/student.css"			type="text/css" media="all">
+	<link rel="stylesheet" href="/css/postdoc.css"			type="text/css" media="all">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
 
@@ -40,10 +40,10 @@
 	<!-- Team -->
 	<div class="team" id="team">
 		<div class="container">
-			<p style="text-align:left;margin:12px 0 10px;"><a href="/students/students.html">&larr; Back to Students</a></p>
-			<h3 class="title">STUDENTS OF <span id="year"></span></h3>
+			<p style="text-align:left;margin:12px 0 10px;"><a href="/postdocs/postdocs.html">&larr; Back to Postdocs</a></p>
+			<h3 class="title">POSTDOCS OF <span id="year"></span></h3>
 			<p class="underline1"></p>
-			<div class="student-card-grid" id="grid"></div>
+			<div class="postdoc-card-grid" id="grid"></div>
 			<h3 class="title" style="margin-top:28px;">OTHER YEARS</h3>
 			<p class="underline1"></p>
 			<ul class="years-grid" id="years-list"></ul>
@@ -60,9 +60,9 @@
 	<script>
 	(function(){
 		const DATA_BASE    = '/data';
-		const IMG_ROSTER   = '/students/images/roster';
-		const IMG_YEARS    = '/students/images';
-		const DEFAULT_IMG  = '/students/images/cta-default.jpg';
+		const IMG_ROSTER   = '/postdocs/images/roster';
+		const IMG_YEARS    = '/postdocs/images';
+		const DEFAULT_IMG  = '/postdocs/images/cta-default.jpg';
 
 		function qs(s){
 			return document.querySelector(s);
@@ -126,16 +126,16 @@
 		function card(stint, person, years){
 			const slug=stint.slug, name=(person && (person.display_name||person.name))||formatNameFromSlug(slug);
 			const href = 'profile.html?slug=' + encodeURIComponent(slug);
-			const node = el('div',{class:'student-card-wrap'},[
-				el('a',{class:'student-card',href},[
-					el('img',{class:'student-photo',src:DEFAULT_IMG,alt:name,loading:'lazy'}),
-					el('div',{class:'student-meta'},[
-						el('h4',{class:'student-name'},name),
-						stint.university?el('span',{class:'student-univ'},stint.university):null,
-						stint.role?el('span',{class:'student-role'},stint.role):null,
-						(stint.division||stint.group_code)?el('span',{class:'student-group'},
+			const node = el('div',{class:'postdoc-card-wrap'},[
+				el('a',{class:'postdoc-card',href},[
+					el('img',{class:'postdoc-photo',src:DEFAULT_IMG,alt:name,loading:'lazy'}),
+					el('div',{class:'postdoc-meta'},[
+						el('h4',{class:'postdoc-name'},name),
+						stint.university?el('span',{class:'postdoc-univ'},stint.university):null,
+						stint.role?el('span',{class:'postdoc-role'},stint.role):null,
+						(stint.division||stint.group_code)?el('span',{class:'postdoc-group'},
 							`${stint.division||''}${(stint.division&&stint.group_code)?', ':''}${stint.group_code||''}`):null,
-						stint.focus?el('p',{class:'student-focus'},stint.focus):null
+						stint.focus?el('p',{class:'postdoc-focus'},stint.focus):null
 					])
 				])
 			]);
@@ -145,12 +145,12 @@
 		async function main(){
 			const params = new URL(location.href).searchParams;
 			const y = params.get('y');
-			if(!y){ location.replace('/students/students.html'); return; }
+			if(!y){ location.replace('/postdocs/postdocs.html'); return; }
 			qs('#year').textContent = y;
-			const years = (await fetchYAML(`${DATA_BASE}/students/student_years.yml`)).years || [];
-			const roster = await fetchYAML(`${DATA_BASE}/students/student_roster.yml`);
+			const years = (await fetchYAML(`${DATA_BASE}/postdocs/postdoc_years.yml`)).years || [];
+			const roster = await fetchYAML(`${DATA_BASE}/postdocs/postdoc_roster.yml`);
 			const bySlug = Object.fromEntries((Array.isArray(roster)?roster:[]).map(p=>[p.slug,p]));
-			const stints = await fetchYAML(`${DATA_BASE}/students/students_${y}.yml`);
+			const stints = await fetchYAML(`${DATA_BASE}/postdocs/postdocs_${y}.yml`);
 			const grid = qs('#grid');
 			(Array.isArray(stints)?stints:[]).slice()
 				.sort((a,b)=>sortKey(a, bySlug).localeCompare(sortKey(b, bySlug)))
@@ -158,7 +158,7 @@
 			// Other years list
 			const list = qs('#years-list');
 			years.forEach(yr=>{
-				const li = el('li', {}, el('a', {href:`/students/year.html?y=${yr}`}, `${yr}`));
+				const li = el('li', {}, el('a', {href:`/postdocs/year.html?y=${yr}`}, `${yr}`));
 				if (yr != y) list.appendChild(li);
 			});
 		}
