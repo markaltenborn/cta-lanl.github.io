@@ -5,17 +5,12 @@
 	<title>Profile — CTA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/style.css" 			type="text/css" media="all">
-	<link rel="stylesheet" href="/css/student.css" 			type="text/css" media="all">
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/student.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/profiles-common.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
-	<style>
-		.profile-hero{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;margin:10px 0 24px;}
-		.profile-hero img{max-width:260px;width:100%;border-radius:8px;object-fit:cover;aspect-ratio:4/3;}
-		.profile-meta{flex:1;min-width:260px;}
-		.profile-meta h1{margin:0 0 10px;font-size:28px;line-height:1.25;}
-		.quick-links a{margin-right:10px;}
-	</style>
 </head>
 <body>
 	<!-- Compact Header -->
@@ -84,6 +79,7 @@
 	<div id="cta-footer"></div>
 	<!-- //Footer -->
 	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script src="/js/profile-utils.js"></script>
 	<script>
 	(async function(){
 		const DATA_BASE    = '/data';
@@ -91,81 +87,47 @@
 		const IMG_YEARS    = '/students/images';
 		const DEFAULT_IMG  = '/students/images/cta-default.jpg';
 
-		function a(href, text){
-			const n=document.createElement('a');
-			n.href=href;
-			n.target='_blank';
-			n.rel='noopener';
-			n.textContent=text;
-			return n;
-		}
-		async function fetchYAML(p){
-			const r=await fetch(p,{cache:'no-store'});
-			const t=await r.text();
-			return jsyaml.load(t)||{};
-		}
-		function imageCandidates(slug, person, years){
-			const exts = ['.jpg', '.png', '.jpeg'];
-			const out = [];
-			// 1) roster-provided photo
-			if (person && person.photo) out.push(person.photo);
-			// 2) canonical roster folder
-			for (const ext of exts) out.push(`${IMG_ROSTER}/${slug}${ext}`);
-			// 3) scan each year folder
-			for (const y of years) for (const ext of exts)
-				out.push(`${IMG_YEARS}/${y}/${slug}${ext}`);
-			// 4) default
-			out.push(DEFAULT_IMG);
-			return Array.from(new Set(out.filter(Boolean)));
-		}
-		function formatNameFromSlug(str) {
-			return str
-			.split('-') // Split by hyphen
-			.map(word => {
-				if (!word) return ''; // Handle empty segments safely
-				const lower = word.toLowerCase(); // Normalize to lowercase
-				return lower.charAt(0).toUpperCase() + lower.slice(1);
-			})
-			.join(' ');
-		}
-		function firstReachable(urls){
-			return new Promise(resolve=>{
-				let i=0,img=new Image();
-				const next=()=>{
-					if(i>=urls.length) return resolve(DEFAULT_IMG);
-					const u=urls[i++];
-					img.onload=()=>resolve(u);
-					img.onerror=next;
-					img.src=u;
-				};
-				next();
-			});
-		}
 		const params = new URL(location.href).searchParams;
 		const slug = params.get('slug');
-		if(!slug){
+
+		if (!slug) {
 			location.replace('/students/students.html');
 			return;
 		}
-		const roster = await fetchYAML(`${DATA_BASE}/students/student_roster.yml`);
-		const person = (Array.isArray(roster)?roster:[]).find(p=>p.slug===slug) || {};
-		document.title = `${person.display_name || formatNameFromSlug(slug)} — CTA Profile`;
-		document.getElementById('profile-name').textContent = person.display_name || formatNameFromSlug(slug);
-		const years = (await fetchYAML(`${DATA_BASE}/students/student_years.yml`)).years || [];
+
+		const roster = await ProfileUtils.fetchYAML(`${DATA_BASE}/students/student_roster.yml`);
+		const person = (Array.isArray(roster) ? roster : []).find(p => p.slug === slug);
+
+		if (!person) {
+			ProfileUtils.showProfileNotFound('/students/students.html', 'Back to Students');
+			return;
+		}
+
+		const displayName = person.display_name || ProfileUtils.formatNameFromSlug(slug);
+		document.title = `${displayName} — CTA Profile`;
+		document.getElementById('profile-name').textContent = displayName;
+
+		const years = (await ProfileUtils.fetchYAML(`${DATA_BASE}/students/student_years.yml`)).years || [];
+
 		// Photo
-		const imgEl = document.getElementById('profile-photo'); imgEl.src = DEFAULT_IMG;
-		firstReachable(imageCandidates(slug, person, years)).then(u=> imgEl.src = u);
+		const imgEl = document.getElementById('profile-photo');
+		imgEl.src = DEFAULT_IMG;
+		imgEl.alt = `Photo of ${displayName}`;
+		const candidates = ProfileUtils.imageCandidates(slug, person, years, IMG_ROSTER, IMG_YEARS, DEFAULT_IMG);
+		ProfileUtils.firstReachableImage(candidates).then(u => imgEl.src = u);
+
 		// Load all years to determine participation and latest affiliation
 		const lists = await Promise.all(
-			years.map(y => fetchYAML(`${DATA_BASE}/students/students_${y}.yml`).then(list => ({y, list})))
+			years.map(y => ProfileUtils.fetchYAML(`${DATA_BASE}/students/students_${y}.yml`).then(list => ({y, list})))
 		);
 		const myYears = lists
-			.filter(e => (Array.isArray(e.list)?e.list:[]).some(s => s.slug === slug))
+			.filter(e => (Array.isArray(e.list) ? e.list : []).some(s => s.slug === slug))
 			.map(e => e.y);
+
 		// Latest affiliation from most-recent year
 		let latestAff = '';
 		let latestStint = null;
-		if (myYears.length){
+		if (myYears.length) {
 			const latestYear = myYears[0];
 			const latestList = (lists.find(e => e.y === latestYear) || {}).list || [];
 			latestStint = latestList.find(s => s.slug === slug) || null;
@@ -173,92 +135,57 @@
 		}
 		document.getElementById('profile-affiliation').textContent = latestAff || '—';
 
-		(function renderInterests(){
-			const titleEl = document.getElementById('interests-title');
-			const listEl	= document.getElementById('profile-interests');
-			if (!titleEl || !listEl) return;
-			const toItems = (v) => {
-				if (!v) return [];
-				if (Array.isArray(v)) return v.map(s => String(s).trim()).filter(Boolean);
-				return String(v).split(/[,;|\n]/).map(s => s.trim()).filter(Boolean);
-			};
-			let items = toItems(person.interests);
-			if (!items.length && latestStint && latestStint.focus){
-				items = toItems(latestStint.focus);
+		// Interests
+		const titleEl = document.getElementById('interests-title');
+		const listEl = document.getElementById('profile-interests');
+		if (titleEl && listEl) {
+			let items = ProfileUtils.parseInterests(person.interests);
+			if (!items.length && latestStint && latestStint.focus) {
+				items = ProfileUtils.parseInterests(latestStint.focus);
 			}
-			const seen = new Set();
-			items = items.filter(s => {
-				const k = s.toLowerCase();
-				if (seen.has(k)) return false;
-				seen.add(k);
-				return true;
-			});
-			if (!items.length) return; // nothing to show
-			titleEl.style.display = '';
-			listEl.style.display	= '';
-			listEl.innerHTML = '';
-			items.forEach(txt => {
-				const li = document.createElement('li');
-				li.textContent = txt;
-				listEl.appendChild(li);
-			});
-		})();
-		// Bio will appear once when data is added to roster
+
+			if (items.length > 0) {
+				titleEl.style.display = '';
+				listEl.style.display = '';
+				listEl.innerHTML = '';
+				items.forEach(txt => {
+					const li = document.createElement('li');
+					li.textContent = txt;
+					listEl.appendChild(li);
+				});
+			}
+		}
+
+		// Bio
 		const bioText = (person.bio && String(person.bio).trim()) || '';
-		if (bioText){
+		if (bioText) {
 			const bioEl = document.getElementById('profile-bio');
 			bioEl.textContent = bioText;
 			bioEl.style.display = '';
 		}
+
 		// Contact entries
-		const list = document.getElementById('contact-list'); list.innerHTML='';
-		if (person.email){
-			const li=document.createElement('li');
-			li.appendChild(a(`mailto:${person.email}`, person.email));
-			list.appendChild(li);
-		}
-		if (person.phone){
-			const li=document.createElement('li');
-			li.textContent = person.phone;
-			list.appendChild(li);
-		}
-		if (person.scholar){
-			const li=document.createElement('li');
-			li.appendChild(a(person.scholar, 'Google Scholar'));
-			list.appendChild(li);
-		}
-		if (person.ads){
-			const li=document.createElement('li');
-			li.appendChild(a(person.ads, 'NASA ADS'));
-			list.appendChild(li);
-		}
-		// Participation newest to oldest
-		const ul = document.getElementById('stints'); ul.innerHTML='';
+		ProfileUtils.renderContactInfo(person, document.getElementById('contact-list'));
+
+		// Participation years
+		const ul = document.getElementById('stints');
+		ul.innerHTML = '';
 		myYears.forEach(y => {
-			const li=document.createElement('li');
-			const L=a(`/students/year.html?y=${y}`, `${y}`);
-			li.appendChild(L); ul.appendChild(li);
+			const li = document.createElement('li');
+			const link = ProfileUtils.createExternalLink(`/students/year.html?y=${y}`, `${y}`);
+			link.removeAttribute('target'); // Internal link, no new tab
+			link.removeAttribute('aria-label');
+			li.appendChild(link);
+			ul.appendChild(li);
 		});
+
+		// Load partials
+		ProfileUtils.loadPartial('#cta-contact', '/partials/contact.html');
+		ProfileUtils.loadPartial('#cta-footer', '/partials/footer.html');
+
+		// Initialize strap height syncing
+		ProfileUtils.initStrapSync();
 	})();
-		(function syncStrap(){
-			function update(){
-				var tb = document.querySelector('.page-strap .top-bar');
-				var bg = document.querySelector('.page-strap .strap-bg');
-				if (tb && bg) bg.style.height = tb.offsetHeight + 'px';
-			}
-			window.addEventListener('load', update);
-			window.addEventListener('resize', update);
-		})();
-	</script>
-	<script>
-	$(function () {
-	    $("#cta-contact").load("/partials/contact.html");
-	});
-	</script>
-	<script>
-	$(function () {
-	    $("#cta-footer").load("/partials/footer.html");
-	});
 	</script>
 </body>
 </html>

@@ -1,0 +1,186 @@
+/* ===== Shared Profile & Year Page Styles =====
+   Common styles for staff, postdoc, and student profile pages
+   and their respective year listing pages.
+*/
+
+/* ===== Profile page layout ===== */
+.profile-name {
+    margin: 10px 0 12px;
+    font-size: 28px;
+    line-height: 1.25;
+    text-align: left;
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 360px) minmax(280px, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+/* Tablet and below: single column layout */
+@media (max-width: 992px) {
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 50% 20%;
+    border-radius: 8px;
+    display: block;
+}
+
+.profile-affil {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+.profile-affil strong {
+    color: #222;
+}
+
+/* Contact card on the right-hand side */
+.contact-card {
+    margin-left: auto;
+    width: 100%;
+    max-width: 360px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.06);
+}
+
+.contact-card h4 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.contact-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-card li {
+    margin: 6px 0;
+    word-break: break-word;
+    text-align: left;
+}
+
+.contact-card a {
+    color: #028fcc;
+}
+
+/* Profile bio */
+.profile-bio {
+    margin-top: 16px;
+    font-size: 15px;
+    color: #444;
+    text-align: left;
+}
+
+/* Profile interests as a centered grid */
+.profile-interests {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    column-gap: 125px;
+    row-gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-interests li {
+    text-align: center;
+}
+
+/* Profile stints (participation years) */
+.profile-stints {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    column-gap: 125px;
+    row-gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-stints li {
+    text-align: center;
+}
+
+/* ===== Year listing page styles ===== */
+.year-list {
+    margin-bottom: 30px;
+}
+
+.year-left {
+    text-align: left !important;
+}
+
+.year-left + .underline1 {
+    margin: 20px 0 16px 0;
+}
+
+/* Previous years grid */
+#team .years-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    column-gap: 125px;
+    row-gap: 50px;
+    list-style: none !important;
+    list-style-type: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+#team .years-grid li {
+    text-align: center;
+}
+
+#team .years-grid a {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    color: #028fcc;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#team .years-grid a:hover {
+    color: red;
+}
+
+/* Tablet and below: 3 columns */
+@media (max-width: 992px) {
+    #team .years-grid {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+/* Mobile landscape: 2 columns */
+@media (max-width: 768px) {
+    #team .years-grid {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+/* Mobile portrait: 1 column */
+@media (max-width: 576px) {
+    #team .years-grid {
+        grid-template-columns: auto;
+    }
+}

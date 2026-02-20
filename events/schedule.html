@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Events & Schedule — Center for Theoretical Astrophysics</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/design-system.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/staff.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/events.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+
+	<!-- YAML Parser -->
+	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+</head>
+<body>
+	<!-- Compact Header (strap) -->
+	<div class="header page-strap" id="home">
+		<div class="top-bar">
+			<div class="container">
+				<div class="logo">
+					<p><a href="/index.html">Center for Theoretical<br />Astrophysics</a></p>
+					<br>
+					<p class="subtitle"><a href="https://www.lanl.gov/">Los Alamos National Laboratory</a></p>
+				</div>
+				<div class="info">
+					<div class="email">
+						<p>
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+							<a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a>
+						</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="strap-bg" aria-hidden="true"></div>
+	</div>
+	<!-- //Compact Header -->
+
+	<!-- Events Section -->
+	<div class="events-section team" id="events">
+		<div class="container">
+			<h1 class="title">EVENTS & SCHEDULE</h1>
+			<p class="underline1"></p>
+
+			<!-- Meeting Info -->
+			<div class="meeting-info">
+				<h2>CTA WEEKLY MEETINGS</h2>
+				<div class="underline1"></div>
+				<p>
+					Current LANL staff and students are welcome to join us at our weekly CTA meetings.
+					The meetings take place at <strong>9:00 AM most Fridays</strong> in the <strong>CNLS Conference Room (03-1690-102)</strong>.
+				</p>
+				<p>
+					To join our mail list and Teams group, please contact one of the meeting organizers.
+				</p>
+			</div>
+
+			<!-- Calendar Section -->
+			<div class="calendar-section">
+				<h2>CALENDAR</h2>
+				<div class="underline1"></div>
+				<div class="calendar-container">
+					<!-- PLACEHOLDER: Replace src with your Google Calendar embed URL -->
+					<!-- Make sure your calendar is public and add &mode=MONTH to show month view -->
+					<iframe src="https://calendar.google.com/calendar/embed?src=704516115b487fef862286807f5f91bdf0b8e3f99e37dadd92dc9e93946749ed%40group.calendar.google.com&ctz=America%2FDenver"
+						style="border: 0"
+						width="800"
+						height="600"
+						frameborder="0"
+						scrolling="no"
+						id="calendar-iframe">
+					</iframe>
+				</div>
+			</div>
+
+			<!-- Featured Speaker Card -->
+			<div id="featured-speaker-card" class="featured-speaker-card" style="display:none;">
+				<h2>FEATURED GUEST SPEAKER</h2>
+				<div class="underline1"></div>
+				<h2 class="speaker-name" id="speaker-name"></h2>
+				<p class="speaker-affiliation" id="speaker-affiliation"></p>
+
+				<div class="speaker-details">
+					<div class="speaker-photo-container" id="speaker-photo-container" style="display:none;">
+						<img id="speaker-photo" class="speaker-photo" alt="">
+					</div>
+					<div class="speaker-content">
+						<h3 class="speaker-title" id="speaker-title"></h3>
+						<div class="speaker-meta">
+							<p><strong>Date:</strong> <span id="speaker-date"></span></p>
+							<p><strong>Time:</strong> <span id="speaker-time"></span></p>
+							<p><strong>Location:</strong> <span id="speaker-location"></span></p>
+						</div>
+						<div class="speaker-bio" id="speaker-bio"></div>
+						<div class="speaker-abstract" id="speaker-abstract" style="display:none;">
+							<h4>Abstract</h4>
+							<div id="speaker-abstract-text"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //Events Section -->
+	<!-- // TODO: add specific events announcements-->
+
+	<!-- Contact -->
+	<div id="cta-contact"></div>
+	<!-- //Contact -->
+
+	<!-- Footer -->
+	<div id="cta-footer"></div>
+	<!-- //Footer -->
+
+	<!-- JS dependencies -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script>
+	(async function() {
+		// PLACEHOLDER: Replace with your GitHub Gist raw URL
+		const GIST_URL = 'https://gist.githubusercontent.com/markaltenborn/3d28e8d63f876be17536431c31218bef/raw/acf70c0759168d4b8cbaf63d0203f101f6f2bd5c/cta-featured-speaker.yml';
+
+		async function loadFeaturedSpeaker() {
+			try {
+				// Skip loading if placeholder URL
+				if (GIST_URL.includes('GITHUB_GIST')) {
+					console.log('Featured speaker: Placeholder URL, skipping load');
+					return;
+				}
+
+				const response = await fetch(GIST_URL);
+				if (!response.ok) throw new Error('Failed to fetch speaker data');
+
+				const text = await response.text();
+				const data = jsyaml.load(text);
+
+				if (data.featured_speaker && data.featured_speaker.enabled) {
+					renderSpeakerCard(data.featured_speaker);
+				}
+			} catch (error) {
+				console.log('No featured speaker data:', error.message);
+			}
+		}
+
+		function renderSpeakerCard(speaker) {
+			const card = document.getElementById('featured-speaker-card');
+
+			// Set basic info
+			document.getElementById('speaker-name').textContent = speaker.name || '';
+			document.getElementById('speaker-affiliation').textContent = speaker.affiliation || '';
+			document.getElementById('speaker-title').textContent = speaker.title || '';
+
+			// Format date
+			if (speaker.date) {
+				const date = new Date(speaker.date);
+				const formatted = date.toLocaleDateString('en-US', {
+					weekday: 'long',
+					year: 'numeric',
+					month: 'long',
+					day: 'numeric'
+				});
+				document.getElementById('speaker-date').textContent = formatted;
+			}
+
+			document.getElementById('speaker-time').textContent = speaker.time || '';
+			document.getElementById('speaker-location').textContent = speaker.location || '';
+
+			// Bio
+			if (speaker.bio) {
+				const bioEl = document.getElementById('speaker-bio');
+				bioEl.innerHTML = `<h4>Biography</h4><p>${speaker.bio.replace(/\n/g, '</p><p>')}</p>`;
+			}
+
+			// Abstract
+			if (speaker.abstract) {
+				const abstractEl = document.getElementById('speaker-abstract');
+				abstractEl.style.display = 'block';
+				document.getElementById('speaker-abstract-text').innerHTML =
+					`<p>${speaker.abstract.replace(/\n/g, '</p><p>')}</p>`;
+			}
+
+			// Photo
+			if (speaker.photo) {
+				const photoContainer = document.getElementById('speaker-photo-container');
+				const photoEl = document.getElementById('speaker-photo');
+				photoContainer.style.display = 'block';
+				photoEl.src = speaker.photo;
+				photoEl.alt = speaker.name || 'Speaker photo';
+			}
+
+			// Show the card
+			card.style.display = 'block';
+		}
+
+		// Check if calendar URL is configured
+		function checkCalendarConfig() {
+			const iframe = document.getElementById('calendar-iframe');
+			const placeholder = document.getElementById('calendar-placeholder');
+
+			if (iframe.src.includes('GOOGLE_CALENDAR')) {
+				// Placeholder URL, show message
+				iframe.style.display = 'none';
+				placeholder.style.display = 'block';
+			} else {
+				// Real URL, show calendar
+				iframe.style.display = 'block';
+				placeholder.style.display = 'none';
+			}
+		}
+
+		// Load partials
+		async function loadPartial(selector, url) {
+			try {
+				const response = await fetch(url);
+				const html = await response.text();
+				const element = document.querySelector(selector);
+				if (element) element.innerHTML = html;
+			} catch (error) {
+				console.error('Error loading partial:', error);
+			}
+		}
+
+		// Sync strap height
+		function syncStrap() {
+			const tb = document.querySelector('.page-strap .top-bar');
+			const bg = document.querySelector('.page-strap .strap-bg');
+			if (tb && bg) bg.style.height = tb.offsetHeight + 'px';
+		}
+
+		// Initialize
+		checkCalendarConfig();
+		loadFeaturedSpeaker();
+		loadPartial('#cta-contact', '/partials/contact.html');
+		loadPartial('#cta-footer', '/partials/footer.html');
+
+		window.addEventListener('load', syncStrap);
+		window.addEventListener('resize', syncStrap);
+	})();
+	</script>
+</body>
+</html>

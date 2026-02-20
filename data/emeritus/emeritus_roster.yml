@@ -3,52 +3,60 @@
   sort_key: "andrews, amaya"
   email: aandrews@lanl.gov
   photo: "/emeritus/images/amaya-andrews.jpg"
-  scholar: 
-  ads: 
-  bio: 
-  interests: 
+  scholar:
+  ads:
+  bio: "Former CTA scientist specializing in computational astrophysics and core-collapse supernovae modeling."
+  interests:
     - Computational astrophysics
     - Core-collapse supernovae
     - Radiation hydrodynamics
     - Nucleosynthesis
     - Code modernization
     - Verification & validation
-  leadership: 
-  university: 
+  leadership:
+  university:
   role: Scientist
   division: Computing and Artificial Intelligence
-  focus: 
+  focus:
+  years_start: 2018
+  years_end: 2024
 
 - slug: roseanne-cheng
   display_name: "Roseanne Cheng"
   sort_key: "cheng, roseanne"
-  email: 
+  email:
   photo: "/emeritus/images/roseanne-cheng.jpg"
-  scholar: 
-  ads: 
-  bio: 
-  interests: 
+  scholar:
+  ads:
+  bio: "Former CTA scientist working on tidal disruption events and computational methods."
+  interests:
     - Tidal disruption events
     - Overset mesh methods
-  leadership: 
-  university: 
+  leadership:
+  university:
   role: Scientist
   division: Theoretical
-  focus: 
+  focus:
+  years_start: 2016
+  years_end: 2023
 
 - slug: jonas-lippuner
   display_name: "Jonas Lippuner"
   sort_key: "lippuner, jonas"
-  email: 
+  email:
   photo: "/emeritus/images/jonas-lippuner.jpg"
-  scholar: 
-  ads: 
-  bio: 
-  interests: 
+  scholar:
+  ads:
+  bio: "Former CTA scientist researching tidal disruption events and advanced numerical methods."
+  interests:
     - Tidal disruption events
     - Overset mesh methods
-  leadership: 
-  university: 
+    - Nucleosynthesis
+    - Neutron star mergers
+  leadership:
+  university:
   role: Scientist
   division: Theoretical
-  focus: 
+  focus:
+  years_start: 2015
+  years_end: 2022

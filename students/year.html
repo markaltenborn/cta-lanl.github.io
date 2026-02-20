@@ -5,9 +5,11 @@
 	<title>Students — Year</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/style.css"				type="text/css" media="all">
-	<link rel="stylesheet" href="/css/cards.css"				type="text/css" media="all">
-	<link rel="stylesheet" href="/css/student.css"			type="text/css" media="all">
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/cards.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/student.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/profiles-common.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
 
@@ -57,6 +59,7 @@
 	<div id="cta-footer"></div>
 	<!-- //Footer -->
 	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script src="/js/profile-utils.js"></script>
 	<script>
 	(function(){
 		const DATA_BASE    = '/data';
@@ -75,7 +78,7 @@
 			return n;
 		}
 		async function fetchYAML(p){
-			const r=await fetch(p,{cache:'no-store'});
+			const r=await fetch(p);
 			const t=await r.text();
 			return jsyaml.load(t)||{};
 		}
@@ -164,27 +167,12 @@
 		}
 		main().catch(console.error);
 	})();
-	</script>
-	<script>
-		(function syncStrap(){
-			function update(){
-				var tb = document.querySelector('.page-strap .top-bar');
-				var bg = document.querySelector('.page-strap .strap-bg');
-				if (tb && bg) bg.style.height = tb.offsetHeight + 'px';
-			}
-			window.addEventListener('load', update);
-			window.addEventListener('resize', update);
-		})();
-	</script>
-	<script>
-	$(function () {
-	    $("#cta-contact").load("/partials/contact.html");
-	});
-	</script>
-	<script>
-	$(function () {
-	    $("#cta-footer").load("/partials/footer.html");
-	});
+		// Load partials
+		ProfileUtils.loadPartial('#cta-contact', '/partials/contact.html');
+		ProfileUtils.loadPartial('#cta-footer', '/partials/footer.html');
+
+		// Initialize strap height syncing
+		ProfileUtils.initStrapSync();
 	</script>
 </body>
 </html>

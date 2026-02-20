@@ -1,0 +1,246 @@
+/* ===================================
+   Events & Schedule Page Styles
+   =================================== */
+
+.events-section {
+    padding: 60px 0;
+}
+
+.events-section .title {
+    margin-bottom: 20px;
+}
+
+/* Meeting Info Section */
+.meeting-info {
+    margin: 40px 0 28px 0;
+    text-align: center;
+}
+
+.meeting-info h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team .meeting-info p {
+    margin: 12px auto;
+    width: 60%;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Featured Speaker Card */
+.featured-speaker-card {
+    margin: 40px 0;
+    padding: 30px 10px 30px 30px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.featured-speaker-card > h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.speaker-name {
+    margin: 0 0 8px 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: left;
+}
+
+.speaker-affiliation {
+    margin: 0 0 24px 0;
+    font-size: 18px;
+    color: #555;
+    font-weight: 500;
+    text-align: left;
+}
+
+.speaker-details {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+    margin-top: 24px;
+}
+
+.speaker-photo-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.speaker-photo {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.speaker-content {
+    flex: 1;
+}
+
+.speaker-title {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3e50;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.speaker-meta {
+    margin-bottom: 24px;
+    padding: 16px;
+    background: transparent;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.speaker-meta p {
+    margin: 8px 0;
+    color: #444;
+    font-size: 15px;
+    text-align: left;
+}
+
+.speaker-meta strong {
+    display: inline-block;
+    width: 80px;
+    color: #2c3e50;
+}
+
+.speaker-bio,
+.speaker-abstract {
+    text-align: left;
+}
+
+.speaker-bio h4,
+.speaker-abstract h4 {
+    margin: 24px 0 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.speaker-bio p,
+.speaker-abstract p {
+    margin: 12px 0;
+    color: #555;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* Calendar Section */
+.calendar-section {
+    margin: 40px 0 28px 0;
+}
+
+.calendar-section h2 {
+    margin-top: 28px;
+    margin-bottom: 20px;
+}
+
+.calendar-container {
+    margin-top: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.calendar-container iframe {
+    display: block;
+    width: 100%;
+    min-height: 600px;
+    border: none;
+}
+
+.calendar-placeholder {
+    padding: 60px 20px;
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .speaker-details {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .speaker-photo-container {
+        justify-content: center;
+    }
+
+    .speaker-photo {
+        max-width: 250px;
+    }
+
+    .speaker-name {
+        font-size: 28px;
+    }
+
+    .speaker-title {
+        font-size: 20px;
+    }
+
+    .featured-speaker-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .events-section {
+        padding: 40px 0;
+    }
+
+    .speaker-name {
+        font-size: 24px;
+    }
+
+    .speaker-affiliation {
+        font-size: 16px;
+    }
+
+    .speaker-title {
+        font-size: 18px;
+    }
+
+    .speaker-meta strong {
+        display: block;
+        width: auto;
+        margin-bottom: 4px;
+    }
+
+    .calendar-container iframe {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-speaker-card {
+        padding: 20px 15px;
+    }
+
+    .speaker-name {
+        font-size: 22px;
+    }
+
+    .calendar-section h2 {
+        font-size: 24px;
+    }
+
+    .calendar-container iframe {
+        min-height: 450px;
+    }
+}

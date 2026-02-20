@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Emeritus Members — CTA</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/design-system.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/cards.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/emeritus.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/chocolat.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/profiles-common.css"  type="text/css" media="all">
+	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+</head>
+<body>
+	<!-- Compact Header -->
+	<div class="header page-strap" id="home">
+		<div class="top-bar">
+			<div class="container">
+				<!-- Logo -->
+				<div class="logo">
+					<p><a href="/index.html">Center for Theoretical<br />Astrophysics</a></p>
+					<br>
+					<p class="subtitle"><a href="http://cta.lanl.gov">Los Alamos National Laboratory</a></p>
+				</div>
+				<!-- //Logo -->
+				<div class="info">
+					<!-- Email -->
+					<div class="email">
+						<p>
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+							<a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a>
+						</p>
+					</div>
+					<!-- //Email -->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="strap-bg" aria-hidden="true"></div>
+	</div>
+	<!-- //Compact Header -->
+
+	<!-- About -->
+	<div id="emeritus-intro" class="cta-section">
+		<div class="container">
+			<h1>EMERITUS MEMBERS</h1>
+			<p>
+				The Center for Theoretical Astrophysics has been fortunate to work with exceptional
+				scientists, postdocs, and students over the years. This page honors former CTA staff members
+				who have moved on to new positions and opportunities. We celebrate their contributions
+				to CTA and wish them continued success in their careers.
+			</p>
+			<div class="underline1"></div>
+		</div>
+	</div>
+	<!-- //About -->
+
+	<!-- Team -->
+	<div class="team" id="team">
+		<div class="container">
+			<p style="text-align:left;margin:12px 0 10px;">
+                <a href="/staff/people.html">&larr; Back to Members</a>
+            </p>
+			<h1 class="title">FORMER CTA MEMBERS</h1>
+			<p class="underline1"></p>
+			<div class="emeritus-card-grid" id="emeritus-grid"></div>
+		</div>
+	</div>
+	<!-- //Team -->
+
+	<!-- Contact -->
+	<div id="cta-contact"></div>
+	<!-- //Contact -->
+
+	<!-- Footer -->
+	<div id="cta-footer"></div>
+	<!-- //Footer -->
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+	(async function(){
+		const DATA_BASE = '/data';
+		const IMG_ROSTER = '/emeritus/images';
+		const DEFAULT_IMG = '/staff/images/cta-default.jpg';
+
+		function el(tag, attrs = {}, ...children) {
+			const n = document.createElement(tag);
+			Object.entries(attrs).forEach(([k, v]) => {
+				if (k === 'className') n.className = v;
+				else if (k.startsWith('on')) n.addEventListener(k.slice(2).toLowerCase(), v);
+				else n.setAttribute(k, v);
+			});
+			children.forEach(x => {
+				if (x != null) n.appendChild(typeof x === 'string' ? document.createTextNode(x) : x);
+			});
+			return n;
+		}
+
+		async function fetchYAML(path) {
+			const res = await fetch(path);
+			const txt = await res.text();
+			return jsyaml.load(txt) || {};
+		}
+
+		function imageCandidates(slug, person) {
+			const exts = ['.jpg', '.png', '.jpeg'];
+			const out = [];
+			if (person && person.photo) out.push(person.photo);
+			for (const ext of exts) out.push(`${IMG_ROSTER}/${slug}${ext}`);
+			out.push(DEFAULT_IMG);
+			return Array.from(new Set(out.filter(Boolean)));
+		}
+
+		function firstReachable(urls) {
+			return new Promise(resolve => {
+				let i = 0;
+				const img = new Image();
+				const next = () => {
+					if (i >= urls.length) return resolve(DEFAULT_IMG);
+					const u = urls[i++];
+					img.onload = () => resolve(u);
+					img.onerror = next;
+					img.src = u;
+				};
+				next();
+			});
+		}
+
+		function card(person) {
+			const wrap = el('div', { className: 'emeritus-card-wrap' });
+			const cardEl = el('a', {
+				href: `/emeritus/profile.html?slug=${person.slug}`,
+				className: 'emeritus-card'
+			});
+
+			const photoWrap = el('div', { className: 'emeritus-photo-wrap' });
+			const photoEl = el('img', {
+				className: 'emeritus-photo',
+				alt: person.display_name || '',
+				loading: 'lazy'
+			});
+			photoEl.src = DEFAULT_IMG;
+
+			firstReachable(imageCandidates(person.slug, person))
+				.then(u => { photoEl.src = u; });
+
+			photoWrap.appendChild(photoEl);
+			cardEl.appendChild(photoWrap);
+
+			const meta = el('div', { className: 'emeritus-meta' });
+			const h4 = el('h4', {}, person.display_name || '');
+			meta.appendChild(h4);
+
+			if (person.role) {
+				const roleDiv = el('div', { className: 'emeritus-role' }, person.role);
+				meta.appendChild(roleDiv);
+			}
+
+			if (person.division) {
+				const divDiv = el('div', { className: 'emeritus-division' }, person.division);
+				meta.appendChild(divDiv);
+			}
+
+			// Display year range if available
+			if (person.years_start || person.years_end) {
+				const yearsText = `CTA member: ${person.years_start || '?'} — ${person.years_end || 'present'}`;
+				const yearsDiv = el('div', { className: 'emeritus-years' }, yearsText);
+				meta.appendChild(yearsDiv);
+			}
+
+			cardEl.appendChild(meta);
+			wrap.appendChild(cardEl);
+			return wrap;
+		}
+
+		async function main() {
+			const roster = await fetchYAML(`${DATA_BASE}/emeritus/emeritus_roster.yml`);
+			const people = Array.isArray(roster) ? roster : [];
+
+			people.sort((a, b) => {
+				const aKey = a.sort_key || a.display_name || '';
+				const bKey = b.sort_key || b.display_name || '';
+				return aKey.localeCompare(bKey);
+			});
+
+			const grid = document.getElementById('emeritus-grid');
+			people.forEach(person => grid.appendChild(card(person)));
+		}
+
+		main().catch(console.error);
+
+		// Load partials
+		async function loadPartial(selector, url) {
+			try {
+				const response = await fetch(url);
+				const html = await response.text();
+				const element = document.querySelector(selector);
+				if (element) element.innerHTML = html;
+			} catch (error) {
+				console.error('Error loading partial:', error);
+			}
+		}
+
+		loadPartial('#cta-contact', '/partials/contact.html');
+		loadPartial('#cta-footer', '/partials/footer.html');
+
+		// Sync strap height
+		function syncStrap() {
+			const tb = document.querySelector('.page-strap .top-bar');
+			const bg = document.querySelector('.page-strap .strap-bg');
+			if (tb && bg) bg.style.height = tb.offsetHeight + 'px';
+		}
+		window.addEventListener('load', syncStrap);
+		window.addEventListener('resize', syncStrap);
+	})();
+	</script>
+</body>
+</html>

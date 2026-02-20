@@ -3,7 +3,8 @@
 /* Grids */
 .staff-card-grid,
 .postdoc-card-grid,
-.student-card-grid {
+.student-card-grid,
+.emeritus-card-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,7 +18,9 @@
 .postdoc-card-grid::before,
 .postdoc-card-grid::after,
 .student-card-grid::before,
-.student-card-grid::after {
+.student-card-grid::after,
+.emeritus-card-grid::before,
+.emeritus-card-grid::after {
     content: none !important;
     display: none !important;
 }
@@ -25,23 +28,28 @@
 /* Card wrappers */
 .staff-card-wrap,
 .postdoc-card-wrap,
-.student-card-wrap {
+.student-card-wrap,
+.emeritus-card-wrap {
     flex: 0 1 calc(25% - 24px);
     max-width: 260px;
 }
 
-@media (max-width: 991px) {
+/* Tablet: 2 columns */
+@media (max-width: 992px) {
     .staff-card-wrap,
     .postdoc-card-wrap,
-    .student-card-wrap {
+    .student-card-wrap,
+    .emeritus-card-wrap {
         flex: 0 1 calc(50% - 24px);
     }
 }
 
-@media (max-width: 480px) {
+/* Mobile: 1 column */
+@media (max-width: 576px) {
     .staff-card-wrap,
     .postdoc-card-wrap,
-    .student-card-wrap {
+    .student-card-wrap,
+    .emeritus-card-wrap {
         flex: 0 1 100%;
         max-width: 340px;
     }
@@ -50,7 +58,8 @@
 /* Card containers */
 .staff-card,
 .postdoc-card,
-.student-card {
+.student-card,
+.emeritus-card {
     display: flex;
     flex-direction: column;
     background: #FFF;
@@ -67,9 +76,11 @@
 .staff-card:hover,
 .postdoc-card:hover,
 .student-card:hover,
+.emeritus-card:hover,
 .staff-card:focus-within,
 .postdoc-card:focus-within,
-.student-card:focus-within {
+.student-card:focus-within,
+.emeritus-card:focus-within {
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(0,0,0,.12);
 }
@@ -77,13 +88,15 @@
 /* Photos */
 .staff-photo-wrap,
 .postdoc-photo-wrap,
-.student-photo-wrap {
+.student-photo-wrap,
+.emeritus-photo-wrap {
     position: relative;
 }
 
 .staff-photo,
 .postdoc-photo,
-.student-photo {
+.student-photo,
+.emeritus-photo {
     display: block;
     width: 100%;
     height: auto;
@@ -95,7 +108,8 @@
 /* Shared meta area */
 .staff-meta,
 .postdoc-meta,
-.student-meta {
+.student-meta,
+.emeritus-meta {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -107,7 +121,8 @@
 /* Name line – LaTeX \textsc-style small caps */
 .staff-meta h4,
 .postdoc-meta h4,
-.student-meta h4 {
+.student-meta h4,
+.emeritus-meta h4 {
     margin: 6px 0 4px;
     font-size: 18px;
     font-weight: 700;
@@ -121,14 +136,16 @@
 /* Name links (when the name itself is wrapped in an <a>) */
 .staff-meta h4 a,
 .postdoc-meta h4 a,
-.student-meta h4 a {
+.student-meta h4 a,
+.emeritus-meta h4 a {
     color: inherit;
     text-decoration: none;
 }
 
 .staff-meta h4 a:hover,
 .postdoc-meta h4 a:hover,
-.student-meta h4 a:hover {
+.student-meta h4 a:hover,
+.emeritus-meta h4 a:hover {
     text-decoration: underline;
 }
 
@@ -141,7 +158,10 @@
 .postdoc-group,
 .student-univ,
 .student-role,
-.student-group {
+.student-group,
+.emeritus-role,
+.emeritus-division,
+.emeritus-years {
     margin: 2px 0;
     font-size: 13px;
     font-weight: 600;
@@ -151,7 +171,8 @@
 /* Interests / focus */
 .staff-interests,
 .postdoc-focus,
-.student-focus {
+.student-focus,
+.emeritus-focus {
     margin-top: 8px;
     font-size: 11px;
     line-height: 1.4;
@@ -161,7 +182,8 @@
 /* Email lines */
 .staff-email,
 .postdoc-email,
-.student-email {
+.student-email,
+.emeritus-email {
     margin-top: 10px;
     font-size: 10px;
     text-align: left;
@@ -169,7 +191,8 @@
 
 .staff-email a,
 .postdoc-email a,
-.student-email a {
+.student-email a,
+.emeritus-email a {
     color: #028fcc;
     text-decoration: none;
     word-break: break-all;
@@ -177,7 +200,8 @@
 
 .staff-email a:hover,
 .postdoc-email a:hover,
-.student-email a:hover {
+.student-email a:hover,
+.emeritus-email a:hover {
     color: red;
 }
 
@@ -185,7 +209,8 @@
 /* style.css sets `.team p` to centered & narrow; card text must be full-width, left. */
 .team p.staff-interests,
 .team p.postdoc-focus,
-.team p.student-focus {
+.team p.student-focus,
+.team p.emeritus-focus {
     width: 100%;
     margin: 0;
     font-size: 12px;
@@ -194,7 +219,8 @@
 
 .team p.staff-email,
 .team p.postdoc-email,
-.team p.student-email {
+.team p.student-email,
+.team p.emeritus-email {
     width: 100%;
     margin: 0;
     font-size: 11px;

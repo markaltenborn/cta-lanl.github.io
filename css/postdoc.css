@@ -1,49 +1,12 @@
-/* ===== Postdocs ===== */
+/* ===== Postdocs-specific page & profile styles =====
+   - Member card layout & typography live in cards.css
+   - Common profile/strap/year styles live in profiles-common.css
+   - These rules handle postdoc-specific overrides only
+*/
 
 /* Team section background on the postdocs page */
 #team {
     background: #EEE;
-}
-
-/* ===== Year list ===== */
-.year-list {
-    margin-bottom: 30px;
-}
-
-.postdoc-list {
-    list-style: none !important;
-    list-style-type: none !important;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
-.postdoc-list li {
-    margin: 6px 0;
-}
-
-.postdoc-list a {
-    color: #028fcc;
-    text-decoration: none;
-}
-
-.postdoc-list a:hover {
-    color: red;
-    text-decoration: none;
-}
-
-.postdoc-list .name-col {
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: left;
-}
-
-.year-left {
-    text-align: left !important;
-}
-
-.year-left + .underline1 {
-    margin: 20px 0 16px 0;
 }
 
 #team .title {
@@ -55,203 +18,36 @@
     margin-right: auto;
 }
 
-/* Previous years grid */
-.years-grid {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
-    column-gap: 125px;
-    row-gap: 50px;
+/* ===== Postdoc list styles ===== */
+#team .postdoc-list {
     list-style: none;
-    padding: 0;
+    list-style-type: none;
     margin: 0;
-}
-
-.years-grid li {
-    text-align: center;
-}
-
-.years-grid a {
-    background: none;
-    border: 0;
-    box-shadow: none;
-    border-radius: 0;
     padding: 0;
+    text-align: left;
+}
+
+#team .postdoc-list li {
+    margin: 6px 0;
+}
+
+#team .postdoc-list a {
     color: #028fcc;
-    font-weight: 700;
     text-decoration: none;
 }
 
-.years-grid a:hover {
+#team .postdoc-list a:hover {
     color: red;
+    text-decoration: none;
 }
 
-@media (max-width: 991px) {
-    .years-grid {
-        grid-template-columns: repeat(3, auto);
-    }
-}
-
-@media (max-width: 640px) {
-    .years-grid {
-        grid-template-columns: repeat(2, auto);
-    }
-}
-
-@media (max-width: 400px) {
-    .years-grid {
-        grid-template-columns: auto;
-    }
+#team .postdoc-list .name-col {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
 }
 
 /* Top spacing for the main postdoc intro section, gap between header and text */
 #postdocs-intro {
     margin-top: 60px;
-}
-
-/* ===== Strap header ===== */
-.page-strap {
-    position: relative;
-}
-
-.page-strap .top-bar {
-    position: relative;
-    z-index: 2;
-}
-
-.page-strap .strap-bg {
-    position: absolute;
-    inset: 0;
-    background: #0b1d36;
-    background: linear-gradient(
-        180deg,
-        #0B1D36 0%,
-        #091A44 20%,
-        #071753 40%,
-        #041561 60%,
-        #021270 80%,
-        #000F7E 100%
-    );
-    z-index: 1;
-    min-height: 100px;
-}
-
-.page-strap .logo a,
-.page-strap .subtitle a,
-.page-strap .info a,
-.page-strap .glyphicon {
-    color: #EEE;
-}
-
-/* ===== Postdoc Profile page ===== */
-.profile-name {
-    margin: 10px 0 12px;
-    font-size: 28px;
-    line-height: 1.25;
-    text-align: left;
-}
-
-.profile-layout {
-    display: grid;
-    grid-template-columns: minmax(240px, 360px) minmax(280px, 1fr);
-    gap: 24px;
-    align-items: start;
-}
-
-@media (max-width: 768px) {
-    .profile-layout {
-        grid-template-columns: 1fr;
-    }
-}
-
-.profile-photo {
-    width: 100%;
-    max-width: 360px;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    object-position: 50% 20%;
-    border-radius: 8px;
-    display: block;
-}
-
-.profile-affil {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #444;
-}
-
-.profile-affil strong {
-    color: #222;
-}
-
-.contact-card {
-    margin-left: auto;
-    width: 100%;
-    max-width: 360px;
-    background: #fff;
-    border: 1px solid #e6e6e6;
-    border-radius: 8px;
-    padding: 14px 16px;
-    box-shadow: 0 1px 2px rgba(0,0,0,.06);
-}
-
-.contact-card h4 {
-    margin: 0 0 8px;
-    font-size: 18px;
-    text-align: left;
-}
-
-.contact-card ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.contact-card li {
-    margin: 6px 0;
-    word-break: break-word;
-    text-align: left;
-}
-
-.contact-card a {
-    color: #028fcc;
-}
-
-.profile-bio {
-    margin-top: 16px;
-    font-size: 15px;
-    color: #444;
-    text-align: left;
-}
-
-/* Profile interests as a centered grid */
-.profile-interests {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: center;
-    column-gap: 125px;
-    row-gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.profile-interests li {
-    text-align: center;
-}
-
-/* Profile stints */
-.profile-stints {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
-    column-gap: 125px;
-    row-gap: 50px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.profile-stints li {
-    text-align: center;
 }
