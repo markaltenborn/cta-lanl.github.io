@@ -493,6 +493,13 @@ a:focus, a:hover {
     font-size:13px;
 }
 
+.menu__item__six {
+	display: block;
+	width: 16.666666%;
+	padding: 7px 0;
+    font-size:13px;
+}
+
 .menu__link {
 	cursor: pointer;
 	-webkit-user-select: none;
