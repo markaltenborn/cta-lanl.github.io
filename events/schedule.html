@@ -69,8 +69,6 @@
 				<h2>CALENDAR</h2>
 				<div class="underline1"></div>
 				<div class="calendar-container">
-					<!-- PLACEHOLDER: Replace src with your Google Calendar embed URL -->
-					<!-- Make sure your calendar is public and add &mode=MONTH to show month view -->
 					<iframe src="https://calendar.google.com/calendar/embed?src=704516115b487fef862286807f5f91bdf0b8e3f99e37dadd92dc9e93946749ed%40group.calendar.google.com&ctz=America%2FDenver"
 						style="border: 0"
 						width="800"
@@ -112,7 +110,6 @@
 		</div>
 	</div>
 	<!-- //Events Section -->
-	<!-- // TODO: add specific events announcements-->
 
 	<!-- Contact -->
 	<div id="cta-contact"></div>
@@ -127,17 +124,10 @@
 
 	<script>
 	(async function() {
-		// PLACEHOLDER: Replace with your GitHub Gist raw URL
 		const GIST_URL = 'https://gist.githubusercontent.com/markaltenborn/3d28e8d63f876be17536431c31218bef/raw/acf70c0759168d4b8cbaf63d0203f101f6f2bd5c/cta-featured-speaker.yml';
 
 		async function loadFeaturedSpeaker() {
 			try {
-				// Skip loading if placeholder URL
-				if (GIST_URL.includes('GITHUB_GIST')) {
-					console.log('Featured speaker: Placeholder URL, skipping load');
-					return;
-				}
-
 				const response = await fetch(GIST_URL);
 				if (!response.ok) throw new Error('Failed to fetch speaker data');
 

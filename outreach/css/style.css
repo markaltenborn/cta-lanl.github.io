@@ -666,15 +666,16 @@ p.about-p-2 {
 .about a {
 	padding: 10px 30px;
 	border-radius: 0;
-	background-color: #333;
+	background-color: #028fcc;
 	border: none;
 	outline: none;
 	color: #EEE;
 }
 
 .about a:hover {
-	background-color: #009688;
+	background-color: red;
 	color: #FFF;
+	text-decoration: underline;
 }
 
 /*-- //About --*/
