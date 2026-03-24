@@ -1,0 +1,33 @@
+/*-- Outreach Page Overrides --*/
+
+/* Logo subtitle spacing */
+.logo .subtitle {
+    line-height: 0.94;
+}
+
+/* Project title links - blue box with red hover */
+.about a {
+	padding: 10px 30px;
+	border-radius: 0;
+	background-color: #028fcc;
+	border: none;
+	outline: none;
+	color: #EEE;
+}
+
+.about a:hover {
+	background-color: red;
+	color: #FFF;
+	text-decoration: underline;
+}
+
+/* Team heading - outreach page uses h3 instead of h1 */
+.team h3 {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+/* Team h4 color override */
+.team h4 {
+	color: #393B48;
+}

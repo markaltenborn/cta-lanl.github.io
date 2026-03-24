@@ -1,0 +1,39 @@
+/* ===== Staff-specific page & profile styles =====
+   - Member card layout & typography live in cards.css
+   - Common profile/strap styles live in profiles-common.css
+   - These rules handle staff-specific overrides only
+*/
+
+/* Optional: light background for the #team section on staff pages */
+#team {
+    background: #EEE;
+}
+
+/* Titles inside the team section */
+#team .title {
+    text-align: center;
+}
+
+#team .title + .underline1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Staff-specific list styles ===== */
+.team .people-links {
+    text-align: center;        /* keep the block visually centered under the heading */
+    margin-top: 10px;
+}
+
+/* Center the list as a block, but keep its contents left-aligned */
+.team .people-links ul {
+    display: inline-block;     /* shrink to content and center as a block */
+    text-align: left;          /* list text left-aligned within that block */
+    list-style: disc outside;  /* normal bullets, just left of the text */
+    margin: 8px 0 0;
+    padding-left: 1.4em;       /* small indent so bullets aren't on the very edge */
+}
+
+.team .people-links li {
+    margin: 3px 0;
+}

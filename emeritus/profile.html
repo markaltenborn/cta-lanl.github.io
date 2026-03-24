@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Profile — CTA Emeritus</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/cards.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/emeritus.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/profiles-common.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+
+	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script src="/js/profile-utils.js"></script>
+</head>
+<body>
+	<!-- Compact Header -->
+	<div class="header page-strap" id="home">
+		<div class="top-bar">
+			<div class="container">
+				<!-- Logo -->
+				<div class="logo">
+					<p><a href="/index.html">Center for Theoretical<br />Astrophysics</a></p>
+					<br>
+					<p class="subtitle"><a href="http://cta.lanl.gov">Los Alamos National Laboratory</a></p>
+				</div>
+				<!-- //Logo -->
+				<div class="info">
+					<!-- Email -->
+					<div class="email">
+						<p>
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+							<a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a>
+						</p>
+					</div>
+					<!-- //Email -->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="strap-bg" aria-hidden="true"></div>
+	</div>
+	<!-- //Compact Header -->
+
+	<!-- Team / Profile -->
+	<div class="team" id="team">
+		<div class="container">
+			<p style="text-align:left;margin:12px 0 10px;">
+                <a href="/emeritus/emeritus.html">&larr; Back to Emeritus</a>
+            </p>
+
+			<h1 class="profile-name" id="profile-name"></h1>
+
+			<div class="profile-layout">
+				<!-- Left column -->
+				<div>
+					<img class="profile-photo" id="profile-photo" alt="" loading="lazy">
+					<div class="profile-affil">
+						<strong>FORMER AFFILIATION:</strong>
+						<span id="profile-affiliation"></span>
+					</div>
+					<div class="profile-tenure" id="profile-tenure" style="display:none;">
+						<strong>CTA TENURE:</strong>
+						<span class="tenure-years" id="tenure-years"></span>
+					</div>
+				</div>
+				<!-- //Left column -->
+
+				<!-- Right column -->
+				<aside class="contact-card" aria-label="Contact information">
+					<h4>Contact</h4>
+					<ul id="contact-list"><!-- JS inserts links --></ul>
+				</aside>
+				<!-- //Right column -->
+			</div>
+
+			<!-- Bio -->
+			<div class="profile-bio" id="profile-bio" style="display:none;"></div>
+			<!-- //Bio -->
+
+			<!-- Interests -->
+			<h3 class="title" id="interests-title" style="margin-top:20px; display:none;">RESEARCH INTERESTS</h3>
+			<p class="underline1"></p>
+			<ul class="profile-interests" id="profile-interests" style="display:none;"></ul>
+			<!-- //Interests -->
+		</div>
+	</div>
+	<!-- //Team -->
+
+	<!-- Contact -->
+	<div id="cta-contact"></div>
+	<!-- //Contact -->
+
+	<!-- Footer -->
+	<div id="cta-footer"></div>
+	<!-- //Footer -->
+
+	<script>
+	(async function(){
+		const DATA_BASE   = '/data';
+		const IMG_ROSTER  = '/emeritus/images';
+		const DEFAULT_IMG = '/staff/images/cta-default.jpg';
+
+		// Get slug from URL
+		const params = new URL(location.href).searchParams;
+		const slug = params.get('slug');
+
+		if (!slug) {
+			location.replace('/emeritus/emeritus.html');
+			return;
+		}
+
+		// Load emeritus roster
+		const roster = await ProfileUtils.fetchYAML(`${DATA_BASE}/emeritus/emeritus_roster.yml`);
+		const people = Array.isArray(roster) ? roster : [];
+		const person = people.find(p => p.slug === slug);
+
+		// Show error if person not found
+		if (!person) {
+			ProfileUtils.showProfileNotFound('/staff/people.html', 'Back to Members');
+			return;
+		}
+
+		// Display name
+		const displayName = person.display_name || person.name || ProfileUtils.formatNameFromSlug(slug);
+		document.title = `${displayName} — CTA Emeritus`;
+		document.getElementById('profile-name').textContent = displayName;
+
+		// Photo
+		const imgEl = document.getElementById('profile-photo');
+		imgEl.src = DEFAULT_IMG;
+		imgEl.alt = `Photo of ${displayName}`;
+
+		// Build candidate list for emeritus
+		const exts = ['.jpg', '.png', '.jpeg'];
+		const candidates = [];
+		if (person.photo) candidates.push(person.photo);
+		for (const ext of exts) candidates.push(`${IMG_ROSTER}/${slug}${ext}`);
+		candidates.push(DEFAULT_IMG);
+		const uniqueCandidates = Array.from(new Set(candidates.filter(Boolean)));
+
+		ProfileUtils.firstReachableImage(uniqueCandidates).then(url => { imgEl.src = url; });
+
+		// Affiliation: combine role + division if present
+		const affSpan = document.getElementById('profile-affiliation');
+		const affParts = [];
+		if (person.role && String(person.role).trim()) {
+			affParts.push(String(person.role).trim());
+		}
+		if (person.division && String(person.division).trim()) {
+			affParts.push(String(person.division).trim());
+		}
+		affSpan.textContent = affParts.join(' — ') || '—';
+
+		// Tenure years
+		if (person.years_start || person.years_end) {
+			const tenureEl = document.getElementById('profile-tenure');
+			const yearsEl = document.getElementById('tenure-years');
+			const startYear = person.years_start || '?';
+			const endYear = person.years_end || 'present';
+			yearsEl.textContent = `${startYear} — ${endYear}`;
+			tenureEl.style.display = '';
+		}
+
+		// Bio
+		const bioText = (person.bio && String(person.bio).trim()) || '';
+		if (bioText) {
+			const bioEl = document.getElementById('profile-bio');
+			bioEl.textContent = bioText;
+			bioEl.style.display = '';
+		}
+
+		// Interests / focus
+		const titleEl = document.getElementById('interests-title');
+		const listEl = document.getElementById('profile-interests');
+		if (titleEl && listEl) {
+			let items = ProfileUtils.parseInterests(person.interests);
+			if (!items.length && person.focus) {
+				items = ProfileUtils.parseInterests(person.focus);
+			}
+
+			if (items.length > 0) {
+				titleEl.style.display = '';
+				listEl.style.display = '';
+				listEl.innerHTML = '';
+				items.forEach(txt => {
+					const li = document.createElement('li');
+					li.textContent = txt;
+					listEl.appendChild(li);
+				});
+			}
+		}
+
+		// Contact entries
+		ProfileUtils.renderContactInfo(person, document.getElementById('contact-list'));
+
+		// Load partials
+		ProfileUtils.loadPartial('#cta-contact', '/partials/contact.html');
+		ProfileUtils.loadPartial('#cta-footer', '/partials/footer.html');
+
+		// Initialize strap height syncing
+		ProfileUtils.initStrapSync();
+	})();
+	</script>
+</body>
+</html>

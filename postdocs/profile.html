@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Profile — CTA</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/cards.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/postdoc.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/profiles-common.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+</head>
+<body>
+	<!-- Compact Header -->
+	<div class="header page-strap" id="home">
+		<div class="top-bar">
+			<div class="container">
+				<!-- Logo -->
+				<div class="logo">
+					<p><a href="/index.html">Center for Theoretical<br />Astrophysics</a></p>
+					<br>
+					<p class="subtitle"><a href="http://cta.lanl.gov">Los Alamos National Laboratory</a></p>
+				</div>
+				<!-- //Logo -->
+				<div class="info">
+					<!-- Email -->
+					<div class="email">
+						<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a></p>
+					</div>
+					<!-- //Email -->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="strap-bg" aria-hidden="true"></div>
+	</div>
+	<!-- //Compact Header -->
+	<!-- Team -->
+	<div class="team" id="team">
+		<div class="container">
+			<p style="text-align:left;margin:12px 0 10px;"><a href="/postdocs/postdocs.html">&larr; Back to Postdocs</a></p>
+			<h1 class="profile-name" id="profile-name"></h1>
+			<div class="profile-layout">
+				<!-- Left column -->
+				<div>
+					<img class="profile-photo" id="profile-photo" alt="" loading="lazy">
+					<div class="profile-affil"><strong>AFFILIATION:</strong> <span id="profile-affiliation"></span></div>
+				</div>
+				<!-- //Left column -->
+				<!-- Right column -->
+				<aside class="contact-card" aria-label="Contact information">
+					<h4>Contact</h4>
+					<ul id="contact-list"><!-- JS inserts Email, Phone, Scholar, ADS --></ul>
+				</aside>
+				<!-- //Right column -->
+			</div>
+			<!-- Bio -->
+			<div class="profile-bio" id="profile-bio" style="display:none;"></div>
+			<!-- //Bio -->
+			<!-- Interests -->
+			<h3 class="title" id="interests-title" style="margin-top:20px; display:none;">INTERESTS</h3>
+			<p class="underline1"></p>
+			<ul class="postdoc-list profile-interests" id="profile-interests" style="display:none;"></ul>
+			<!-- //Interests -->
+			<!-- Participation -->
+			<h3 class="title" style="margin-top:28px;">CTA PARTICIPATION</h3>
+			<p class="underline1"></p>
+			<ul class="postdoc-list profile-stints" id="stints"></ul>
+			<!-- //Participation -->
+		</div>
+	</div>
+	<!-- //Team -->
+	<!-- Contact -->
+	<div id="cta-contact"></div>
+	<!-- //Contact -->
+	<!-- Footer -->
+	<div id="cta-footer"></div>
+	<!-- //Footer -->
+	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script src="/js/profile-utils.js"></script>
+	<script>
+	(async function(){
+		const DATA_BASE    = '/data';
+		const IMG_ROSTER   = '/postdocs/images/roster';
+		const IMG_YEARS    = '/postdocs/images';
+		const DEFAULT_IMG  = '/postdocs/images/cta-default.jpg';
+
+		const params = new URL(location.href).searchParams;
+		const slug = params.get('slug');
+
+		if (!slug) {
+			location.replace('/postdocs/postdocs.html');
+			return;
+		}
+
+		const roster = await ProfileUtils.fetchYAML(`${DATA_BASE}/postdocs/postdoc_roster.yml`);
+		const person = (Array.isArray(roster) ? roster : []).find(p => p.slug === slug);
+
+		if (!person) {
+			ProfileUtils.showProfileNotFound('/postdocs/postdocs.html', 'Back to Postdocs');
+			return;
+		}
+
+		const displayName = person.display_name || ProfileUtils.formatNameFromSlug(slug);
+		document.title = `${displayName} — CTA Profile`;
+		document.getElementById('profile-name').textContent = displayName;
+
+		const years = (await ProfileUtils.fetchYAML(`${DATA_BASE}/postdocs/postdoc_years.yml`)).years || [];
+
+		// Photo
+		const imgEl = document.getElementById('profile-photo');
+		imgEl.src = DEFAULT_IMG;
+		imgEl.alt = `Photo of ${displayName}`;
+		const candidates = ProfileUtils.imageCandidates(slug, person, years, IMG_ROSTER, IMG_YEARS, DEFAULT_IMG);
+		ProfileUtils.firstReachableImage(candidates).then(u => imgEl.src = u);
+
+		// Load all years to determine participation and latest affiliation
+		const lists = await Promise.all(
+			years.map(y => ProfileUtils.fetchYAML(`${DATA_BASE}/postdocs/postdocs_${y}.yml`).then(list => ({y, list})))
+		);
+		const myYears = lists
+			.filter(e => (Array.isArray(e.list) ? e.list : []).some(s => s.slug === slug))
+			.map(e => e.y);
+
+		// Latest affiliation from most-recent year
+		let latestAff = '';
+		let latestStint = null;
+		if (myYears.length) {
+			const latestYear = myYears[0];
+			const latestList = (lists.find(e => e.y === latestYear) || {}).list || [];
+			latestStint = latestList.find(s => s.slug === slug) || null;
+			latestAff = (latestStint && latestStint.university) ? latestStint.university : '';
+		}
+		document.getElementById('profile-affiliation').textContent = latestAff || '—';
+
+		// Interests
+		const titleEl = document.getElementById('interests-title');
+		const listEl = document.getElementById('profile-interests');
+		if (titleEl && listEl) {
+			let items = ProfileUtils.parseInterests(person.interests);
+			if (!items.length && latestStint && latestStint.focus) {
+				items = ProfileUtils.parseInterests(latestStint.focus);
+			}
+
+			if (items.length > 0) {
+				titleEl.style.display = '';
+				listEl.style.display = '';
+				listEl.innerHTML = '';
+				items.forEach(txt => {
+					const li = document.createElement('li');
+					li.textContent = txt;
+					listEl.appendChild(li);
+				});
+			}
+		}
+
+		// Bio
+		const bioText = (person.bio && String(person.bio).trim()) || '';
+		if (bioText) {
+			const bioEl = document.getElementById('profile-bio');
+			bioEl.textContent = bioText;
+			bioEl.style.display = '';
+		}
+
+		// Contact entries
+		ProfileUtils.renderContactInfo(person, document.getElementById('contact-list'));
+
+		// Participation years
+		const ul = document.getElementById('stints');
+		ul.innerHTML = '';
+		myYears.forEach(y => {
+			const li = document.createElement('li');
+			const link = ProfileUtils.createExternalLink(`/postdocs/year.html?y=${y}`, `${y}`);
+			link.removeAttribute('target'); // Internal link, no new tab
+			link.removeAttribute('aria-label');
+			li.appendChild(link);
+			ul.appendChild(li);
+		});
+
+		// Load partials
+		ProfileUtils.loadPartial('#cta-contact', '/partials/contact.html');
+		ProfileUtils.loadPartial('#cta-footer', '/partials/footer.html');
+
+		// Initialize strap height syncing
+		ProfileUtils.initStrapSync();
+	})();
+	</script>
+</body>
+</html>

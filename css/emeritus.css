@@ -1,0 +1,76 @@
+/* ===== Emeritus-specific page & profile styles =====
+   - Member card layout & typography live in cards.css
+   - Common profile/strap/year styles live in profiles-common.css
+   - These rules handle emeritus-specific overrides only
+*/
+
+/* Team section background on the emeritus page */
+#team {
+    background: #EEE;
+}
+
+#team .title {
+    text-align: center;
+}
+
+#team .title + .underline1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Emeritus list styles ===== */
+#team .emeritus-list {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#team .emeritus-list li {
+    margin: 6px 0;
+}
+
+#team .emeritus-list a {
+    color: #028fcc;
+    text-decoration: none;
+}
+
+#team .emeritus-list a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+#team .emeritus-list .name-col {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+}
+
+/* Top spacing for the main emeritus intro section */
+#emeritus-intro {
+    margin-top: 60px;
+}
+
+/* ===== Emeritus-specific profile elements ===== */
+.profile-tenure {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #444;
+    font-weight: 600;
+}
+
+.profile-tenure strong {
+    color: #222;
+}
+
+.tenure-years {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    margin-left: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #028fcc;
+}

@@ -1,0 +1,37 @@
+/* ===== Shared gradient header =====
+   Common styles the non-landing page.
+*/
+/* ===== Strap header (gradient background) ===== */
+.page-strap {
+    position: relative;
+}
+
+.page-strap .top-bar {
+    position: relative !important;
+    z-index: 2 !important;
+    padding: 30px 0;
+}
+
+.page-strap .strap-bg {
+    position: absolute;
+    inset: 0;
+    background: #0b1d36;
+    background: linear-gradient(
+        180deg,
+        #0B1D36 0%,
+        #091A44 20%,
+        #071753 40%,
+        #041561 60%,
+        #021270 80%,
+        #000F7E 100%
+    );
+    z-index: 1;
+    min-height: 100px;
+}
+
+.page-strap .logo a,
+.page-strap .subtitle a,
+.page-strap .info a,
+.page-strap .glyphicon {
+    color: #EEE;
+}
