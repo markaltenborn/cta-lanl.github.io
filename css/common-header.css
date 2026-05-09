@@ -35,3 +35,19 @@
 .page-strap .glyphicon {
     color: #EEE;
 }
+
+.info .apply-wrap {
+    width: 100%;
+    float: left;
+    text-align: right;
+    margin-top: 4px;
+}
+
+.info .apply-wrap .btn {
+    color: #FFF;
+}
+
+.info .apply-wrap .btn:hover {
+    color: #FFF;
+    text-decoration: none;
+}

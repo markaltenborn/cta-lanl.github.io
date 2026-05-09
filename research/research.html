@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Research — Center for Theoretical Astrophysics</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/design-system.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/research.css" type="text/css" media="all">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="/js/apply.js"></script>
+</head>
+<body>
+	<!-- Compact Header (strap) — loaded from /partials/header-strap.html via /js/apply.js -->
+	<div id="cta-header"></div>
+
+	<!-- Research -->
+	<div class="research-section" id="research">
+		<div class="container">
+
+			<h1 class="title">RESEARCH</h1>
+			<p class="underline1"></p>
+
+			<p class="research-lead">
+				CTA scientists are engaged in a wide variety of projects. Some of these topics
+				are listed below with links to more information. CTA members are encouraged to
+				include the Center for Theoretical Astrophysics affiliation in their research
+				publications, in addition to their LANL group affiliation. Please use:
+			</p>
+
+			<p class="research-citation">
+				Center for Theoretical Astrophysics, Los Alamos National Laboratory, Los Alamos, NM 87545, USA
+			</p>
+
+			<p class="research-publications">
+				<a href="https://ui.adsabs.harvard.edu/#/public-libraries/X_2en3tqRqa_sJXo-FL30w">Publications &rarr;</a>
+			</p>
+
+			<div class="underline1"></div>
+
+			<!-- Slice 3: each topic should grow into a card with active CTA members linked from roster YAML, plus a hero image / sim thumbnail. -->
+			<div class="research-grid">
+				<div class="research-card">
+					<h3>Active Galactic Nuclei</h3>
+					<p>Evolution of massive black holes, studying both radiation and magneto-hydrodynamic effects.</p>
+				</div>
+				<div class="research-card">
+					<h3>Computational Astrophysics</h3>
+					<p>We develop and apply state-of-the-art methods and codes to tackle some of the most complex problems in astrophysics.</p>
+				</div>
+				<div class="research-card">
+					<h3>Cosmic Rays</h3>
+					<p>Generation and propagation of cosmic rays from gamma-ray bursts and supernovae. Ties to a number of missions (e.g., HAWC, NuSTAR).</p>
+				</div>
+				<div class="research-card">
+					<h3>Cosmology and the First Stars</h3>
+					<p>Cosmology calculations using a broad range of tools (e.g., ENZO and Gadget), focused on studying the formation of the first stars and black holes.</p>
+				</div>
+				<div class="research-card">
+					<h3>Engines Behind Transients</h3>
+					<p>Thermonuclear and core-collapse supernovae, gamma-ray burst, and x-ray burst engines.</p>
+				</div>
+				<div class="research-card">
+					<h3><a href="/transient/transients_astro.html">Emission for Transients</a></h3>
+					<p>Modeling spectra and light-curves, radiation-hydrodynamics effects, atomic physics.</p>
+				</div>
+				<div class="research-card">
+					<h3>Experimental Astrophysics</h3>
+					<p>Many of these fields leverage laboratory experiments in plasma physics, turbulence, radiation transport, nuclear, and atomic physics.</p>
+				</div>
+				<div class="research-card">
+					<h3>Nuclear Astrophysics</h3>
+					<p>Understanding the behavior of matter at nuclear densities and applying these effects (neutrinos, equations of state) to supernova models.</p>
+				</div>
+				<div class="research-card">
+					<h3><a href="/nucleosynthesis/nucleosynthesis_astro.html">Nucleosynthesis</a></h3>
+					<p>Yields from stars and supernovae, nuclear cross-sections (tying to experiment), galactic chemical evolution.</p>
+				</div>
+				<div class="research-card">
+					<h3>Star and Planet Formation</h3>
+					<p>Formation of the solar system, extra-solar planets.</p>
+				</div>
+				<div class="research-card">
+					<h3>Stellar Astrophysics</h3>
+					<p>Structure, evolution, nucleosynthesis, and hydrodynamics of stars.</p>
+				</div>
+				<div class="research-card">
+					<h3>Supernova Remnants</h3>
+					<p>Following the engine through the remnant phase, effects of NLTE opacities, and magneto-hydrodynamics.</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //Research -->
+
+	<!-- Contact -->
+	<div id="cta-contact"></div>
+	<!-- //Contact -->
+
+	<!-- Footer -->
+	<div id="cta-footer"></div>
+	<!-- //Footer -->
+
+	<!-- JS dependencies -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+	$(function () {
+		$("#cta-contact").load("/partials/contact.html");
+		$("#cta-footer").load("/partials/footer.html");
+	});
+	</script>
+</body>
+</html>

@@ -15,35 +15,11 @@
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
 	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script src="/js/apply.js"></script>
 </head>
 <body>
-	<!-- Compact Header -->
-	<div class="header page-strap" id="home">
-		<div class="top-bar">
-			<div class="container">
-				<!-- Logo -->
-				<div class="logo">
-					<p><a href="/index.html">Center for Theoretical<br />Astrophysics</a></p>
-					<br>
-					<p class="subtitle"><a href="http://cta.lanl.gov">Los Alamos National Laboratory</a></p>
-				</div>
-				<!-- //Logo -->
-				<div class="info">
-					<!-- Email -->
-					<div class="email">
-						<p>
-							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-							<a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a>
-						</p>
-					</div>
-					<!-- //Email -->
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-		<div class="strap-bg" aria-hidden="true"></div>
-	</div>
-	<!-- //Compact Header -->
+	<!-- Compact Header — loaded from /partials/header-strap.html via /js/apply.js -->
+	<div id="cta-header"></div>
 
 	<!-- About -->
 	<div id="emeritus-intro" class="cta-section">
@@ -206,17 +182,9 @@
 			}
 		}
 
+		// strap-bg height syncing handled by /js/apply.js
 		loadPartial('#cta-contact', '/partials/contact.html');
 		loadPartial('#cta-footer', '/partials/footer.html');
-
-		// Sync strap height
-		function syncStrap() {
-			const tb = document.querySelector('.page-strap .top-bar');
-			const bg = document.querySelector('.page-strap .strap-bg');
-			if (tb && bg) bg.style.height = tb.offsetHeight + 'px';
-		}
-		window.addEventListener('load', syncStrap);
-		window.addEventListener('resize', syncStrap);
 	})();
 	</script>
 </body>
