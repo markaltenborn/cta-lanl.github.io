@@ -6,6 +6,11 @@
     padding: 60px 0;
 }
 
+.opportunities-section h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
 .opportunities-section .title {
     margin-bottom: 16px;
 }
@@ -155,6 +160,78 @@
     font-size: 14px;
     line-height: 1.5;
     color: #555;
+}
+
+/* ----- Disclosures (details/summary) ----- */
+
+.opps-disclosure {
+    margin: 10px 0;
+    border: 1px solid #cdd5dc;
+    border-radius: 6px;
+    background: #fafafa;
+    overflow: hidden;
+}
+
+.opps-disclosure[open] {
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.opps-disclosure > summary {
+    padding: 12px 44px 12px 18px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    list-style: none;
+    position: relative;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.opps-disclosure > summary::-webkit-details-marker {
+    display: none;
+}
+
+.opps-disclosure > summary::after {
+    content: "\25BE";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #028fcc;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.opps-disclosure[open] > summary::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.opps-disclosure > summary:hover,
+.opps-disclosure > summary:focus {
+    background: #e6eef5;
+    color: #028fcc;
+    outline: none;
+}
+
+.opps-disclosure[open] > summary {
+    border-bottom: 1px solid #cdd5dc;
+}
+
+.opps-disclosure > p,
+.opps-disclosure > div {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.opps-disclosure > p:first-of-type {
+    margin-top: 14px;
+}
+
+.opps-disclosure > *:last-child {
+    margin-bottom: 14px;
 }
 
 /* ----- Track record ----- */
@@ -334,6 +411,22 @@
     margin: 6px 0;
 }
 
+/* ----- Additional LANL resources: 3-col centered list ----- */
+
+#lanl-resources ul {
+    list-style: disc inside;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 10px 40px;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#lanl-resources li {
+    margin: 0;
+}
+
 @media (max-width: 768px) {
     .opportunities-section {
         padding: 40px 0;
@@ -358,5 +451,12 @@
     .opps-gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
         gap: 8px;
+    }
+    #lanl-resources ul {
+        grid-template-columns: 1fr;
+        gap: 8px 0;
+    }
+    .opportunities-section h1 {
+        font-size: 32px;
     }
 }
