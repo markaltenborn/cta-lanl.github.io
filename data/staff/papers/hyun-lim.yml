@@ -51,3 +51,18 @@
   year: '2026'
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260425635W/abstract
+
+- bibcode: 2026NatSR..1613163H
+  title: 'Development of head-to-head and longitudinal CycleGAN algorithm for MRI harmonization: validation in follow-up MRI
+    evaluation in patients with brain metastasis'
+  authors:
+  - Hwang, Hosung
+  - Choi, Hyeon-Ung
+  - Jeong, Hyunjae
+  - Lim, Hyun-Woo
+  - Jo, Sang Won
+  - Jeon, Young Hun
+  author_count: 9
+  year: '2026'
+  journal: Scientific Reports
+  url: https://ui.adsabs.harvard.edu/abs/2026NatSR..1613163H/abstract

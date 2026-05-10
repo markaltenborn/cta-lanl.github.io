@@ -48,3 +48,18 @@
   year: '2017'
   journal: Journal of Physics Conference Series
   url: https://ui.adsabs.harvard.edu/abs/2017JPhCS.837a2005C/abstract
+
+- bibcode: 2017cicc.conf...83K
+  title: A monolithically integrated, optically clocked 10 GS/s sampler with a bandwidth of >30 GHz and a jitter of <30 fs
+    in photonic SiGe BiCMOS technology
+  authors:
+  - Krueger, B.
+  - Makon, R. E.
+  - Landolt, O.
+  - Hidri, O.
+  - Schweiger, T.
+  - Krune, E.
+  author_count: 9
+  year: '2017'
+  journal: 2017 IEEE Custom Integrated Circuits Conference (CICC)
+  url: https://ui.adsabs.harvard.edu/abs/2017cicc.conf...83K/abstract

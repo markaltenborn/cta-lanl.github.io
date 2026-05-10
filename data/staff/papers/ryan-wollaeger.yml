@@ -53,3 +53,17 @@
   year: '2026'
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260203621D/abstract
+
+- bibcode: 2024APS..DFDS01035C
+  title: Kinetic spectral simulations with implicit-explicit time integration
+  authors:
+  - Chapurin, Oleksandr
+  - Koshkarov, Oleksandr
+  - Delzanno, Gian Luca
+  - Harnish, Cale
+  - Hrabski, Alexander
+  - Janhunen, Salomon
+  author_count: 10
+  year: '2024'
+  journal: APS Division of Fluid Dynamics Meeting Abstracts
+  url: https://ui.adsabs.harvard.edu/abs/2024APS..DFDS01035C/abstract

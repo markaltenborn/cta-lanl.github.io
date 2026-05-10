@@ -50,3 +50,17 @@
   year: '2023'
   journal: Physics of Plasmas
   url: https://ui.adsabs.harvard.edu/abs/2023PhPl...30g2503C/abstract
+
+- bibcode: 2022MNRAS.511..886L
+  title: 'Radioactive nuclei in the early Solar system: analysis of the 15 isotopes produced by core-collapse supernovae'
+  authors:
+  - Lawson, Thomas V.
+  - Pignatari, Marco
+  - Stancliffe, Richard J.
+  - den Hartogh, Jacqueline
+  - Jones, Sam
+  - Fryer, Chris L.
+  author_count: 8
+  year: '2022'
+  journal: Monthly Notices of the Royal Astronomical Society
+  url: https://ui.adsabs.harvard.edu/abs/2022MNRAS.511..886L/abstract

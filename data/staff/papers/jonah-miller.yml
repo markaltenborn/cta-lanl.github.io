@@ -53,3 +53,15 @@
   year: '2026'
   journal: Ecology and Evolution
   url: https://ui.adsabs.harvard.edu/abs/2026EcoEv..1673204C/abstract
+
+- bibcode: 2026ATel17653....1M
+  title: Continued Swift Monitoring of the Stellar-mass Black Hole GX 339-4
+  authors:
+  - Miller, J. M.
+  - Chan, I.
+  - Dumitrascu, I.
+  - Lopez, M.
+  author_count: 4
+  year: '2026'
+  journal: The Astronomer's Telegram
+  url: https://ui.adsabs.harvard.edu/abs/2026ATel17653....1M/abstract

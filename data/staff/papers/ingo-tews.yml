@@ -54,3 +54,16 @@
   year: '2025'
   journal: Nature Communications
   url: https://ui.adsabs.harvard.edu/abs/2025NatCo..16.9819S/abstract
+
+- bibcode: 2025PhRvL.135n2501A
+  title: 'Emulators for Scarce and Noisy Data: Application to Auxiliary-Field Diffusion Monte Carlo for Neutron Matter'
+  authors:
+  - Armstrong, Cassandra L.
+  - Giuliani, Pablo
+  - Godbey, Kyle
+  - Somasundaram, Rahul
+  - Tews, Ingo
+  author_count: 5
+  year: '2025'
+  journal: Physical Review Letters
+  url: https://ui.adsabs.harvard.edu/abs/2025PhRvL.135n2501A/abstract

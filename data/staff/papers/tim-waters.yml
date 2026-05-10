@@ -49,3 +49,13 @@
   year: '2025'
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2025ApJ...987..144K/abstract
+
+- bibcode: 2025AAS...24630801S
+  title: A new explanation for coronal rain formation
+  authors:
+  - Stricklan, Amanda
+  - Waters, Tim
+  author_count: 2
+  year: '2025'
+  journal: 246th Meeting of the American Astronomical Society
+  url: https://ui.adsabs.harvard.edu/abs/2025AAS...24630801S/abstract

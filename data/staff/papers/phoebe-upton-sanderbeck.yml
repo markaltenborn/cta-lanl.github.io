@@ -45,3 +45,13 @@
   year: '2023'
   journal: 'American Astronomical Society Meeting Abstracts #242'
   url: https://ui.adsabs.harvard.edu/abs/2023AAS...24240806J/abstract
+
+- bibcode: 2022ApJ...934...58J
+  title: A Simple Condition for Sustained Super-Eddington Black Hole Growth
+  authors:
+  - Johnson, Jarrett Lawrence
+  - Upton Sanderbeck, Phoebe R.
+  author_count: 2
+  year: '2022'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2022ApJ...934...58J/abstract

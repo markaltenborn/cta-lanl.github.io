@@ -52,3 +52,14 @@
   year: '2025'
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2025arXiv250320058G/abstract
+
+- bibcode: 2025AAS...24511105V
+  title: Classification of Delta Scuti, Gamma Doradus, and Hybrid Stars through Oscillation Spectra Analysis
+  authors:
+  - Vercher, Jonah
+  - Guzik, Joyce
+  - Baran, Andrzej
+  author_count: 3
+  year: '2025'
+  journal: 'American Astronomical Society Meeting Abstracts #245'
+  url: https://ui.adsabs.harvard.edu/abs/2025AAS...24511105V/abstract

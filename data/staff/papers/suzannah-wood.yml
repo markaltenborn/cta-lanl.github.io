@@ -54,3 +54,17 @@
   year: '2026'
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260214416./abstract
+
+- bibcode: 2025PhLB..86839734L
+  title: Inclusive studies of two- and three-nucleon short-range correlations in <SUP>3</SUP>H and <SUP>3</SUP>He
+  authors:
+  - Li, S.
+  - Santiesteban, S. N.
+  - Arrington, J.
+  - Cruz-Torres, R.
+  - Kurbany, L.
+  - Abrams, D.
+  author_count: 116
+  year: '2025'
+  journal: Physics Letters B
+  url: https://ui.adsabs.harvard.edu/abs/2025PhLB..86839734L/abstract

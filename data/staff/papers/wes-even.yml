@@ -51,3 +51,17 @@
   year: '2022'
   journal: Astronomy and Astrophysics
   url: https://ui.adsabs.harvard.edu/abs/2022A&A...668A.163B/abstract
+
+- bibcode: 2022JPhB...55r4002Z
+  title: A comprehensive study of the radiative properties of NO-a first step toward a complete air opacity
+  authors:
+  - Zammit, Mark C.
+  - Leiding, Jeffery A.
+  - Colgan, James
+  - Even, Wesley
+  - Fontes, Christopher J.
+  - Timmermans, Eddy
+  author_count: 6
+  year: '2022'
+  journal: Journal of Physics B Atomic Molecular Physics
+  url: https://ui.adsabs.harvard.edu/abs/2022JPhB...55r4002Z/abstract

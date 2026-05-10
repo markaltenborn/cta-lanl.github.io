@@ -53,3 +53,15 @@
   year: '2026'
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260404362F/abstract
+
+- bibcode: 2026arXiv260327036N
+  title: Material Identification using Multi-Modal Intrinsic Radiation and Radiography
+  authors:
+  - Nguyen, Khoa
+  - Wohlberg, Brendt
+  - Korobkin, Oleg
+  - Klasky, Marc
+  author_count: 4
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260327036N/abstract

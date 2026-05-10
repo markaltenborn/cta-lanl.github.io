@@ -47,3 +47,17 @@
   year: '2023'
   journal: 'American Astronomical Society Meeting Abstracts #242'
   url: https://ui.adsabs.harvard.edu/abs/2023AAS...24240804K/abstract
+
+- bibcode: 2023APS..HAWD08001N
+  title: Nuclear pasta and the deep inner crust
+  authors:
+  - Newton, William
+  - Stone, Jirina
+  - Kaltenborn, Mark
+  - Stinson, Amber
+  - Preston, Rebecca
+  - Balliet, Lauren
+  author_count: 8
+  year: '2023'
+  journal: APS Meeting Abstracts
+  url: https://ui.adsabs.harvard.edu/abs/2023APS..HAWD08001N/abstract
