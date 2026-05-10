@@ -1,0 +1,53 @@
+- bibcode: 2023ApJ...956...71K
+  title: Abundances and Transients from Neutron Star-White Dwarf Mergers
+  authors:
+  - Kaltenborn, M. Alexander R.
+  - Fryer, Chris L.
+  - Wollaeger, Ryan T.
+  - Belczynski, Krzysztof
+  - Even, Wesley
+  - Kouveliotou, Chryssa
+  author_count: 6
+  year: '2023'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2023ApJ...956...71K/abstract
+
+- bibcode: 2023ApJ...952...60K
+  title: 'Halted-pendulum Relaxation: Application to White Dwarf Binary Initial Data'
+  authors:
+  - Kaltenborn, M. Alexander R.
+  - Falato, Michael J.
+  - Korobkin, Oleg
+  - Sagert, Irina
+  - Even, Wesley P.
+  author_count: 5
+  year: '2023'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2023ApJ...952...60K/abstract
+
+- bibcode: 2023APS..APRJ01007F
+  title: Initialization of Compact Star Orbits Using External Potential Relaxation Scheme
+  authors:
+  - Falato, Michael
+  - Sagert, Irina
+  - Korobkin, Oleg
+  - Kaltenborn, Mark
+  - Even, Wesley
+  author_count: 5
+  year: '2023'
+  journal: APS April Meeting Abstracts
+  url: https://ui.adsabs.harvard.edu/abs/2023APS..APRJ01007F/abstract
+
+- bibcode: 2022A&A...668A.163B
+  title: 'StaNdaRT: a repository of standardised test models and outputs for supernova radiative transfer'
+  authors:
+  - Blondin, Stéphane
+  - Blinnikov, Sergei
+  - Callan, Fionntan P.
+  - Collins, Christine E.
+  - Dessart, Luc
+  - Even, Wesley
+  author_count: 29
+  year: '2022'
+  journal: Astronomy and Astrophysics
+  url: https://ui.adsabs.harvard.edu/abs/2022A&A...668A.163B/abstract

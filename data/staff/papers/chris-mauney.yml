@@ -1,0 +1,51 @@
+- bibcode: 2025doe..soft..105R
+  title: flecsolve
+  authors:
+  - Reisner, Andrew
+  - Mauney, Christopher
+  author_count: 2
+  year: '2025'
+  journal: U.S. Department of Energy (DOE) Software
+  url: https://ui.adsabs.harvard.edu/abs/2025doe..soft..105R/abstract
+
+- bibcode: 2024JOSS....9.6805M
+  title: 'Singularity-EOS: Performance Portable Equations of State and Mixed Cell Closures'
+  authors:
+  - Miller, Jonah
+  - Holladay, Daniel
+  - Peterson, Jeffrey
+  - Mauney, Christopher
+  - Berger, Richard
+  - Graham, Anna
+  author_count: 15
+  year: '2024'
+  journal: The Journal of Open Source Software
+  url: https://ui.adsabs.harvard.edu/abs/2024JOSS....9.6805M/abstract
+
+- bibcode: 2024APS..APRFF3006S
+  title: Modeling the Solid Neutron-Star Crust with SPH
+  authors:
+  - Sagert, Irina
+  - Korobkin, Oleg
+  - Tews, Ingo
+  - Tsao, Bing-Jyun
+  - Lim, Hyun
+  - Falato, Michael
+  author_count: 9
+  year: '2024'
+  journal: APS April Meeting Abstracts
+  url: https://ui.adsabs.harvard.edu/abs/2024APS..APRFF3006S/abstract
+
+- bibcode: 2022JOSS....7.4367M
+  title: 'Spiner: Performance Portable Routines for Generic, Tabulated, Multi-Dimensional Data'
+  authors:
+  - Miller, Jonah
+  - Holladay, Daniel
+  - Meyer, Chad
+  - Dolence, Joshua
+  - Swaminarayan, Sriram
+  - Mauney, Christopher
+  author_count: 7
+  year: '2022'
+  journal: The Journal of Open Source Software
+  url: https://ui.adsabs.harvard.edu/abs/2022JOSS....7.4367M/abstract

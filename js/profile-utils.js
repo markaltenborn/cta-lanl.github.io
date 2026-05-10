@@ -250,6 +250,178 @@ const ProfileUtils = (function() {
         }
     }
 
+    /**
+     * Show whichever container we were handed. Supports the redesigned
+     * <section hidden> wrapper (Slice 2.5) and the legacy <h3>+<ul>
+     * pair where each gets style.display toggled.
+     */
+    function _showContainer(rootEl, listEl) {
+        if (!rootEl) return;
+        if (rootEl.tagName && rootEl.tagName.toLowerCase() === 'section') {
+            rootEl.hidden = false;
+        } else {
+            rootEl.style.display = '';
+            if (listEl) listEl.style.display = '';
+        }
+    }
+
+    /**
+     * Render a single paper as <li class="paper-item"> using the same
+     * DOM shape for ADS-fetched papers and form-curated selected pubs.
+     * Accepts a string (renders as title only) or a dict with any of:
+     *   title, url, bibcode, authors (list or "; "-joined string),
+     *   author_count, year, journal.
+     */
+    function _renderPaperItem(paper, listEl) {
+        const li = document.createElement('li');
+        li.className = 'paper-item';
+
+        if (typeof paper === 'string') {
+            const span = document.createElement('span');
+            span.className = 'paper-title';
+            span.textContent = paper;
+            li.appendChild(span);
+            listEl.appendChild(li);
+            return;
+        }
+        if (!paper || typeof paper !== 'object') return;
+
+        const title = paper.title || paper.bibcode || '(untitled)';
+        const url = paper.url
+            || (paper.bibcode ? `https://ui.adsabs.harvard.edu/abs/${paper.bibcode}/abstract` : null);
+
+        let titleNode;
+        if (url) {
+            titleNode = document.createElement('a');
+            titleNode.href = url;
+            titleNode.target = '_blank';
+            titleNode.rel = 'noopener';
+        } else {
+            titleNode = document.createElement('span');
+        }
+        titleNode.className = 'paper-title';
+        titleNode.textContent = title;
+        li.appendChild(titleNode);
+
+        const meta = document.createElement('div');
+        meta.className = 'paper-meta';
+        const parts = [];
+        if (paper.authors) {
+            const arr = Array.isArray(paper.authors)
+                ? paper.authors
+                : String(paper.authors).split(/\s*;\s*/).filter(Boolean);
+            const cap = arr.slice(0, 3).join('; ');
+            const total = paper.author_count || arr.length;
+            parts.push(total > 3 ? `${cap} et al.` : cap);
+        }
+        if (paper.year) parts.push(String(paper.year));
+        if (paper.journal) parts.push(paper.journal);
+        if (parts.length) {
+            meta.textContent = parts.join(' · ');
+            li.appendChild(meta);
+        }
+
+        listEl.appendChild(li);
+    }
+
+    /**
+     * Fetch and render the per-person Recent Papers list (auto-built by
+     * scripts/fetch_ads_papers.py + .github/workflows/ads-papers.yml).
+     * Silently no-ops if the file doesn't exist or is empty.
+     *
+     * @param {string} section - "staff" | "postdocs" | "emeritus"
+     * @param {string} slug
+     * @param {Element} rootEl - <section hidden> (new) or <h3> heading (legacy)
+     * @param {Element} listEl - <ul> element to populate
+     */
+    async function renderRecentPapers(section, slug, rootEl, listEl) {
+        if (!section || !slug || !rootEl || !listEl) return;
+        let papers = null;
+        try {
+            const res = await fetch(`/data/${section}/papers/${slug}.yml`);
+            if (!res.ok) return;
+            const text = await res.text();
+            papers = jsyaml.load(text);
+        } catch (e) {
+            return;
+        }
+        if (!Array.isArray(papers) || !papers.length) return;
+
+        listEl.innerHTML = '';
+        papers.forEach(p => _renderPaperItem(p, listEl));
+        _showContainer(rootEl, listEl);
+    }
+
+    /**
+     * Sanitize bio text into HTML using a small allowlist:
+     *   <i>, <em>, <b>, <strong>, <a href>, <br>
+     * Everything else is escaped to plain text. Tolerates the common
+     * `<\i>` typo (invalid HTML) by rewriting it to `</i>`.
+     *
+     * Anchor tags are forced to target=_blank rel=noopener to avoid
+     * window.opener leaks. Only http(s) and mailto schemes are kept.
+     */
+    function safeBioHtml(text) {
+        if (!text) return '';
+        const allowedTags = new Set(['I', 'EM', 'B', 'STRONG', 'A', 'BR']);
+        const allowedAttrs = { A: new Set(['href']) };
+        const allowedSchemes = /^(?:https?:|mailto:)/i;
+
+        // Repair `<\i>` → `</i>` and similar `<\tag>` typos before parsing.
+        const repaired = String(text).replace(/<\\([a-zA-Z]+)>/g, '</$1>');
+
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(`<div>${repaired}</div>`, 'text/html');
+        const root = doc.body.firstChild;
+
+        function walk(node) {
+            // Snapshot children first; walking may mutate the live list.
+            const children = Array.from(node.children);
+            children.forEach(walk);
+            if (!allowedTags.has(node.tagName)) {
+                // Replace the disallowed element with its text content.
+                node.replaceWith(document.createTextNode(node.textContent));
+                return;
+            }
+            const ok = allowedAttrs[node.tagName] || new Set();
+            Array.from(node.attributes).forEach(a => {
+                if (!ok.has(a.name.toLowerCase())) node.removeAttribute(a.name);
+            });
+            if (node.tagName === 'A') {
+                const href = node.getAttribute('href') || '';
+                if (!allowedSchemes.test(href)) {
+                    // Reject unsafe URL schemes; collapse to text.
+                    node.replaceWith(document.createTextNode(node.textContent));
+                    return;
+                }
+                node.setAttribute('rel', 'noopener');
+                node.setAttribute('target', '_blank');
+            }
+        }
+        Array.from(root.children).forEach(walk);
+        return root.innerHTML;
+    }
+
+    /**
+     * Render the member-curated "Selected publications" list from the
+     * roster YAML's `papers` field. Visually identical to renderRecentPapers.
+     * Accepts the same per-entry shapes (string or dict).
+     */
+    function renderSelectedPublications(papers, rootEl, listEl) {
+        if (!rootEl || !listEl) return;
+        let items = [];
+        if (Array.isArray(papers)) {
+            items = papers;
+        } else if (typeof papers === 'string' && papers.trim()) {
+            items = papers.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+        }
+        if (!items.length) return;
+
+        listEl.innerHTML = '';
+        items.forEach(p => _renderPaperItem(p, listEl));
+        _showContainer(rootEl, listEl);
+    }
+
     // Public API
     return {
         createExternalLink,
@@ -262,6 +434,9 @@ const ProfileUtils = (function() {
         loadPartial,
         syncStrapHeight,
         initStrapSync,
-        showProfileNotFound
+        showProfileNotFound,
+        renderRecentPapers,
+        renderSelectedPublications,
+        safeBioHtml
     };
 })();

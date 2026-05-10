@@ -1,0 +1,52 @@
+- bibcode: 2024JOSS....9.6805M
+  title: 'Singularity-EOS: Performance Portable Equations of State and Mixed Cell Closures'
+  authors:
+  - Miller, Jonah
+  - Holladay, Daniel
+  - Peterson, Jeffrey
+  - Mauney, Christopher
+  - Berger, Richard
+  - Graham, Anna
+  author_count: 15
+  year: '2024'
+  journal: The Journal of Open Source Software
+  url: https://ui.adsabs.harvard.edu/abs/2024JOSS....9.6805M/abstract
+
+- bibcode: 2023ascl.soft06026G
+  title: 'Parthenon: Portable block-structured adaptive mesh refinement framework'
+  authors:
+  - Grete, Philipp
+  - Dolence, Joshua C.
+  - Miller, Jonah M.
+  - Brown, Joshua
+  - Ryan, Ben
+  - Gaspar, Andrew
+  author_count: 16
+  year: '2023'
+  journal: Astrophysics Source Code Library
+  url: https://ui.adsabs.harvard.edu/abs/2023ascl.soft06026G/abstract
+
+- bibcode: 2022JOSS....7.4367M
+  title: 'Spiner: Performance Portable Routines for Generic, Tabulated, Multi-Dimensional Data'
+  authors:
+  - Miller, Jonah
+  - Holladay, Daniel
+  - Meyer, Chad
+  - Dolence, Joshua
+  - Swaminarayan, Sriram
+  - Mauney, Christopher
+  author_count: 7
+  year: '2022'
+  journal: The Journal of Open Source Software
+  url: https://ui.adsabs.harvard.edu/abs/2022JOSS....7.4367M/abstract
+
+- bibcode: 2022arXiv220608957M
+  title: Not-Quite Transcendental Functions and their Applications
+  authors:
+  - Miller, Jonah M.
+  - Dolence, Joshua C.
+  - Holladay, Daniel
+  author_count: 3
+  year: '2022'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2022arXiv220608957M/abstract

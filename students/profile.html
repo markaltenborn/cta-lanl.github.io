@@ -4,67 +4,82 @@
 	<meta charset="utf-8">
 	<title>Profile — CTA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/student.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/profiles-common.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
+
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+
+	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script src="/js/profile-utils.js"></script>
 	<script src="/js/apply.js"></script>
 </head>
 <body>
-	<!-- Compact Header — loaded from /partials/header-strap.html via /js/apply.js -->
+	<!-- Compact Header -->
 	<div id="cta-header"></div>
-	<!-- Team -->
+
+	<!-- Profile -->
 	<div class="team" id="team">
 		<div class="container">
-			<p style="text-align:left;margin:12px 0 10px;"><a href="/students/students.html">&larr; Back to Students</a></p>
-			<h1 class="profile-name" id="profile-name"></h1>
-			<div class="profile-layout">
-				<!-- Left column -->
-				<div>
+			<p style="text-align:left; margin:12px 0 12px;">
+				<a href="/students/students.html">&larr; Back to Students</a>
+			</p>
+
+			<header class="profile-header">
+				<h1 class="profile-name" id="profile-name"></h1>
+			</header>
+
+			<div class="profile-grid">
+				<aside class="profile-sidebar profile-sidebar-card">
 					<img class="profile-photo" id="profile-photo" alt="" loading="lazy">
-					<div class="profile-affil"><strong>AFFILIATION:</strong> <span id="profile-affiliation"></span></div>
-				</div>
-				<!-- //Left column -->
-				<!-- Right column -->
-				<aside class="contact-card" aria-label="Contact information">
-					<h4>Contact</h4>
-					<ul id="contact-list"><!-- JS inserts Email, Phone, Scholar, ADS --></ul>
+
+					<p class="profile-rank" id="profile-rank"></p>
+
+					<ul id="profile-meta-facts" class="profile-meta-list"></ul>
+
+					<div class="profile-link-group">
+						<span class="meta-label">Contact</span>
+						<ul id="contact-list" class="profile-link-list"></ul>
+					</div>
 				</aside>
-				<!-- //Right column -->
+
+				<div class="profile-content">
+					<section class="profile-section" id="bio-section" hidden>
+						<h3 class="profile-section-heading">Biography</h3>
+						<p class="profile-bio" id="profile-bio"></p>
+					</section>
+					<section class="profile-section" id="interests-section" hidden>
+						<h3 class="profile-section-heading">Interests</h3>
+						<ul class="profile-interests-chips" id="profile-interests"></ul>
+					</section>
+					<section class="profile-section" id="profiles-section" hidden>
+						<h3 class="profile-section-heading">Profiles</h3>
+						<ul class="profile-link-chips" id="profile-links"></ul>
+					</section>
+				</div>
 			</div>
-			<!-- Bio -->
-			<div class="profile-bio" id="profile-bio" style="display:none;"></div>
-			<!-- //Bio -->
-			<!-- Interests -->
-			<h3 class="title" id="interests-title" style="margin-top:20px; display:none;">INTERESTS</h3>
-			<p class="underline1"></p>
-			<ul class="student-list profile-interests" id="profile-interests" style="display:none;"></ul>
-			<!-- //Interests -->
-			<!-- Participation -->
-			<h3 class="title" style="margin-top:28px;">CTA PARTICIPATION</h3>
-			<p class="underline1"></p>
-			<ul class="student-list profile-stints" id="stints"></ul>
-			<!-- //Participation -->
+
+			<section class="profile-section profile-fullwidth" id="participation-section" hidden>
+				<h3 class="profile-section-heading">CTA Participation</h3>
+				<ul class="student-list profile-stints" id="stints"></ul>
+			</section>
 		</div>
 	</div>
-	<!-- //Team -->
-	<!-- Contact -->
-	<div id="cta-contact"></div>
-	<!-- //Contact -->
+	<!-- //Profile -->
+
 	<!-- Footer -->
 	<div id="cta-footer"></div>
-	<!-- //Footer -->
-	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-	<script src="/js/profile-utils.js"></script>
+
 	<script>
-	(async function(){
-		const DATA_BASE    = '/data';
-		const IMG_ROSTER   = '/students/images/roster';
-		const IMG_YEARS    = '/students/images';
-		const DEFAULT_IMG  = '/students/images/cta-default.jpg';
+	(async function () {
+		const DATA_BASE   = '/data';
+		const IMG_ROSTER  = '/students/images/roster';
+		const IMG_YEARS   = '/students/images';
+		const DEFAULT_IMG = '/students/images/cta-default.jpg';
 
 		const params = new URL(location.href).searchParams;
 		const slug = params.get('slug');
@@ -86,83 +101,135 @@
 		document.title = `${displayName} — CTA Profile`;
 		document.getElementById('profile-name').textContent = displayName;
 
+		// Year-based stint data
 		const years = (await ProfileUtils.fetchYAML(`${DATA_BASE}/students/student_years.yml`)).years || [];
+		const lists = await Promise.all(
+			years.map(y => ProfileUtils.fetchYAML(`${DATA_BASE}/students/students_${y}.yml`).then(list => ({ y, list })))
+		);
+		const myYears = lists
+			.filter(e => (Array.isArray(e.list) ? e.list : []).some(s => s.slug === slug))
+			.map(e => e.y);
+
+		let latestStint = null;
+		if (myYears.length) {
+			const latestList = (lists.find(e => e.y === myYears[0]) || {}).list || [];
+			latestStint = latestList.find(s => s.slug === slug) || null;
+		}
 
 		// Photo
 		const imgEl = document.getElementById('profile-photo');
 		imgEl.src = DEFAULT_IMG;
 		imgEl.alt = `Photo of ${displayName}`;
 		const candidates = ProfileUtils.imageCandidates(slug, person, years, IMG_ROSTER, IMG_YEARS, DEFAULT_IMG);
-		ProfileUtils.firstReachableImage(candidates).then(u => imgEl.src = u);
+		ProfileUtils.firstReachableImage(candidates).then(u => { imgEl.src = u; });
 
-		// Load all years to determine participation and latest affiliation
-		const lists = await Promise.all(
-			years.map(y => ProfileUtils.fetchYAML(`${DATA_BASE}/students/students_${y}.yml`).then(list => ({y, list})))
-		);
-		const myYears = lists
-			.filter(e => (Array.isArray(e.list) ? e.list : []).some(s => s.slug === slug))
-			.map(e => e.y);
-
-		// Latest affiliation from most-recent year
-		let latestAff = '';
-		let latestStint = null;
+		// Rank line: student_level · group · year-span
+		const rankEl = document.getElementById('profile-rank');
+		const escapeHtml = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+		const role = person.student_level && String(person.student_level).trim()
+			? String(person.student_level).trim()
+			: 'Student';
+		const groupSrc = (person.group_code && String(person.group_code).trim())
+			|| (person.division && String(person.division).trim())
+			|| '';
+		let tenure = '';
 		if (myYears.length) {
-			const latestYear = myYears[0];
-			const latestList = (lists.find(e => e.y === latestYear) || {}).list || [];
-			latestStint = latestList.find(s => s.slug === slug) || null;
-			latestAff = (latestStint && latestStint.university) ? latestStint.university : '';
+			tenure = myYears.length > 1
+				? `${myYears[myYears.length - 1]}–${myYears[0]}`
+				: `${myYears[0]}`;
 		}
-		document.getElementById('profile-affiliation').textContent = latestAff || '—';
+		const rankParts = [role];
+		if (groupSrc) rankParts.push(groupSrc);
+		if (tenure)   rankParts.push(tenure);
+		rankEl.innerHTML = rankParts.map(escapeHtml).join(' <span class="sep">·</span> ');
+		if (!rankParts.length) rankEl.style.display = 'none';
 
-		// Interests
-		const titleEl = document.getElementById('interests-title');
-		const listEl = document.getElementById('profile-interests');
-		if (titleEl && listEl) {
-			let items = ProfileUtils.parseInterests(person.interests);
-			if (!items.length && latestStint && latestStint.focus) {
-				items = ProfileUtils.parseInterests(latestStint.focus);
-			}
+		// Sidebar meta facts: University (multi-supported)
+		const splitMulti = v => {
+			if (Array.isArray(v)) return v.map(s => String(s).trim()).filter(Boolean);
+			if (typeof v === 'string') return v.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+			return [];
+		};
+		const facts = document.getElementById('profile-meta-facts');
+		const factPairs = [];
+		const unis = splitMulti(person.university || (latestStint && latestStint.university) || '');
+		if (unis.length) factPairs.push(['University', unis]);
 
-			if (items.length > 0) {
-				titleEl.style.display = '';
-				listEl.style.display = '';
-				listEl.innerHTML = '';
-				items.forEach(txt => {
-					const li = document.createElement('li');
-					li.textContent = txt;
-					listEl.appendChild(li);
-				});
-			}
-		}
-
-		// Bio
-		const bioText = (person.bio && String(person.bio).trim()) || '';
-		if (bioText) {
-			const bioEl = document.getElementById('profile-bio');
-			bioEl.textContent = bioText;
-			bioEl.style.display = '';
-		}
-
-		// Contact entries
-		ProfileUtils.renderContactInfo(person, document.getElementById('contact-list'));
-
-		// Participation years
-		const ul = document.getElementById('stints');
-		ul.innerHTML = '';
-		myYears.forEach(y => {
+		factPairs.forEach(([label, vals]) => {
 			const li = document.createElement('li');
-			const link = ProfileUtils.createExternalLink(`/students/year.html?y=${y}`, `${y}`);
-			link.removeAttribute('target'); // Internal link, no new tab
-			link.removeAttribute('aria-label');
-			li.appendChild(link);
-			ul.appendChild(li);
+			const lbl = document.createElement('span');
+			lbl.className = 'meta-label';
+			lbl.textContent = label;
+			li.appendChild(lbl);
+			vals.forEach((v, i) => {
+				if (i > 0) li.appendChild(document.createElement('br'));
+				li.appendChild(document.createTextNode(v));
+			});
+			facts.appendChild(li);
 		});
 
-		// Load partials
-		ProfileUtils.loadPartial('#cta-contact', '/partials/contact.html');
-		ProfileUtils.loadPartial('#cta-footer', '/partials/footer.html');
+		// Contact (sidebar) + Profiles (right column chips)
+		const contactList = document.getElementById('contact-list');
+		const linksList = document.getElementById('profile-links');
+		const addLink = (parent, href, text) => {
+			const li = document.createElement('li');
+			const a = document.createElement('a');
+			a.href = href;
+			a.textContent = text;
+			if (!href.startsWith('mailto:') && !href.startsWith('tel:')) {
+				a.target = '_blank';
+				a.rel = 'noopener';
+			}
+			li.appendChild(a);
+			parent.appendChild(li);
+		};
+		if (person.email) addLink(contactList, `mailto:${person.email}`, person.email);
+		if (person.phone) addLink(contactList, `tel:${person.phone}`, person.phone);
 
-		// Initialize strap height syncing
+		const lanlUrl = person.lanl || person.lanl_profile;
+		let linkCount = 0;
+		if (person.scholar) { addLink(linksList, person.scholar, 'Google Scholar'); linkCount++; }
+		if (person.ads)     { addLink(linksList, person.ads, 'NASA ADS');           linkCount++; }
+		if (lanlUrl)        { addLink(linksList, lanlUrl, 'LANL Profile');          linkCount++; }
+		if (linkCount) document.getElementById('profiles-section').hidden = false;
+
+		// Bio with HTML allowlist sanitization
+		const bioText = (person.bio && String(person.bio).trim()) || '';
+		if (bioText) {
+			document.getElementById('profile-bio').innerHTML = ProfileUtils.safeBioHtml(bioText);
+			document.getElementById('bio-section').hidden = false;
+		}
+
+		// Interests
+		let items = ProfileUtils.parseInterests(person.interests);
+		if (!items.length && latestStint && latestStint.focus) {
+			items = ProfileUtils.parseInterests(latestStint.focus);
+		}
+		if (items.length) {
+			const ul = document.getElementById('profile-interests');
+			items.forEach(t => {
+				const li = document.createElement('li');
+				li.textContent = t;
+				ul.appendChild(li);
+			});
+			document.getElementById('interests-section').hidden = false;
+		}
+
+		// CTA Participation
+		const stintsUl = document.getElementById('stints');
+		stintsUl.innerHTML = '';
+		myYears.forEach(y => {
+			const li = document.createElement('li');
+			const link = ProfileUtils.createExternalLink(`/students/year.html?y=${y}`, String(y));
+			link.removeAttribute('target');
+			link.removeAttribute('aria-label');
+			li.appendChild(link);
+			stintsUl.appendChild(li);
+		});
+		if (myYears.length) document.getElementById('participation-section').hidden = false;
+
+		// Footer
+		ProfileUtils.loadPartial('#cta-footer', '/partials/footer.html');
 		ProfileUtils.initStrapSync();
 	})();
 	</script>

@@ -20,66 +20,77 @@
 	<script src="/js/apply.js"></script>
 </head>
 <body>
-	<!-- Compact Header — loaded from /partials/header-strap.html via /js/apply.js -->
+	<!-- Compact Header -->
 	<div id="cta-header"></div>
 
-	<!-- Team / Profile -->
+	<!-- Profile -->
 	<div class="team" id="team">
 		<div class="container">
-			<p style="text-align:left;margin:12px 0 10px;">
-                <a href="/staff/people.html">&larr; Back to Members</a>
-            </p>
+			<p style="text-align:left; margin:12px 0 12px;">
+				<a href="/staff/people.html">&larr; Back to Members</a>
+			</p>
 
-			<h1 class="profile-name" id="profile-name"></h1>
+			<!-- Name spans full width -->
+			<header class="profile-header">
+				<h1 class="profile-name" id="profile-name"></h1>
+			</header>
 
-			<div class="profile-layout">
-				<!-- Left column -->
-				<div>
+			<!-- Two columns: sidebar (photo + meta + links) and bio -->
+			<div class="profile-grid">
+				<aside class="profile-sidebar profile-sidebar-card">
 					<img class="profile-photo" id="profile-photo" alt="" loading="lazy">
-					<div class="profile-affil">
-						<strong>AFFILIATION:</strong>
-						<span id="profile-affiliation"></span>
-					</div>
-				</div>
-				<!-- //Left column -->
 
-				<!-- Right column -->
-				<aside class="contact-card" aria-label="Contact information">
-					<h4>Contact</h4>
-					<ul id="contact-list"><!-- JS inserts links --></ul>
+					<p class="profile-rank" id="profile-rank"></p>
+
+					<ul id="profile-meta-facts" class="profile-meta-list"></ul>
+
+					<div class="profile-link-group">
+						<span class="meta-label">Contact</span>
+						<ul id="contact-list" class="profile-link-list"></ul>
+					</div>
+
 				</aside>
-				<!-- //Right column -->
+
+				<div class="profile-content">
+					<section class="profile-section" id="bio-section" hidden>
+						<h3 class="profile-section-heading">Biography</h3>
+						<p class="profile-bio" id="profile-bio"></p>
+					</section>
+					<section class="profile-section" id="interests-section" hidden>
+						<h3 class="profile-section-heading">Research Interests</h3>
+						<ul class="profile-interests-chips" id="profile-interests"></ul>
+					</section>
+					<section class="profile-section" id="profiles-section" hidden>
+						<h3 class="profile-section-heading">Scholarly Profiles</h3>
+						<ul class="profile-link-chips" id="profile-links"></ul>
+					</section>
+				</div>
 			</div>
 
-			<!-- Bio -->
-			<div class="profile-bio" id="profile-bio" style="display:none;"></div>
-			<!-- //Bio -->
+			<!-- Full-width sections after the grid -->
+			<section class="profile-section profile-fullwidth" id="selected-pubs-section" hidden>
+				<h3 class="profile-section-heading">Selected Publications</h3>
+				<ul class="profile-papers" id="profile-selected-pubs"></ul>
+			</section>
 
-			<!-- Interests -->
-			<h3 class="title" id="interests-title" style="margin-top:20px; display:none;">INTERESTS</h3>
-			<p class="underline1"></p>
-			<ul class="profile-interests" id="profile-interests" style="display:none;"></ul>
-			<!-- //Interests -->
+			<section class="profile-section profile-fullwidth" id="papers-section" hidden>
+				<h3 class="profile-section-heading">Recent Papers</h3>
+				<ul class="profile-papers" id="profile-papers"></ul>
+			</section>
 		</div>
 	</div>
-	<!-- //Team -->
-
-	<!-- Contact -->
-	<div id="cta-contact"></div>
-	<!-- //Contact -->
+	<!-- //Profile -->
 
 	<!-- Footer -->
 	<div id="cta-footer"></div>
-	<!-- //Footer -->
 
 	<script>
-	(async function(){
+	(async function () {
 		const DATA_BASE   = '/data';
 		const IMG_ROSTER  = '/staff/images/roster';
 		const IMG_ROOT    = '/staff/images';
 		const DEFAULT_IMG = '/staff/images/cta-default.jpg';
 
-		// Get slug from URL
 		const params = new URL(location.href).searchParams;
 		const slug = params.get('slug');
 
@@ -88,86 +99,169 @@
 			return;
 		}
 
-		// Load staff roster
 		const roster = await ProfileUtils.fetchYAML(`${DATA_BASE}/staff/staff_roster.yml`);
 		const people = Array.isArray(roster) ? roster : [];
 		const person = people.find(p => p.slug === slug);
 
-		// Show error if person not found
 		if (!person) {
 			ProfileUtils.showProfileNotFound('/staff/people.html', 'Back to Members');
 			return;
 		}
+
+		const retired = String(person.status || '').trim().toLowerCase() === 'retired';
+		const roleSrc = retired ? person.former_role : person.role;
+		const divSrc  = retired ? person.former_division : person.division;
 
 		// Display name
 		const displayName = person.display_name || person.name || ProfileUtils.formatNameFromSlug(slug);
 		document.title = `${displayName} — CTA Profile`;
 		document.getElementById('profile-name').textContent = displayName;
 
-		// Photo - include both roster and root image folders
+		// Rank line: role · group · At LANL since YYYY [+ badge].
+		// Legacy roster YAML uses `division` to hold the group code (e.g., CAI-2);
+		// form-driven entries split into group_code + longer division name. Prefer
+		// group_code, fall back to division.
+		const rankEl = document.getElementById('profile-rank');
+		const escapeHtml = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+		const groupSrc = (person.group_code && String(person.group_code).trim())
+			|| (divSrc && String(divSrc).trim())
+			|| '';
+		const rankParts = [];
+		if (roleSrc && String(roleSrc).trim()) rankParts.push(String(roleSrc).trim());
+		if (groupSrc) rankParts.push(groupSrc);
+		if (person.year_joined && String(person.year_joined).trim()) {
+			rankParts.push('since ' + String(person.year_joined).trim());
+		}
+
+		rankEl.innerHTML = rankParts.map(escapeHtml).join(' <span class="sep">·</span> ');
+
+		if (retired) {
+			const b = document.createElement('span');
+			b.className = 'profile-badge is-retired';
+			b.textContent = 'Retired';
+			rankEl.appendChild(b);
+		} else if (String(person.accepting_students || '').toLowerCase().startsWith('y')) {
+			const b = document.createElement('span');
+			b.className = 'profile-badge';
+			b.textContent = 'Accepting students';
+			rankEl.appendChild(b);
+		}
+		if (!rankParts.length && !rankEl.querySelector('.profile-badge')) {
+			rankEl.style.display = 'none';
+		}
+
+		// Photo
 		const imgEl = document.getElementById('profile-photo');
 		imgEl.src = DEFAULT_IMG;
 		imgEl.alt = `Photo of ${displayName}`;
-
-		// Build custom candidate list for staff (includes IMG_ROOT)
 		const exts = ['.jpg', '.png', '.jpeg'];
 		const candidates = [];
 		if (person.photo) candidates.push(person.photo);
 		for (const ext of exts) candidates.push(`${IMG_ROSTER}/${slug}${ext}`);
 		for (const ext of exts) candidates.push(`${IMG_ROOT}/${slug}${ext}`);
 		candidates.push(DEFAULT_IMG);
-		const uniqueCandidates = Array.from(new Set(candidates.filter(Boolean)));
+		const uniq = Array.from(new Set(candidates.filter(Boolean)));
+		ProfileUtils.firstReachableImage(uniq).then(url => { imgEl.src = url; });
 
-		ProfileUtils.firstReachableImage(uniqueCandidates).then(url => { imgEl.src = url; });
+		// Sidebar meta facts: University (multi-value supported), Accepting students,
+		// Currently (retired). At-LANL-since is on the rank line above.
+		// Multi-university convention: YAML list OR newline-separated string.
+		// Commas are NOT separators — names like "University of New Mexico, Los Alamos"
+		// are single entities.
+		const splitMulti = v => {
+			if (Array.isArray(v)) return v.map(s => String(s).trim()).filter(Boolean);
+			if (typeof v === 'string') return v.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+			return [];
+		};
 
-		// Affiliation: combine role + division if present
-		const affSpan = document.getElementById('profile-affiliation');
-		const affParts = [];
-		if (person.role && String(person.role).trim()) {
-			affParts.push(String(person.role).trim());
+		const facts = document.getElementById('profile-meta-facts');
+		const factPairs = [];
+		const unis = splitMulti(person.university);
+		if (unis.length) factPairs.push(['University', unis]);
+		if (!retired && person.accepting_students && String(person.accepting_students).trim()) {
+			factPairs.push(['Accepting students', [String(person.accepting_students).trim()]]);
 		}
-		if (person.division && String(person.division).trim()) {
-			affParts.push(String(person.division).trim());
+		if (retired && person.current_position) {
+			factPairs.push(['Currently', [String(person.current_position).trim()]]);
 		}
-		affSpan.textContent = affParts.join(' — ') || '—';
+		factPairs.forEach(([label, vals]) => {
+			const li = document.createElement('li');
+			const lbl = document.createElement('span');
+			lbl.className = 'meta-label';
+			lbl.textContent = label;
+			li.appendChild(lbl);
+			vals.forEach((v, i) => {
+				if (i > 0) li.appendChild(document.createElement('br'));
+				li.appendChild(document.createTextNode(v));
+			});
+			facts.appendChild(li);
+		});
 
-		// Bio
+		// Sidebar link groups: split contact (email/phone) from external profiles (scholar/ads/lanl).
+		const contactList = document.getElementById('contact-list');
+		const linksList = document.getElementById('profile-links');
+		const addLink = (parent, href, text) => {
+			const li = document.createElement('li');
+			const a = document.createElement('a');
+			a.href = href;
+			a.textContent = text;
+			if (!href.startsWith('mailto:') && !href.startsWith('tel:')) {
+				a.target = '_blank';
+				a.rel = 'noopener';
+			}
+			li.appendChild(a);
+			parent.appendChild(li);
+		};
+		if (person.email) addLink(contactList, `mailto:${person.email}`, person.email);
+		if (person.phone) addLink(contactList, `tel:${person.phone}`, person.phone);
+
+		const lanlUrl = person.lanl || person.lanl_profile;
+		let linkCount = 0;
+		if (person.scholar) { addLink(linksList, person.scholar, 'Google Scholar'); linkCount++; }
+		if (person.ads)     { addLink(linksList, person.ads, 'NASA ADS');           linkCount++; }
+		if (lanlUrl)        { addLink(linksList, lanlUrl, 'LANL Profile');          linkCount++; }
+		if (linkCount) document.getElementById('profiles-section').hidden = false;
+
+		// Interests as chips (sidebar)
+		let items = ProfileUtils.parseInterests(person.interests);
+		if (!items.length && person.focus) {
+			items = ProfileUtils.parseInterests(person.focus);
+		}
+		if (items.length) {
+			const ul = document.getElementById('profile-interests');
+			items.forEach(t => {
+				const li = document.createElement('li');
+				li.textContent = t;
+				ul.appendChild(li);
+			});
+			document.getElementById('interests-section').hidden = false;
+		}
+
+		// Bio (right column). Allowlist HTML so <i>, <b>, <a> work; everything else escapes.
 		const bioText = (person.bio && String(person.bio).trim()) || '';
 		if (bioText) {
-			const bioEl = document.getElementById('profile-bio');
-			bioEl.textContent = bioText;
-			bioEl.style.display = '';
+			document.getElementById('profile-bio').innerHTML = ProfileUtils.safeBioHtml(bioText);
+			document.getElementById('bio-section').hidden = false;
 		}
 
-		// Interests / focus
-		const titleEl = document.getElementById('interests-title');
-		const listEl = document.getElementById('profile-interests');
-		if (titleEl && listEl) {
-			let items = ProfileUtils.parseInterests(person.interests);
-			if (!items.length && person.focus) {
-				items = ProfileUtils.parseInterests(person.focus);
-			}
+		// Selected publications (full-width below grid)
+		ProfileUtils.renderSelectedPublications(
+			person.papers,
+			document.getElementById('selected-pubs-section'),
+			document.getElementById('profile-selected-pubs')
+		);
 
-			if (items.length > 0) {
-				titleEl.style.display = '';
-				listEl.style.display = '';
-				listEl.innerHTML = '';
-				items.forEach(txt => {
-					const li = document.createElement('li');
-					li.textContent = txt;
-					listEl.appendChild(li);
-				});
-			}
-		}
+		// Recent papers (full-width below grid)
+		ProfileUtils.renderRecentPapers(
+			'staff', slug,
+			document.getElementById('papers-section'),
+			document.getElementById('profile-papers')
+		);
 
-		// Contact entries
-		ProfileUtils.renderContactInfo(person, document.getElementById('contact-list'));
-
-		// Load partials
-		ProfileUtils.loadPartial('#cta-contact', '/partials/contact.html');
+		// Footer (no contact partial on profile pages)
 		ProfileUtils.loadPartial('#cta-footer', '/partials/footer.html');
 
-		// Initialize strap height syncing
+		// Strap height syncing
 		ProfileUtils.initStrapSync();
 	})();
 	</script>

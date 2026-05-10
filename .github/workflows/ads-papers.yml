@@ -1,0 +1,42 @@
+name: ADS papers refresh
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/**/papers/**'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Fetch ADS papers
+        env:
+          ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
+        run: python3 scripts/fetch_ads_papers.py
+
+      - name: Commit paper updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/*/papers/
+          if git diff --cached --quiet; then
+            echo "No paper changes."
+          else
+            git commit -m "chore: refresh ADS papers [skip ci]"
+            git push
+          fi

@@ -41,6 +41,13 @@
             <div class="underline1"></div>
 			<div class="staff-card-grid" id="staff-members-grid"></div>
 
+			<!-- Retired / Lab Fellow (auto-shown if any status:retired entries) -->
+			<section id="staff-retired-section" hidden>
+				<h2 style="margin-top:28px;">RETIRED / LAB FELLOW</h2>
+				<div class="underline1"></div>
+				<div class="staff-card-grid" id="staff-retired-grid"></div>
+			</section>
+
 			<!-- Emeritus -->
 			<h2 style="margin-top:28px;">EMERITUS</h2>
             <div class="underline1"></div>
@@ -191,23 +198,24 @@
 	        return trimmed;
 	    }
 
+	    function isRetired(person) {
+	        return String(person && person.status || '').trim().toLowerCase() === 'retired';
+	    }
+
 	    function staffCard(person) {
 	        const slug     = person.slug;
 	        const rawName  = person.display_name || person.name || slug;
 	        const name     = formatName(rawName);
 	        const imgUrls  = imageCandidates(slug, person);
+	        const retired  = isRetired(person);
 	        const leadershipText =
 	            person.leadership && String(person.leadership).trim()
 	                ? person.leadership
 	                : '';
-	        const roleText =
-	            person.role && String(person.role).trim()
-	                ? person.role
-	                : '';
-	        const divisionText =
-	            person.division && String(person.division).trim()
-	                ? person.division
-	                : '';
+	        const roleSrc     = retired ? person.former_role     : person.role;
+	        const divisionSrc = retired ? person.former_division : person.division;
+	        const roleText     = roleSrc && String(roleSrc).trim() ? roleSrc : '';
+	        const divisionText = divisionSrc && String(divisionSrc).trim() ? divisionSrc : '';
 	        // Interests list (preferred) or fallback to `focus`
 	        let interestsText = '';
 	        if (Array.isArray(person.interests) && person.interests.length) {
@@ -277,8 +285,11 @@
 	        const people = Array.isArray(roster) ? roster : [];
 	        if (!people.length) return;
 
-	        const leadership = people.filter(p => normalizeLeadership(p.leadership));
-	        const members    = people.filter(p => !normalizeLeadership(p.leadership));
+	        const active = people.filter(p => !isRetired(p));
+	        const retired = people.filter(isRetired);
+
+	        const leadership = active.filter(p => normalizeLeadership(p.leadership));
+	        const members    = active.filter(p => !normalizeLeadership(p.leadership));
 
 	        leadership.sort((a, b) => {
 	            const pa = leadershipPriority(a);
@@ -288,13 +299,21 @@
 	        });
 
 	        members.sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+	        retired.sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
 
-	        const leadGrid    = document.getElementById('staff-leadership-grid');
-	        const membersGrid = document.getElementById('staff-members-grid');
+	        const leadGrid     = document.getElementById('staff-leadership-grid');
+	        const membersGrid  = document.getElementById('staff-members-grid');
+	        const retiredSec   = document.getElementById('staff-retired-section');
+	        const retiredGrid  = document.getElementById('staff-retired-grid');
 	        if (!leadGrid || !membersGrid) return;
 
 	        leadership.forEach(p => leadGrid.appendChild(staffCard(p)));
-	        members.forEach(p   => membersGrid.appendChild(staffCard(p)));
+	        members.forEach(p    => membersGrid.appendChild(staffCard(p)));
+
+	        if (retired.length && retiredSec && retiredGrid) {
+	            retired.forEach(p => retiredGrid.appendChild(staffCard(p)));
+	            retiredSec.hidden = false;
+	        }
 	    }
 
 	    main().catch(err => console.error('Staff page render error:', err));
