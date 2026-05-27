@@ -41,10 +41,24 @@
         if (tb && bg) bg.style.height = tb.offsetHeight + 'px';
     }
 
+    function loadNav() {
+        var slot = document.getElementById('cta-nav');
+        if (!slot || slot.dataset.navLoaded === '1') return;
+        slot.dataset.navLoaded = '1';
+        fetch('/partials/navbar.html')
+            .then(function (r) { return r.text(); })
+            .then(function (html) {
+                slot.innerHTML = html;
+                wireApplyButtons();
+            })
+            .catch(function (err) { console.error('Nav load failed:', err); });
+    }
+
     function loadHeaderStrap() {
         var slot = document.getElementById('cta-header');
         if (!slot) {
             wireApplyButtons();
+            loadNav();
             return;
         }
         fetch('/partials/header-strap.html')
@@ -53,6 +67,7 @@
                 slot.innerHTML = html;
                 wireApplyButtons();
                 syncStrap();
+                loadNav();
             })
             .catch(function (err) { console.error('Header load failed:', err); });
     }

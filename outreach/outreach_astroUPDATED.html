@@ -24,9 +24,11 @@
 
 	<!-- Custom-Theme-Files -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="../css/style.css" 			type="text/css" media="all"> <!-- Page-Styling -->
-		<link rel="stylesheet" href="../css/chocolat.css" 		type="text/css" media="all"> <!-- Gallery-Popup-CSS -->
-		<link rel="stylesheet" href="../css/outreach.css" 		type="text/css" media="all"> <!-- Outreach-Overrides -->
+		<link rel="stylesheet" href="/css/style.css" 			type="text/css" media="all"> <!-- Page-Styling -->
+		<link rel="stylesheet" href="/css/design-system.css" 	type="text/css" media="all"> <!-- Design System -->
+		<link rel="stylesheet" href="/css/common-header.css" 	type="text/css" media="all"> <!-- Strap header -->
+		<link rel="stylesheet" href="/css/chocolat.css" 		type="text/css" media="all"> <!-- Gallery-Popup-CSS -->
+		<link rel="stylesheet" href="/css/outreach.css" 		type="text/css" media="all"> <!-- Outreach-Overrides -->
 	<!-- //Custom-Theme-Files -->
 
 	<!-- Web-Fonts -->
@@ -36,6 +38,7 @@
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/js/apply.js"></script>
 </head>
 <!-- //Head -->
 
@@ -44,110 +47,7 @@
 <!-- Body -->
 <body>
 
-	<!-- Header -->
-	<div class="header" id="home">
-		<!-- Top-Bar -->
-		<div class="top-bar">
-			<div class="container">
-				<!-- Logo -->
-				<div class="logo">
-					<p><a href="../index.html">Center for Theoretical<br />Astrophysics</a></p>
-                    <br>
-                    <p class="subtitle"><a href="http://cta.lanl.gov">Los Alamos National Laboratory</a></p>
-				</div>
-				<!-- //Logo -->
-				<div class="info">
-					<!-- Email -->
-					<div class="email">
-						<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a></p>
-					</div>
-					<!-- //Email -->
-				</div>
-			</div>
-		</div>
-		<!-- //Top-Bar -->
-
-		<!-- Slider -->
-		<div class="slider">
-			<div class="callbacks_container">
-				<ul class="rslides" id="slider">
-					<li>
-						<div class="slider-img">
-							<img src="../images/outreach/BHrubsheet.jpg" class="img-responsive" alt="Elementary">
-						</div>
-						<div class="slider-info">
-							<h3>ELEMENTARY SCHOOL STUDENTS</h3>
-							<div class="underline"></div>
-							<p><font color="white">Hands-on physics with young scientists.</font></p>
-						</div>
-					</li>
-					<li>
-						<div class="slider-img">
-							<img src="../images/outreach/hst_ed.png" class="img-responsive" alt="Mid and High School">
-						</div>
-						<div class="slider-info">
-							<h3>MIDDLE SCHOOL AND HIGH SCHOOL</h3>
-							<div class="underline"></div>
-							<p>Involving students in real astrophysics research problems.</p>
-						</div>
-					</li>
-					<li>
-						<div class="slider-img">
-							<img src="../images/outreach/subaru.jpg" class="img-responsive" alt="Wider Community">
-						</div>
-						<div class="slider-info">
-							<h3>COMMUNITY</h3>
-							<div class="underline"></div>
-							<p>Engaging the community in the wonders of astrophysics.</p>
-						</div>
-					</li>
-					<li>
-						<div class="slider-img">
-							<img src="../images/outreach/ccsn2.jpg" class="img-responsive" alt="Summer Schools">
-						</div>
-						<div class="slider-info">
-							<h3>UNDERGRADUATE AND GRADUATE STUDENTS</h3>
-							<div class="underline"></div>
-							<p>Computational science summer schools.</p>
-						</div>
-                                       
-
-					</li>	
-				</ul>
-			</div>
-		</div>
-		<!-- //Slider -->
-	</div>
-	<!-- //Header -->
-
-	<!-- Navbar -->
-	<nav class="navbar navbar-default">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<!-- Navbar-Collapse -->
-			<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-				<nav class="menu menu--francisco">
-					<ul class="nav navbar-nav menu__list">
-						<li class="menu__item"><a href="#about" class="menu__link"><span class="menu__helper">ABOUT</span></a></li>
-						<li class="menu__item"><a href="#projects" class="menu__link"><span class="menu__helper">PROJECTS</span></a></li>
-						<li class="menu__item"><a href="#links" class="menu__link"><span class="menu__helper">LINKS</span></a></li>
-						<li class="menu__item"><a href="#gallery" class="menu__link"><span class="menu__helper">GALLERY</span></a></li>
-						<li class="menu__item"><a href="#team" class="menu__link"><span class="menu__helper">TEAM</span></a></li>
-						<li class="menu__item"><a href="#contact" class="menu__link"><span class="menu__helper">CONTACT</span></a></li>
-					</ul>
-				</nav>
-			</div>
-			<!-- //Navbar-Collapse -->
-		</div>
-	</nav>
-	<!-- //Navbar -->
+	<div id="cta-header"></div>
 
 	<!-- About -->
 	<div class="about" id="about">
