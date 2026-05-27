@@ -1,14 +1,3 @@
-- bibcode: 2026ApJS..284....6C
-  title: 'Toward First-principles Multimessenger Predictions: Coupling Nuclear Networks with General Relativistic Radiation
-    Magnetohydrodynamics in Gmunu'
-  authors:
-  - Cheong, Patrick Chi-Kit
-  - Fryer, Christopher L.
-  author_count: 2
-  year: '2026'
-  journal: The Astrophysical Journal Supplement Series
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJS..284....6C/abstract
-
 - bibcode: 2026PhRvR...8b3117R
   title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
     ejecta predictions
@@ -24,33 +13,8 @@
   journal: Physical Review Research
   url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
 
-- bibcode: 2026IJMPD..3540002F
-  title: The physics behind astrophysical transients
-  authors:
-  - Fryer, Chris
-  - Fryer, Daniel A.
-  author_count: 2
-  year: '2026'
-  journal: International Journal of Modern Physics D
-  url: https://ui.adsabs.harvard.edu/abs/2026IJMPD..3540002F/abstract
-
-- bibcode: 2026IJMPD..3540020R
-  title: 'Selected topics on: (1) proposal of interpreting the Crab supernova with a GRB (2) progress in identifying the seven
-    GRBs episodes (3) the role of Sagittarius A in identifying the dark matter component by X-fermions'
-  authors:
-  - Ruffini, R.
-  - Sigismondi, C.
-  - Wang, Y.
-  - Quevedo, H.
-  - Zhang, S.
-  - Aimuratov, Y.
-  author_count: 12
-  year: '2026'
-  journal: International Journal of Modern Physics D
-  url: https://ui.adsabs.harvard.edu/abs/2026IJMPD..3540020R/abstract
-
-- bibcode: 2026arXiv260404362F
-  title: A comparison of three neodymium atomic data sets for kilonova modeling
+- bibcode: 2026ApJ..1003...89F
+  title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling
   authors:
   - Fontes, Christopher J.
   - Vieira, Nicholas
@@ -60,5 +24,41 @@
   - Ristić, Marko
   author_count: 7
   year: '2026'
-  journal: arXiv e-prints
-  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260404362F/abstract
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003...89F/abstract
+
+- bibcode: 2026ApJ..1003L...2B
+  title: 'Production of Heavy α-Elements and <SUP>44</SUP>Ti in Cas A: Comparison to Abundances from 1D Core-collapse Supernova
+    Models and Evidence for Carbon─Oxygen Shell Mergers'
+  authors:
+  - Boccioli, L.
+  - Roberti, L.
+  - Fryer, C.
+  - Safi-Harb, S.
+  - Jones, S.
+  - Pignatari, M.
+  author_count: 6
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003L...2B/abstract
+
+- bibcode: 2026ApJS..284....6C
+  title: 'Toward First-principles Multimessenger Predictions: Coupling Nuclear Networks with General Relativistic Radiation
+    Magnetohydrodynamics in Gmunu'
+  authors:
+  - Cheong, Patrick Chi-Kit
+  - Fryer, Christopher L.
+  author_count: 2
+  year: '2026'
+  journal: The Astrophysical Journal Supplement Series
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJS..284....6C/abstract
+
+- bibcode: 2026IJMPD..3540002F
+  title: The physics behind astrophysical transients
+  authors:
+  - Fryer, Chris
+  - Fryer, Daniel A.
+  author_count: 2
+  year: '2026'
+  journal: International Journal of Modern Physics D
+  url: https://ui.adsabs.harvard.edu/abs/2026IJMPD..3540002F/abstract

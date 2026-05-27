@@ -12,20 +12,6 @@
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1002L..24R/abstract
 
-- bibcode: 2026arXiv260406404U
-  title: Neutrino transport and flavor instabilities in a post-merger disk
-  authors:
-  - Urquilla, Erick
-  - Shankar, Swapnil
-  - Kundu, Debraj
-  - Froustey, Julien
-  - Richers, Sherwood
-  - Miller, Jonah M.
-  author_count: 9
-  year: '2026'
-  journal: arXiv e-prints
-  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260406404U/abstract
-
 - bibcode: 2026A&A...708A.130D
   title: A highly ionised outflow in the X-ray binary 4U 1624─49 detected with XRISM
   authors:
@@ -39,6 +25,20 @@
   year: '2026'
   journal: Astronomy and Astrophysics
   url: https://ui.adsabs.harvard.edu/abs/2026A&A...708A.130D/abstract
+
+- bibcode: 2026arXiv260406404U
+  title: Neutrino transport and flavor instabilities in a post-merger disk
+  authors:
+  - Urquilla, Erick
+  - Shankar, Swapnil
+  - Kundu, Debraj
+  - Froustey, Julien
+  - Richers, Sherwood
+  - Miller, Jonah M.
+  author_count: 9
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260406404U/abstract
 
 - bibcode: 2026EcoEv..1673204C
   title: Past Colony Connectivity of a Declining Seabird Derived From Host─Parasite Genetic Data
@@ -54,14 +54,16 @@
   journal: Ecology and Evolution
   url: https://ui.adsabs.harvard.edu/abs/2026EcoEv..1673204C/abstract
 
-- bibcode: 2026ATel17653....1M
-  title: Continued Swift Monitoring of the Stellar-mass Black Hole GX 339-4
+- bibcode: 2026AAS...24727706W
+  title: 'PHifty One Ergs Blows Up a Star: Towards Performance-Portable Supernovae with 3D GRRMHD in Phoebus'
   authors:
-  - Miller, J. M.
-  - Chan, I.
-  - Dumitrascu, I.
-  - Lopez, M.
-  author_count: 4
+  - White, Logan
+  - Fields, Carl
+  - Barker, Brandon
+  - Dolence, Joshua
+  - Gogilashvili, Mariam
+  - Miller, Jonah
+  author_count: 8
   year: '2026'
-  journal: The Astronomer's Telegram
-  url: https://ui.adsabs.harvard.edu/abs/2026ATel17653....1M/abstract
+  journal: American Astronomical Society Meeting Abstracts
+  url: https://ui.adsabs.harvard.edu/abs/2026AAS...24727706W/abstract

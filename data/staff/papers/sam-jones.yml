@@ -1,3 +1,18 @@
+- bibcode: 2026ApJ..1003L...2B
+  title: 'Production of Heavy α-Elements and <SUP>44</SUP>Ti in Cas A: Comparison to Abundances from 1D Core-collapse Supernova
+    Models and Evidence for Carbon─Oxygen Shell Mergers'
+  authors:
+  - Boccioli, L.
+  - Roberti, L.
+  - Fryer, C.
+  - Safi-Harb, S.
+  - Jones, S.
+  - Pignatari, M.
+  author_count: 6
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003L...2B/abstract
+
 - bibcode: 2026JCoPh.55014641J
   title: A constrained-transport embedded boundary method for compressible resistive magnetohydrodynamics
   authors:
@@ -50,17 +65,3 @@
   year: '2023'
   journal: Physics of Plasmas
   url: https://ui.adsabs.harvard.edu/abs/2023PhPl...30g2503C/abstract
-
-- bibcode: 2022MNRAS.511..886L
-  title: 'Radioactive nuclei in the early Solar system: analysis of the 15 isotopes produced by core-collapse supernovae'
-  authors:
-  - Lawson, Thomas V.
-  - Pignatari, Marco
-  - Stancliffe, Richard J.
-  - den Hartogh, Jacqueline
-  - Jones, Sam
-  - Fryer, Chris L.
-  author_count: 8
-  year: '2022'
-  journal: Monthly Notices of the Royal Astronomical Society
-  url: https://ui.adsabs.harvard.edu/abs/2022MNRAS.511..886L/abstract

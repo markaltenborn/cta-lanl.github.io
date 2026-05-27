@@ -12,19 +12,50 @@
   journal: Soil Biology and Biochemistry
   url: https://ui.adsabs.harvard.edu/abs/2026SBiBi.21810144R/abstract
 
-- bibcode: 2026Fuel..41138029Y
-  title: Feasibility evaluation of CO<SUB>2</SUB>-EOR and storage in low oil saturation reservoir
+- bibcode: 2026PhLB..87740440A
+  title: Characterization of nuclear breakup as a function of hard-scattering kinematics using dijets measured by ATLAS in
+    p+Pb collisions
   authors:
-  - Yan, Wenxin
-  - Li, Zongfa
-  - Peng, Hanxiu
-  - Chen, Yashu
-  - Hao, Yongmao
-  - Guo, Fan
-  author_count: 10
+  - Aad, G.
+  - Aakvaag, E.
+  - Abbott, B.
+  - Abdelhameed, S.
+  - Abeling, K.
+  - Abicht, N. J.
+  author_count: 2874
   year: '2026'
-  journal: Fuel
-  url: https://ui.adsabs.harvard.edu/abs/2026Fuel..41138029Y/abstract
+  journal: Physics Letters B
+  url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87740440A/abstract
+
+- bibcode: 2026ApJ..1003..126N
+  title: 'Global Characteristics of the IBEX Ribbon and Its Temporal Variation: Implications for Relationships with Solar
+    Cycle Variability and the Interstellar Magnetic Field'
+  authors:
+  - Noh, Sung Jun
+  - Reisenfeld, Daniel B.
+  - Zirnstein, Eric J.
+  - Funsten, Herbert O.
+  - Janzen, Paul H.
+  - Kim, Thomas K.
+  author_count: 12
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003..126N/abstract
+
+- bibcode: 2026PhLB..87740279A
+  title: Search for Higgs bosons produced in association with a high-energy photon via vector-boson fusion and decaying to
+    a pair of b-quarks in the ATLAS detector
+  authors:
+  - Aad, G.
+  - Aakvaag, E.
+  - Abbott, B.
+  - Abdelhameed, S.
+  - Abeling, K.
+  - Abicht, N. J.
+  author_count: 2871
+  year: '2026'
+  journal: Physics Letters B
+  url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87740279A/abstract
 
 - bibcode: 2026ApJ..1002...10L
   title: The Effect of Large-scale Magnetic Fluctuations on Energetic Particle Profiles across Interplanetary Shocks
@@ -39,35 +70,3 @@
   year: '2026'
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1002...10L/abstract
-
-- bibcode: 2026PhLB..87640280A
-  title: Study of Higgs boson pair production in the <mml:math><mml:mrow><mml:mi>H</mml:mi><mml:mi>H</mml:mi><mml:mo>→</mml:mo><mml:mi>b</mml:mi><mml:mover><mml:mrow><mml:mi>b</mml:mi></mml:mrow><mml:mo>\oline
-    </mml:mo></mml:mover><mml:mi>γ</mml:mi><mml:mi>γ</mml:mi></mml:mrow></mml:math> final state with 308 fb<mml:math><mml:msup><mml:mrow></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:math>
-    of data collected at <mml:math><mml:mrow><mml:msqrt><mml:mi>s</mml:mi></mml:msqrt><mml:mo>=</mml:mo></mml:mrow></mml:math>
-    13 TeV and 13.6 TeV by the ATLAS experiment
-  authors:
-  - Aad, G.
-  - Aakvaag, E.
-  - Abbott, B.
-  - Abdelhameed, S.
-  - Abeling, K.
-  - Abicht, N. J.
-  author_count: 2885
-  year: '2026'
-  journal: Physics Letters B
-  url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87640280A/abstract
-
-- bibcode: 2026ApJ..1000..203H
-  title: 'Evolution of a Pickup Ion Ring-beam Population in Large-scale Interstellar Turbulence and Small-scale Self-generated
-    Waves: Implications for the IBEX Ribbon'
-  authors:
-  - Huang, Yifan
-  - Guo, Fan
-  - Sun, Xiaochen
-  - Noh, Sung Jun
-  - Zirnstein, Eric J.
-  - Reisenfeld, Daniel B.
-  author_count: 9
-  year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1000..203H/abstract
