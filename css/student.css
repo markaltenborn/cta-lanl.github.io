@@ -9,6 +9,12 @@
     background: var(--color-bg-accent);
 }
 
+/* Match the homepage hero-to-content rhythm after the shared navbar. */
+#students-intro {
+    padding: 100px 0;
+    text-align: center;
+}
+
 #team .title {
     text-align: center;
 }

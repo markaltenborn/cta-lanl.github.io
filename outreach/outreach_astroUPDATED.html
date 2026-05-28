@@ -17,9 +17,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="keywords" content="Astrophysics Outreach Los Alamos LANL CTA Students">
-		<script type="application/x-javascript"> addEventListener("load", function() { 
-                setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-        </script>
 	<!-- //Meta-Tags -->
 
 	<!-- Custom-Theme-Files -->
@@ -27,7 +24,6 @@
 		<link rel="stylesheet" href="/css/style.css" 			type="text/css" media="all"> <!-- Page-Styling -->
 		<link rel="stylesheet" href="/css/design-system.css" 	type="text/css" media="all"> <!-- Design System -->
 		<link rel="stylesheet" href="/css/common-header.css" 	type="text/css" media="all"> <!-- Strap header -->
-		<link rel="stylesheet" href="/css/chocolat.css" 		type="text/css" media="all"> <!-- Gallery-Popup-CSS -->
 		<link rel="stylesheet" href="/css/outreach.css" 		type="text/css" media="all"> <!-- Outreach-Overrides -->
 	<!-- //Custom-Theme-Files -->
 
@@ -238,102 +234,7 @@
 
 
 
-	<!-- Custom-JavaScript-File-Links -->
-
-		<!-- Necessary-JavaScript-File-For-Bootstrap <script type="text/javascript" src="../js/bootstrap.min.js"></script>-->
-
-        <!-- Latest compiled JavaScript -->
-        <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-		<!-- Slider-JavaScript -->
-			<script src="../js/responsiveslides.min.js"></script>
-			<script>
-				$(function () {
-					$("#slider").responsiveSlides({
-						auto: true,
-						pager: true,
-						nav: true,
-						speed: 1000,
-						namespace: "callbacks",
-						before: function () {
-							$('.events').append("<li>before event fired.</li>");
-						},
-						after: function () {
-							$('.events').append("<li>after event fired.</li>");
-						}
-					});
-				});
-			</script>
-		<!-- //Slider-JavaScript -->
-
-		<!-- Gallery-Tab-JavaScript -->
-			<script src="../js/cbpFWTabs.js"></script>
-			<script>
-				(function() {
-					[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
-						new CBPFWTabs( el );
-					});
-				})();
-			</script>
-		<!-- //Gallery-Tab-JavaScript -->
-
-		<!-- Popup-Box-JavaScript -->
-			<script src="../js/modernizr.custom.97074.js"></script>
-			<script src="../js/jquery.chocolat.js"></script>
-			<script type="text/javascript">
-				$(function() {
-					$('.gallery-item a').Chocolat();
-				});
-			</script>
-		<!-- //Popup-Box-JavaScript -->
-
-		<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
-			<script type="text/javascript">
-				$(document).ready(function() {
-					var defaults = {
-						containerID: 'toTop', // fading element id
-						containerHoverID: 'toTopHover', // fading element hover id
-						scrollSpeed: 100,
-						easingType: 'linear'
-					};
-					$().UItoTop({ easingType: 'easeOutQuart' });
-				});
-			</script>
-			<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
-		<!-- //Slide-To-Top JavaScript -->
-
-		<!-- Smooth-Scrolling-JavaScript -->
-			<script type="text/javascript" src="../js/move-top.js"></script>
-			<script type="text/javascript" src="../js/easing.js"></script>
-			<script type="text/javascript">
-					jQuery(document).ready(function($) {
-						$(".scroll, .navbar li a, .footer li a").click(function(event){
-							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-						});
-					});
-			</script>
-		<!-- //Smooth-Scrolling-JavaScript -->
-		
-		<!-- FlexSlider-JavaScript -->
-			<script defer src="../js/jquery.flexslider.js"></script>
-			<script type="text/javascript">
-				$(function(){
-					SyntaxHighlighter.all();
-				});
-				$(window).load(function(){
-					$('.flexslider').flexslider({
-						animation: "slide",
-						start: function(slider){
-							$('body').removeClass('loading');
-						}
-					});
-				});
-			</script>
-		<!-- //FlexSlider-JavaScript -->
-
-	<!-- //Custom-JavaScript-File-Links -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
 
@@ -343,4 +244,3 @@
 
 
 </html>
-
