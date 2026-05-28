@@ -52,17 +52,18 @@
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260425635W/abstract
 
-- bibcode: 2026NatSR..1613163H
-  title: 'Development of head-to-head and longitudinal CycleGAN algorithm for MRI harmonization: validation in follow-up MRI
-    evaluation in patients with brain metastasis'
+- bibcode: 2026PhLB..87440252A
+  title: Measurement of the p─<mml:math><mml:msup><mml:mstyle><mml:mi>Σ</mml:mi></mml:mstyle><mml:mo>+</mml:mo></mml:msup></mml:math>
+    correlation function in pp collisions at <mml:math><mml:mrow><mml:msqrt><mml:mi>s</mml:mi></mml:msqrt><mml:mo>=</mml:mo><mml:mn>13</mml:mn></mml:mrow></mml:math>
+    TeV
   authors:
-  - Hwang, Hosung
-  - Choi, Hyeon-Ung
-  - Jeong, Hyunjae
-  - Lim, Hyun-Woo
-  - Jo, Sang Won
-  - Jeon, Young Hun
-  author_count: 9
+  - Abualrob, I. J.
+  - Acharya, S.
+  - Aglieri Rinella, G.
+  - Aglietta, L.
+  - Agnello, M.
+  - Agrawal, N.
+  author_count: 1041
   year: '2026'
-  journal: Scientific Reports
-  url: https://ui.adsabs.harvard.edu/abs/2026NatSR..1613163H/abstract
+  journal: Physics Letters B
+  url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87440252A/abstract

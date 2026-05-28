@@ -55,16 +55,16 @@
   journal: Nature Communications
   url: https://ui.adsabs.harvard.edu/abs/2025NatCo..16.9819S/abstract
 
-- bibcode: 2025RvMP...97d5007C
-  title: Neutron stars and the dense matter equation of state
+- bibcode: 2025arXiv251015860C
+  title: Quantum Monte Carlo Calculations of Light Nuclei with Fully Propagated Theoretical Uncertainties
   authors:
-  - Chatziioannou, Katerina
-  - Cromartie, H. Thankful
+  - Curry, Ryan
+  - Hebeler, Kai
   - Gandolfi, Stefano
-  - Tews, Ingo
-  - Radice, David
-  - Steiner, Andrew W.
+  - Gezerlis, Alexandros
+  - Schwenk, Achim
+  - Somasundaram, Rahul
   author_count: 7
   year: '2025'
-  journal: Reviews of Modern Physics
-  url: https://ui.adsabs.harvard.edu/abs/2025RvMP...97d5007C/abstract
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2025arXiv251015860C/abstract

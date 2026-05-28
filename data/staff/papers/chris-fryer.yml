@@ -13,6 +13,17 @@
   journal: Physical Review Research
   url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
 
+- bibcode: 2026ApJS..284....6C
+  title: 'Toward First-principles Multimessenger Predictions: Coupling Nuclear Networks with General Relativistic Radiation
+    Magnetohydrodynamics in Gmunu'
+  authors:
+  - Cheong, Patrick Chi-Kit
+  - Fryer, Christopher L.
+  author_count: 2
+  year: '2026'
+  journal: The Astrophysical Journal Supplement Series
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJS..284....6C/abstract
+
 - bibcode: 2026ApJ..1003...89F
   title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling
   authors:
@@ -42,23 +53,13 @@
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003L...2B/abstract
 
-- bibcode: 2026ApJS..284....6C
-  title: 'Toward First-principles Multimessenger Predictions: Coupling Nuclear Networks with General Relativistic Radiation
-    Magnetohydrodynamics in Gmunu'
+- bibcode: 2026arXiv260423503C
+  title: 'Hyperaccreting Neutron Stars inside Massive Envelopes: The Implausibility of Thorne-Żytkow Objects'
   authors:
-  - Cheong, Patrick Chi-Kit
+  - Chi-Kit Cheong, Patrick
+  - Radice, David
   - Fryer, Christopher L.
-  author_count: 2
+  author_count: 3
   year: '2026'
-  journal: The Astrophysical Journal Supplement Series
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJS..284....6C/abstract
-
-- bibcode: 2026IJMPD..3540002F
-  title: The physics behind astrophysical transients
-  authors:
-  - Fryer, Chris
-  - Fryer, Daniel A.
-  author_count: 2
-  year: '2026'
-  journal: International Journal of Modern Physics D
-  url: https://ui.adsabs.harvard.edu/abs/2026IJMPD..3540002F/abstract
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260423503C/abstract
