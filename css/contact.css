@@ -5,8 +5,8 @@
 }
 
 .contact-lead {
-	font-size: 16px;
-	line-height: 1.6;
+	font-size: 17px;
+	line-height: 1.7;
 	max-width: 820px;
 	margin: 0 auto 32px;
 	text-align: center;
@@ -79,8 +79,8 @@
 
 .contact-faq > p {
 	margin: 6px 0 6px 28px;
-	font-size: 14px;
-	line-height: 1.65;
+	font-size: 16px;
+	line-height: 1.7;
 	color: var(--color-text-primary);
 }
 
@@ -110,8 +110,8 @@
 }
 
 .contact-card p {
-	font-size: 14px;
-	line-height: 1.55;
+	font-size: 16px;
+	line-height: 1.7;
 	margin: 0 0 10px;
 }
 
@@ -132,8 +132,8 @@
 /* Weekly meeting block */
 
 .contact-meeting p {
-	font-size: 15px;
-	line-height: 1.6;
+	font-size: 16px;
+	line-height: 1.7;
 }
 
 /* Inline mailing-address sub-footer */
