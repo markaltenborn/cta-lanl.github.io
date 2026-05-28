@@ -122,11 +122,6 @@
 	        });
 	    }
 
-	    function normalizeLeadership(str) {
-	        if (!str) return '';
-	        return String(str).trim().toLowerCase();
-	    }
-
 	    const LEADERSHIP_ORDER = {
 	        'director': 1,
 	        'co-director': 2,
@@ -136,13 +131,31 @@
 	        'outreach coordinator': 5
 	    };
 
+	    function leadershipTitles(person) {
+	        const v = person && person.leadership;
+	        if (v == null) return [];
+	        const list = Array.isArray(v) ? v : [v];
+	        return list.map(s => String(s).trim()).filter(Boolean);
+	    }
+
+	    function normalizeLeadership(value) {
+	        if (value == null) return '';
+	        const list = Array.isArray(value) ? value : [value];
+	        return list.map(s => String(s).trim().toLowerCase()).filter(Boolean).join(',');
+	    }
+
 	    function leadershipPriority(person) {
-	        const key = normalizeLeadership(person.leadership);
-	        if (!key) return Infinity; // non-leadership
-	        if (Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, key)) {
-	            return LEADERSHIP_ORDER[key];
+	        const titles = leadershipTitles(person);
+	        if (!titles.length) return Infinity; // non-leadership
+	        let best = Infinity;
+	        for (const t of titles) {
+	            const key = t.toLowerCase();
+	            const p = Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, key)
+	                ? LEADERSHIP_ORDER[key]
+	                : 100;
+	            if (p < best) best = p;
 	        }
-	        return 100; // unknown leadership role, but still leadership
+	        return best;
 	    }
 
 	    function sortKey(person) {
@@ -208,10 +221,12 @@
 	        const name     = formatName(rawName);
 	        const imgUrls  = imageCandidates(slug, person);
 	        const retired  = isRetired(person);
-	        const leadershipText =
-	            person.leadership && String(person.leadership).trim()
-	                ? person.leadership
-	                : '';
+	        const titles = leadershipTitles(person).slice().sort((a, b) => {
+	            const pa = Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, a.toLowerCase()) ? LEADERSHIP_ORDER[a.toLowerCase()] : 100;
+	            const pb = Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, b.toLowerCase()) ? LEADERSHIP_ORDER[b.toLowerCase()] : 100;
+	            return pa - pb;
+	        });
+	        const leadershipText = titles.join(' · ');
 	        const roleSrc     = retired ? person.former_role     : person.role;
 	        const divisionSrc = retired ? person.former_division : person.division;
 	        const roleText     = roleSrc && String(roleSrc).trim() ? roleSrc : '';
