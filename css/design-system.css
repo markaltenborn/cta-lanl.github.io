@@ -131,6 +131,10 @@
     transition: color var(--transition-fast);
 }
 
+.page-back-link::before {
+    content: '← ';
+}
+
 .page-back-link:hover {
     color: var(--color-link-hover);
 }

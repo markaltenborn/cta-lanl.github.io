@@ -46,8 +46,22 @@
 }
 
 .profile-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
     text-align: left;
     min-width: 0;
+}
+
+.team .page-back-link {
+    display: block;
+    width: max-content;
+    margin: 12px 0 12px;
+    text-align: left;
+}
+
+.profile-content #bio-section {
+    grid-column: 1 / -1;
 }
 
 /* Old .profile-layout retained for emeritus/other pages until they migrate */
@@ -425,7 +439,23 @@
 
 /* Section pattern in content area */
 .profile-section {
-    margin: 0 0 26px;
+    margin: 0;
+    padding: 18px 20px;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-rule);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+@media (max-width: 768px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-content #bio-section {
+        grid-column: auto;
+    }
 }
 
 .profile-section[hidden] {
