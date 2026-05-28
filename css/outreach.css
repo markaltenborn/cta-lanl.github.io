@@ -5,18 +5,18 @@
     line-height: 0.94;
 }
 
-/* Project title links - blue box with red hover */
+/* Project title links - blue box with brand-blue hover */
 .about a {
 	padding: 10px 30px;
 	border-radius: 0;
-	background-color: #028fcc;
+	background-color: var(--color-link);
 	border: none;
 	outline: none;
-	color: #EEE;
+	color: #FFF;
 }
 
 .about a:hover {
-	background-color: red;
+	background-color: var(--color-link-hover);
 	color: #FFF;
 	text-decoration: underline;
 }
@@ -29,5 +29,5 @@
 
 /* Team h4 color override */
 .team h4 {
-	color: #393B48;
+	color: var(--color-text-primary);
 }

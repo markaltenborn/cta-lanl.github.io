@@ -25,7 +25,7 @@
 .team .meeting-info p {
     margin: 12px auto;
     width: 60%;
-    color: #555;
+    color: var(--color-text-secondary);
     line-height: 1.6;
     text-align: center;
 }
@@ -34,7 +34,7 @@
 .featured-speaker-card {
     margin: 40px 0;
     padding: 30px 10px 30px 30px;
-    background: #f9f9f9;
+    background: var(--color-bg-accent);
     border-radius: 8px;
 }
 
@@ -47,14 +47,14 @@
     margin: 0 0 8px 0;
     font-size: 32px;
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--color-heading);
     text-align: left;
 }
 
 .speaker-affiliation {
     margin: 0 0 24px 0;
     font-size: 18px;
-    color: #555;
+    color: var(--color-text-secondary);
     font-weight: 500;
     text-align: left;
 }
@@ -88,7 +88,7 @@
     margin: 0 0 20px 0;
     font-size: 22px;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--color-heading);
     line-height: 1.4;
     text-align: left;
 }
@@ -103,7 +103,7 @@
 
 .speaker-meta p {
     margin: 8px 0;
-    color: #444;
+    color: var(--color-text-primary);
     font-size: 15px;
     text-align: left;
 }
@@ -111,7 +111,7 @@
 .speaker-meta strong {
     display: inline-block;
     width: 80px;
-    color: #2c3e50;
+    color: var(--color-heading);
 }
 
 .speaker-bio,
@@ -124,7 +124,7 @@
     margin: 24px 0 12px 0;
     font-size: 18px;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--color-heading);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     text-align: left;
@@ -133,7 +133,7 @@
 .speaker-bio p,
 .speaker-abstract p {
     margin: 12px 0;
-    color: #555;
+    color: var(--color-text-secondary);
     line-height: 1.7;
     text-align: left;
 }
@@ -150,7 +150,7 @@
 
 .calendar-container {
     margin-top: 30px;
-    background: white;
+    background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -166,7 +166,7 @@
 .calendar-placeholder {
     padding: 60px 20px;
     text-align: center;
-    color: #999;
+    color: var(--color-text-secondary);
     font-size: 16px;
     display: none;
 }
@@ -179,7 +179,7 @@
 .calendar-subscribe-label {
     margin: 0 0 10px 0;
     font-weight: 600;
-    color: #555;
+    color: var(--color-text-secondary);
 }
 
 .calendar-subscribe-buttons {

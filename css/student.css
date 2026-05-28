@@ -6,7 +6,7 @@
 
 /* Team section background on the students page */
 #team {
-    background: #EEE;
+    background: var(--color-bg-accent);
 }
 
 #team .title {
@@ -32,12 +32,12 @@
 }
 
 #team .student-list a {
-    color: #028fcc;
+    color: var(--color-link);
     text-decoration: none;
 }
 
 #team .student-list a:hover {
-    color: red;
+    color: var(--color-link-hover);
     text-decoration: none;
 }
 

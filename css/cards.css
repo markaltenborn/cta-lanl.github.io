@@ -62,8 +62,8 @@
 .emeritus-card {
     display: flex;
     flex-direction: column;
-    background: #FFF;
-    border: 1px solid #e6e6e6;
+    background: #fff;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     overflow: hidden;
     text-decoration: none;
@@ -126,7 +126,7 @@
     margin: 6px 0 4px;
     font-size: 18px;
     font-weight: 700;
-    color: #444;
+    color: var(--color-text-primary);
     font-family: 'Open Sans', sans-serif;
     font-variant: small-caps;   /* \textsc-like */
     text-transform: none;
@@ -165,7 +165,7 @@
     margin: 2px 0;
     font-size: 13px;
     font-weight: 600;
-    color: #555;
+    color: var(--color-text-secondary);
 }
 
 /* Interests / focus */
@@ -176,7 +176,7 @@
     margin-top: 8px;
     font-size: 11px;
     line-height: 1.4;
-    color: #777;
+    color: var(--color-text-secondary);
 }
 
 /* Email lines */
@@ -193,7 +193,7 @@
 .postdoc-email a,
 .student-email a,
 .emeritus-email a {
-    color: #028fcc;
+    color: var(--color-link);
     text-decoration: none;
     word-break: break-all;
 }
@@ -202,7 +202,7 @@
 .postdoc-email a:hover,
 .student-email a:hover,
 .emeritus-email a:hover {
-    color: red;
+    color: var(--color-link-hover);
 }
 
 /* ---- Override generic .team p styles from style.css ---- */

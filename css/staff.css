@@ -6,7 +6,7 @@
 
 /* Optional: light background for the #team section on staff pages */
 #team {
-    background: #EEE;
+    background: var(--color-bg-accent);
 }
 
 /* Titles inside the team section */

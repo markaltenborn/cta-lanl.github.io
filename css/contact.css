@@ -21,7 +21,7 @@
 	font-size: 22px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	color: #1f4f8f;
+	color: var(--color-heading);
 	margin: 0 0 6px;
 }
 
@@ -32,12 +32,12 @@
 /* FAQ — <details>/<summary> disclosures */
 
 .contact-faq {
-	border-bottom: 1px solid #e5e5e5;
+	border-bottom: 1px solid var(--color-border);
 	padding: 14px 0;
 }
 
 .contact-faq:first-of-type {
-	border-top: 1px solid #e5e5e5;
+	border-top: 1px solid var(--color-border);
 }
 
 .contact-faq > summary {
@@ -46,7 +46,7 @@
 	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	font-weight: 600;
-	color: #1f4f8f;
+	color: var(--color-link);
 	padding: 4px 0 4px 28px;
 	position: relative;
 	transition: color 0.15s ease;
@@ -62,7 +62,7 @@
 	font-size: 18px;
 	line-height: 1;
 	font-weight: 400;
-	color: #1f4f8f;
+	color: var(--color-link);
 }
 
 .contact-faq[open] > summary::before {
@@ -74,14 +74,14 @@
 }
 
 .contact-faq > summary:hover {
-	color: #143a6b;
+	color: var(--color-link-hover);
 }
 
 .contact-faq > p {
 	margin: 6px 0 6px 28px;
 	font-size: 14px;
 	line-height: 1.65;
-	color: #444;
+	color: var(--color-text-primary);
 }
 
 /* Routed-contact cards — 2x2 grid */
@@ -94,8 +94,8 @@
 }
 
 .contact-card {
-	background: #f8f8f8;
-	border-left: 3px solid #1f4f8f;
+	background: var(--color-bg-accent);
+	border-left: 3px solid var(--color-rule);
 	padding: 26px 28px;
 	border-radius: 2px;
 }
@@ -106,7 +106,7 @@
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
 	margin: 0 0 10px;
-	color: #1f4f8f;
+	color: var(--color-heading);
 }
 
 .contact-card p {
@@ -141,9 +141,9 @@
 .contact-address-line {
 	margin: 64px 0 0;
 	padding: 22px 16px;
-	border-top: 1px solid #eee;
+	border-top: 1px solid var(--color-border);
 	text-align: center;
 	font-size: 12px;
-	color: #999;
+	color: var(--color-text-secondary);
 	letter-spacing: 0.3px;
 }
