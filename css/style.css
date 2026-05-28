@@ -1211,6 +1211,76 @@ figure.effect-apollo:hover figcaption::before {
 	font-size: 14px;
 }
 
+/* ===== Member Spotlight Sections (Home Page) ===== */
+.cta-spotlight-section {
+	display: flex;
+	margin: 48px 0;
+	gap: 0;
+	background: var(--color-border);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.cta-spotlight-label-bar {
+	position: relative;
+	background: var(--color-link);
+	width: 80px;
+	min-height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	text-decoration: none;
+	transition: background 0.2s ease;
+}
+
+.cta-spotlight-label-bar:hover {
+	background: var(--color-link-hover);
+	text-decoration: none;
+}
+
+.cta-spotlight-label-bar::after {
+	content: attr(data-label);
+	color: #FFFFFF;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	transform: rotate(180deg);
+	text-transform: uppercase;
+}
+
+.cta-spotlight-content {
+	flex: 1;
+	padding: 16px 32px;
+}
+
+@media (max-width: 768px) {
+	.cta-spotlight-section {
+		flex-direction: column;
+		margin: 32px 0;
+	}
+	
+	.cta-spotlight-label-bar {
+		width: 100%;
+		min-height: 50px;
+		height: 50px;
+	}
+	
+	.cta-spotlight-label-bar::after {
+		writing-mode: horizontal-tb;
+		transform: none;
+		font-size: 16px;
+	}
+	
+	.cta-spotlight-content {
+		padding: 16px 24px;
+	}
+}
+
 .get{
 	margin:0 auto;
 }
