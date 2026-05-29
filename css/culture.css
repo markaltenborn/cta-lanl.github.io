@@ -1,0 +1,181 @@
+/* ===================================
+   Culture — Living & Working in Los Alamos
+   =================================== */
+
+.culture-page {
+    background: var(--color-bg-page);
+}
+
+.culture-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* First section sits directly under the shared navbar — match the
+   100px hero-to-content rhythm used on the other interior pages. */
+.culture-hero {
+    padding: 100px 0 60px;
+}
+
+.culture-section .title {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.culture-section .title + .underline1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.culture-lead,
+.culture-section-lead {
+    max-width: 850px;
+    margin: 0 auto 36px;
+    color: var(--color-text-primary);
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.culture-section-lead {
+    max-width: 760px;
+    color: var(--color-text-secondary);
+    font-size: 16px;
+}
+
+/* Alternating section background, matching the outreach rhythm. */
+.culture-gallery-section {
+    background: var(--color-bg-accent);
+}
+
+/* ----- Intro layout (text + image), mirrors outreach SUMMARY block ----- */
+
+.culture-intro-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 40%);
+    gap: 28px;
+    align-items: center;
+    text-align: left;
+}
+
+.culture-intro-text {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-rule);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+    padding: 24px 28px;
+}
+
+.culture-intro-text h2 {
+    margin: 0 0 16px;
+    color: var(--color-heading);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.culture-intro-text p {
+    margin: 0 0 14px;
+    color: var(--color-text-primary);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.culture-intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+.culture-intro-image {
+    text-align: center;
+}
+
+.culture-intro-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ----- Photo gallery ----- */
+
+.culture-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.culture-tile {
+    position: relative;
+    margin: 0;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-bg-page);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+}
+
+.culture-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .3s ease;
+}
+
+.culture-tile:hover img {
+    transform: scale(1.04);
+}
+
+.culture-tile figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, .72), rgba(0, 0, 0, 0));
+    color: #fff;
+    text-align: left;
+}
+
+.culture-tile figcaption .place {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.culture-tile figcaption .loc {
+    display: block;
+    font-size: 12px;
+    opacity: .85;
+}
+
+@media (max-width: 768px) {
+    .culture-section {
+        padding: 40px 0;
+    }
+
+    .culture-hero {
+        padding: 70px 0 40px;
+    }
+
+    .culture-intro-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-intro-image {
+        order: -1;
+    }
+
+    .culture-gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .culture-lead,
+    .culture-section-lead {
+        font-size: 16px;
+    }
+}

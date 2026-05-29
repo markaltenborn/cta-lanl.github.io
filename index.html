@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="css/staff.css"				type="text/css" media="all"> <!-- People-Styling -->
 	<link rel="stylesheet" href="css/postdoc.css"			type="text/css" media="all"> <!-- Postdoc-Styling -->
 	<link rel="stylesheet" href="css/student.css"			type="text/css" media="all"> <!-- Student-Styling -->
-	<link rel="stylesheet" href="css/chocolat.css"			type="text/css" media="all"> <!-- Gallery-Popup-CSS -->
+	<link rel="stylesheet" href="css/common-header.css"		type="text/css" media="all"> <!-- Header (APPLY button) -->
 	<!-- //Custom-Theme-Files -->
 	<!-- Web-Fonts -->
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" 	type="text/css">
@@ -54,6 +54,9 @@
 						<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a></p>
 					</div>
 					<!-- //Email -->
+					<div class="apply-wrap">
+						<a class="btn btn-primary btn-sm js-apply" href="https://jobszp1.lanl.gov/OA_HTML/RF.jsp?function_id=14330&amp;resp_id=51616&amp;resp_appl_id=800&amp;security_group_id=0%3C_code%3DUS&amp;params=btOoWGkj963I..Q2L5dcEkwPdY2X8RgGyIGQIgmPvx1ATLhV1EKKfMP8X3LGjq5S&amp;oas=LEh_BAM3qoSLDf-lxE5pKg">APPLY</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -158,6 +161,7 @@
 						<li class="menu__item__seven"><a href="/research/research.html" class="menu__link"><span class="menu__helper">RESEARCH</span></a></li>
 						<li class="menu__item__seven"><a href="/outreach/outreach.html" class="menu__link"><span class="menu__helper">OUTREACH</span></a></li>
 						<li class="menu__item__seven"><a href="/opportunities/opportunities.html" class="menu__link"><span class="menu__helper">OPPORTUNITIES</span></a></li>
+						<li class="menu__item__seven"><a href="/culture/culture.html" class="menu__link"><span class="menu__helper">CULTURE</span></a></li>
 						<li class="dropdown menu__item__seven">
 							<a href="#" class="menu__link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="menu__helper">PEOPLE <span class="caret"></span></span></a>
 							<ul class="dropdown-menu menu__dropdown">
@@ -169,7 +173,6 @@
 						</li>
 						<li class="menu__item__seven"><a href="/contact.html" class="menu__link"><span class="menu__helper">CONTACT</span></a></li>
 						<li class="menu__item__seven"><a href="/events/schedule.html" class="menu__link"><span class="menu__helper">SCHEDULE/EVENTS</span></a></li>
-						<li class="menu__item__seven"><a href="#" class="menu__link js-apply"><span class="menu__helper">APPLY</span></a></li>
 					</ul>
 				</nav>
 			</div>
@@ -287,25 +290,6 @@
 		});
 	</script>
 	<!-- //Slider-JavaScript -->
-	<!-- Gallery-Tab-JavaScript -->
-	<script src="js/cbpFWTabs.js"></script>
-	<script>
-		(function() {
-			[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
-				new CBPFWTabs( el );
-			});
-		})();
-	</script>
-	<!-- //Gallery-Tab-JavaScript -->
-	<!-- Popup-Box-JavaScript -->
-	<script src="js/modernizr.custom.97074.js"></script>
-	<script src="js/jquery.chocolat.js"></script>
-	<script type="text/javascript">
-		$(function() {
-			$('.gallery-item a').Chocolat();
-		});
-	</script>
-	<!-- //Popup-Box-JavaScript -->
 	<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -331,22 +315,6 @@
 			});
 	</script>
 	<!-- //Smooth-Scrolling-JavaScript -->
-	<!-- FlexSlider-JavaScript -->
-	<script defer src="js/jquery.flexslider.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			SyntaxHighlighter.all();
-		});
-		$(window).load(function(){
-			$('.flexslider').flexslider({
-				animation: "slide",
-				start: function(slider){
-					$('body').removeClass('loading');
-				}
-			});
-		});
-	</script>
-	<!-- //FlexSlider-JavaScript -->
 	<!-- //Custom-JavaScript-File-Links -->
 	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 	<script>
