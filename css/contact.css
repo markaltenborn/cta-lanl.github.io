@@ -29,7 +29,7 @@
 	margin-bottom: 18px;
 }
 
-/* FAQ — <details>/<summary> disclosures */
+/* FAQ&mdash;<details>/<summary> disclosures */
 
 .contact-faq {
 	border-bottom: 1px solid var(--color-border);
@@ -84,7 +84,7 @@
 	color: var(--color-text-primary);
 }
 
-/* Routed-contact cards — 2x2 grid */
+/* Routed-contact cards&mdash;2x2 grid */
 
 .contact-cards {
 	display: grid;

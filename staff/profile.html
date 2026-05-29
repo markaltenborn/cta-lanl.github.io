@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Profile — CTA</title>
+	<title>Profile&mdash;CTA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -115,7 +115,7 @@
 
 		// Display name
 		const displayName = person.display_name || person.name || ProfileUtils.formatNameFromSlug(slug);
-		document.title = `${displayName} — CTA Profile`;
+		document.title = `${displayName}&mdash;CTA Profile`;
 		document.getElementById('profile-name').textContent = displayName;
 
 		// Rank line: role · group · At LANL since YYYY [+ badge].
@@ -167,7 +167,7 @@
 		// Sidebar meta facts: University (multi-value supported), Accepting students,
 		// Currently (retired). At-LANL-since is on the rank line above.
 		// Multi-university convention: YAML list OR newline-separated string.
-		// Commas are NOT separators — names like "University of New Mexico, Los Alamos"
+		// Commas are NOT separators&mdash;names like "University of New Mexico, Los Alamos"
 		// are single entities.
 		const splitMulti = v => {
 			if (Array.isArray(v)) return v.map(s => String(s).trim()).filter(Boolean);

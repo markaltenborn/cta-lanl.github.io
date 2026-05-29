@@ -1,6 +1,9 @@
 - slug: wes-even
   display_name: Wes Even
   sort_key: even, wes
+  research_groups:
+  - transients
+  - nucleosynthesis
   email: even@lanl.gov
   photo: /staff/images/wes-even.jpg
   scholar: https://scholar.google.com/citations?user=BVH-rEQAAAAJ&hl=en&oi=ao
@@ -61,6 +64,8 @@
 - slug: nicole-lloyd-ronning
   display_name: Nicole Lloyd-Ronning
   sort_key: lloyd-ronning, nicole
+  research_groups:
+  - transients
   email: lloyd-ronning@lanl.gov
   photo: /staff/images/nicole-lloyd-ronning.jpg
   scholar: https://scholar.google.com/citations?user=7d6Ru8UAAAAJ&hl=en
@@ -88,7 +93,7 @@
   - University of New Mexico, Los Alamos (Faculty)
   - Stanford University (PhD)
   role: Scientist
-  division: CAI
+  division: CAComputing and Artificial IntelligenceI
   focus:
   - gamma-ray bursts
   - relativistic shocks
@@ -144,6 +149,8 @@
 - slug: chris-fryer
   display_name: Chris Fryer
   sort_key: fryer, chris
+  research_groups:
+  - transients
   email: fryer@lanl.gov
   photo: /staff/images/chris-fryer.jpg
   scholar: https://scholar.google.com/citations?user=ZZZorWwAAAAJ&hl=en&oi=ao
@@ -199,6 +206,8 @@
 - slug: aimee-hungerford
   display_name: Aimee Hungerford
   sort_key: hungerford, aimee
+  research_groups:
+  - transients
   email: aimee@lanl.gov
   photo: /staff/images/.jpg
   scholar: https://scholar.google.com/citations?user=v5jSagUAAAAJ&hl=en&oi=ao
@@ -260,6 +269,8 @@
 - slug: philipp-edelmann
   display_name: Philipp Edelmann
   sort_key: edelmann, philipp
+  research_groups:
+  - nucleosynthesis
   email: pedelmann@lanl.gov
   photo: /staff/images/philipp-edelmann.jpg
   scholar: https://scholar.google.com/citations?hl=en&user=cRMDv1oAAAAJ
@@ -303,6 +314,8 @@
 - slug: chris-fontes
   display_name: Chris Fontes
   sort_key: fontes, chris
+  research_groups:
+  - transients
   email: cjf@lanl.gov
   photo: /staff/images/chris-fontes.jpg
   scholar: https://scholar.google.com/citations?user=ZnrcypIAAAAJ&hl=en
@@ -360,6 +373,8 @@
 - slug: daniel-holladay
   display_name: Daniel Holladay
   sort_key: holladay, daniel
+  research_groups:
+  - transients
   email: danl@lanl.gov
   photo: /staff/images/daniel-holladay.jpg
   scholar: https://scholar.google.com/citations?user=MRXuVNkAAAAJ&hl=en
@@ -414,6 +429,8 @@
 - slug: sam-jones
   display_name: Sam Jones
   sort_key: jones, sam
+  research_groups:
+  - nucleosynthesis
   email: swjones@lanl.gov
   photo: /staff/images/sam-jones.jpg
   scholar: https://scholar.google.com/citations?hl=en&user=DcRbD8AAAAAJ
@@ -436,6 +453,8 @@
 - slug: oleg-korobkin
   display_name: Oleg Korobkin
   sort_key: korobkin, oleg
+  research_groups:
+  - transients
   email: korobkin@lanl.gov
   photo: /staff/images/oleg-korobkin.jpg
   scholar: https://scholar.google.com/citations?user=Ql3IcEwAAAAJ&hl=en&oi=ao
@@ -551,6 +570,8 @@
 - slug: zach-medin
   display_name: Zach Medin
   sort_key: medin, zach
+  research_groups:
+  - transients
   email: zmedin@lanl.gov
   photo: /staff/images/zach-medin.jpg
   scholar: https://scholar.google.com/citations?user=vaNWpukAAAAJ&hl=en
@@ -581,7 +602,7 @@
   leadership: null
   university: University of Michigan at Ann Arbor, North Carolina State University
   role: Scientist
-  division: CAI
+  division: Computing and Artificial Intelligence
   focus: null
   papers:
   - https://ui.adsabs.harvard.edu/abs/2019PhRvD.100b3008M/abstract
@@ -596,6 +617,8 @@
 - slug: matthew-mumpower
   display_name: Matthew Mumpower
   sort_key: mumpower, matthew
+  research_groups:
+  - nucleosynthesis
   email: mumpower@lanl.gov
   photo: /staff/images/matthew-mumpower.jpg
   scholar: https://scholar.google.com/citations?user=wYeD79MAAAAJ&hl=en
@@ -745,6 +768,8 @@
 - slug: ryan-wollaeger
   display_name: Ryan Wollaeger
   sort_key: wollaeger, ryan
+  research_groups:
+  - transients
   email: wollaeger@lanl.gov
   photo: /staff/images/ryan-wollaeger.jpg
   scholar: https://scholar.google.com/citations?user=3OImwa8AAAAJ&hl=en

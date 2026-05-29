@@ -161,7 +161,7 @@
     text-align: center;
 }
 
-/* Profile stints (participation years) — left-aligned grid */
+/* Profile stints (participation years)&mdash;left-aligned grid */
 .profile-stints {
     display: grid;
     grid-template-columns: repeat(4, max-content);
@@ -334,7 +334,7 @@
     display: inline-block;
 }
 
-/* Sidebar link groups (Contact, Profiles) — unboxed */
+/* Sidebar link groups (Contact, Profiles)&mdash;unboxed */
 .profile-link-group {
     margin: 10px 0 0;
 }
@@ -374,7 +374,7 @@
     text-decoration: underline;
 }
 
-/* Sidebar interests section (legacy slot — interests now full-width) */
+/* Sidebar interests section (legacy slot&mdash;interests now full-width) */
 .profile-sidebar .profile-section {
     margin: 18px 0 0;
 }
@@ -505,7 +505,7 @@
     margin: 0;
 }
 
-/* Profile link chips (Scholar / ADS / LANL Profile) — clickable variant */
+/* Profile link chips (Scholar / ADS / LANL Profile)&mdash;clickable variant */
 .profile-link-chips {
     list-style: none;
     padding: 0;
@@ -537,7 +537,7 @@
     text-decoration: none;
 }
 
-/* Recent papers — left aligned override */
+/* Recent papers&mdash;left aligned override */
 .profile-papers {
     text-align: left;
     margin: 0;

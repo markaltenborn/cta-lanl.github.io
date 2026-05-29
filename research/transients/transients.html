@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Transient Emission Modeling&mdash;Center for Theoretical Astrophysics</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Computational Astrophysics Los Alamos LANL CTA transients kilonova supernova simulation modeling">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/design-system.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/cards.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/staff.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/profiles-common.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/transients.css" type="text/css" media="all">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+
+	<!-- jQuery + js-yaml + profile utilities (for loading the publications list) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script src="/js/profile-utils.js"></script>
+	<script src="/js/apply.js"></script>
+</head>
+<body>
+	<div id="cta-header"></div>
+
+	<main class="transients-page" id="transients">
+
+		<!-- Hero -->
+		<section class="transients-section transients-hero" id="about">
+			<div class="container">
+				<h1 class="title">TRANSIENT EMISSION MODELING</h1>
+				<p class="underline1"></p>
+				<p class="transients-lead">
+					CTA scientists develop and apply codes to model radiation transport in
+					astrophysical transients: kilonovae, supernovae, gamma-ray bursts,
+					and compact object mergers.
+				</p>
+			</div>
+		</section>
+
+		<!-- Codes + Data (two columns) -->
+		<section class="transients-section transients-codes-data">
+			<div class="container">
+				<div class="transients-split">
+
+					<div class="transients-col" id="codes">
+						<div class="transients-box">
+							<h2 class="transients-box-title">Codes</h2>
+							<p class="transients-box-intro">
+								CTA scientists use a variety of codes to model radiation transport. Some are
+								in open repositories and we hope to make more available.
+							</p>
+
+							<h3>Semi-Analytic <span class="transients-ref-inline">(<a href="http://adsabs.harvard.edu/abs/2017ApJ...850..133D">ref</a>)</span></h3>
+							<p>Semi-Analytic is a 1-temperature diffusion code running on top of homologous outflows. This code is very quick and can run large grids of models to get first pass light-curves.</p>
+
+							<h3>Spectrum + RAGE <span class="transients-ref-inline">(<a href="http://adsabs.harvard.edu/abs/2013ApJS..204...16F">ref</a>)</span></h3>
+							<p>Spectrum is a post-process spectra code using LANL opacities and building upon the radiation-hydrodynamics code (<a href="http://adsabs.harvard.edu/abs/2008CS%26D....1a5005G">RAGE</a>) at LANL. This set of codes are ideal for problems where shock heating is important.</p>
+
+							<h3>SuperNu <span class="transients-ref-inline">(<a href="https://ui.adsabs.harvard.edu/abs/2013ApJS..209...36W/abstract">ref</a>, <a href="https://bitbucket.org/drrossum/supernu/wiki/Home">link</a>)</span></h3>
+							<p>SuperNu is a program for simulating time-dependent radiation transport in local thermodynamic equilibrium with matter. It applies the methods of Implicit Monte Carlo (IMC) and Discrete Diffusion Monte Carlo (DDMC) for static or homologously expanding spatial grids. The radiation field affects material temperature but does not affect the motion of the fluid. SuperNu may be applied to simulate radiation transport for supernovae with ejecta velocities that are not affected by radiation momentum. The physical opacity calculation includes elements from Hydrogen up to Cobalt. SuperNu is motivated by the ongoing research into the effect of variation in the structure of progenitor star explosions on observables: the brightness and shape of light curves and the temporal evolution of the spectra. Consequently, the code may be used to post-process data from hydrodynamic simulations. SuperNu does not include any capabilities or methods that allow for non-trivial hydrodynamics.</p>
+						</div>
+					</div>
+
+					<div class="transients-col" id="data">
+						<div class="transients-box">
+							<h2 class="transients-box-title">Data</h2>
+							<p class="transients-box-intro">
+								CTA scientists produce data sets of light curves and spectra. Models are
+								listed in order of creation date.
+							</p>
+
+							<h3><a href="macronova_models_wollaeger2017.tgz">Kilonova models</a></h3>
+							<p class="transients-ref">Reference: <a href="http://adsabs.harvard.edu/abs/2018MNRAS.478.3298W">Wollaeger et al. (2018)</a>, LAUR-17-27847</p>
+							<p>The first set of kilonova models simulated with SuperNu.</p>
+
+							<h3><a href="https://zenodo.org/records/15537646">Source term study</a></h3>
+							<p class="transients-ref">Reference: <a href="http://adsabs.harvard.edu/abs/2019arXiv190405934W">Wollaeger et al. (2019)</a>, LAUR-19-22878</p>
+							<p>Kilonova models including additional source terms from either a pulsar or fallback accretion.</p>
+
+							<h3><a href="https://zenodo.org/records/15539865">Lanthanide abundance study</a></h3>
+							<p class="transients-ref">Reference: <a href="https://arxiv.org/abs/1904.13298">Even et al. (2019)</a>, LAUR-19-22878</p>
+							<p>Kilonova models examining the impact of varying individual lanthanide abundances.</p>
+
+							<h3><a href="https://zenodo.org/records/15540318">Multi-dimensional morphology study</a></h3>
+							<p class="transients-ref">Reference: <a href="https://arxiv.org/abs/2004.00102">Korobkin et al. (2020)</a>, LAUR-20-22636</p>
+							<p>Kilonova models examining the impact of varying the 2-D morphology using a 2 component model.</p>
+
+							<h3><a href="https://zenodo.org/records/7335961">Active Learning Simulations</a></h3>
+							<p class="transients-ref">Reference: <a href="https://arxiv.org/abs/2105.07013">Ristic et al. (2021)</a>, LAUR-21-24289</p>
+							<p>Active Learning Simulations of grid of kilonova models.</p>
+
+							<h3><a href="https://zenodo.org/records/7335961">Broad Grid of 2-component models</a></h3>
+							<p class="transients-ref">Reference: <a href="https://arxiv.org/abs/2105.11543">Wollaeger et al. (2021)</a>, LAUR-20-30338</p>
+							<p>Grid of kilonova models.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Publications (loaded from /data/research/papers/transients.yml) -->
+		<section class="transients-section transients-publications" id="papers" hidden>
+			<div class="container">
+				<div class="transients-box transients-pub-box">
+					<h2 class="transients-box-title">Publications</h2>
+					<ul class="profile-papers" id="transients-papers"></ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team (auto-loaded from /data/staff/staff_roster.yml, filtered to research_groups: transients) -->
+		<section class="transients-section transients-team" id="team">
+			<div class="container">
+				<h2 class="title">PEOPLE</h2>
+				<p class="underline1"></p>
+				<div class="staff-card-grid" id="transients-people-grid"></div>
+			</div>
+		</section>
+
+	</main>
+
+	<!-- Contact -->
+	<div id="cta-contact"></div>
+
+	<!-- Footer -->
+	<div id="cta-footer"></div>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- People: staff cards filtered to research_groups: transients -->
+	<script>
+	(function () {
+		const DATA_BASE   = '/data';
+		const DEFAULT_IMG = '/staff/images/cta-default.jpg';
+		const IMG_ROSTER  = '/staff/images/roster';
+		const IMG_ROOT    = '/staff/images';
+		const GROUP       = 'transients';
+
+		function el(tag, attrs = {}, children = []) {
+			const n = document.createElement(tag);
+			Object.entries(attrs).forEach(([k, v]) => { if (v != null) n.setAttribute(k, v); });
+			(Array.isArray(children) ? children : [children]).forEach(c => {
+				if (c == null) return;
+				n.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+			});
+			return n;
+		}
+		async function fetchYAML(path) {
+			const res = await fetch(path, { cache: 'no-store' });
+			return jsyaml.load(await res.text()) || [];
+		}
+		function imageCandidates(slug, person) {
+			const exts = ['.jpg', '.png', '.jpeg'];
+			const out = [];
+			if (person && person.photo) out.push(person.photo);
+			for (const ext of exts) out.push(`${IMG_ROSTER}/${slug}${ext}`);
+			for (const ext of exts) out.push(`${IMG_ROOT}/${slug}${ext}`);
+			out.push(DEFAULT_IMG);
+			return Array.from(new Set(out.filter(Boolean)));
+		}
+		function firstReachable(urls) {
+			return new Promise(resolve => {
+				let i = 0, img = new Image();
+				const next = () => {
+					if (i >= urls.length) return resolve(DEFAULT_IMG);
+					const u = urls[i++];
+					img.onload = () => resolve(u);
+					img.onerror = next;
+					img.src = u;
+				};
+				next();
+			});
+		}
+		const LEADERSHIP_ORDER = {
+			'director': 1, 'co-director': 2, 'deputy director': 2,
+			'coordinator': 3, 'co-coordinator': 4, 'outreach coordinator': 5
+		};
+		function leadershipTitles(person) {
+			const v = person && person.leadership;
+			if (v == null) return [];
+			return (Array.isArray(v) ? v : [v]).map(s => String(s).trim()).filter(Boolean);
+		}
+		function sortKey(person) {
+			return (person.sort_key || person.display_name || person.name || person.slug || '').toLowerCase();
+		}
+		function buildSocialList(person) {
+			const items = [];
+			if (person.lanl) items.push(el('li', {}, el('a', { href: person.lanl, class: 'lanl', title: 'LANL Profile Page', target: '_blank', rel: 'noopener' })));
+			if (person.ads) items.push(el('li', {}, el('a', { href: person.ads, class: 'ads', title: 'ADS Publication List', target: '_blank', rel: 'noopener' })));
+			if (person.scholar) items.push(el('li', {}, el('a', { href: person.scholar, class: 'gscholar', title: 'Google Scholar Profile', target: '_blank', rel: 'noopener' })));
+			return items.length ? el('ul', { class: 'social' }, items) : null;
+		}
+		function formatName(raw) {
+			if (!raw) return '';
+			const t = String(raw).trim();
+			return t === t.toUpperCase() ? t.toLowerCase().replace(/\b\w/g, c => c.toUpperCase()) : t;
+		}
+		function inGroup(person) {
+			const g = person && person.research_groups;
+			if (!g) return false;
+			return (Array.isArray(g) ? g : [g]).map(s => String(s).trim().toLowerCase()).includes(GROUP);
+		}
+		function staffCard(person) {
+			const slug = person.slug;
+			const name = formatName(person.display_name || person.name || slug);
+			const titles = leadershipTitles(person).slice().sort((a, b) => {
+				const pa = Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, a.toLowerCase()) ? LEADERSHIP_ORDER[a.toLowerCase()] : 100;
+				const pb = Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, b.toLowerCase()) ? LEADERSHIP_ORDER[b.toLowerCase()] : 100;
+				return pa - pb;
+			});
+			const leadershipText = titles.join(' · ');
+			const roleText = person.role && String(person.role).trim() ? person.role : '';
+			const divisionText = person.division && String(person.division).trim() ? person.division : '';
+			let interestsText = '';
+			if (Array.isArray(person.interests) && person.interests.length) {
+				interestsText = person.interests.map(s => String(s).trim()).filter(Boolean).join(', ');
+			} else if (person.focus && String(person.focus).trim()) {
+				interestsText = String(person.focus).trim();
+			}
+			let emailNode = null;
+			if (person.email) {
+				emailNode = el('p', { class: 'staff-email' }, [
+					el('a', { href: `mailto:${person.email}` }, [
+						el('span', { class: 'glyphicon glyphicon-envelope', 'aria-hidden': 'true' }),
+						' ', person.email
+					])
+				]);
+			}
+			const href = '/staff/profile.html?slug=' + encodeURIComponent(slug);
+			const card = el('div', { class: 'staff-card-wrap' }, [
+				el('a', { class: 'staff-card', href }, [
+					el('div', { class: 'staff-photo-wrap view view-seventh' }, [
+						el('img', { class: 'staff-photo', src: DEFAULT_IMG, alt: name, loading: 'lazy' }),
+						el('div', { class: 'mask' }, buildSocialList(person))
+					]),
+					el('div', { class: 'staff-meta' }, [
+						el('h4', {}, name),
+						leadershipText ? el('div', { class: 'staff-leadership' }, leadershipText) : null,
+						roleText ? el('div', { class: 'staff-role' }, roleText) : null,
+						divisionText ? el('div', { class: 'staff-division' }, divisionText) : null,
+						interestsText ? el('p', { class: 'staff-interests' }, interestsText) : null,
+						emailNode
+					])
+				])
+			]);
+			const imgEl = card.querySelector('img.staff-photo');
+			firstReachable(imageCandidates(slug, person)).then(u => { imgEl.src = u; });
+			return card;
+		}
+		async function main() {
+			const roster = await fetchYAML(`${DATA_BASE}/staff/staff_roster.yml`);
+			const people = (Array.isArray(roster) ? roster : []).filter(inGroup);
+			const grid = document.getElementById('transients-people-grid');
+			if (!grid || !people.length) return;
+			people.sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+			people.forEach(p => grid.appendChild(staffCard(p)));
+		}
+		main().catch(err => console.error('Transients people render error:', err));
+	})();
+	</script>
+
+	<script>
+	$(function () {
+		$("#cta-contact").load("/partials/contact.html");
+		$("#cta-footer").load("/partials/footer.html");
+	});
+	ProfileUtils.renderRecentPapers(
+		"research",
+		"transients",
+		document.getElementById("papers"),
+		document.getElementById("transients-papers")
+	);
+	</script>
+</body>
+</html>

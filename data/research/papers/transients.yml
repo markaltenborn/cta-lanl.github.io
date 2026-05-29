@@ -1,0 +1,167 @@
+# Transient emission modeling publications.
+# Rendered on /research/transients/transients.html via ProfileUtils.renderRecentPapers.
+# Per-entry fields: title, url (or bibcode), authors (list), author_count, year, journal.
+
+- bibcode: 2019arXiv190413298E
+  title: 'Composition Effects on Kilonova Spectra and Light Curves: I'
+  authors:
+  - Even, Wesley
+  - Korobkin, Oleg
+  - Fryer, Christopher L.
+  - Fontes, Christopher J.
+  - Wollaeger, R. T.
+  - Hungerford, Aimee
+  - Lippuner, Jonas
+  - Miller, Jonah
+  - Mumpower, Matthew R.
+  - Misch, G. Wendell
+  author_count: 10
+  year: '2019'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2019arXiv190413298E/abstract
+
+- bibcode: 2019MNRAS.485.4260S
+  title: 'Serendipitous discoveries of kilonovae in the LSST main survey: maximizing detections of sub-threshold gravitational wave events'
+  authors:
+  - Setzer, Christian N.
+  - Biswas, Rahul
+  - Peiris, Hiranya V.
+  - Rosswog, Stephan
+  - Korobkin, Oleg
+  - Wollaeger, Ryan T.
+  author_count: 6
+  year: '2019'
+  journal: Monthly Notices of the Royal Astronomical Society
+  url: https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.4260S/abstract
+
+- bibcode: 2019arXiv190405934W
+  title: Impact of Pulsar and Fallback Sources on Multifrequency Kilonova Models
+  authors:
+  - Wollaeger, Ryan T.
+  - Fryer, Chris L.
+  - Fontes, Christopher J.
+  - Lippuner, Jonas
+  - Vestrand, W. Thomas
+  - Mumpower, Matthew R.
+  - Korobkin, Oleg
+  - Hungerford, Aimee L.
+  - Even, Wesley P.
+  author_count: 9
+  year: '2019'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2019arXiv190405934W/abstract
+
+- bibcode: 2019ApJ...875..140C
+  title: Synthetic Spectra of Pair-instability Supernovae in 3D
+  authors:
+  - Chatzopoulos, E.
+  - Gilmer, Matthew S.
+  - Wollaeger, Ryan T.
+  - Fröhlich, Carla
+  - Even, Wesley P.
+  author_count: 5
+  year: '2019'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2019ApJ...875..140C/abstract
+
+- bibcode: 2018MNRAS.478.3298W
+  title: Impact of ejecta morphology and composition on the electromagnetic signatures of neutron star mergers
+  authors:
+  - Wollaeger, Ryan T.
+  - Korobkin, Oleg
+  - Fontes, Christopher J.
+  - Rosswog, Stephan K.
+  - Even, Wesley P.
+  - Fryer, Christopher L.
+  - Sollerman, Jesper
+  - Hungerford, Aimee L.
+  - van Rossum, Daniel R.
+  - Wollaber, Allan B.
+  author_count: 10
+  year: '2018'
+  journal: Monthly Notices of the Royal Astronomical Society
+  url: https://ui.adsabs.harvard.edu/abs/2018MNRAS.478.3298W/abstract
+
+- bibcode: 2018ApJ...863L..23Z
+  title: Californium-254 and Kilonova Light Curves
+  authors:
+  - Zhu, Y.
+  - Wollaeger, R. T.
+  - Vassh, N.
+  - Surman, R.
+  - Sprouse, T. M.
+  - Mumpower, M. R.
+  - Möller, P.
+  - McLaughlin, G. C.
+  - Korobkin, O.
+  - Kawano, T.
+  - Jaffke, P. J.
+  - Holmbeck, E. M.
+  - Fryer, C. L.
+  - Even, W. P.
+  - Couture, A. J.
+  - Barnes, J.
+  author_count: 16
+  year: '2018'
+  journal: The Astrophysical Journal Letters
+  url: https://ui.adsabs.harvard.edu/abs/2018ApJ...863L..23Z/abstract
+
+- bibcode: 2017Sci...358.1565E
+  title: 'Swift and NuSTAR observations of GW170817: Detection of a blue kilonova'
+  authors:
+  - Evans, P. A.
+  - Cenko, S. B.
+  - Kennea, J. A.
+  - Emery, S. W. K.
+  - Kuin, N. P. M.
+  - Korobkin, O.
+  - Wollaeger, R. T.
+  - Fryer, C. L.
+  author_count: 64
+  year: '2017'
+  journal: Science
+  url: https://ui.adsabs.harvard.edu/abs/2017Sci...358.1565E/abstract
+
+- bibcode: 2017Natur.551...71T
+  title: The X-ray counterpart to the gravitational-wave event GW170817
+  authors:
+  - Troja, E.
+  - Piro, L.
+  - van Eerten, H.
+  - Wollaeger, R. T.
+  - Im, M.
+  - Fox, O. D.
+  - Butler, N. R.
+  - Cenko, S. B.
+  author_count: 41
+  year: '2017'
+  journal: Nature
+  url: https://ui.adsabs.harvard.edu/abs/2017Natur.551...71T/abstract
+
+- bibcode: 2017ApJ...848L..27T
+  title: The Emergence of a Lanthanide-rich Kilonova Following the Merger of Two Neutron Stars
+  authors:
+  - Tanvir, N. R.
+  - Levan, A. J.
+  - González-Fernández, C.
+  - Korobkin, O.
+  - Mandel, I.
+  - Rosswog, S.
+  author_count: 60
+  year: '2017'
+  journal: The Astrophysical Journal Letters
+  url: https://ui.adsabs.harvard.edu/abs/2017ApJ...848L..27T/abstract
+
+- bibcode: 2017ApJ...845..168W
+  title: Light Curves and Spectra from a Unimodal Core-collapse Supernova
+  authors:
+  - Wollaeger, Ryan T.
+  - Hungerford, Aimee L.
+  - Fryer, Chris L.
+  - Wollaber, Allan B.
+  - van Rossum, Daniel R.
+  - Even, Wesley
+  author_count: 6
+  year: '2017'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2017ApJ...845..168W/abstract

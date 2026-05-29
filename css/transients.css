@@ -1,0 +1,196 @@
+/* ===================================
+   Transient Emission Modeling (research) Page
+   =================================== */
+
+.transients-page {
+    background: var(--color-bg-page);
+}
+
+.transients-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* First section sits directly under the shared navbar — match the
+   100px hero-to-content rhythm used on the other interior pages. */
+.transients-hero {
+    padding: 100px 0 60px;
+}
+
+.transients-section .title {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.transients-section .title + .underline1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transients-lead {
+    max-width: 850px;
+    margin: 0 auto 36px;
+    color: var(--color-text-primary);
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Alternating section backgrounds, matching the outreach rhythm. */
+.transients-codes-data,
+.transients-team {
+    background: var(--color-bg-accent);
+}
+
+/* ----- Codes | Data two-column split ----- */
+
+.transients-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* ----- Single box per column (Codes, Data) -----
+   Mirrors the outreach SUMMARY block (.outreach-intro-text): one white card
+   holding a stack of entries, each an uppercase subtitle + reference + paragraph. */
+
+.transients-box {
+    padding: 24px 28px;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-rule);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+    text-align: left;
+}
+
+.transients-box h3 {
+    margin: 22px 0 6px;
+    color: var(--color-link);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* Inline (ref, link) hyperlinks sitting on the same line as a Codes title. */
+.transients-ref-inline {
+    margin-left: 8px;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--color-text-secondary);
+}
+
+.transients-ref-inline a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.transients-ref-inline a:hover,
+.transients-ref-inline a:focus {
+    text-decoration: underline;
+}
+
+.transients-box-title {
+    margin: 0 0 14px;
+    color: var(--color-heading);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.transients-box-intro {
+    margin: 0 0 18px;
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.transients-box h3:first-child {
+    margin-top: 0;
+}
+
+.transients-box h3 a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.transients-box h3 a:hover,
+.transients-box h3 a:focus,
+.transients-ref a:hover,
+.transients-ref a:focus {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+
+.transients-ref {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.transients-ref a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.transients-box p {
+    margin: 0 0 4px;
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ----- Publications -----
+   The list is rendered by ProfileUtils.renderRecentPapers using the shared
+   .profile-papers / .paper-item styles from profiles-common.css. It sits in a
+   .transients-box with the section title as the box header. */
+
+.transients-pub-box {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.transients-publications .profile-papers {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.transients-publications .profile-papers .paper-item:last-child {
+    margin-bottom: 0;
+}
+
+/* ----- People -----
+   Reuses the shared staff-card component. The section text is centered, so
+   re-assert the card meta's left alignment to match the other people pages
+   (which get this from style.css `.team h4`, not matched by .transients-team). */
+.transients-team .staff-meta {
+    text-align: left;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .transients-section {
+        padding: 40px 0;
+    }
+
+    .transients-hero {
+        padding: 70px 0 40px;
+    }
+
+    .transients-split {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .transients-lead {
+        font-size: 16px;
+    }
+}

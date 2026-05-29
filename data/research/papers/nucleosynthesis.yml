@@ -1,0 +1,4 @@
+# Nucleosynthesis publications.
+# Rendered on /research/nucleosynthesis/nucleosynthesis.html via ProfileUtils.renderRecentPapers.
+# Same per-entry schema as transients.yml: title, url (or bibcode), authors (list),
+# author_count, year, journal. Empty for now — add entries to populate the section.

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Emeritus Members — CTA</title>
+	<title>Emeritus Members&mdash;CTA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
@@ -18,7 +18,7 @@
 	<script src="/js/apply.js"></script>
 </head>
 <body>
-	<!-- Compact Header — loaded from /partials/header-strap.html via /js/apply.js -->
+	<!-- Compact Header&mdash;loaded from /partials/header-strap.html via /js/apply.js -->
 	<div id="cta-header"></div>
 
 	<!-- About -->
@@ -144,7 +144,7 @@
 
 			// Display year range if available
 			if (person.years_start || person.years_end) {
-				const yearsText = `CTA member: ${person.years_start || '?'} — ${person.years_end || 'present'}`;
+				const yearsText = `CTA member: ${person.years_start || '?'}&mdash;${person.years_end || 'present'}`;
 				const yearsDiv = el('div', { className: 'emeritus-years' }, yearsText);
 				meta.appendChild(yearsDiv);
 			}

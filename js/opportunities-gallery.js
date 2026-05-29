@@ -1,6 +1,6 @@
 /* Opportunities photo gallery + lightbox.
  *
- * Fetches /data/opportunities/photos.yml — a list of { src, caption, thumb? }.
+ * Fetches /data/opportunities/photos.yml&mdash;a list of { src, caption, thumb? }.
  * Renders one tile per entry into #opps-gallery-grid.
  * Click a tile to open the lightbox; close via the X button, the backdrop,
  * or the Escape key.
