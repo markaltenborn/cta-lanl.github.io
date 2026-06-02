@@ -28,7 +28,22 @@
   photo: /staff/images/alexander-kaltenborn.jpg
   scholar: https://scholar.google.com/citations?user=3OUPGc0AAAAJ&hl=en&oi=ao
   ads: https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=author%3A%22Kaltenborn%2C%20M.%20Alexander%20R.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
-  bio: null
+  bio: M. Alexander R. Kaltenborn is a physicist and Staff Scientist in the Applied Mathematics and Plasma Physics group at 
+    Los Alamos National Laboratory. He received his Ph.D. in Physics from The George Washington University in 2023 and has 
+    pursued additional graduate training in science, technology, and national security policy through programs at George 
+    Washington University and Texas A&amp;M University, with coursework spanning space policy and law, the corporate and 
+    government environment in space, emerging technologies, deterrence theory, nuclear deterrence, strategic competition, 
+    and military power. He began at Los Alamos as a student intern in 2017, was awarded a Nicholas C. Metropolis Postdoctoral 
+    Fellowship in 2023, and transitioned to a staff scientist position in 2024.<br><br>Dr. Kaltenborn&rsquo;s research 
+    focuses on high-performance multiphysics simulations of energetic and extreme-physics systems. His early work involved 
+    numerical studies of degenerate stellar mergers, including neutron star&ndash;neutron star, white dwarf&ndash;white dwarf, 
+    and white dwarf&ndash;neutron star systems, as well as simulations of accretion disks around neutron stars. This work 
+    contributed to modeling capabilities for compact-object astrophysics and high-energy transient phenomena. His current 
+    work centers on atmospheric blast phenomena, with an emphasis on radiation hydrodynamics and applications to national and 
+    global security. He has also applied machine learning methods to improve multiphysics simulations and material property 
+    modeling. Trained across physics, computation, and national security policy, Dr. Kaltenborn brings technical expertise 
+    and strategic perspective to problems at the intersection of advanced simulation, emerging technology, and nuclear 
+    security.
   interests:
   - Compact binary mergers
   - National and International Security Policy
