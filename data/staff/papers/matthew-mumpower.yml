@@ -1,3 +1,17 @@
+- bibcode: 2026NDS...210....1N
+  title: 'ENDF/B-VIII.1: Updated Nuclear Reaction Data Library for Science and Applications'
+  authors:
+  - Nobre, G. P. A.
+  - Capote, R.
+  - Pigni, M. T.
+  - Trkov, A.
+  - Mattoon, C. M.
+  - Neudecker, D.
+  author_count: 109
+  year: '2026'
+  journal: Nuclear Data Sheets
+  url: https://ui.adsabs.harvard.edu/abs/2026NDS...210....1N/abstract
+
 - bibcode: 2026PhRvC.113e5802R
   title: Total absorption spectroscopy of two isomers in <inline-formula><mml:math><mml:mmultiscripts><mml:mi>Cu</mml:mi><mml:mn>70</mml:mn></mml:mmultiscripts></mml:math></inline-formula>
     influencing nucleosynthesis signatures
@@ -13,34 +27,6 @@
   journal: Physical Review C
   url: https://ui.adsabs.harvard.edu/abs/2026PhRvC.113e5802R/abstract
 
-- bibcode: 2026ApJ..1002L..24R
-  title: Kilonovae and Long-duration Gamma-Ray Bursts
-  authors:
-  - Ristić, Marko
-  - Barker, Brandon L.
-  - Cupp, Samuel
-  - Gross, Axel
-  - Lloyd-Ronning, Nicole
-  - Korobkin, Oleg
-  author_count: 8
-  year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1002L..24R/abstract
-
-- bibcode: 2026NDS...210....1N
-  title: 'ENDF/B-VIII.1: Updated Nuclear Reaction Data Library for Science and Applications'
-  authors:
-  - Nobre, G. P. A.
-  - Capote, R.
-  - Pigni, M. T.
-  - Trkov, A.
-  - Mattoon, C. M.
-  - Neudecker, D.
-  author_count: 109
-  year: '2026'
-  journal: Nuclear Data Sheets
-  url: https://ui.adsabs.harvard.edu/abs/2026NDS...210....1N/abstract
-
 - bibcode: 2026PhRvR...8b3117R
   title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
     ejecta predictions
@@ -55,6 +41,20 @@
   year: '2026'
   journal: Physical Review Research
   url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
+
+- bibcode: 2026ApJ..1002L..24R
+  title: Kilonovae and Long-duration Gamma-Ray Bursts
+  authors:
+  - Ristić, Marko
+  - Barker, Brandon L.
+  - Cupp, Samuel
+  - Gross, Axel
+  - Lloyd-Ronning, Nicole
+  - Korobkin, Oleg
+  author_count: 8
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1002L..24R/abstract
 
 - bibcode: 2026ADNDT.16801782M
   title: Erratum to "Nuclear β−-decay with statistical de-excitation" [At. Data Nucl. Data Tables 165 (2025) 1─81]

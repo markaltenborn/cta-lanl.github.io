@@ -12,20 +12,20 @@
   journal: Soil Biology and Biochemistry
   url: https://ui.adsabs.harvard.edu/abs/2026SBiBi.21810144R/abstract
 
-- bibcode: 2026ApJ..1003..126N
-  title: 'Global Characteristics of the IBEX Ribbon and Its Temporal Variation: Implications for Relationships with Solar
-    Cycle Variability and the Interstellar Magnetic Field'
+- bibcode: 2026PhLB..87740279A
+  title: Search for Higgs bosons produced in association with a high-energy photon via vector-boson fusion and decaying to
+    a pair of b-quarks in the ATLAS detector
   authors:
-  - Noh, Sung Jun
-  - Reisenfeld, Daniel B.
-  - Zirnstein, Eric J.
-  - Funsten, Herbert O.
-  - Janzen, Paul H.
-  - Kim, Thomas K.
-  author_count: 12
+  - Aad, G.
+  - Aakvaag, E.
+  - Abbott, B.
+  - Abdelhameed, S.
+  - Abeling, K.
+  - Abicht, N. J.
+  author_count: 2871
   year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003..126N/abstract
+  journal: Physics Letters B
+  url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87740279A/abstract
 
 - bibcode: 2026PhLB..87740440A
   title: Characterization of nuclear breakup as a function of hard-scattering kinematics using dijets measured by ATLAS in
@@ -42,31 +42,33 @@
   journal: Physics Letters B
   url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87740440A/abstract
 
-- bibcode: 2026PhLB..87740279A
-  title: Search for Higgs bosons produced in association with a high-energy photon via vector-boson fusion and decaying to
-    a pair of b-quarks in the ATLAS detector
+- bibcode: 2026ApJ..1003..126N
+  title: 'Global Characteristics of the IBEX Ribbon and Its Temporal Variation: Implications for Relationships with Solar
+    Cycle Variability and the Interstellar Magnetic Field'
   authors:
+  - Noh, Sung Jun
+  - Reisenfeld, Daniel B.
+  - Zirnstein, Eric J.
+  - Funsten, Herbert O.
+  - Janzen, Paul H.
+  - Kim, Thomas K.
+  author_count: 12
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003..126N/abstract
+
+- bibcode: 2026EPJC...86..483A
+  title: Measurement of the W-boson angular coefficients and transverse momentum in <inline-formula><mml:math><mml:mrow><mml:mi>p</mml:mi><mml:mspace></mml:mspace><mml:mi>p</mml:mi></mml:mrow></mml:math></inline-formula>
+    collisions at <inline-formula><mml:math><mml:mrow><mml:msqrt><mml:mi>s</mml:mi></mml:msqrt><mml:mo>=</mml:mo><mml:mn>13</mml:mn></mml:mrow></mml:math></inline-formula>
+    TeV with the ATLAS detector
+  authors:
+  - Atlas Collaboration
   - Aad, G.
   - Aakvaag, E.
   - Abbott, B.
   - Abdelhameed, S.
   - Abeling, K.
-  - Abicht, N. J.
-  author_count: 2871
+  author_count: 2874
   year: '2026'
-  journal: Physics Letters B
-  url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87740279A/abstract
-
-- bibcode: 2026ApJ..1002...10L
-  title: The Effect of Large-scale Magnetic Fluctuations on Energetic Particle Profiles across Interplanetary Shocks
-  authors:
-  - Lo, Ming-Yuan
-  - Guo, Fan
-  - Giacalone, Joe
-  - Zhao, Lulu
-  - Lario, David
-  - Koban, Gergely
-  author_count: 8
-  year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1002...10L/abstract
+  journal: European Physical Journal C
+  url: https://ui.adsabs.harvard.edu/abs/2026EPJC...86..483A/abstract

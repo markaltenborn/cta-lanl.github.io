@@ -1,3 +1,29 @@
+- bibcode: 2026PhRvR...8b3117R
+  title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
+    ejecta predictions
+  authors:
+  - Ristić, Marko
+  - O'Shaughnessy, Richard
+  - Wagner, Kate
+  - Fontes, Christopher J.
+  - Fryer, Chris L.
+  - Korobkin, Oleg
+  author_count: 8
+  year: '2026'
+  journal: Physical Review Research
+  url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
+
+- bibcode: 2026ApJS..284....6C
+  title: 'Toward First-principles Multimessenger Predictions: Coupling Nuclear Networks with General Relativistic Radiation
+    Magnetohydrodynamics in Gmunu'
+  authors:
+  - Cheong, Patrick Chi-Kit
+  - Fryer, Christopher L.
+  author_count: 2
+  year: '2026'
+  journal: The Astrophysical Journal Supplement Series
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJS..284....6C/abstract
+
 - bibcode: 2026ApJ..1003...89F
   title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling
   authors:
@@ -26,32 +52,6 @@
   year: '2026'
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003L...2B/abstract
-
-- bibcode: 2026PhRvR...8b3117R
-  title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
-    ejecta predictions
-  authors:
-  - Ristić, Marko
-  - O'Shaughnessy, Richard
-  - Wagner, Kate
-  - Fontes, Christopher J.
-  - Fryer, Chris L.
-  - Korobkin, Oleg
-  author_count: 8
-  year: '2026'
-  journal: Physical Review Research
-  url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
-
-- bibcode: 2026ApJS..284....6C
-  title: 'Toward First-principles Multimessenger Predictions: Coupling Nuclear Networks with General Relativistic Radiation
-    Magnetohydrodynamics in Gmunu'
-  authors:
-  - Cheong, Patrick Chi-Kit
-  - Fryer, Christopher L.
-  author_count: 2
-  year: '2026'
-  journal: The Astrophysical Journal Supplement Series
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJS..284....6C/abstract
 
 - bibcode: 2026IJMPD..3540002F
   title: The physics behind astrophysical transients
