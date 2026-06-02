@@ -1,3 +1,17 @@
+- bibcode: 2026ApJ..1003...89F
+  title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling
+  authors:
+  - Fontes, Christopher J.
+  - Vieira, Nicholas
+  - Fryer, Chris L.
+  - Kathirgamaraju, Adithan
+  - Korobkin, Oleg
+  - Ristić, Marko
+  author_count: 7
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003...89F/abstract
+
 - bibcode: 2026PhRvR...8b3117R
   title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
     ejecta predictions
@@ -12,20 +26,6 @@
   year: '2026'
   journal: Physical Review Research
   url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
-
-- bibcode: 2026ApJ..1003...89F
-  title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling
-  authors:
-  - Fontes, Christopher J.
-  - Vieira, Nicholas
-  - Fryer, Chris L.
-  - Kathirgamaraju, Adithan
-  - Korobkin, Oleg
-  - Ristić, Marko
-  author_count: 7
-  year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003...89F/abstract
 
 - bibcode: 2026JQSRT.35409866W
   title: Asymptotic constraints for 1D planar grey photon diffusion from linear transport with special-relativistic effects
@@ -54,16 +54,16 @@
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260203621D/abstract
 
-- bibcode: 2024APS..DFDL16005H
-  title: Spectral Adaptivity for a High-Performance Kinetic Solver
+- bibcode: 2024APS..DFDA08001B
+  title: Spectral Simulations of Fluid-Kinetic Flows with Nontrivial Boundary Conditions
   authors:
-  - Hrabski, Alexander
-  - Koshkarov, Oleksandr
-  - Chiodi, Robert
   - Brady, Peter
-  - Janhunen, Salomon
   - Harnish, Cale
-  author_count: 11
+  - Hrabski, Alexander
+  - Janhunen, Salomon
+  - Chapurin, Oleksandr
+  - Koshkarov, Oleksandr
+  author_count: 10
   year: '2024'
   journal: APS Division of Fluid Dynamics Meeting Abstracts
-  url: https://ui.adsabs.harvard.edu/abs/2024APS..DFDL16005H/abstract
+  url: https://ui.adsabs.harvard.edu/abs/2024APS..DFDA08001B/abstract

@@ -1,3 +1,18 @@
+- bibcode: 2026arXiv260600258D
+  title: 'OCEANS of Absorption: High-resolution NIRSpec Spectroscopy Reveals Diverse Balmer-line Absorption in Little Red
+    Dots'
+  authors:
+  - Davis, Kelcey
+  - Brooks, Madisyn
+  - Simons, Raymond C.
+  - Trump, Jonathan R.
+  - Barro, Guillermo
+  - Arrabal Haro, Pablo
+  author_count: 27
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260600258D/abstract
+
 - bibcode: 2026arXiv260223310D
   title: Extreme Emission Line Galaxies in CEERS Are Powered by Star Formation, not AGN
   authors:
@@ -45,13 +60,3 @@
   year: '2023'
   journal: 'American Astronomical Society Meeting Abstracts #242'
   url: https://ui.adsabs.harvard.edu/abs/2023AAS...24240806J/abstract
-
-- bibcode: 2022ApJ...934...58J
-  title: A Simple Condition for Sustained Super-Eddington Black Hole Growth
-  authors:
-  - Johnson, Jarrett Lawrence
-  - Upton Sanderbeck, Phoebe R.
-  author_count: 2
-  year: '2022'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2022ApJ...934...58J/abstract

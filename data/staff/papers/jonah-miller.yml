@@ -1,3 +1,17 @@
+- bibcode: 2026ApJ..1003..193D
+  title: Multigroup Thermal Radiation Transport with Tensor Trains
+  authors:
+  - Deshpande, Aditya S.
+  - Mullen, Patrick D.
+  - Gorodetsky, Alex A.
+  - Dolence, Joshua C.
+  - Meyer, Chad D.
+  - Miller, Jonah M.
+  author_count: 7
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003..193D/abstract
+
 - bibcode: 2026ApJ..1002L..24R
   title: Kilonovae and Long-duration Gamma-Ray Bursts
   authors:
@@ -12,19 +26,19 @@
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1002L..24R/abstract
 
-- bibcode: 2026A&A...708A.130D
-  title: A highly ionised outflow in the X-ray binary 4U 1624─49 detected with XRISM
+- bibcode: 2026GeoRL..5320780W
+  title: Prediction of Hydroclimatic Anomalies Using a New Isotope Precipitation Index
   authors:
-  - Díaz Trigo, M.
-  - Caruso, E.
-  - Costantini, E.
-  - Dotani, T.
-  - Kohmura, T.
-  - Shidatsu, M.
-  author_count: 11
+  - Watson, A.
+  - Miller, J.
+  - Waal, J.
+  - Beckett, H.
+  - Vystavna, Y.
+  - Chikviladze, E.
+  author_count: 14
   year: '2026'
-  journal: Astronomy and Astrophysics
-  url: https://ui.adsabs.harvard.edu/abs/2026A&A...708A.130D/abstract
+  journal: Geophysical Research Letters
+  url: https://ui.adsabs.harvard.edu/abs/2026GeoRL..5320780W/abstract
 
 - bibcode: 2026arXiv260406404U
   title: Neutrino transport and flavor instabilities in a post-merger disk
@@ -40,30 +54,16 @@
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260406404U/abstract
 
-- bibcode: 2026EcoEv..1673204C
-  title: Past Colony Connectivity of a Declining Seabird Derived From Host─Parasite Genetic Data
+- bibcode: 2026A&A...708A.130D
+  title: A highly ionised outflow in the X-ray binary 4U 1624─49 detected with XRISM
   authors:
-  - Cargill, C. P.
-  - McCoy, K. D.
-  - Scott, B. E.
-  - Masden, E. A.
-  - Miller, J.
-  - Ruffino, L.
-  author_count: 7
+  - Díaz Trigo, M.
+  - Caruso, E.
+  - Costantini, E.
+  - Dotani, T.
+  - Kohmura, T.
+  - Shidatsu, M.
+  author_count: 11
   year: '2026'
-  journal: Ecology and Evolution
-  url: https://ui.adsabs.harvard.edu/abs/2026EcoEv..1673204C/abstract
-
-- bibcode: 2026AAS...24727706W
-  title: 'PHifty One Ergs Blows Up a Star: Towards Performance-Portable Supernovae with 3D GRRMHD in Phoebus'
-  authors:
-  - White, Logan
-  - Fields, Carl
-  - Barker, Brandon
-  - Dolence, Joshua
-  - Gogilashvili, Mariam
-  - Miller, Jonah
-  author_count: 8
-  year: '2026'
-  journal: American Astronomical Society Meeting Abstracts
-  url: https://ui.adsabs.harvard.edu/abs/2026AAS...24727706W/abstract
+  journal: Astronomy and Astrophysics
+  url: https://ui.adsabs.harvard.edu/abs/2026A&A...708A.130D/abstract

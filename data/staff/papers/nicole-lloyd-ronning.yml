@@ -1,3 +1,15 @@
+- bibcode: 2026ApJ..1003..233H
+  title: Simulations of Interacting Binary Systems—Pathways to Radio-bright Gamma-Ray Burst Progenitors
+  authors:
+  - Hernandez, Angel
+  - Cheng, Roseanne M.
+  - Lloyd-Ronning, Nicole M.
+  - Fields, C. E.
+  author_count: 4
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003..233H/abstract
+
 - bibcode: 2026ApJ..1002L..24R
   title: Kilonovae and Long-duration Gamma-Ray Bursts
   authors:
@@ -48,14 +60,3 @@
   year: '2026'
   journal: American Astronomical Society Meeting Abstracts
   url: https://ui.adsabs.harvard.edu/abs/2026AAS...24714206K/abstract
-
-- bibcode: 2026arXiv260107928L
-  title: 'The GRB Intrinsic Duration Distribution: Progenitor Insights Across Cosmic Time'
-  authors:
-  - Lloyd-Ronning, Nicole M.
-  - Bromberg, Omer
-  - Piran, Tsvi
-  author_count: 3
-  year: '2026'
-  journal: arXiv e-prints
-  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260107928L/abstract

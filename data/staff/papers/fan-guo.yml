@@ -12,6 +12,21 @@
   journal: Soil Biology and Biochemistry
   url: https://ui.adsabs.harvard.edu/abs/2026SBiBi.21810144R/abstract
 
+- bibcode: 2026ApJ..1003..126N
+  title: 'Global Characteristics of the IBEX Ribbon and Its Temporal Variation: Implications for Relationships with Solar
+    Cycle Variability and the Interstellar Magnetic Field'
+  authors:
+  - Noh, Sung Jun
+  - Reisenfeld, Daniel B.
+  - Zirnstein, Eric J.
+  - Funsten, Herbert O.
+  - Janzen, Paul H.
+  - Kim, Thomas K.
+  author_count: 12
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003..126N/abstract
+
 - bibcode: 2026PhLB..87740440A
   title: Characterization of nuclear breakup as a function of hard-scattering kinematics using dijets measured by ATLAS in
     p+Pb collisions
@@ -41,21 +56,6 @@
   year: '2026'
   journal: Physics Letters B
   url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87740279A/abstract
-
-- bibcode: 2026ApJ..1003..126N
-  title: 'Global Characteristics of the IBEX Ribbon and Its Temporal Variation: Implications for Relationships with Solar
-    Cycle Variability and the Interstellar Magnetic Field'
-  authors:
-  - Noh, Sung Jun
-  - Reisenfeld, Daniel B.
-  - Zirnstein, Eric J.
-  - Funsten, Herbert O.
-  - Janzen, Paul H.
-  - Kim, Thomas K.
-  author_count: 12
-  year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003..126N/abstract
 
 - bibcode: 2026ApJ..1002...10L
   title: The Effect of Large-scale Magnetic Fluctuations on Energetic Particle Profiles across Interplanetary Shocks

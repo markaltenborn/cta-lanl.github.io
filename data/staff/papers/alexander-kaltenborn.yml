@@ -48,15 +48,16 @@
   journal: 'American Astronomical Society Meeting Abstracts #242'
   url: https://ui.adsabs.harvard.edu/abs/2023AAS...24240804K/abstract
 
-- bibcode: 2023APS..APRJ01007F
-  title: Initialization of Compact Star Orbits Using External Potential Relaxation Scheme
+- bibcode: 2023APS..HAWD08001N
+  title: Nuclear pasta and the deep inner crust
   authors:
-  - Falato, Michael
-  - Sagert, Irina
-  - Korobkin, Oleg
+  - Newton, William
+  - Stone, Jirina
   - Kaltenborn, Mark
-  - Even, Wesley
-  author_count: 5
+  - Stinson, Amber
+  - Preston, Rebecca
+  - Balliet, Lauren
+  author_count: 8
   year: '2023'
-  journal: APS April Meeting Abstracts
-  url: https://ui.adsabs.harvard.edu/abs/2023APS..APRJ01007F/abstract
+  journal: APS Meeting Abstracts
+  url: https://ui.adsabs.harvard.edu/abs/2023APS..HAWD08001N/abstract

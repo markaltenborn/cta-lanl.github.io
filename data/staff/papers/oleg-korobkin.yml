@@ -13,19 +13,6 @@
   journal: Physical Review Research
   url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
 
-- bibcode: 2026arXiv260503947F
-  title: Effects of magnetically driven shocks on nucleosynthesis and kilonovae from neutron star mergers
-  authors:
-  - Feng, Yuan
-  - Korobkin, Oleg
-  - Most, Elias R.
-  - Smith, Ananda F.
-  - Fontes, Christopher J.
-  author_count: 5
-  year: '2026'
-  journal: arXiv e-prints
-  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260503947F/abstract
-
 - bibcode: 2026ApJ..1002L..24R
   title: Kilonovae and Long-duration Gamma-Ray Bursts
   authors:
@@ -39,6 +26,19 @@
   year: '2026'
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1002L..24R/abstract
+
+- bibcode: 2026arXiv260503947F
+  title: Effects of magnetically driven shocks on nucleosynthesis and kilonovae from neutron star mergers
+  authors:
+  - Feng, Yuan
+  - Korobkin, Oleg
+  - Most, Elias R.
+  - Smith, Ananda F.
+  - Fontes, Christopher J.
+  author_count: 5
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260503947F/abstract
 
 - bibcode: 2026ApJ..1003...89F
   title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling

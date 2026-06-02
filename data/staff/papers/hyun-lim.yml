@@ -12,18 +12,16 @@
   journal: Journal of Energy Chemistry
   url: https://ui.adsabs.harvard.edu/abs/2026JEnCh.117..893J/abstract
 
-- bibcode: 2026Fuel..40937654L
-  title: High-power proton exchange membrane fuel cell system with oxygen enrichment
+- bibcode: 2026ACSSe..11.3664L
+  title: Three-Dimensional DNA Nanostructure-Assisted Multiplexed Aptamer Assay for Simultaneous Detection of Endocrine-Disrupting
+    Chemical Clusters
   authors:
-  - Lee, Yoo Il
-  - Lee, Yeong Ho
-  - Lim, Hyun Sung
-  - Lee, Sangwook
-  - Kim, Min Soo
-  author_count: 5
+  - Lim, Hyun Jeong
+  - Son, Ahjeong
+  author_count: 2
   year: '2026'
-  journal: Fuel
-  url: https://ui.adsabs.harvard.edu/abs/2026Fuel..40937654L/abstract
+  journal: ACS Sensors
+  url: https://ui.adsabs.harvard.edu/abs/2026ACSSe..11.3664L/abstract
 
 - bibcode: 2026ApWS...16..150O
   title: 'Trihalomethanes as chlorination by-product: insights from an extended two decades study across six full-scale water
@@ -40,6 +38,19 @@
   journal: Applied Water Science
   url: https://ui.adsabs.harvard.edu/abs/2026ApWS...16..150O/abstract
 
+- bibcode: 2026Fuel..40937654L
+  title: High-power proton exchange membrane fuel cell system with oxygen enrichment
+  authors:
+  - Lee, Yoo Il
+  - Lee, Yeong Ho
+  - Lim, Hyun Sung
+  - Lee, Sangwook
+  - Kim, Min Soo
+  author_count: 5
+  year: '2026'
+  journal: Fuel
+  url: https://ui.adsabs.harvard.edu/abs/2026Fuel..40937654L/abstract
+
 - bibcode: 2026arXiv260425635W
   title: Numerical Investigations of Stable Dynamics in the Presence of Ghosts
   authors:
@@ -51,19 +62,3 @@
   year: '2026'
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260425635W/abstract
-
-- bibcode: 2026PhLB..87440252A
-  title: Measurement of the p─<mml:math><mml:msup><mml:mstyle><mml:mi>Σ</mml:mi></mml:mstyle><mml:mo>+</mml:mo></mml:msup></mml:math>
-    correlation function in pp collisions at <mml:math><mml:mrow><mml:msqrt><mml:mi>s</mml:mi></mml:msqrt><mml:mo>=</mml:mo><mml:mn>13</mml:mn></mml:mrow></mml:math>
-    TeV
-  authors:
-  - Abualrob, I. J.
-  - Acharya, S.
-  - Aglieri Rinella, G.
-  - Aglietta, L.
-  - Agnello, M.
-  - Agrawal, N.
-  author_count: 1041
-  year: '2026'
-  journal: Physics Letters B
-  url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87440252A/abstract
