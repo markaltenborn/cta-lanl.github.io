@@ -2,14 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Events & Schedule — Center for Theoretical Astrophysics</title>
+	<title>Events & Schedule&mdash;Center for Theoretical Astrophysics</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/design-system.css" type="text/css" media="all">
-	<link rel="stylesheet" href="/css/staff.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/events.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
 
@@ -17,33 +16,14 @@
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
 
-	<!-- YAML Parser -->
+	<!-- jQuery + YAML Parser -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script src="/js/apply.js"></script>
 </head>
 <body>
-	<!-- Compact Header (strap) -->
-	<div class="header page-strap" id="home">
-		<div class="top-bar">
-			<div class="container">
-				<div class="logo">
-					<p><a href="/index.html">Center for Theoretical<br />Astrophysics</a></p>
-					<br>
-					<p class="subtitle"><a href="https://www.lanl.gov/">Los Alamos National Laboratory</a></p>
-				</div>
-				<div class="info">
-					<div class="email">
-						<p>
-							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-							<a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a>
-						</p>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-		<div class="strap-bg" aria-hidden="true"></div>
-	</div>
-	<!-- //Compact Header -->
+	<!-- Compact Header&mdash;loaded from /partials/header-strap.html via /js/apply.js -->
+	<div id="cta-header"></div>
 
 	<!-- Events Section -->
 	<div class="events-section team" id="events">
@@ -51,23 +31,25 @@
 			<h1 class="title">EVENTS & SCHEDULE</h1>
 			<p class="underline1"></p>
 
-			<!-- Meeting Info -->
-			<div class="meeting-info">
-				<h2>CTA WEEKLY MEETINGS</h2>
-				<div class="underline1"></div>
-				<p>
-					Current LANL staff and students are welcome to join us at our weekly CTA meetings.
-					The meetings take place at <strong>9:00 AM most Fridays</strong> in the <strong>CNLS Conference Room (03-1690-102)</strong>.
-				</p>
-				<p>
-					To join our mail list and Teams group, please contact one of the meeting organizers.
-				</p>
+			<div class="container">
+			<p>
+				Current LANL staff and students are welcome to join us at our weekly CTA
+				meetings. The meetings take place at <strong>9:00 AM most Fridays</strong> in
+				the <strong>CNLS Conference Room (03-1690-102)</strong>. Check our upcoming
+				events on the <a href="/events/schedule.html">Schedule and Events page</a>.
+			</p>
+			<p>
+				To join our mailing list and Teams group, please contact one of the meeting
+				organizers:
+				<a href="mailto:alexander.kaltenborn@lanl.gov">Alexander Kaltenborn</a>,
+				<a href="mailto:makana.silva@lanl.gov">Makana Silva</a>, or
+				<a href="mailto:wes.even@lanl.gov">Wes Even</a>.
+			</p>
 			</div>
 
 			<!-- Calendar Section -->
 			<div class="calendar-section">
-				<h2>CALENDAR</h2>
-				<div class="underline1"></div>
+
 				<div class="calendar-container">
 					<iframe src="https://calendar.google.com/calendar/embed?src=704516115b487fef862286807f5f91bdf0b8e3f99e37dadd92dc9e93946749ed%40group.calendar.google.com&ctz=America%2FDenver"
 						style="border: 0"
@@ -77,6 +59,22 @@
 						scrolling="no"
 						id="calendar-iframe">
 					</iframe>
+				</div>
+
+				<!-- Subscribe / download -->
+				<div class="calendar-subscribe">
+					<p class="calendar-subscribe-label">Add to your calendar:</p>
+					<div class="calendar-subscribe-buttons">
+						<a class="btn btn-secondary btn-sm"
+							href="https://calendar.google.com/calendar/render?cid=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Fical%2F704516115b487fef862286807f5f91bdf0b8e3f99e37dadd92dc9e93946749ed%2540group.calendar.google.com%2Fpublic%2Fbasic.ics">Add to Google</a>
+						<a class="btn btn-secondary btn-sm"
+							href="webcal://calendar.google.com/calendar/ical/704516115b487fef862286807f5f91bdf0b8e3f99e37dadd92dc9e93946749ed%40group.calendar.google.com/public/basic.ics">Add to Apple</a>
+						<a class="btn btn-secondary btn-sm"
+							href="https://outlook.live.com/calendar/0/addfromweb?url=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Fical%2F704516115b487fef862286807f5f91bdf0b8e3f99e37dadd92dc9e93946749ed%2540group.calendar.google.com%2Fpublic%2Fbasic.ics&name=CTA%20Events">Add to Outlook</a>
+						<a class="btn btn-secondary btn-sm"
+							href="https://calendar.google.com/calendar/ical/704516115b487fef862286807f5f91bdf0b8e3f99e37dadd92dc9e93946749ed%40group.calendar.google.com/public/basic.ics"
+							download="cta-events.ics">Download .ics</a>
+					</div>
 				</div>
 			</div>
 
@@ -220,21 +218,11 @@
 			}
 		}
 
-		// Sync strap height
-		function syncStrap() {
-			const tb = document.querySelector('.page-strap .top-bar');
-			const bg = document.querySelector('.page-strap .strap-bg');
-			if (tb && bg) bg.style.height = tb.offsetHeight + 'px';
-		}
-
-		// Initialize
+		// Initialize (strap-bg height syncing handled by /js/apply.js)
 		checkCalendarConfig();
 		loadFeaturedSpeaker();
 		loadPartial('#cta-contact', '/partials/contact.html');
 		loadPartial('#cta-footer', '/partials/footer.html');
-
-		window.addEventListener('load', syncStrap);
-		window.addEventListener('resize', syncStrap);
 	})();
 	</script>
 </body>

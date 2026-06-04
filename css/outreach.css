@@ -1,33 +1,216 @@
-/*-- Outreach Page Overrides --*/
+/* Outreach Page */
 
-/* Logo subtitle spacing */
 .logo .subtitle {
     line-height: 0.94;
 }
 
-/* Project title links - blue box with red hover */
-.about a {
-	padding: 10px 30px;
-	border-radius: 0;
-	background-color: #028fcc;
-	border: none;
-	outline: none;
-	color: #EEE;
+.outreach-page {
+    background: var(--color-bg-page);
 }
 
-.about a:hover {
-	background-color: red;
-	color: #FFF;
-	text-decoration: underline;
+.outreach-section {
+    padding: 60px 0;
+    text-align: center;
 }
 
-/* Team heading - outreach page uses h3 instead of h1 */
-.team h3 {
-	font-size: 40px;
-	margin-bottom: 20px;
+.outreach-section .title {
+    margin-bottom: 16px;
 }
 
-/* Team h4 color override */
-.team h4 {
-	color: #393B48;
+.outreach-lead,
+.outreach-section-lead {
+    max-width: 850px;
+    margin: 0 auto 36px;
+    color: var(--color-text-primary);
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.outreach-section-lead {
+    max-width: 760px;
+    color: var(--color-text-secondary);
+    font-size: 16px;
+}
+
+.outreach-intro-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 40%);
+    gap: 28px;
+    align-items: center;
+    text-align: left;
+}
+
+.outreach-intro-text {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-rule);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    padding: 24px 28px;
+}
+
+.outreach-intro-text h2 {
+    margin: 0 0 16px;
+    color: var(--color-heading);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.outreach-intro-text p {
+    margin: 0 0 14px;
+    color: var(--color-text-primary);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.outreach-intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+.outreach-intro-image {
+    text-align: center;
+}
+
+.outreach-intro-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.outreach-projects,
+.outreach-team,
+.outreach-contact {
+    background: var(--color-bg-accent);
+}
+
+.outreach-card-grid,
+.outreach-partner-grid,
+.outreach-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.outreach-card {
+    padding: 20px 22px;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-rule);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    text-align: left;
+}
+
+.outreach-card h3 {
+    margin: 0 0 10px;
+    color: var(--color-heading);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.outreach-card h3 a,
+.outreach-partner-grid a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.outreach-contact-card {
+    padding: 20px 22px;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-rule);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    text-align: left;
+}
+
+.outreach-contact-card h3 {
+    margin: 0 0 12px;
+    color: var(--color-heading);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.outreach-contact-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.outreach-contact-card li {
+    margin: 6px 0;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+.outreach-contact-card a {
+    color: var(--color-link);
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.outreach-contact-card a:hover,
+.outreach-contact-card a:focus {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+.outreach-card h3 a:hover,
+.outreach-card h3 a:focus,
+.outreach-partner-grid a:hover,
+.outreach-partner-grid a:focus {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+.outreach-card p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.outreach-partner-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 86px;
+    padding: 16px 20px;
+    background: var(--color-bg-accent);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .outreach-section {
+        padding: 40px 0;
+    }
+
+    .outreach-intro-layout,
+    .outreach-card-grid,
+    .outreach-partner-grid,
+    .outreach-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .outreach-intro-image {
+        order: -1;
+    }
+
+    .outreach-lead,
+    .outreach-section-lead {
+        font-size: 16px;
+    }
 }

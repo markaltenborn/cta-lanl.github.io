@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>CTA Members — Center for Theoretical Astrophysics</title>
+	<title>CTA Members&mdash;Center for Theoretical Astrophysics</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS -->
@@ -22,29 +22,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
-	<!-- Compact Header (strap) -->
-	<div class="header page-strap" id="home">
-		<div class="top-bar">
-			<div class="container">
-				<div class="logo">
-					<p><a href="/index.html">Center for Theoretical<br />Astrophysics</a></p>
-					<br>
-					<p class="subtitle"><a href="https://www.lanl.gov/">Los Alamos National Laboratory</a></p>
-				</div>
-				<div class="info">
-					<div class="email">
-						<p>
-							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-							<a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a>
-						</p>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-		<div class="strap-bg" aria-hidden="true"></div>
-	</div>
-	<!-- //Compact Header -->
+	<!-- Compact Header (strap)&mdash;loaded from /partials/header-strap.html via /js/apply.js -->
+	<div id="cta-header"></div>
 
 	<!-- Team -->
 	<div class="team" id="team">
@@ -61,6 +40,13 @@
 			<h2 style="margin-top:28px;">MEMBERS</h2>
             <div class="underline1"></div>
 			<div class="staff-card-grid" id="staff-members-grid"></div>
+
+			<!-- Retired / Lab Fellow (auto-shown if any status:retired entries) -->
+			<section id="staff-retired-section" hidden>
+				<h2 style="margin-top:28px;">RETIRED / LAB FELLOW</h2>
+				<div class="underline1"></div>
+				<div class="staff-card-grid" id="staff-retired-grid"></div>
+			</section>
 
 			<!-- Emeritus -->
 			<h2 style="margin-top:28px;">EMERITUS</h2>
@@ -81,6 +67,7 @@
 	<!-- JS dependencies -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script src="/js/apply.js"></script>
 
 	<script>
 	(function () {
@@ -135,11 +122,6 @@
 	        });
 	    }
 
-	    function normalizeLeadership(str) {
-	        if (!str) return '';
-	        return String(str).trim().toLowerCase();
-	    }
-
 	    const LEADERSHIP_ORDER = {
 	        'director': 1,
 	        'co-director': 2,
@@ -149,13 +131,31 @@
 	        'outreach coordinator': 5
 	    };
 
+	    function leadershipTitles(person) {
+	        const v = person && person.leadership;
+	        if (v == null) return [];
+	        const list = Array.isArray(v) ? v : [v];
+	        return list.map(s => String(s).trim()).filter(Boolean);
+	    }
+
+	    function normalizeLeadership(value) {
+	        if (value == null) return '';
+	        const list = Array.isArray(value) ? value : [value];
+	        return list.map(s => String(s).trim().toLowerCase()).filter(Boolean).join(',');
+	    }
+
 	    function leadershipPriority(person) {
-	        const key = normalizeLeadership(person.leadership);
-	        if (!key) return Infinity; // non-leadership
-	        if (Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, key)) {
-	            return LEADERSHIP_ORDER[key];
+	        const titles = leadershipTitles(person);
+	        if (!titles.length) return Infinity; // non-leadership
+	        let best = Infinity;
+	        for (const t of titles) {
+	            const key = t.toLowerCase();
+	            const p = Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, key)
+	                ? LEADERSHIP_ORDER[key]
+	                : 100;
+	            if (p < best) best = p;
 	        }
-	        return 100; // unknown leadership role, but still leadership
+	        return best;
 	    }
 
 	    function sortKey(person) {
@@ -211,23 +211,26 @@
 	        return trimmed;
 	    }
 
+	    function isRetired(person) {
+	        return String(person && person.status || '').trim().toLowerCase() === 'retired';
+	    }
+
 	    function staffCard(person) {
 	        const slug     = person.slug;
 	        const rawName  = person.display_name || person.name || slug;
 	        const name     = formatName(rawName);
 	        const imgUrls  = imageCandidates(slug, person);
-	        const leadershipText =
-	            person.leadership && String(person.leadership).trim()
-	                ? person.leadership
-	                : '';
-	        const roleText =
-	            person.role && String(person.role).trim()
-	                ? person.role
-	                : '';
-	        const divisionText =
-	            person.division && String(person.division).trim()
-	                ? person.division
-	                : '';
+	        const retired  = isRetired(person);
+	        const titles = leadershipTitles(person).slice().sort((a, b) => {
+	            const pa = Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, a.toLowerCase()) ? LEADERSHIP_ORDER[a.toLowerCase()] : 100;
+	            const pb = Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, b.toLowerCase()) ? LEADERSHIP_ORDER[b.toLowerCase()] : 100;
+	            return pa - pb;
+	        });
+	        const leadershipText = titles.join(' · ');
+	        const roleSrc     = retired ? person.former_role     : person.role;
+	        const divisionSrc = retired ? person.former_division : person.division;
+	        const roleText     = roleSrc && String(roleSrc).trim() ? roleSrc : '';
+	        const divisionText = divisionSrc && String(divisionSrc).trim() ? divisionSrc : '';
 	        // Interests list (preferred) or fallback to `focus`
 	        let interestsText = '';
 	        if (Array.isArray(person.interests) && person.interests.length) {
@@ -297,8 +300,11 @@
 	        const people = Array.isArray(roster) ? roster : [];
 	        if (!people.length) return;
 
-	        const leadership = people.filter(p => normalizeLeadership(p.leadership));
-	        const members    = people.filter(p => !normalizeLeadership(p.leadership));
+	        const active = people.filter(p => !isRetired(p));
+	        const retired = people.filter(isRetired);
+
+	        const leadership = active.filter(p => normalizeLeadership(p.leadership));
+	        const members    = active.filter(p => !normalizeLeadership(p.leadership));
 
 	        leadership.sort((a, b) => {
 	            const pa = leadershipPriority(a);
@@ -308,13 +314,21 @@
 	        });
 
 	        members.sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+	        retired.sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
 
-	        const leadGrid    = document.getElementById('staff-leadership-grid');
-	        const membersGrid = document.getElementById('staff-members-grid');
+	        const leadGrid     = document.getElementById('staff-leadership-grid');
+	        const membersGrid  = document.getElementById('staff-members-grid');
+	        const retiredSec   = document.getElementById('staff-retired-section');
+	        const retiredGrid  = document.getElementById('staff-retired-grid');
 	        if (!leadGrid || !membersGrid) return;
 
 	        leadership.forEach(p => leadGrid.appendChild(staffCard(p)));
-	        members.forEach(p   => membersGrid.appendChild(staffCard(p)));
+	        members.forEach(p    => membersGrid.appendChild(staffCard(p)));
+
+	        if (retired.length && retiredSec && retiredGrid) {
+	            retired.forEach(p => retiredGrid.appendChild(staffCard(p)));
+	            retiredSec.hidden = false;
+	        }
 	    }
 
 	    main().catch(err => console.error('Staff page render error:', err));

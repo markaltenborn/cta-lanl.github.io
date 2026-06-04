@@ -1,0 +1,67 @@
+# Example Featured Speaker Data
+# Instructions:
+# 1. Create a new GitHub Gist at https://gist.github.com/
+# 2. Name it something like "cta-featured-speaker.yml"
+# 3. Copy this template into the Gist
+# 4. Click "Create public gist"
+# 5. Click the "Raw" button and copy the URL
+# 6. Update events/schedule.html with the raw URL (replace GITHUB_GIST_RAW_URL_HERE)
+#
+# To update the speaker:
+# - Edit the Gist directly on GitHub
+# - Changes will appear on the website immediately (may take a few seconds for cache)
+#
+# To hide the speaker card:
+# - Set enabled: false
+
+featured_speaker:
+  # Set to true to show the speaker card, false to hide it
+  enabled: true
+
+  # Basic Info
+  name: "Dr. Jane Smith"
+  affiliation: "University of California, Berkeley"
+  title: "Computational Magnetohydrodynamics in Extreme Astrophysical Environments"
+
+  # Event Details
+  date: "2026-03-15"  # YYYY-MM-DD format
+  time: "2:00 PM MT"
+  location: "CNLS Conference Room (03-1690-102)"
+
+  # Biography (multi-line text supported)
+  bio: |
+    Dr. Jane Smith is a leading expert in computational astrophysics with over 15 years
+    of experience in MHD simulations of stellar phenomena. She received her Ph.D. from
+    MIT in 2010 and has since published over 80 peer-reviewed papers on topics ranging
+    from stellar dynamics to black hole accretion. Her work has been featured in Nature,
+    Science, and The Astrophysical Journal.
+
+    Currently, Dr. Smith leads the Computational Astrophysics Group at UC Berkeley,
+    where her team develops state-of-the-art numerical methods for simulating extreme
+    astrophysical environments. She is a recipient of the NSF CAREER Award and the
+    AAS Annie Jump Cannon Award.
+
+  # Abstract (optional, multi-line text supported)
+  abstract: |
+    This talk will cover recent advances in computational magnetohydrodynamics (MHD)
+    applied to extreme astrophysical environments, including neutron star mergers,
+    accretion disks around black holes, and supernova explosions.
+
+    I will present new simulation results that challenge existing paradigms about
+    magnetic field amplification in these systems and discuss implications for
+    multi-messenger astronomy observations. The talk will also cover recent
+    developments in adaptive mesh refinement techniques that enable us to resolve
+    critical small-scale physics within global simulations.
+
+    Time will be reserved for questions and discussion about potential collaborations
+    with LANL researchers.
+
+  # Photo URL (optional)
+  # Can be a URL to any publicly accessible image
+  # Recommended aspect ratio: 3:4 (portrait)
+  photo: "https://example.com/images/jane-smith.jpg"
+
+
+# Alternative example - No featured speaker (hides the card)
+# featured_speaker:
+#   enabled: false

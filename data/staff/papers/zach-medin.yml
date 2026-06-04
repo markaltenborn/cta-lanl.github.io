@@ -1,0 +1,64 @@
+- bibcode: 2026arXiv260203982C
+  title: Modeling X-ray Bursting Neutron Star Atmospheres
+  authors:
+  - Colleyn, Lourenzo
+  - Medin, Zach
+  - Calder, Alan
+  author_count: 3
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260203982C/abstract
+
+- bibcode: 2022PhPl...29h3901H
+  title: The development of a high-resolution Eulerian radiation-hydrodynamics simulation capability for laser-driven Hohlraums
+  authors:
+  - Haines, Brian M.
+  - Keller, D. E.
+  - Long, K. P.
+  - McKay, M. D.
+  - Medin, Z. J.
+  - Park, H.
+  author_count: 20
+  year: '2022'
+  journal: Physics of Plasmas
+  url: https://ui.adsabs.harvard.edu/abs/2022PhPl...29h3901H/abstract
+
+- bibcode: 2020JPhCS1623a2003C
+  title: A Study of Low-Temperature Neutron Star Atmospheres
+  authors:
+  - Calder, A. C.
+  - Karpov, P. I.
+  - Medin, Z.
+  - Lattimer, J. M.
+  author_count: 4
+  year: '2020'
+  journal: Journal of Physics Conference Series
+  url: https://ui.adsabs.harvard.edu/abs/2020JPhCS1623a2003C/abstract
+
+- bibcode: 2019BAAS...51g..11B
+  title: Training the Future Generation of Computational Researchers
+  authors:
+  - Besla, Gurtina
+  - Huppenkothen, D.
+  - Lloyd-Ronning, N.
+  - Schneider, E.
+  - Behroozi, P.
+  - Burkhart, B.
+  author_count: 99
+  year: '2019'
+  journal: Bulletin of the American Astronomical Society
+  url: https://ui.adsabs.harvard.edu/abs/2019BAAS...51g..11B/abstract
+
+- bibcode: 2016ApJ...832..102M
+  title: Model Atmospheres for X-Ray Bursting Neutron Stars
+  authors:
+  - Medin, Zach
+  - von Steinkirch, Marina
+  - Calder, Alan C.
+  - Fontes, Christopher J.
+  - Fryer, Chris L.
+  - Hungerford, Aimee L.
+  author_count: 6
+  year: '2016'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2016ApJ...832..102M/abstract

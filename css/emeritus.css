@@ -6,7 +6,7 @@
 
 /* Team section background on the emeritus page */
 #team {
-    background: #EEE;
+    background: var(--color-bg-accent);
 }
 
 #team .title {
@@ -32,12 +32,12 @@
 }
 
 #team .emeritus-list a {
-    color: #028fcc;
+    color: var(--color-link);
     text-decoration: none;
 }
 
 #team .emeritus-list a:hover {
-    color: red;
+    color: var(--color-link-hover);
     text-decoration: none;
 }
 
@@ -56,21 +56,21 @@
 .profile-tenure {
     margin-top: 10px;
     font-size: 16px;
-    color: #444;
+    color: var(--color-text-primary);
     font-weight: 600;
 }
 
 .profile-tenure strong {
-    color: #222;
+    color: var(--color-text-primary);
 }
 
 .tenure-years {
     display: inline-block;
     padding: 4px 12px;
-    background: #f0f0f0;
+    background: var(--color-bg-accent);
     border-radius: 4px;
     margin-left: 8px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #028fcc;
+    color: var(--color-link);
 }

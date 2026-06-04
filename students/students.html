@@ -13,9 +13,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="keywords" content="Computational Astrophysics Los Alamos LANL CTA State-of-the-art High-resolution multi-physics multi-scale simulation modeling">
-	<script type="application/x-javascript"> addEventListener("load", function() { 
-			setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-	</script>
 	<!-- //Meta-Tags -->
 	<!-- Custom-Theme-Files -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -23,7 +20,6 @@
 	<link rel="stylesheet" href="/css/design-system.css" 	type="text/css" media="all">
 	<link rel="stylesheet" href="/css/cards.css"				type="text/css" media="all">
 	<link rel="stylesheet" href="/css/student.css" 			type="text/css" media="all">
-	<link rel="stylesheet" href="/css/chocolat.css"			type="text/css" media="all">
 	<link rel="stylesheet" href="/css/profiles-common.css"  type="text/css" media="all">
 	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
 	
@@ -34,6 +30,7 @@
 	<!-- //Web-Fonts -->
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="/js/apply.js"></script>
 </head>
 <!-- //Head -->
 <!-- Body -->
@@ -56,6 +53,9 @@
 						<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a></p>
 					</div>
 					<!-- //Email -->
+					<div class="apply-wrap">
+						<a class="btn btn-primary btn-sm js-apply" href="https://jobszp1.lanl.gov/OA_HTML/RF.jsp?function_id=14330&amp;resp_id=51616&amp;resp_appl_id=800&amp;security_group_id=0%3C_code%3DUS&amp;params=btOoWGkj963I..Q2L5dcEkwPdY2X8RgGyIGQIgmPvx1ATLhV1EKKfMP8X3LGjq5S&amp;oas=LEh_BAM3qoSLDf-lxE5pKg">APPLY</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -92,8 +92,9 @@
 		<!-- //Slider -->
 	</div>
 	<!-- //Header -->
+	<div id="cta-nav"></div>
 	<!-- Students Intro -->
-	<div id="students-intro" class="cta-section" style="padding-top: 1050px;">
+	<div id="students-intro" class="cta-section">
 		<div class="container">
 			<h1>CTA STUDENTS</h1>
 			<p>
@@ -183,67 +184,6 @@
 		});
 	</script>
 	<!-- //Slider-JavaScript -->
-	<!-- Gallery-Tab-JavaScript -->
-	<script src="/js/cbpFWTabs.js"></script>
-	<script>
-		(function() {
-			[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
-				new CBPFWTabs( el );
-			});
-		})();
-	</script>
-	<!-- //Gallery-Tab-JavaScript -->
-	<!-- Popup-Box-JavaScript -->
-	<script src="/js/modernizr.custom.97074.js"></script>
-	<script src="/js/jquery.chocolat.js"></script>
-	<script type="text/javascript">
-		$(function() {
-			$('.gallery-item a').Chocolat();
-		});
-	</script>
-	<!-- //Popup-Box-JavaScript -->
-	<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 100,
-				easingType: 'linear'
-			};
-			$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
-	<!-- //Slide-To-Top JavaScript -->
-	<!-- Smooth-Scrolling-JavaScript -->
-	<script type="text/javascript" src="/js/move-top.js"></script>
-	<script type="text/javascript" src="/js/easing.js"></script>
-	<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll, .navbar li a, .footer li a").click(function(event){
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-	</script>
-	<!-- //Smooth-Scrolling-JavaScript -->
-	<!-- FlexSlider-JavaScript -->
-	<script defer src="/js/jquery.flexslider.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			SyntaxHighlighter.all();
-		});
-		$(window).load(function(){
-			$('.flexslider').flexslider({
-				animation: "slide",
-				start: function(slider){
-					$('body').removeClass('loading');
-				}
-			});
-		});
-	</script>
-	<!-- //FlexSlider-JavaScript -->
-	<!-- //Custom-JavaScript-File-Links -->
 	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 	<script>
 	(function () {

@@ -3,22 +3,74 @@
    and their respective year listing pages.
 */
 
-/* ===== Profile page layout ===== */
+/* ===== Profile page layout (Slice 2.5 redesign) ===== */
 .profile-name {
-    margin: 10px 0 12px;
-    font-size: 28px;
-    line-height: 1.25;
+    margin: 0 0 6px;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: left;
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 36px;
+    align-items: start;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+.profile-sidebar {
     text-align: left;
 }
 
+/* Optional white-card wrapper around the sidebar (try-out on postdocs first) */
+.profile-sidebar.profile-sidebar-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.06);
+}
+
+.profile-sidebar.profile-sidebar-card .profile-rank {
+    margin-top: 12px;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    text-align: left;
+    min-width: 0;
+}
+
+.team .page-back-link {
+    display: block;
+    width: max-content;
+    margin: 12px 0 12px;
+    text-align: left;
+}
+
+.profile-content #bio-section {
+    grid-column: 1 / -1;
+}
+
+/* Old .profile-layout retained for emeritus/other pages until they migrate */
 .profile-layout {
     display: grid;
     grid-template-columns: minmax(240px, 360px) minmax(280px, 1fr);
     gap: 24px;
     align-items: start;
 }
-
-/* Tablet and below: single column layout */
 @media (max-width: 992px) {
     .profile-layout {
         grid-template-columns: 1fr;
@@ -35,14 +87,20 @@
     display: block;
 }
 
+/* Sidebar photo override: smaller for the redesigned grid */
+.profile-sidebar .profile-photo {
+    max-width: 280px;
+    margin-bottom: 12px;
+}
+
 .profile-affil {
     margin-top: 10px;
     font-size: 16px;
-    color: #444;
+    color: var(--color-text-primary);
 }
 
 .profile-affil strong {
-    color: #222;
+    color: var(--color-text-primary);
 }
 
 /* Contact card on the right-hand side */
@@ -51,7 +109,7 @@
     width: 100%;
     max-width: 360px;
     background: #fff;
-    border: 1px solid #e6e6e6;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 14px 16px;
     box-shadow: 0 1px 2px rgba(0,0,0,.06);
@@ -76,14 +134,14 @@
 }
 
 .contact-card a {
-    color: #028fcc;
+    color: var(--color-link);
 }
 
 /* Profile bio */
 .profile-bio {
     margin-top: 16px;
     font-size: 15px;
-    color: #444;
+    color: var(--color-text-primary);
     text-align: left;
 }
 
@@ -103,20 +161,20 @@
     text-align: center;
 }
 
-/* Profile stints (participation years) */
+/* Profile stints (participation years)&mdash;left-aligned grid */
 .profile-stints {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
-    column-gap: 125px;
-    row-gap: 50px;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: start;
+    column-gap: 40px;
+    row-gap: 12px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .profile-stints li {
-    text-align: center;
+    text-align: left;
 }
 
 /* ===== Year listing page styles ===== */
@@ -155,13 +213,13 @@
     box-shadow: none;
     border-radius: 0;
     padding: 0;
-    color: #028fcc;
+    color: var(--color-link);
     font-weight: 700;
     text-decoration: none;
 }
 
 #team .years-grid a:hover {
-    color: red;
+    color: var(--color-link-hover);
 }
 
 /* Tablet and below: 3 columns */
@@ -183,4 +241,309 @@
     #team .years-grid {
         grid-template-columns: auto;
     }
+}
+
+/* ----- Recent papers (ADS) ----- */
+
+.profile-papers {
+    list-style: none;
+    padding-left: 0;
+    margin: 12px 0 0;
+}
+
+.profile-papers .paper-item {
+    margin: 0 0 14px;
+    padding-left: 0;
+}
+
+.profile-papers .paper-title {
+    color: var(--color-link);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.profile-papers .paper-title:hover {
+    text-decoration: underline;
+}
+
+.profile-papers .paper-meta {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    margin-top: 2px;
+    line-height: 1.4;
+}
+
+/* ===== Slice 2.5 redesign primitives ===== */
+
+/* Full-width header (name + meta line) above the two-column grid */
+.profile-header {
+    margin: 0 0 22px;
+}
+
+.profile-header .profile-name {
+    margin: 0 0 6px;
+}
+
+.profile-header .profile-meta-line,
+.profile-meta-line {
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+}
+
+.profile-meta-line .sep {
+    margin: 0 8px;
+    color: var(--color-border);
+}
+
+/* Full-width sections below the grid.
+   Specificity bumped (.profile-section.profile-fullwidth) so the later
+   .profile-section { margin: 0 0 26px } shorthand can't reset margin-top. */
+.profile-section.profile-fullwidth {
+    margin-top: 48px;
+    clear: both;
+}
+
+.profile-section.profile-fullwidth + .profile-section.profile-fullwidth {
+    margin-top: 32px;
+}
+
+/* Rank line under sidebar photo: role · group · At LANL since YYYY [+ badge].
+   Specificity bumped above .team p (which sets margin:0 auto; width:60%). */
+.profile-sidebar .profile-rank {
+    margin: 10px 0 6px;
+    width: auto;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.45;
+    text-align: left;
+}
+
+.profile-rank .sep {
+    margin: 0 6px;
+    color: var(--color-border);
+}
+
+.profile-rank .profile-badge {
+    margin-left: 0;
+    margin-top: 6px;
+    display: inline-block;
+}
+
+/* Sidebar link groups (Contact, Profiles)&mdash;unboxed */
+.profile-link-group {
+    margin: 10px 0 0;
+}
+
+.profile-link-group[hidden] {
+    display: none !important;
+}
+
+.profile-link-group .meta-label {
+    display: block;
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 2px;
+}
+
+.profile-link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-link-list li {
+    margin: 2px 0;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.profile-link-list a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.profile-link-list a:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar interests section (legacy slot&mdash;interests now full-width) */
+.profile-sidebar .profile-section {
+    margin: 18px 0 0;
+}
+
+/* Accepting-students / status badge */
+.profile-badge {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 3px 10px;
+    background: #9EE8CA;
+    color: #0C0D17;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+}
+
+.profile-badge.is-retired {
+    background: #B794E7;
+    color: #0C0D17;
+}
+
+/* Sidebar meta list (university, currently if retired, etc.) */
+.profile-meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: var(--color-text-primary);
+    text-align: left;
+}
+
+.profile-meta-list li {
+    margin: 4px 0;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.profile-meta-list:empty {
+    display: none;
+}
+
+.profile-meta-list .meta-label {
+    display: block;
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 1px;
+}
+
+.profile-meta-list a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.profile-meta-list a:hover {
+    text-decoration: underline;
+}
+
+/* Section pattern in content area */
+.profile-section {
+    margin: 0;
+    padding: 18px 20px;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-rule);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+@media (max-width: 768px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-content #bio-section {
+        grid-column: auto;
+    }
+}
+
+.profile-section[hidden] {
+    display: none !important;
+}
+
+.profile-section-heading {
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-heading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 6px;
+}
+
+/* Bio paragraph. Specificity bumped above .team p (margin:0 auto; width:60%). */
+.profile-content .profile-bio {
+    margin: 0;
+    font-size: 15px;
+    color: var(--color-text-primary);
+    line-height: 1.65;
+    text-align: left;
+    width: auto;
+}
+
+/* Interests as chips */
+.profile-interests-chips {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.profile-interests-chips li {
+    background: var(--color-bg-accent);
+    color: var(--color-heading);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: left;
+    margin: 0;
+}
+
+/* Profile link chips (Scholar / ADS / LANL Profile)&mdash;clickable variant */
+.profile-link-chips {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.profile-link-chips li {
+    margin: 0;
+}
+
+.profile-link-chips a {
+    display: inline-block;
+    background: var(--color-bg-accent);
+    color: var(--color-link);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.profile-link-chips a:hover,
+.profile-link-chips a:focus {
+    background: var(--color-border);
+    text-decoration: none;
+}
+
+/* Recent papers&mdash;left aligned override */
+.profile-papers {
+    text-align: left;
+    margin: 0;
+}
+
+.profile-papers .paper-title {
+    display: block;
+    margin-bottom: 2px;
 }

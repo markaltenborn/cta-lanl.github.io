@@ -15,16 +15,8 @@
 .page-strap .strap-bg {
     position: absolute;
     inset: 0;
-    background: #0b1d36;
-    background: linear-gradient(
-        180deg,
-        #0B1D36 0%,
-        #091A44 20%,
-        #071753 40%,
-        #041561 60%,
-        #021270 80%,
-        #000F7E 100%
-    );
+    background: #07153A;
+    background: var(--gradient-compact-header);
     z-index: 1;
     min-height: 100px;
 }
@@ -33,5 +25,21 @@
 .page-strap .subtitle a,
 .page-strap .info a,
 .page-strap .glyphicon {
-    color: #EEE;
+    color: #FFF;
+}
+
+.info .apply-wrap {
+    width: 100%;
+    float: left;
+    text-align: right;
+    margin-top: 4px;
+}
+
+.info .apply-wrap .btn {
+    color: #FFF;
+}
+
+.info .apply-wrap .btn:hover {
+    color: #FFF;
+    text-decoration: none;
 }

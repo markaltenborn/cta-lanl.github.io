@@ -12,8 +12,9 @@
 body {
 	padding: 0;
 	margin: 0;
-	background: #FFF;
+	background: var(--color-bg-page);
 	font-family: 'Montserrat', sans-serif;
+	color: var(--color-text-primary);
 }
 
 body a {
@@ -45,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	color: #028fcc;
+	color: var(--color-heading);
 }
 
 p {
@@ -112,12 +113,13 @@ a:focus, a:hover {
 .logo a {
 	font-size: 30px;
 	font-weight: bolder;
-	color: #EEE;
+	color: #FFF;
     
 }
 
 .logo a:hover {
-	color: red;
+	color: #FFF;
+	text-decoration: underline;
 }
 
 .logo .subtitle {
@@ -148,7 +150,7 @@ a:focus, a:hover {
 }
 
 .info p {
-	color: #EEE;
+	color: #FFF;
 	font-size: 13px;
 }
 
@@ -157,7 +159,8 @@ a:focus, a:hover {
 }
 
 .info a:hover {
-	color: red;
+	color: #FFF;
+	text-decoration: underline;
 }
 
 .info span.glyphicon {
@@ -398,7 +401,7 @@ a:focus, a:hover {
 }
 
 .callbacks_here a:after {
-	background: #1ca0de;
+	background: var(--color-rule);
 }
 
 .slider-info {
@@ -458,16 +461,16 @@ a:focus, a:hover {
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: #777;
+	color: var(--color-text-secondary);
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #6BC676;
+	color: var(--color-brand-ultramarine);
 	background-color: transparent;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-	color: #028fcc;
+	color: var(--color-link-hover);
 	background-color: transparent;
 }
 
@@ -500,6 +503,13 @@ a:focus, a:hover {
     font-size:13px;
 }
 
+.menu__item__seven {
+	display: block;
+	width: 14.285714%;
+	padding: 7px 0;
+    font-size:13px;
+}
+
 .menu__link {
 	cursor: pointer;
 	-webkit-user-select: none;
@@ -520,17 +530,17 @@ a:focus, a:hover {
 	overflow: hidden;
 	padding: 20px 0;
 	text-align: center;
-	color: #028fcc;
+	color: var(--color-link);
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
 }
 
 .menu--francisco .menu__link:hover, .menu--francisco .menu__link:focus {
-	color: #028fcc;
+	color: var(--color-link-hover);
 }
 
 .menu--francisco .menu__item--current .menu__link {
-	color: #028fcc;
+	color: var(--color-brand-ultramarine);
 }
 
 .menu--francisco .menu__link::before {
@@ -541,7 +551,7 @@ a:focus, a:hover {
 	width: 100%;
 	height: 3px;
 	opacity: 0;
-	background: #028fcc;
+	background: var(--color-rule);
 	-webkit-transform: translate3d(0, -3em, 0);
 	transform: translate3d(0, -3em, 0);
 	-webkit-transition: -webkit-transform 0s 0.3s, opacity 0.2s;
@@ -633,7 +643,7 @@ a:focus, a:hover {
 .underline1 {
 	height: 3px;
 	width: 75px;
-	background-color: #004393;
+	background-color: var(--color-rule);
 	margin: 20px auto 75px;
 }
 
@@ -645,7 +655,7 @@ a:focus, a:hover {
 
 .about p, .services p, .team p, .contact p, .portfolio p {
 	font-size: 16px;
-	color: #777;
+	color: var(--color-text-secondary);
 	margin: 0 auto;
 	width: 60%;
 	/*line-height: 30px;*/
@@ -683,7 +693,7 @@ p.about-p-2 {
 	background-color: #333;
 	border: none;
 	outline: none;
-	color: #EEE;
+	color: #FFF;
 }*/
 
 .about a:hover {
@@ -696,7 +706,7 @@ p.about-p-2 {
 /*-- Projects --*/
 
 #projects {
-    background: #EEE;
+    background: var(--color-bg-accent);
 }
 
 .projlist {
@@ -713,7 +723,7 @@ p.about-p-2 {
 .projtitle {
     margin-top: 15px;
     font-size: 16px;
-    color: #028fcc;
+    color: var(--color-heading);
 }
 
 /*-- //Projects --*/
@@ -721,7 +731,7 @@ p.about-p-2 {
 /*-- Publications --*/
 
 #publications {
-    background: #EEE;
+    background: var(--color-bg-accent);
 }
 
 .publist {
@@ -732,12 +742,12 @@ p.about-p-2 {
 .publist a {
     padding:0;
     background:none;
-    color: #028fcc;
+    color: var(--color-link);
 }
 
 .publist a:hover {
     background:none;
-    color:red;
+    color: var(--color-link-hover);
 }
 
 .publist ul {
@@ -756,7 +766,7 @@ p.about-p-2 {
 /*-- Skills --*/
 
 .skills {
-	background-color: #f5f5f5;
+	background-color: var(--color-bg-accent);
 }
 
 .skills h4 {
@@ -773,7 +783,7 @@ p.about-p-2 {
 
 .skills .progress {
 	position: relative;
-	background-color: #C7C7C7;
+	background-color: var(--color-border);
 	border-radius: 30px;
 }
 
@@ -784,7 +794,7 @@ p.about-p-2 {
 }
 
 .skills .progress-bar {
-	background-color: #2196F3;
+	background-color: var(--color-data-blue);
 	color: #FFF;
 	text-align: left;
 	padding-left: 275px;
@@ -824,7 +834,7 @@ p.about-p-2 {
 .services-item h4 {
 	font-size: 20px;
 	font-weight: 700;
-	color: #393b48;
+	color: var(--color-text-primary);
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
@@ -848,7 +858,7 @@ p.about-p-2 {
 }
 
 .services a:hover {
-    color:red;
+    color: var(--color-link-hover);
 }
 
 /*-- //Services --*/
@@ -857,7 +867,7 @@ p.about-p-2 {
 /*-- Gallery --*/
 
 .portfolio {
-/*	background-color: #EEE;*/
+/*	background-color: var(--color-bg-accent);*/
 }
 
 .portfolio section {
@@ -1014,7 +1024,7 @@ p.about-p-2 {
 
 .tabs-style-linemove nav a {
 	padding-bottom: 25px;
-	color: #777;
+	color: var(--color-text-secondary);
 	line-height: 1;
 	-webkit-transition: color 0.3s, -webkit-transform 0.3s; 
 	transition: color 0.3s, transform 0.3s;
@@ -1142,7 +1152,7 @@ figure.effect-apollo:hover figcaption::before {
 /*-- Team --*/
 
 #team {
-    background: #EEE;
+    background: var(--color-bg-accent);
 }
 
 .team-top {
@@ -1157,7 +1167,7 @@ figure.effect-apollo:hover figcaption::before {
 
 .team-top-text {
 	height: 275px;
-	background-color: #EEE;
+	background-color: var(--color-bg-accent);
     margin: 0;
 	padding: 0 25px 0 10px;;
 	margin-bottom: 30px;
@@ -1171,14 +1181,14 @@ figure.effect-apollo:hover figcaption::before {
 
 .team h2 {
 	font-size: 23px;
-	color: #777;
+	color: var(--color-text-secondary);
 	margin: 20px 0;
 	text-align: center;
 }
 
 .team h4 {
 	font-size: 23px;
-	color: #777;
+	color: var(--color-text-secondary);
 	margin: 20px 0;
 	text-align: left;
 }
@@ -1188,17 +1198,87 @@ figure.effect-apollo:hover figcaption::before {
 	text-align: left;
 	margin-bottom: 20px;
     font-weight: 400;
-    color: #777;
+    color: var(--color-text-secondary);
 }
 
 
 .team-top-text p {
 	font-family: 'Open Sans', sans-serif;
 	/*line-height: 25px;*/
-	color: #777;
+	color: var(--color-text-secondary);
 	font-weight: 400;
 	width: 100%;
 	font-size: 14px;
+}
+
+/* ===== Member Spotlight Sections (Home Page) ===== */
+.cta-spotlight-section {
+	display: flex;
+	margin: 48px 0;
+	gap: 0;
+	background: var(--color-border);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.cta-spotlight-label-bar {
+	position: relative;
+	background: var(--color-link);
+	width: 80px;
+	min-height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	text-decoration: none;
+	transition: background 0.2s ease;
+}
+
+.cta-spotlight-label-bar:hover {
+	background: var(--color-link-hover);
+	text-decoration: none;
+}
+
+.cta-spotlight-label-bar::after {
+	content: attr(data-label);
+	color: #FFFFFF;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	transform: rotate(180deg);
+	text-transform: uppercase;
+}
+
+.cta-spotlight-content {
+	flex: 1;
+	padding: 16px 32px;
+}
+
+@media (max-width: 768px) {
+	.cta-spotlight-section {
+		flex-direction: column;
+		margin: 32px 0;
+	}
+	
+	.cta-spotlight-label-bar {
+		width: 100%;
+		min-height: 50px;
+		height: 50px;
+	}
+	
+	.cta-spotlight-label-bar::after {
+		writing-mode: horizontal-tb;
+		transform: none;
+		font-size: 16px;
+	}
+	
+	.cta-spotlight-content {
+		padding: 16px 24px;
+	}
 }
 
 .get{
@@ -1321,8 +1401,8 @@ ul.social li a.gscholar:hover {
 /*-- Clients --*/
 
 .clients {
-	background-color: #555555;
-	color: #EEE;
+	background-color: var(--color-text-secondary);
+	color: #fff;
 }
 
 .clients h4 {
@@ -1387,15 +1467,15 @@ ul.social li a.gscholar:hover {
 .contact input.more_btn {
 	padding: 10px 50px;
 	border-radius: 0;
-	background-color: #333;
+	background-color: var(--color-link);
 	border: none;
 	outline: none;
-	color: #EEE;
+	color: #fff;
 	margin-top: 20px;
 }
 
 .contact input.more_btn:hover {
-	background-color: #028fcc;
+	background-color: var(--color-link-hover);
 	color: #FFF;
 }
 
@@ -1422,7 +1502,7 @@ ul.social li a.gscholar:hover {
 }
 
 .contact span.glyphicon, .team span.glyphicon {
-	color: #777;
+	color: var(--color-text-secondary);
 	margin-right: 0px;
 }
 
@@ -1438,12 +1518,12 @@ ul.social li a.gscholar:hover {
 	font-size: 14px;
 	font-weight: 400;
 	font-family: 'Open Sans', sans-serif;
-    color: #028fcc;
+    color: var(--color-link);
     /*margin-left: 10px;*/
 }
 
 .contact a:hover {
-    color: red;
+    color: var(--color-link-hover);
 }
 
 .contact h5 {
@@ -1460,7 +1540,7 @@ ul.social li a.gscholar:hover {
 	font-weight: 600;
 	font-family: 'Open Sans', sans-serif;
 	line-height: 25px;
-    color: #777;
+    color: var(--color-text-secondary);
     margin-bottom:20px;
 }
 
@@ -1477,7 +1557,7 @@ ul.social li a.gscholar:hover {
 
 .footer {
 	padding: 50px 0;
-	background-color: #333;
+	background-color: var(--color-text-primary);
 }
 
 .copyright p {
@@ -1490,7 +1570,8 @@ ul.social li a.gscholar:hover {
 }
 
 .copyright p a:hover {
-	color: #009688;
+	color: #FFF;
+	text-decoration: underline;
 }
 
 /*-- //Footer --*/
@@ -2732,7 +2813,7 @@ ul.social li a.gscholar:hover {
 .cta-section .cta-feature h4 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #004393;
+    color: var(--color-heading);
 }
 
 .cta-section .cta-feature ul,
@@ -2740,7 +2821,7 @@ ul.social li a.gscholar:hover {
     margin: 0;
     padding-left: 18px;
     font-size: 14px;
-    color: #555;
+    color: var(--color-text-secondary);
 }
 
 .cta-section .cta-links {

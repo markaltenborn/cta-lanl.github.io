@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nucleosynthesis&mdash;Center for Theoretical Astrophysics</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Nucleosynthesis Los Alamos LANL CTA r-process reaction network stellar yields">
+
+	<!-- CSS (styling shared with the transients research subpage) -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/design-system.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/cards.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/staff.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/profiles-common.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/transients.css" type="text/css" media="all">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+
+	<!-- jQuery + js-yaml + profile utilities (for loading the publications list) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script src="/js/profile-utils.js"></script>
+	<script src="/js/apply.js"></script>
+</head>
+<body>
+	<div id="cta-header"></div>
+
+	<main class="transients-page" id="nucleosynthesis">
+
+		<!-- Hero -->
+		<section class="transients-section transients-hero" id="about">
+			<div class="container">
+				<h1 class="title">NUCLEOSYNTHESIS</h1>
+				<p class="underline1"></p>
+				<p class="transients-lead">
+					CTA scientists study the origin of the elements, from nuclear reaction networks
+					to the astrophysical sites that synthesize nuclei in stars, supernovae, and
+					compact-object mergers.
+				</p>
+			</div>
+		</section>
+
+		<!-- Codes + Data (two columns) -->
+		<section class="transients-section transients-codes-data">
+			<div class="container">
+				<div class="transients-split">
+
+					<div class="transients-col" id="codes">
+						<div class="transients-box">
+							<h2 class="transients-box-title">Codes</h2>
+							<p class="transients-box-intro">
+								CTA scientists are co-developers on a number of nuclear reaction network
+								and nucleosynthesis codes.
+							</p>
+
+							<h3>SkyNet</h3>
+							<p class="transients-ref">CTA contact: Jonas Lippuner</p>
+							<p>A modular nuclear reaction network for computing nucleosynthesis.</p>
+
+							<h3>PRISM</h3>
+							<p class="transients-ref">LANL contact: Matt Mumpower</p>
+							<p>A nuclear reaction network used for r-process nucleosynthesis studies.</p>
+
+							<h3>NuGrid</h3>
+							<p class="transients-ref">LANL contact: Sam Jones</p>
+							<p>A collaboration and toolset for stellar nucleosynthesis and post-processing of simulations.</p>
+						</div>
+					</div>
+
+					<div class="transients-col" id="data">
+						<div class="transients-box">
+							<h2 class="transients-box-title">Data</h2>
+							<p class="transients-box-intro">
+								Nucleosynthesis data sets produced by CTA scientists. The links below
+								lead to the public data archives.
+							</p>
+
+							<h3><a href="https://doi.org/10.5281/zenodo.13352178">Stellar Grid</a></h3>
+							<p class="transients-ref">Reference: <a href="https://doi.org/10.3847/1538-4357/ab64f8">Andrews et al.</a>, LA-UR-19-30411</p>
+							<p>Yields from a grid of stellar explosions with three progenitors.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Publications (loaded from /data/research/papers/nucleosynthesis.yml) -->
+		<section class="transients-section transients-publications" id="papers" hidden>
+			<div class="container">
+				<div class="transients-box transients-pub-box">
+					<h2 class="transients-box-title">Publications</h2>
+					<ul class="profile-papers" id="nucleosynthesis-papers"></ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team (auto-loaded from /data/staff/staff_roster.yml, filtered to research_groups: nucleosynthesis) -->
+		<section class="transients-section transients-team" id="team">
+			<div class="container">
+				<h2 class="title">PEOPLE</h2>
+				<p class="underline1"></p>
+				<div class="staff-card-grid" id="nucleosynthesis-people-grid"></div>
+			</div>
+		</section>
+
+	</main>
+
+	<!-- Contact -->
+	<div id="cta-contact"></div>
+
+	<!-- Footer -->
+	<div id="cta-footer"></div>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- People: staff cards filtered to research_groups: nucleosynthesis -->
+	<script>
+	(function () {
+		const DATA_BASE   = '/data';
+		const DEFAULT_IMG = '/staff/images/cta-default.jpg';
+		const IMG_ROSTER  = '/staff/images/roster';
+		const IMG_ROOT    = '/staff/images';
+		const GROUP       = 'nucleosynthesis';
+
+		function el(tag, attrs = {}, children = []) {
+			const n = document.createElement(tag);
+			Object.entries(attrs).forEach(([k, v]) => { if (v != null) n.setAttribute(k, v); });
+			(Array.isArray(children) ? children : [children]).forEach(c => {
+				if (c == null) return;
+				n.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+			});
+			return n;
+		}
+		async function fetchYAML(path) {
+			const res = await fetch(path, { cache: 'no-store' });
+			return jsyaml.load(await res.text()) || [];
+		}
+		function imageCandidates(slug, person) {
+			const exts = ['.jpg', '.png', '.jpeg'];
+			const out = [];
+			if (person && person.photo) out.push(person.photo);
+			for (const ext of exts) out.push(`${IMG_ROSTER}/${slug}${ext}`);
+			for (const ext of exts) out.push(`${IMG_ROOT}/${slug}${ext}`);
+			out.push(DEFAULT_IMG);
+			return Array.from(new Set(out.filter(Boolean)));
+		}
+		function firstReachable(urls) {
+			return new Promise(resolve => {
+				let i = 0, img = new Image();
+				const next = () => {
+					if (i >= urls.length) return resolve(DEFAULT_IMG);
+					const u = urls[i++];
+					img.onload = () => resolve(u);
+					img.onerror = next;
+					img.src = u;
+				};
+				next();
+			});
+		}
+		const LEADERSHIP_ORDER = {
+			'director': 1, 'co-director': 2, 'deputy director': 2,
+			'coordinator': 3, 'co-coordinator': 4, 'outreach coordinator': 5
+		};
+		function leadershipTitles(person) {
+			const v = person && person.leadership;
+			if (v == null) return [];
+			return (Array.isArray(v) ? v : [v]).map(s => String(s).trim()).filter(Boolean);
+		}
+		function sortKey(person) {
+			return (person.sort_key || person.display_name || person.name || person.slug || '').toLowerCase();
+		}
+		function buildSocialList(person) {
+			const items = [];
+			if (person.lanl) items.push(el('li', {}, el('a', { href: person.lanl, class: 'lanl', title: 'LANL Profile Page', target: '_blank', rel: 'noopener' })));
+			if (person.ads) items.push(el('li', {}, el('a', { href: person.ads, class: 'ads', title: 'ADS Publication List', target: '_blank', rel: 'noopener' })));
+			if (person.scholar) items.push(el('li', {}, el('a', { href: person.scholar, class: 'gscholar', title: 'Google Scholar Profile', target: '_blank', rel: 'noopener' })));
+			return items.length ? el('ul', { class: 'social' }, items) : null;
+		}
+		function formatName(raw) {
+			if (!raw) return '';
+			const t = String(raw).trim();
+			return t === t.toUpperCase() ? t.toLowerCase().replace(/\b\w/g, c => c.toUpperCase()) : t;
+		}
+		function inGroup(person) {
+			const g = person && person.research_groups;
+			if (!g) return false;
+			return (Array.isArray(g) ? g : [g]).map(s => String(s).trim().toLowerCase()).includes(GROUP);
+		}
+		function staffCard(person) {
+			const slug = person.slug;
+			const name = formatName(person.display_name || person.name || slug);
+			const titles = leadershipTitles(person).slice().sort((a, b) => {
+				const pa = Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, a.toLowerCase()) ? LEADERSHIP_ORDER[a.toLowerCase()] : 100;
+				const pb = Object.prototype.hasOwnProperty.call(LEADERSHIP_ORDER, b.toLowerCase()) ? LEADERSHIP_ORDER[b.toLowerCase()] : 100;
+				return pa - pb;
+			});
+			const leadershipText = titles.join(' · ');
+			const roleText = person.role && String(person.role).trim() ? person.role : '';
+			const divisionText = person.division && String(person.division).trim() ? person.division : '';
+			let interestsText = '';
+			if (Array.isArray(person.interests) && person.interests.length) {
+				interestsText = person.interests.map(s => String(s).trim()).filter(Boolean).join(', ');
+			} else if (person.focus && String(person.focus).trim()) {
+				interestsText = String(person.focus).trim();
+			}
+			let emailNode = null;
+			if (person.email) {
+				emailNode = el('p', { class: 'staff-email' }, [
+					el('a', { href: `mailto:${person.email}` }, [
+						el('span', { class: 'glyphicon glyphicon-envelope', 'aria-hidden': 'true' }),
+						' ', person.email
+					])
+				]);
+			}
+			const href = '/staff/profile.html?slug=' + encodeURIComponent(slug);
+			const card = el('div', { class: 'staff-card-wrap' }, [
+				el('a', { class: 'staff-card', href }, [
+					el('div', { class: 'staff-photo-wrap view view-seventh' }, [
+						el('img', { class: 'staff-photo', src: DEFAULT_IMG, alt: name, loading: 'lazy' }),
+						el('div', { class: 'mask' }, buildSocialList(person))
+					]),
+					el('div', { class: 'staff-meta' }, [
+						el('h4', {}, name),
+						leadershipText ? el('div', { class: 'staff-leadership' }, leadershipText) : null,
+						roleText ? el('div', { class: 'staff-role' }, roleText) : null,
+						divisionText ? el('div', { class: 'staff-division' }, divisionText) : null,
+						interestsText ? el('p', { class: 'staff-interests' }, interestsText) : null,
+						emailNode
+					])
+				])
+			]);
+			const imgEl = card.querySelector('img.staff-photo');
+			firstReachable(imageCandidates(slug, person)).then(u => { imgEl.src = u; });
+			return card;
+		}
+		async function main() {
+			const roster = await fetchYAML(`${DATA_BASE}/staff/staff_roster.yml`);
+			const people = (Array.isArray(roster) ? roster : []).filter(inGroup);
+			const grid = document.getElementById('nucleosynthesis-people-grid');
+			if (!grid || !people.length) return;
+			people.sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+			people.forEach(p => grid.appendChild(staffCard(p)));
+		}
+		main().catch(err => console.error('Nucleosynthesis people render error:', err));
+	})();
+	</script>
+
+	<script>
+	$(function () {
+		$("#cta-contact").load("/partials/contact.html");
+		$("#cta-footer").load("/partials/footer.html");
+	});
+	ProfileUtils.renderRecentPapers(
+		"research",
+		"nucleosynthesis",
+		document.getElementById("papers"),
+		document.getElementById("nucleosynthesis-papers")
+	);
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# CTA opportunities-page photo gallery.
+#
+# Each entry renders one tile in the "LIFE AT CTA" gallery on
+# /opportunities/opportunities.html. To add a photo:
+#
+#   1. Drop the image file in /opportunities/images/
+#   2. Append an entry below with `src:` and (optionally) `caption:` and `thumb:`
+#
+# Fields:
+#   src      (required) absolute path to the full-size image
+#   caption  (optional) short text shown on hover + in the lightbox
+#   thumb    (optional) absolute path to a smaller version for the grid;
+#            if omitted, src is used (browser-resized)
+#
+# Captions are plain text. Keep them short — one line, ~60 chars max.
+# Suggested categories: summer schools, conferences, posters, happy hours,
+# group meetings, retreats.
+
+# Example entries (delete or replace as real photos are added):
+#
+# - src: /opportunities/images/2025-summer-school.jpg
+#   caption: "2025 Summer School — Computational Astrophysics"
+#
+# - src: /opportunities/images/2025-aas-poster.jpg
+#   caption: "AAS 245 — group poster session"
+#
+# - src: /opportunities/images/2024-retreat.jpg
+#   caption: "2024 group retreat, Bandelier"

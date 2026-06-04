@@ -1,0 +1,70 @@
+- bibcode: 2026CQGra..43e5015R
+  title: Direct inference of nuclear equation-of-state parameters from gravitational-wave observations
+  authors:
+  - Reed, Brendan T.
+  - Armstrong, Cassandra L.
+  - Somasundaram, Rahul
+  - Brown, Duncan A.
+  - Capano, Collin
+  - De, Soumi
+  author_count: 7
+  year: '2026'
+  journal: Classical and Quantum Gravity
+  url: https://ui.adsabs.harvard.edu/abs/2026CQGra..43e5015R/abstract
+
+- bibcode: 2026EPJA...62...22M
+  title: The nucleardatapy toolkit for simple access to experimental nuclear data, astrophysical observations, and theoretical
+    predictions
+  authors:
+  - Margueron, Jérôme
+  - Drischler, Christian
+  - Dutra, Mariana
+  - Gandolfi, Stefano
+  - Gezerlis, Alexandros
+  - Grams, Guilherme
+  author_count: 13
+  year: '2026'
+  journal: European Physical Journal A
+  url: https://ui.adsabs.harvard.edu/abs/2026EPJA...62...22M/abstract
+
+- bibcode: 2026arXiv260105999A
+  title: Constraining Hamiltonians from chiral effective field theory with neutron-star data
+  authors:
+  - Armstrong, Cassandra L.
+  - Reed, Brendan T.
+  - Plohr, Tate
+  - Rose, Henrik
+  - De, Soumi
+  - Somasundaram, Rahul
+  author_count: 7
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260105999A/abstract
+
+- bibcode: 2025NatCo..16.9819S
+  title: Inferring three-nucleon couplings from multi-messenger neutron-star observations
+  authors:
+  - Somasundaram, Rahul
+  - Svensson, Isak
+  - De, Soumi
+  - Deneris, Andrew E.
+  - Dietz, Yannick
+  - Landry, Philippe
+  author_count: 8
+  year: '2025'
+  journal: Nature Communications
+  url: https://ui.adsabs.harvard.edu/abs/2025NatCo..16.9819S/abstract
+
+- bibcode: 2025RvMP...97d5007C
+  title: Neutron stars and the dense matter equation of state
+  authors:
+  - Chatziioannou, Katerina
+  - Cromartie, H. Thankful
+  - Gandolfi, Stefano
+  - Tews, Ingo
+  - Radice, David
+  - Steiner, Andrew W.
+  author_count: 7
+  year: '2025'
+  journal: Reviews of Modern Physics
+  url: https://ui.adsabs.harvard.edu/abs/2025RvMP...97d5007C/abstract

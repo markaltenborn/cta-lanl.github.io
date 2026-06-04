@@ -2,48 +2,24 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Emeritus Members — CTA</title>
+	<title>Emeritus Members&mdash;CTA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/design-system.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/cards.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/emeritus.css" type="text/css" media="all">
-	<link rel="stylesheet" href="/css/chocolat.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/profiles-common.css"  type="text/css" media="all">
 	<link rel="stylesheet" href="/css/common-header.css" type="text/css" media="all">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+	<script src="/js/apply.js"></script>
 </head>
 <body>
-	<!-- Compact Header -->
-	<div class="header page-strap" id="home">
-		<div class="top-bar">
-			<div class="container">
-				<!-- Logo -->
-				<div class="logo">
-					<p><a href="/index.html">Center for Theoretical<br />Astrophysics</a></p>
-					<br>
-					<p class="subtitle"><a href="http://cta.lanl.gov">Los Alamos National Laboratory</a></p>
-				</div>
-				<!-- //Logo -->
-				<div class="info">
-					<!-- Email -->
-					<div class="email">
-						<p>
-							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-							<a href="mailto:CTA_recruitment@lanl.gov">CTA_recruitment@lanl.gov</a>
-						</p>
-					</div>
-					<!-- //Email -->
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-		<div class="strap-bg" aria-hidden="true"></div>
-	</div>
-	<!-- //Compact Header -->
+	<!-- Compact Header&mdash;loaded from /partials/header-strap.html via /js/apply.js -->
+	<div id="cta-header"></div>
 
 	<!-- About -->
 	<div id="emeritus-intro" class="cta-section">
@@ -168,7 +144,7 @@
 
 			// Display year range if available
 			if (person.years_start || person.years_end) {
-				const yearsText = `CTA member: ${person.years_start || '?'} — ${person.years_end || 'present'}`;
+				const yearsText = `CTA member: ${person.years_start || '?'}&mdash;${person.years_end || 'present'}`;
 				const yearsDiv = el('div', { className: 'emeritus-years' }, yearsText);
 				meta.appendChild(yearsDiv);
 			}
@@ -206,17 +182,9 @@
 			}
 		}
 
+		// strap-bg height syncing handled by /js/apply.js
 		loadPartial('#cta-contact', '/partials/contact.html');
 		loadPartial('#cta-footer', '/partials/footer.html');
-
-		// Sync strap height
-		function syncStrap() {
-			const tb = document.querySelector('.page-strap .top-bar');
-			const bg = document.querySelector('.page-strap .strap-bg');
-			if (tb && bg) bg.style.height = tb.offsetHeight + 'px';
-		}
-		window.addEventListener('load', syncStrap);
-		window.addEventListener('resize', syncStrap);
 	})();
 	</script>
 </body>

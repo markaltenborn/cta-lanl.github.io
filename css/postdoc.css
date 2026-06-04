@@ -6,7 +6,7 @@
 
 /* Team section background on the postdocs page */
 #team {
-    background: #EEE;
+    background: var(--color-bg-accent);
 }
 
 #team .title {
@@ -32,12 +32,12 @@
 }
 
 #team .postdoc-list a {
-    color: #028fcc;
+    color: var(--color-link);
     text-decoration: none;
 }
 
 #team .postdoc-list a:hover {
-    color: red;
+    color: var(--color-link-hover);
     text-decoration: none;
 }
 
