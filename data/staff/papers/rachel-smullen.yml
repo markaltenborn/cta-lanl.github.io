@@ -44,3 +44,13 @@
   year: '2020'
   journal: Monthly Notices of the Royal Astronomical Society
   url: https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.4517S/abstract
+
+- bibcode: 2020MNRAS.497.1391S
+  title: Machine learning classification of Kuiper belt populations
+  authors:
+  - Smullen, Rachel A.
+  - Volk, Kathryn
+  author_count: 2
+  year: '2020'
+  journal: Monthly Notices of the Royal Astronomical Society
+  url: https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.1391S/abstract

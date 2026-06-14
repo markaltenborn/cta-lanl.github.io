@@ -52,3 +52,16 @@
   year: '2023'
   journal: The Astrophysical Journal Supplement Series
   url: https://ui.adsabs.harvard.edu/abs/2023ApJS..268....8K/abstract
+
+- bibcode: 2023PhPl...30g2503C
+  title: Modeling and simulation of lithium transport and radiation in diverted Pi3 plasmas
+  authors:
+  - Carbajal, L.
+  - Jones, S.
+  - Reynolds, M.
+  - Seifollahi Moghadam, Z.
+  - Mossman, A.
+  author_count: 5
+  year: '2023'
+  journal: Physics of Plasmas
+  url: https://ui.adsabs.harvard.edu/abs/2023PhPl...30g2503C/abstract

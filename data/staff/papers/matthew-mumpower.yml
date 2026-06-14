@@ -54,3 +54,17 @@
   year: '2026'
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1002L..24R/abstract
+
+- bibcode: 2026NDS...210....1N
+  title: 'ENDF/B-VIII.1: Updated Nuclear Reaction Data Library for Science and Applications'
+  authors:
+  - Nobre, G. P. A.
+  - Capote, R.
+  - Pigni, M. T.
+  - Trkov, A.
+  - Mattoon, C. M.
+  - Neudecker, D.
+  author_count: 109
+  year: '2026'
+  journal: Nuclear Data Sheets
+  url: https://ui.adsabs.harvard.edu/abs/2026NDS...210....1N/abstract

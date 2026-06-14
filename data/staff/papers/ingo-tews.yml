@@ -54,3 +54,17 @@
   year: '2025'
   journal: Nature Communications
   url: https://ui.adsabs.harvard.edu/abs/2025NatCo..16.9819S/abstract
+
+- bibcode: 2025arXiv251015860C
+  title: Quantum Monte Carlo Calculations of Light Nuclei with Fully Propagated Theoretical Uncertainties
+  authors:
+  - Curry, Ryan
+  - Hebeler, Kai
+  - Gandolfi, Stefano
+  - Gezerlis, Alexandros
+  - Schwenk, Achim
+  - Somasundaram, Rahul
+  author_count: 7
+  year: '2025'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2025arXiv251015860C/abstract

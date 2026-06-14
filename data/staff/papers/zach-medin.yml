@@ -48,3 +48,17 @@
   year: '2019'
   journal: Bulletin of the American Astronomical Society
   url: https://ui.adsabs.harvard.edu/abs/2019BAAS...51g..11B/abstract
+
+- bibcode: 2016ApJ...832..102M
+  title: Model Atmospheres for X-Ray Bursting Neutron Stars
+  authors:
+  - Medin, Zach
+  - von Steinkirch, Marina
+  - Calder, Alan C.
+  - Fontes, Christopher J.
+  - Fryer, Chris L.
+  - Hungerford, Aimee L.
+  author_count: 6
+  year: '2016'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2016ApJ...832..102M/abstract

@@ -12,17 +12,6 @@
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260418828K/abstract
 
-- bibcode: 2026InJPh.tmp..101D
-  title: Geometrical origin of growth of matter perturbations in Finslerian background
-  authors:
-  - De, S. S.
-  - Rahaman, Farook
-  - Mapdar, Antara
-  author_count: 3
-  year: '2026'
-  journal: Indian Journal of Physics
-  url: https://ui.adsabs.harvard.edu/abs/2026InJPh.tmp..101D/abstract
-
 - bibcode: 2026IJEWR..10...63M
   title: 'Membrane bioreactor (MBR) treated domestic wastewater for the sono-electrolytic production of hydrogen: an experimental
     study of membraneless and membrane configurations'
@@ -49,3 +38,29 @@
   year: '2026'
   journal: Classical and Quantum Gravity
   url: https://ui.adsabs.harvard.edu/abs/2026CQGra..43e5015R/abstract
+
+- bibcode: 2026InJPh.tmp..101D
+  title: Geometrical origin of growth of matter perturbations in Finslerian background
+  authors:
+  - De, S. S.
+  - Rahaman, Farook
+  - Mapdar, Antara
+  author_count: 3
+  year: '2026'
+  journal: Indian Journal of Physics
+  url: https://ui.adsabs.harvard.edu/abs/2026InJPh.tmp..101D/abstract
+
+- bibcode: 2026arXiv260214520T
+  title: Accelerating Posterior Inference from Pulsar Light Curves via Learned Latent Representations and Local Simulator-Guided
+    Optimization
+  authors:
+  - Taiyebah, Farhana
+  - Bucker Siddik, Abu
+  - Bhattacharjee, Indronil
+  - Oyen, Diane
+  - De, Soumi
+  - Olmschenk, Greg
+  author_count: 7
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260214520T/abstract

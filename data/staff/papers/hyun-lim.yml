@@ -53,3 +53,16 @@
   year: '2026'
   journal: Applied Water Science
   url: https://ui.adsabs.harvard.edu/abs/2026ApWS...16..150O/abstract
+
+- bibcode: 2026Fuel..40937654L
+  title: High-power proton exchange membrane fuel cell system with oxygen enrichment
+  authors:
+  - Lee, Yoo Il
+  - Lee, Yeong Ho
+  - Lim, Hyun Sung
+  - Lee, Sangwook
+  - Kim, Min Soo
+  author_count: 5
+  year: '2026'
+  journal: Fuel
+  url: https://ui.adsabs.harvard.edu/abs/2026Fuel..40937654L/abstract
