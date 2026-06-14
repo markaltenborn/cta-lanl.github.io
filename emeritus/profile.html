@@ -124,8 +124,8 @@
 		const rankEl = document.getElementById('profile-rank');
 		const escapeHtml = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 		const role = (person.former_role || person.role || 'Emeritus').toString().trim();
-		const groupSrc = (person.group_code && String(person.group_code).trim())
-			|| (person.former_division && String(person.former_division).trim())
+		// Full division name only; group codes are kept in the data but never shown.
+		const groupSrc = (person.former_division && String(person.former_division).trim())
 			|| (person.division && String(person.division).trim())
 			|| '';
 		let tenure = '';

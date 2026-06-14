@@ -1,3 +1,18 @@
+- bibcode: 2026BBRC..82553990C
+  title: SIRT3-mediated deacetylation of ATP5A1 improves mitochondrial function to attenuate myocardial ischemia-reperfusion
+    injury
+  authors:
+  - Chen, Yuanyuan
+  - Xin, Gaojie
+  - Zhang, Huiyu
+  - Cui, Xiaoshan
+  - Gao, Jiaming
+  - Liu, Zixin
+  author_count: 9
+  year: '2026'
+  journal: Biochemical and Biophysical Research Communications
+  url: https://ui.adsabs.harvard.edu/abs/2026BBRC..82553990C/abstract
+
 - bibcode: 2026SBiBi.21810144R
   title: Benchmarking metabarcoding and metagenomics pipelines in taxonomic profiling for soil microbial eukaryotes
   authors:
@@ -12,63 +27,34 @@
   journal: Soil Biology and Biochemistry
   url: https://ui.adsabs.harvard.edu/abs/2026SBiBi.21810144R/abstract
 
-- bibcode: 2026PhLB..87740279A
-  title: Search for Higgs bosons produced in association with a high-energy photon via vector-boson fusion and decaying to
-    a pair of b-quarks in the ATLAS detector
-  authors:
-  - Aad, G.
-  - Aakvaag, E.
-  - Abbott, B.
-  - Abdelhameed, S.
-  - Abeling, K.
-  - Abicht, N. J.
-  author_count: 2871
-  year: '2026'
-  journal: Physics Letters B
-  url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87740279A/abstract
-
-- bibcode: 2026PhLB..87740440A
-  title: Characterization of nuclear breakup as a function of hard-scattering kinematics using dijets measured by ATLAS in
-    p+Pb collisions
-  authors:
-  - Aad, G.
-  - Aakvaag, E.
-  - Abbott, B.
-  - Abdelhameed, S.
-  - Abeling, K.
-  - Abicht, N. J.
-  author_count: 2874
-  year: '2026'
-  journal: Physics Letters B
-  url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87740440A/abstract
-
-- bibcode: 2026ApJ..1003..126N
-  title: 'Global Characteristics of the IBEX Ribbon and Its Temporal Variation: Implications for Relationships with Solar
-    Cycle Variability and the Interstellar Magnetic Field'
-  authors:
-  - Noh, Sung Jun
-  - Reisenfeld, Daniel B.
-  - Zirnstein, Eric J.
-  - Funsten, Herbert O.
-  - Janzen, Paul H.
-  - Kim, Thomas K.
-  author_count: 12
-  year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003..126N/abstract
-
-- bibcode: 2026EPJC...86..483A
-  title: Measurement of the W-boson angular coefficients and transverse momentum in <inline-formula><mml:math><mml:mrow><mml:mi>p</mml:mi><mml:mspace></mml:mspace><mml:mi>p</mml:mi></mml:mrow></mml:math></inline-formula>
-    collisions at <inline-formula><mml:math><mml:mrow><mml:msqrt><mml:mi>s</mml:mi></mml:msqrt><mml:mo>=</mml:mo><mml:mn>13</mml:mn></mml:mrow></mml:math></inline-formula>
+- bibcode: 2026PhLB..87840497A
+  title: Search for long-lived particles using displaced vertices of oppositely charged leptons in <mml:math><mml:mrow><mml:mn>140</mml:mn><mml:mspace></mml:mspace><mml:mrow><mml:msup><mml:mtext>fb</mml:mtext><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mrow></mml:math>
+    of pp collisions at <mml:math><mml:mrow><mml:msqrt><mml:mi>s</mml:mi></mml:msqrt><mml:mo>=</mml:mo><mml:mn>13</mml:mn></mml:mrow></mml:math>
     TeV with the ATLAS detector
   authors:
-  - Atlas Collaboration
   - Aad, G.
   - Aakvaag, E.
   - Abbott, B.
   - Abdelhameed, S.
   - Abeling, K.
-  author_count: 2874
+  - Abicht, N. J.
+  author_count: 2880
   year: '2026'
-  journal: European Physical Journal C
-  url: https://ui.adsabs.harvard.edu/abs/2026EPJC...86..483A/abstract
+  journal: Physics Letters B
+  url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87840497A/abstract
+
+- bibcode: 2026PhLB..87840509A
+  title: Search for massive, long-lived particles in events with displaced vertices and displaced muons in pp collisions at
+    <mml:math><mml:mrow><mml:msqrt><mml:mi>s</mml:mi></mml:msqrt><mml:mo>=</mml:mo><mml:mn>13.6</mml:mn></mml:mrow></mml:math>
+    TeV with the ATLAS experiment
+  authors:
+  - Aad, G.
+  - Aakvaag, E.
+  - Abbott, B.
+  - Abdelhameed, S.
+  - Abeling, K.
+  - Abicht, N. J.
+  author_count: 2793
+  year: '2026'
+  journal: Physics Letters B
+  url: https://ui.adsabs.harvard.edu/abs/2026PhLB..87840509A/abstract

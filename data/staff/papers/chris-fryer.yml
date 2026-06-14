@@ -1,17 +1,30 @@
-- bibcode: 2026PhRvR...8b3117R
-  title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
-    ejecta predictions
+- bibcode: 2026arXiv260610011R
+  title: A Multi-Wavelength View of the First Type Ic-BL Supernova with an Einstein Probe X-ray Shock Breakout
   authors:
-  - Ristić, Marko
-  - O'Shaughnessy, Richard
-  - Wagner, Kate
-  - Fontes, Christopher J.
-  - Fryer, Chris L.
-  - Korobkin, Oleg
-  author_count: 8
+  - Rastinejad, Jillian C.
+  - Srinivasaragavan, Gokul
+  - Sarin, Nikhil
+  - O'Dwyer, Tanner
+  - Cenko, S. Bradley
+  - Leung, James K.
+  author_count: 39
   year: '2026'
-  journal: Physical Review Research
-  url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260610011R/abstract
+
+- bibcode: 2026arXiv260609992O
+  title: 'EP260321a/SN 2026gzf: The Faintest Shock Breakout Associated with a Broad-Lined Supernova'
+  authors:
+  - O'Connor, Brendan
+  - Hall, Xander J.
+  - Busmann, Malte
+  - Gruen, Daniel
+  - Floris, Alberto
+  - Cabrera, Tomas
+  author_count: 36
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260609992O/abstract
 
 - bibcode: 2026ApJS..284....6C
   title: 'Toward First-principles Multimessenger Predictions: Coupling Nuclear Networks with General Relativistic Radiation
@@ -37,28 +50,3 @@
   year: '2026'
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003...89F/abstract
-
-- bibcode: 2026ApJ..1003L...2B
-  title: 'Production of Heavy α-Elements and <SUP>44</SUP>Ti in Cas A: Comparison to Abundances from 1D Core-collapse Supernova
-    Models and Evidence for Carbon─Oxygen Shell Mergers'
-  authors:
-  - Boccioli, L.
-  - Roberti, L.
-  - Fryer, C.
-  - Safi-Harb, S.
-  - Jones, S.
-  - Pignatari, M.
-  author_count: 6
-  year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003L...2B/abstract
-
-- bibcode: 2026IJMPD..3540002F
-  title: The physics behind astrophysical transients
-  authors:
-  - Fryer, Chris
-  - Fryer, Daniel A.
-  author_count: 2
-  year: '2026'
-  journal: International Journal of Modern Physics D
-  url: https://ui.adsabs.harvard.edu/abs/2026IJMPD..3540002F/abstract

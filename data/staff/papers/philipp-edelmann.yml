@@ -47,17 +47,3 @@
   year: '2024'
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2024ApJ...970..104V/abstract
-
-- bibcode: 2024A&A...686A..34L
-  title: Performance of high-order Godunov-type methods in simulations of astrophysical low Mach number flows
-  authors:
-  - Leidi, G.
-  - Andrassy, R.
-  - Barsukow, W.
-  - Higl, J.
-  - Edelmann, P. V. F.
-  - Röpke, F. K.
-  author_count: 6
-  year: '2024'
-  journal: Astronomy and Astrophysics
-  url: https://ui.adsabs.harvard.edu/abs/2024A&A...686A..34L/abstract

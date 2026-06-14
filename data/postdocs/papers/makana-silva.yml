@@ -39,30 +39,13 @@
   journal: Physical Review D
   url: https://ui.adsabs.harvard.edu/abs/2025PhRvD.111d5011K/abstract
 
-- bibcode: 2025AAS...24540202K
-  title: First Order QED Corrections to Hawking Radiation from Asteroid Mass Primoridal Black Holes
+- bibcode: 2025AAS...24514604S
+  title: Dynamical perturbations around an extreme mass ratio inspiral near resonance
   authors:
-  - Koivu, Emily
-  - Kushan, John
   - Silva, Makana
-  - Vasquez, Gabriel
-  - Das, Arijit
   - Hirata, Christopher
-  author_count: 6
+  - Blake, Harrison
+  author_count: 3
   year: '2025'
   journal: 'American Astronomical Society Meeting Abstracts #245'
-  url: https://ui.adsabs.harvard.edu/abs/2025AAS...24540202K/abstract
-
-- bibcode: 2025AAS...24525011N
-  title: 'Corrections to Hawking radiation from asteroid-mass primordial black holes: Formalism of the exchange interaction'
-  authors:
-  - Nel, Cara
-  - Vasquez, Gabriel
-  - Silva, Makana
-  - Koivu, Emily
-  - Chen, Bowen
-  - Hirata, Christopher
-  author_count: 6
-  year: '2025'
-  journal: 'American Astronomical Society Meeting Abstracts #245'
-  url: https://ui.adsabs.harvard.edu/abs/2025AAS...24525011N/abstract
+  url: https://ui.adsabs.harvard.edu/abs/2025AAS...24514604S/abstract

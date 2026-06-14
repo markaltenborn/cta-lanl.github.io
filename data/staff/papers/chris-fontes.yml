@@ -1,31 +1,3 @@
-- bibcode: 2026PhRvR...8b3117R
-  title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
-    ejecta predictions
-  authors:
-  - Ristić, Marko
-  - O'Shaughnessy, Richard
-  - Wagner, Kate
-  - Fontes, Christopher J.
-  - Fryer, Chris L.
-  - Korobkin, Oleg
-  author_count: 8
-  year: '2026'
-  journal: Physical Review Research
-  url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
-
-- bibcode: 2026arXiv260503947F
-  title: Effects of magnetically driven shocks on nucleosynthesis and kilonovae from neutron star mergers
-  authors:
-  - Feng, Yuan
-  - Korobkin, Oleg
-  - Most, Elias R.
-  - Smith, Ananda F.
-  - Fontes, Christopher J.
-  author_count: 5
-  year: '2026'
-  journal: arXiv e-prints
-  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260503947F/abstract
-
 - bibcode: 2026ApJ..1003...89F
   title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling
   authors:
@@ -40,19 +12,33 @@
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003...89F/abstract
 
-- bibcode: 2026PhRvA.113d2814G
-  title: Close-coupling approach to electron scattering with multielectron targets
+- bibcode: 2026arXiv260503947F
+  title: Effects of magnetically driven shocks on nucleosynthesis and kilonovae from neutron star mergers
   authors:
-  - Gomez, Thomas A.
-  - Fursa, Dmitry V.
-  - Bray, Igor
-  - Zammit, Mark C.
+  - Feng, Yuan
+  - Korobkin, Oleg
+  - Most, Elias R.
+  - Smith, Ananda F.
   - Fontes, Christopher J.
-  - White, Jackson
-  author_count: 6
+  author_count: 5
   year: '2026'
-  journal: Physical Review A
-  url: https://ui.adsabs.harvard.edu/abs/2026PhRvA.113d2814G/abstract
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260503947F/abstract
+
+- bibcode: 2026PhRvR...8b3117R
+  title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
+    ejecta predictions
+  authors:
+  - Ristić, Marko
+  - O'Shaughnessy, Richard
+  - Wagner, Kate
+  - Fontes, Christopher J.
+  - Fryer, Chris L.
+  - Korobkin, Oleg
+  author_count: 8
+  year: '2026'
+  journal: Physical Review Research
+  url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
 
 - bibcode: 2026A&A...708A.126M
   title: Impact of in situ nuclear networks and atomic opacities on neutron star merger ejecta dynamics, nucleosynthesis,

@@ -50,17 +50,3 @@
   year: '2022'
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2022arXiv220608957M/abstract
-
-- bibcode: 2022arXiv220212309G
-  title: Parthenon -- a performance portable block-structured adaptive mesh refinement framework
-  authors:
-  - Grete, Philipp
-  - Dolence, Joshua C.
-  - Miller, Jonah M.
-  - Brown, Joshua
-  - Ryan, Ben
-  - Gaspar, Andrew
-  author_count: 15
-  year: '2022'
-  journal: arXiv e-prints
-  url: https://ui.adsabs.harvard.edu/abs/2022arXiv220212309G/abstract

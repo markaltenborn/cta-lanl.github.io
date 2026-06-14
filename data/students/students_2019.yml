@@ -9,7 +9,7 @@
 - slug: ezra-brooker
   university: Florida State University
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Core-collapse supernovae, young supernova remnants, dust formation in SN ejecta
   card_image: "/students/images/2019/ezra-brooker.jpg"
@@ -17,7 +17,7 @@
 - slug: naia-butler-craig
   university: Georgia Institute of Technology
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Plasma physics, electric propulsion, gamma-ray bursts, astrophysical outflows, particle-in-cell simulations
   card_image: "/students/images/2019/naia-butler-craig.jpg"
@@ -49,7 +49,7 @@
 - slug: carl-fields
   university: Michigan State University
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-7
   focus: Core-collapse supernovae, nuclear astrophysics, gravitational waves, and stellar hydrodynamics
   card_image: "/students/images/2018/carl-fields.jpg"
@@ -57,7 +57,7 @@
 - slug: steve-fromm
   university: Michigan State University
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-7
   focus: Compact object mergers, r-process nucleosynthesis, neutrino radiative transport, numerical relativity, numerical methods
   card_image: "/students/images/2019/steven-fromm.jpg"
@@ -73,7 +73,7 @@
 - slug: alexander-kaltenborn
   university: The George Washington University
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Compact object mergers, White Dwarfs, Neutron Stars, HPC, Radhydro 
   card_image: "/students/images/2018/alexander-kaltenborn.jpg"
@@ -81,7 +81,7 @@
 - slug: hyun-lim
   university: Brigham Young University
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Numerical relativity, binary compact object mergers, numerical methods and algorithms, and HPC
   card_image: "/students/images/2018/hyun-lim.jpg"
@@ -97,7 +97,7 @@
 - slug: sarah-stangl
   university: University of Oklahoma
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Core-collapse supernova explosions, supernova dust formation, very massive Stars
   card_image: "/students/images/2019/sarah-stangl.jpg"
@@ -105,7 +105,7 @@
 - slug: morgan-taylor
   university: Southern Utah University
   role: Undergraduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Galaxy evolution, supernovae, and transient light curves
   card_image: "/students/images/2018/morgan-taylor.jpg"

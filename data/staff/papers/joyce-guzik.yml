@@ -1,3 +1,16 @@
+- bibcode: 2026arXiv260302421G
+  title: Alpha Cygni Variables as Seen from the Transiting Exoplanet Survey Satellite
+  authors:
+  - Guzik, Joyce A.
+  - Whitley, Claire
+  - Moore, Nova
+  - Marshall, Madeline
+  - Jackiewicz, Jason
+  author_count: 5
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260302421G/abstract
+
 - bibcode: 2026PASA...43...40B
   title: TESS observations of newly discovered pulsating A and F stars
   authors:
@@ -12,18 +25,16 @@
   journal: Publications of the Astronomical Society of Australia
   url: https://ui.adsabs.harvard.edu/abs/2026PASA...43...40B/abstract
 
-- bibcode: 2026arXiv260302421G
-  title: Alpha Cygni Variables as Seen from the Transiting Exoplanet Survey Satellite
+- bibcode: 2025AGUFMNH23B.048V
+  title: Comparative Assessment of Equations of State for Representing Meteorite ShockPhenomena in Hydrocode Modeling
   authors:
-  - Guzik, Joyce A.
-  - Whitley, Claire
-  - Moore, Nova
-  - Marshall, Madeline
-  - Jackiewicz, Jason
-  author_count: 5
-  year: '2026'
-  journal: arXiv e-prints
-  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260302421G/abstract
+  - Vercher, Jonah
+  - Plesko, Catherine S.
+  - Guzik, Joyce
+  author_count: 3
+  year: '2025'
+  journal: AGU Fall Meeting Abstracts
+  url: https://ui.adsabs.harvard.edu/abs/2025AGUFMNH23B.048V/abstract
 
 - bibcode: 2025A&A...698A.304S
   title: 'Convective shells in the interior of Cepheid variable stars: Overshooting models based on hydrodynamic simulations'
@@ -38,28 +49,3 @@
   year: '2025'
   journal: Astronomy and Astrophysics
   url: https://ui.adsabs.harvard.edu/abs/2025A&A...698A.304S/abstract
-
-- bibcode: 2025arXiv250320058G
-  title: 'Abrupt Pulsation Resumptions in Deneb: An Update'
-  authors:
-  - Guzik, Joyce A.
-  - Kloppenborg, Brian
-  - Richardson, Noel
-  - Jackiewicz, Jason
-  - Morrison, Nancy
-  - Calderwood, Tom
-  author_count: 7
-  year: '2025'
-  journal: arXiv e-prints
-  url: https://ui.adsabs.harvard.edu/abs/2025arXiv250320058G/abstract
-
-- bibcode: 2025AAS...24511105V
-  title: Classification of Delta Scuti, Gamma Doradus, and Hybrid Stars through Oscillation Spectra Analysis
-  authors:
-  - Vercher, Jonah
-  - Guzik, Joyce
-  - Baran, Andrzej
-  author_count: 3
-  year: '2025'
-  journal: 'American Astronomical Society Meeting Abstracts #245'
-  url: https://ui.adsabs.harvard.edu/abs/2025AAS...24511105V/abstract

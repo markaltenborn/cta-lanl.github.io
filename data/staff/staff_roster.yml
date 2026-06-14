@@ -28,22 +28,21 @@
   photo: /staff/images/alexander-kaltenborn.jpg
   scholar: https://scholar.google.com/citations?user=3OUPGc0AAAAJ&hl=en&oi=ao
   ads: https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=author%3A%22Kaltenborn%2C%20M.%20Alexander%20R.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
-  bio: M. Alexander R. Kaltenborn is a physicist and Staff Scientist in the Applied Mathematics and Plasma Physics group at 
-    Los Alamos National Laboratory. He received his Ph.D. in Physics from The George Washington University in 2023 and has 
-    pursued additional graduate training in science, technology, and national security policy through programs at George 
-    Washington University and Texas A&amp;M University, with coursework spanning space policy and law, the corporate and 
-    government environment in space, emerging technologies, deterrence theory, nuclear deterrence, strategic competition, 
-    and military power. He began at Los Alamos as a student intern in 2017, was awarded a Nicholas C. Metropolis Postdoctoral 
-    Fellowship in 2023, and transitioned to a staff scientist position in 2024.<br><br>Dr. Kaltenborn&rsquo;s research 
-    focuses on high-performance multiphysics simulations of energetic and extreme-physics systems. His early work involved 
-    numerical studies of degenerate stellar mergers, including neutron star&ndash;neutron star, white dwarf&ndash;white dwarf, 
-    and white dwarf&ndash;neutron star systems, as well as simulations of accretion disks around neutron stars. This work 
-    contributed to modeling capabilities for compact-object astrophysics and high-energy transient phenomena. His current 
-    work centers on atmospheric blast phenomena, with an emphasis on radiation hydrodynamics and applications to national and 
-    global security. He has also applied machine learning methods to improve multiphysics simulations and material property 
-    modeling. Trained across physics, computation, and national security policy, Dr. Kaltenborn brings technical expertise 
-    and strategic perspective to problems at the intersection of advanced simulation, emerging technology, and nuclear 
-    security.
+  bio: M. Alexander R. Kaltenborn is a physicist and Staff Scientist in the Applied Mathematics and Plasma Physics group at
+    Los Alamos National Laboratory. He received his Ph.D. in Physics from The George Washington University in 2023 and has
+    pursued additional graduate training in science, technology, and national security policy through programs at George Washington
+    University and Texas A&amp;M University, with coursework spanning space policy and law, the corporate and government environment
+    in space, emerging technologies, deterrence theory, nuclear deterrence, strategic competition, and military power. He
+    began at Los Alamos as a student intern in 2017, was awarded a Nicholas C. Metropolis Postdoctoral Fellowship in 2023,
+    and transitioned to a staff scientist position in 2024.<br><br>Dr. Kaltenborn&rsquo;s research focuses on high-performance
+    multiphysics simulations of energetic and extreme-physics systems. His early work involved numerical studies of degenerate
+    stellar mergers, including neutron star&ndash;neutron star, white dwarf&ndash;white dwarf, and white dwarf&ndash;neutron
+    star systems, as well as simulations of accretion disks around neutron stars. This work contributed to modeling capabilities
+    for compact-object astrophysics and high-energy transient phenomena. His current work centers on atmospheric blast phenomena,
+    with an emphasis on radiation hydrodynamics and applications to national and global security. He has also applied machine
+    learning methods to improve multiphysics simulations and material property modeling. Trained across physics, computation,
+    and national security policy, Dr. Kaltenborn brings technical expertise and strategic perspective to problems at the intersection
+    of advanced simulation, emerging technology, and nuclear security.
   interests:
   - Compact binary mergers
   - National and International Security Policy
@@ -57,7 +56,7 @@
   display_name: Makana Silva
   sort_key: silva, makana
   email: makanas@lanl.gov
-  photo: /postdocs/images/2025/makana-silva.jpg
+  photo: /staff/images/makana-silva.png
   scholar: https://scholar.google.com/citations?hl=en&user=UbqEYOQAAAAJ
   ads: https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&p_=0&q=%20author%3A%22Silva%2C%20Makana%22%20%20aff%3A%22los%20alamos%22&sort=date%20desc%2C%20bibcode%20desc
   bio: Makana Silva is a Native Hawaiian astrophysicist born and raised in Mākaha on the island of Oʻahu. He graduated with
@@ -68,8 +67,12 @@
     of community-based events where people can learn about the science of the stars from a Hawaiian culture and scientific
     perspective. When he is not working, he enjoys lifting stones, logs, kegs, and other heavy and awkward objects.
   interests:
-  - Studying the effects of resonance interactions around extreme mass ratio inspirals on their gravitational wave forms.
-    Studying plasma physics around black holes and other high energy systems.
+  - Extreme mass ratio inspirals
+  - Gravitational waveforms
+  - Resonance interactions
+  - Plasma physics
+  - Black holes
+  - High energy systems
   leadership: Co-Coordinator
   university: The Ohio State University
   role: Postdoc
@@ -104,11 +107,10 @@
   leadership: 
   - Deputy Director
   - Outreach Coordinator
-  university: 
-  - University of New Mexico, Los Alamos (Faculty)
-  - Stanford University (PhD)
+  university: Stanford University
+  affiliation: University of New Mexico, Los Alamos
   role: Scientist
-  division: CAComputing and Artificial IntelligenceI
+  division: Computing and Artificial Intelligence
   focus:
   - gamma-ray bursts
   - relativistic shocks
@@ -154,9 +156,9 @@
   leadership: null
   university: null
   role: Scientist
-  division: XTD
+  division: Theoretical Design
   focus: null
-  group_code: Rather not say
+  group_code: null
   accepting_students: 'No'
   year_joined: '2021'
   additional: I am no longer in leadership, so please take me out of that section
@@ -185,7 +187,7 @@
   leadership: null
   university: University of Arizona
   role: Scientist
-  division: Theory
+  division: Theoretical
   focus:
   - astrophysical transients
   - nuclear astrophysics
@@ -224,7 +226,7 @@
   research_groups:
   - transients
   email: aimee@lanl.gov
-  photo: /staff/images/.jpg
+  photo: /staff/images/aimee-hungerford.jpg
   scholar: https://scholar.google.com/citations?user=v5jSagUAAAAJ&hl=en&oi=ao
   ads: https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22hungerford%2C%20aimee%22%20%20aff%3A%22los%20alamos%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
   bio: Aimee Hungerford received her PhD from the University of Arizona in Astrophysics and was awarded a Director's Postdoctoral
@@ -248,7 +250,6 @@
   display_name: Denis Bowen
   sort_key: bowen, denis
   email: dbowen@lanl.gov
-  photo: /staff/images/.jpg
   scholar: null
   ads: null
   bio: null
@@ -342,7 +343,7 @@
   leadership: null
   university: Penn State University
   role: Scientist
-  division: XCP
+  division: Computational Physics
   focus: null
   group_code: XCP-5
   accepting_students: Case-by-case
@@ -410,7 +411,7 @@
   display_name: Jarrett Johnson
   sort_key: johnson, jarrett
   email: jlj@lanl.gov
-  photo: /staff/images/.jpg
+  photo: /staff/images/jarrett-johnson.png
   scholar: https://scholar.google.com/citations?user=Ya3JBO0AAAAJ&hl=en
   ads: https://ui.adsabs.harvard.edu/search/q=docs(333347a9d11aeadaecd8b6b2f99f9935)&sort=date%20desc%2C%20bibcode%20desc&p_=0
   bio: '2023 - present Deputy Group Leader, LANL
@@ -434,7 +435,7 @@
   leadership: null
   university: The University of Texas at Austin
   role: Manager
-  division: X Theoretical Design
+  division: Theoretical Design
   focus: null
   group_code: XTD-NTA
   accepting_students: Case-by-case
@@ -615,15 +616,30 @@
   - plasma physics
   - radiation transport
   leadership: null
-  university: University of Michigan at Ann Arbor, North Carolina State University
+  university: Guelph-Waterloo Physics Institute
+  affiliation:
+  - University of Michigan at Ann Arbor
+  - North Carolina State University
   role: Scientist
   division: Computing and Artificial Intelligence
   focus: null
   papers:
-  - https://ui.adsabs.harvard.edu/abs/2019PhRvD.100b3008M/abstract
-  - https://ui.adsabs.harvard.edu/abs/2022arXiv220212309G/abstract
-  - https://arxiv.org/abs/2503.18056
-  group_code: '2'
+  - title: "Full Transport Model of GW170817-Like Disk Produces a Blue Kilonova"
+    authors: ["Miller, Jonah M.", "Ryan, Benjamin R.", "Dolence, Joshua C.", "Burrows, Adam", "Fontes, Christopher J.", "Fryer, Christopher L.", "Korobkin, Oleg", "Lippuner, Jonas", "Mumpower, Matthew R.", "Wollaeger, Ryan T."]
+    year: 2019
+    journal: "Physical Review D 100, 023008"
+    url: "https://ui.adsabs.harvard.edu/abs/2019PhRvD.100b3008M/abstract"
+  - title: "Parthenon -- a performance portable block-structured adaptive mesh refinement framework"
+    authors: ["Grete, Philipp", "Dolence, Joshua C.", "Miller, Jonah M.", "Brown, Joshua", "Ryan, Ben", "Gaspar, Andrew", "Glines, Forrest", "Swaminarayan, Sriram", "Lippuner, Jonas", "Solomon, Clell J.", "Shipman, Galen", "Junghans, Christoph", "Holladay, Daniel", "Stone, James M.", "Roberts, Luke F."]
+    year: 2022
+    journal: "International Journal of High Performance Computing Applications"
+    url: "https://ui.adsabs.harvard.edu/abs/2022arXiv220212309G/abstract"
+  - title: "Thermal Radiation Transport with Tensor Trains"
+    authors: ["Gorodetsky, Alex A.", "Mullen, Patrick D.", "Deshpande, Aditya", "Dolence, Joshua C.", "Meyer, Chad D.", "Miller, Jonah M.", "Roberts, Luke F."]
+    year: 2025
+    journal: "arXiv e-prints"
+    url: "https://arxiv.org/abs/2503.18056"
+  group_code: CAI-2
   accepting_students: Case-by-case
   year_joined: '2019'
   additional: Based at Michigan SPARC in Ann Arbor
@@ -846,13 +862,17 @@
   - plasma dynamics
   - numerical simulations
   papers:
-  - Stricklan, A., T. Waters, and J. Klimchuk, “On the Stability Analysis of Astrophysical Cooling Functions,” ApJ, vol. 992,
-    no. 1, 101, p. 101, Oct. 2025. DOI
-  - Waters, T., & Stricklan, A. “Catastrophic Cooling Instability in Optically Thin Plasmas,” Solar Physics, vol. 300, no.
-    1, 5, p. 5, Jan. 2025. DOI.
-  university: Los Alamos National Laboratory
+  - title: "On the Stability Analysis of Astrophysical Cooling Functions"
+    authors: ["Stricklan, A.", "Waters, T.", "Klimchuk, J."]
+    year: 2025
+    journal: "ApJ 992, 101"
+  - title: "Catastrophic Cooling Instability in Optically Thin Plasmas"
+    authors: ["Waters, T.", "Stricklan, A."]
+    year: 2025
+    journal: "Solar Physics 300, 5"
+  university: New Mexico State University
   role: Scientist
-  division: XCP
+  division: Computational Physics
   group_code: XCP-1
   accepting_students: 'No'
   year_joined: '2025'
@@ -863,8 +883,8 @@
   sort_key: fenimore, ed
   email: efenimore@lanl.gov
   photo: /staff/images/ed-fenimore.jpg
-  scholar: null
-  ads: null
+  scholar: https://scholar.google.com/citations?hl=en&user=t6Qn5igAAAAJ
+  ads: https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22Fenimore%2C%20Edward%22%20%20aff%3A%22los%20alamos%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
   bio: Ed Fenimore received his PhD from the University of Chicago for work done as a student at Los Alamos. He has spent
     52 years at Los Alamos as an astrophysicist working on the nonproliferation of nuclear weapons and studying gamma-ray
     bursts, the birth of black holes  in the early universe, resulting in more than 300 papers. Appointed a Laboratory Fellow
@@ -887,8 +907,133 @@
   - EMP
   papers: []
   former_role: Los Alamos Laboratory Fellow, Group Leader
-  former_division: NSEC and ISR
+  former_division: National Security Education Center and Intelligence & Space Research
   current_position: Since 2014, also a senior scientist at Livermore
   year_joined: '1974'
   recruiting_ok: true
   status: retired
+
+- slug: bill-priedhorsky
+  display_name: Bill Priedhorsky
+  sort_key: priedhorsky, bill
+  email: wpriedhorsky@lanl.gov
+  photo: /staff/images/bill-priedhorsky.jpg
+  scholar: null
+  ads: https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&p_=0&q=%20author%3A%22Priedhorsky%2C%20William%22%20%20aff%3A%22los%20alamos%22&sort=date%20desc%2C%20bibcode%20desc
+  bio: "Dr. Priedhorsky has been associated with Los Alamos National Laboratory since 1978.\nHe was honored to be named a\
+    \ Laboratory Fellow in 1997, and currently serves as Emeritus Advisor for the Fellows.  From 2007 to his retirement in\
+    \ 2022 he was Program Director for Laboratory Directed Research and Development, managing investment in advanced R&D across\
+    \ the breadth of Laboratory science and engineering. His research interests include space instrumentation, technologies\
+    \ to stymie the spread of weapons of mass destruction, as well as astrophysics. He is currently engaged with the Intelligence\
+    \ and Space Research division, and the Deputy Director for Science, Technology, and Engineering, mentoring young staff,\
+    \ assessing the health of science and engineering at the Laboratory, and participating in space-related research.\n \n\
+    Dr. Priedhorsky received a B.A. in Physics summa cum laude and Phi Beta Kappa from Whitman College in 1973, and a Ph.\
+    \ D. in physics, specializing in x-ray astronomy, from the California Institute of Technology in 1978. His research has\
+    \ yielded approximately 190 peer-reviewed publications.\n \nAfter joining Los Alamos as a staff member in 1978, he developed\
+    \ x-ray diagnostics for laser fusion research, and discovered copious hard x-rays from CO2 laser-plasma interaction, which\
+    \ guided the national program back towards shorter-wavelength lasers. After returning to space research, he discovered\
+    \ a wealth of eruptions and long- term cycles in cosmic neutron stars and black holes using data from the Los Alamos Vela\
+    \ 5B satellite, as well as developing instrumentation for the detection of nuclear materials in space. He discovered what\
+    \ was then the closest double star in the sky, and the novel phenomenon of quasi-periodic oscillations in the brightest\
+    \ x-ray star in the sky, Scorpius X-1. Notably, he led the development of photon-counting optical imagers for remote ultralow\
+    \ light imaging, a project that continues to this day as “Remote Ultralow Light Imaging”. He conceived and led the development\
+    \ of ALEXIS, Los Alamos’ first small satellite, launched in 1993, and the MOXE x-ray all sky monitor, which sadly never\
+    \ went to space, because of the collapse of the Russian space program after the fall of the USSR. \n \nFrom 1995 to 1999,\
+    \ he was Lead Project Leader for Proliferation Detection Technology, responsible for the Lab’s projects in active and\
+    \ passive remote sensing, as well as Laboratory’s efforts in Hard and Deeply Buried Target Defeat. From 1999 to 2007 he\
+    \ was Chief Scientist in the Nonproliferation and International Security Division, the International, Space, and Response\
+    \ Divisions, and the Threat Reduction Directorate, responsible for the health of basic and applied research in space science,\
+    \ proliferation detection, treaty monitoring, nuclear safeguards, and international technologies. With Chris Morris of\
+    \ Physics division, he originated the idea of using cosmic-ray muons to detect nuclear material. In 2005, he received\
+    \ the Leo Szilard Award of the American Physical Society for his part in their study of boost-phase missile defense, and\
+    \ was named a Fellow of the Society in 2006. Whitman College awarded him their Alumnus of the year award in 1995. He has\
+    \ been a Max Planck Fellow, a visiting scientist at the Danish Space Research Institute, a Lyle Fellow at the University\
+    \ of Melbourne, Australia, and coordinator (elected head) of the Los Alamos National Laboratory Fellows. Priedhorsky is\
+    \ an avid outdoorsman and several times president of the Los Alamos Mountaineers."
+  interests:
+  - High energy astrophysics
+  - space national security
+  - R&D management
+  focus:
+  - black holes
+  - x-ray monitoring
+  - ionospheric physics
+  papers:
+  - title: "Hard X-Ray Measurements of 10.6 µm Laser-Irradiated Targets"
+    authors: ["Priedhorsky, W. C.", "Lier, D.", "Day, R.", "Gerke, D."]
+    year: 1981
+    journal: "Phys. Rev. Lett. 47, 1661"
+  - title: "Long-Term X-Ray Observations of Cen X-3, GX301-2 (4U1223-62), GX304-1 (4U1258-61), and 4U1145-61"
+    authors: ["Priedhorsky, W. C.", "Terrell, J."]
+    year: 1983
+    journal: "Astrophys. J. 273, 709"
+  - title: "Discovery of Rapid Quasi-Periodic Oscillations in Sco X-1"
+    authors: ["Middleditch, J.", "Priedhorsky, W. C."]
+    year: 1986
+    journal: "Ap. J. 306, 230"
+  - title: "The Discovery of a 685 Second Orbital Period from the X-Ray Source 4U 1820-30 in the Globular Cluster NGC6624"
+    authors: ["Stella, L.", "Priedhorsky, W. C.", "White, N."]
+    year: 1987
+    journal: "Ap. J. Lett. 315, L49"
+  - title: "All-Sky Monitors for X-Ray Astronomy"
+    authors: ["Holt, S. S.", "Priedhorsky, W. C."]
+    year: 1987
+    journal: "Space Science Reviews 45, 269"
+  - title: "The ALEXIS Small Satellite Project: Better, Cheaper, Faster Faces Reality"
+    authors: ["Priedhorsky, W. C.", "Bloch, J. J.", "Wallin, S. P.", "Armstrong, W. T.", "Siegmund, O. H. W.", "Griffee, J.", "Fleeter, R."]
+    year: 1993
+    journal: "IEEE Trans. Nucl. Sci. 40, 863"
+  - title: "Laser Ranging and Mapping with a Photon-Counting Detector"
+    authors: ["Priedhorsky, W. C.", "Smith, R. C.", "Ho, C."]
+    year: 1996
+    journal: "Applied Optics 35, 441-452"
+  - title: "Contrast and Signal-to-Noise in Long-Distance Starlight Imaging"
+    authors: ["Priedhorsky, W. C."]
+    year: 1996
+    journal: "Applied Optics 35, 4173-4179"
+  - title: "Discovery of Contemporaneous Optical Radiation from a Gamma-Ray Burst"
+    authors: ["Akerlof, C.", "Balsano, R.", "Barthelmy, S.", "Bloch, J.", "Butterworth, P.", "Casperson, D.", "Cline, T.", "Fletcher, S.", "Frontera, F.", "Gisler, G.", "Heise, J.", "Hills, J.", "Kehoe, R.", "Lee, B.", "Marshall, S.", "McKay, T.", "Miller, R.", "Piro, L.", "Priedhorsky, W.", "Szymanski, J.", "Wren, J."]
+    year: 1999
+    journal: "Nature 398, 400-402"
+  - title: "On the Integrated Spectrum of the X-ray Binaries and the Origin of Soft X-ray Emission from the Bulge of M31"
+    authors: ["Borozdin, Konstantin N.", "Priedhorsky, William C."]
+    year: 2000
+    journal: "Ap. J. Lett. 542, L13"
+  - title: "The XMM-Newton optical/UV monitor telescope"
+    authors: ["Mason, K. O.", "Breeveld, A.", "Much, R.", "Carter, M.", "Cordova, F. A.", "Cropper, M. S.", "Fordham, J.", "Huckle, H.", "Ho, C.", "Kawakami, H.", "Kennea, J.", "Kennedy, T.", "Mittaz, J.", "Pandel, D.", "Priedhorsky, W. C.", "Sasseen, T.", "Shirey, R.", "Smith, P.", "Vreux, J.-M."]
+    year: 2001
+    journal: "Astronomy and Astrophysics 365, 36"
+  - title: "Radiographic Imaging with Cosmic Ray Muons"
+    authors: ["Borozdin, Konstantin N.", "Hogan, Gary E.", "Morris, Christopher", "Priedhorsky, William C.", "Saunders, Alexander", "Schultz, Larry J.", "Teasdale, Margaret E."]
+    year: 2003
+    journal: "Nature 422, 277"
+  - title: "Relativistic OVIII Emission and Ionized Outflow in NGC 4051 Measured with XMM-Newton"
+    authors: ["Ogle, P. M.", "Mason, K. O.", "Page, M. J.", "Salvi, N. J.", "Cordova, F. A.", "McHardy, I. M.", "Priedhorsky, W. C."]
+    year: 2004
+    journal: "Ap. J. 606, 151-167"
+  - title: "Detection of High-Z Objects using Multiple Scattering of Cosmic Ray Muons"
+    authors: ["Priedhorsky, William C.", "Borozdin, Konstantin N.", "Hogan, Gary E.", "Morris, Christopher", "Saunders, Alexander", "Schultz, Larry J.", "Teasdale, Margaret E."]
+    year: 2003
+    journal: "Reviews of Scientific Instruments 74, 4294-4297"
+  - title: "Boost-Phase Intercept Systems for National Missile Defense"
+    authors: ["American Physical Society Study Group"]
+    year: 2004
+    journal: "Reviews of Modern Physics supplement 76, S1"
+  - title: "Strategic ballistic missile defense: Challenges to defending the U.S."
+    authors: ["Lamb, F. K.", "Grego, L.", "Wells, J. D.", "Priedhorsky, W.", "Barton, D.", "Coyle, P. E.", "Fetter, S.", "Gallimore, A.", "Nitta, C.", "Tate, A."]
+    year: 2025
+    journal: "Report by the American Physical Society Panel on Public Affairs"
+  - title: "Acquisition of Objects in Cislunar Space with Small Spaceborne Telescope"
+    authors: ["Priedhorsky, W.", "Sechrest, Y.", "Vance, M.", "Ward, C.", "Wozniak, P."]
+    year: 2024
+    journal: "Journal of Spacecraft and Rockets 61:6, 1723-1728"
+  university: Ph. D. Caltech Physics 1978
+  role: Associate Fellow
+  former_role: Los Alamos Laboratory Fellow, Scientist
+  former_division: Intelligence & Space Research
+  division: Intelligence & Space Research
+  status: retired
+  group_code: ISR-DO
+  accepting_students: Case-by-case
+  year_joined: '1978'
+  recruiting_ok: true

@@ -141,8 +141,9 @@
 		const rankEl = document.getElementById('profile-rank');
 		const escapeHtml = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 		const role = person.role && String(person.role).trim() ? String(person.role).trim() : 'Postdoc';
-		const groupSrc = (person.group_code && String(person.group_code).trim())
-			|| (person.division && String(person.division).trim())
+		// Full division name only; group codes are kept in the data but never shown.
+		const groupSrc = (person.division && String(person.division).trim())
+			|| (latestStint && latestStint.division && String(latestStint.division).trim())
 			|| '';
 		const startYear = person.postdoc_start_year || (myYears.length ? myYears[myYears.length - 1] : '');
 		const endYear   = person.postdoc_end_year   || '';

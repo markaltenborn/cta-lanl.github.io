@@ -1,3 +1,16 @@
+- bibcode: 2026arXiv260608868K
+  title: Topological invariant responsible for the integer QHE and non-commutative geometry
+  authors:
+  - Kovyrshin, G.
+  - Mekrami, A.
+  - Miller, J.
+  - Zubkov, M. A.
+  - Zuevsky, A.
+  author_count: 5
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260608868K/abstract
+
 - bibcode: 2026ApJ..1003..193D
   title: Multigroup Thermal Radiation Transport with Tensor Trains
   authors:
@@ -39,31 +52,3 @@
   year: '2026'
   journal: Geophysical Research Letters
   url: https://ui.adsabs.harvard.edu/abs/2026GeoRL..5320780W/abstract
-
-- bibcode: 2026arXiv260406404U
-  title: Neutrino transport and flavor instabilities in a post-merger disk
-  authors:
-  - Urquilla, Erick
-  - Shankar, Swapnil
-  - Kundu, Debraj
-  - Froustey, Julien
-  - Richers, Sherwood
-  - Miller, Jonah M.
-  author_count: 9
-  year: '2026'
-  journal: arXiv e-prints
-  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260406404U/abstract
-
-- bibcode: 2026A&A...708A.130D
-  title: A highly ionised outflow in the X-ray binary 4U 1624─49 detected with XRISM
-  authors:
-  - Díaz Trigo, M.
-  - Caruso, E.
-  - Costantini, E.
-  - Dotani, T.
-  - Kohmura, T.
-  - Shidatsu, M.
-  author_count: 11
-  year: '2026'
-  journal: Astronomy and Astrophysics
-  url: https://ui.adsabs.harvard.edu/abs/2026A&A...708A.130D/abstract

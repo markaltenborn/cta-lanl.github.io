@@ -22,12 +22,25 @@ Difference is how matched entries are reconciled:
                     a member resubmits the form intending to clear
                     stale fields. Other roster entries (slugs not in
                     the CSV) are still preserved.
+
+Students and postdocs are two-layer: the roster holds the *latest*
+snapshot (drives the profile page); per-year stint files
+(students_<year>.yml / postdocs_<year>.yml) hold the *per-year* values
+that drive the listing/year cards. For those categories the script also
+merges a stint into each active year and bumps <section>_years.yml. A
+person's newest year overwrites its stint with the current submission;
+older years fill only empty fields (history/hand-edits preserved). The
+roster is always overwritten to latest regardless. Active years come
+from the multi-year form column if present (COL_YEARS_ACTIVE), else fall
+back to the single `year_joined`. --replace affects rosters only; stint
+files always follow the newest-overwrite / older-fill-if-empty rule.
 """
 
 import argparse
 import csv
 import re
 import sys
+from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
@@ -46,6 +59,13 @@ COL_PHOTO_LINK = 49
 COL_ADDITIONAL = 50
 
 EXPECTED_COLS = 52
+
+# Future "years in CTA" column: a comma-separated list of active years
+# (e.g. "2024, 2025, 2026") that places a person into each year's stint file.
+# The form doesn't collect this yet — until it does, leave this None and the
+# script falls back to the single `year_joined` value. When the form gains the
+# column, set its index here and bump EXPECTED_COLS.
+COL_YEARS_ACTIVE: int | None = None
 
 BLOCK_FIELDS_COMMON = [
     ("scholar", 0),
@@ -121,6 +141,38 @@ BLOCKS = {
 }
 
 LIST_FIELDS = {"interests", "focus", "papers", "mentors"}
+
+# Two-layer categories. Students and postdocs render their listing/year cards
+# from per-year "stint" files (students_<year>.yml / postdocs_<year>.yml), not
+# the roster. The roster holds the *latest* value (drives the profile page); the
+# stint holds the *per-year* value (drives the card). `fields` maps a stint key
+# to the roster-entry key it sources from. Postdocs collect no role/level field,
+# so postdoc stint `role` stays hand-curated.
+STINT_BLOCKS = {
+    "student": {
+        "section": "students",
+        "stint_file": "students_{year}.yml",
+        "years_file": "student_years.yml",
+        "fields": {
+            "role": "student_level",
+            "university": "university",
+            "division": "division",
+            "group_code": "group_code",
+            "focus": "focus",
+        },
+    },
+    "postdoc": {
+        "section": "postdocs",
+        "stint_file": "postdocs_{year}.yml",
+        "years_file": "postdoc_years.yml",
+        "fields": {
+            "university": "university",
+            "division": "division",
+            "group_code": "group_code",
+            "focus": "focus",
+        },
+    },
+}
 
 
 def slugify(name: str) -> str:
@@ -337,6 +389,131 @@ def print_summary(path: Path, entries: list[dict[str, Any]],
         print(f"  {glyph} {slug:<28}  {detail}")
 
 
+def year_int(value: Any) -> int | None:
+    digits = re.sub(r"\D", "", str(value or ""))
+    return int(digits) if digits else None
+
+
+def active_years(row: list[str], entry: dict[str, Any]) -> list[int]:
+    """Years this person should appear in. Prefers the multi-year form column
+    (comma list); falls back to the single `year_joined`. Returns sorted ints."""
+    years: list[int] = []
+    if COL_YEARS_ACTIVE is not None and len(row) > COL_YEARS_ACTIVE:
+        for y in split_list((row[COL_YEARS_ACTIVE] or "").strip()):
+            yi = year_int(y)
+            if yi:
+                years.append(yi)
+    if not years:
+        yi = year_int(entry.get("year_joined"))
+        if yi:
+            years = [yi]
+    return sorted(set(years))
+
+
+def build_stint(entry: dict[str, Any], category: str) -> dict[str, Any]:
+    """The per-year stint row sourced from the roster entry. List fields
+    (focus) are flattened to the comma string the cards expect."""
+    cfg = STINT_BLOCKS[category]
+    stint: dict[str, Any] = {"slug": entry["slug"]}
+    for stint_key, roster_key in cfg["fields"].items():
+        v = entry.get(roster_key)
+        if isinstance(v, list):
+            v = ", ".join(str(x) for x in v) if v else None
+        if v:
+            stint[stint_key] = v
+    return stint
+
+
+def merge_stint_year(
+    jobs: list[tuple[dict[str, Any], bool]],
+    year_path: Path,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Merge stints into one year file. Each job is (stint, is_newest).
+    Newest year for a person overwrites their stint fields with the current
+    submission; older years fill only empty fields (preserve history/hand-edits).
+    Existing keys the script doesn't manage (card_image, photo_override) survive.
+    """
+    by_slug: dict[str, dict[str, Any]] = {}
+    order: list[str] = []
+    if year_path.exists():
+        with year_path.open("r", encoding="utf-8") as f:
+            existing = yaml.safe_load(f) or []
+        for e in existing:
+            if isinstance(e, dict) and e.get("slug"):
+                by_slug[e["slug"]] = e
+                order.append(e["slug"])
+
+    actions: list[dict[str, Any]] = []
+    for stint, is_newest in jobs:
+        slug = stint["slug"]
+        if slug not in by_slug:
+            by_slug[slug] = dict(stint)
+            order.append(slug)
+            actions.append({"slug": slug, "action": "added"})
+            continue
+        cur = by_slug[slug]
+        changed: list[str] = []
+        for k, v in stint.items():
+            if k == "slug":
+                continue
+            if is_newest:
+                if cur.get(k) != v:
+                    cur[k] = v
+                    changed.append(k)
+            elif not cur.get(k):
+                cur[k] = v
+                changed.append(k)
+        actions.append({
+            "slug": slug,
+            "action": "updated" if changed else "kept",
+            "fields_changed": changed,
+        })
+
+    return [by_slug[s] for s in order], actions
+
+
+def print_stint_summary(path: Path, entries: list[dict[str, Any]],
+                        actions: list[dict[str, Any]], dry_run: bool) -> None:
+    verb = "would update" if dry_run else "updated"
+    counts: dict[str, int] = {}
+    for a in actions:
+        counts[a["action"]] = counts.get(a["action"], 0) + 1
+    parts = [f"{n} {k}" for k, n in counts.items()]
+    summary = "  ".join(parts) if parts else "no changes"
+    print(f"\n{verb} {path}  ({len(entries)} total: {summary})")
+    for a in actions:
+        glyph = {"added": "+", "updated": "~", "kept": "·"}.get(a["action"], "?")
+        if a["action"] == "updated":
+            fields = a.get("fields_changed", [])
+            detail = f"set: {', '.join(fields)}" if fields else "no change"
+        elif a["action"] == "added":
+            detail = "new stint"
+        else:
+            detail = "kept"
+        print(f"  {glyph} {a['slug']:<28}  {detail}")
+
+
+def bump_years_file(years_path: Path, new_years: set[int],
+                    dry_run: bool) -> list[int]:
+    """Add any new years to <section>_years.yml (sorted descending). Returns
+    the year list that was (or would be) written; no-op if nothing new."""
+    existing: list[int] = []
+    if years_path.exists():
+        with years_path.open("r", encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+        existing = [y for y in (year_int(y) for y in (data.get("years") or [])) if y]
+    merged = sorted(set(existing) | set(new_years), reverse=True)
+    added = sorted(set(new_years) - set(existing), reverse=True)
+    if added and not dry_run:
+        years_path.parent.mkdir(parents=True, exist_ok=True)
+        with years_path.open("w", encoding="utf-8") as f:
+            f.write("years: [" + ", ".join(str(y) for y in merged) + "]\n")
+    if added:
+        verb = "would add" if dry_run else "added"
+        print(f"\n{years_path}: {verb} {', '.join(map(str, added))}  -> {merged}")
+    return merged
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -358,6 +535,8 @@ def main(argv: list[str] | None = None) -> int:
         parser.error(f"CSV not found: {args.csv}")
 
     by_category: dict[str, list[dict[str, Any]]] = {k: [] for k in BLOCKS}
+    # (category, year) -> list of (stint, is_newest) for the per-year files
+    stint_jobs: dict[tuple[str, int], list[tuple[dict[str, Any], bool]]] = defaultdict(list)
     skipped = 0
     photo_warnings: list[tuple[str, str, str]] = []
 
@@ -385,6 +564,13 @@ def main(argv: list[str] | None = None) -> int:
             if photo_src:
                 photo_warnings.append((category, entry["slug"], photo_src))
             by_category[category].append(entry)
+            if category in STINT_BLOCKS:
+                years = active_years(row, entry)
+                if years:
+                    newest = max(years)
+                    stint = build_stint(entry, category)
+                    for y in years:
+                        stint_jobs[(category, y)].append((stint, y == newest))
 
     by_output: dict[Path, list[dict[str, Any]]] = {}
     for cat, entries in by_category.items():
@@ -399,6 +585,23 @@ def main(argv: list[str] | None = None) -> int:
         if not args.dry_run:
             write_roster(entries, path)
         print_summary(path, entries, actions, dry_run=args.dry_run)
+
+    # Per-year stint files for two-layer categories (students, postdocs).
+    # Roster above is the latest snapshot; these drive the listing/year cards.
+    years_touched: dict[tuple[str, str], set[int]] = defaultdict(set)
+    for (cat, year), jobs in sorted(stint_jobs.items()):
+        if args.only and cat != args.only:
+            continue
+        cfg = STINT_BLOCKS[cat]
+        year_path = args.out_dir / cfg["section"] / cfg["stint_file"].format(year=year)
+        stints, actions = merge_stint_year(jobs, year_path)
+        if not args.dry_run:
+            write_roster(stints, year_path)
+        print_stint_summary(year_path, stints, actions, dry_run=args.dry_run)
+        years_touched[(cfg["section"], cfg["years_file"])].add(year)
+
+    for (section, years_file), yrs in years_touched.items():
+        bump_years_file(args.out_dir / section / years_file, yrs, dry_run=args.dry_run)
 
     if photo_warnings:
         print("\nPhoto sources flagged (download + place at the photo path manually):",

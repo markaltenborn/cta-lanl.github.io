@@ -1,16 +1,15 @@
-- bibcode: 2026NDS...210....1N
-  title: 'ENDF/B-VIII.1: Updated Nuclear Reaction Data Library for Science and Applications'
+- bibcode: 2026arXiv260604491K
+  title: 'NuGNN: a Graph Neural Network for Nuclear Reaction Network Equations'
   authors:
-  - Nobre, G. P. A.
-  - Capote, R.
-  - Pigni, M. T.
-  - Trkov, A.
-  - Mattoon, C. M.
-  - Neudecker, D.
-  author_count: 109
+  - Kim, C. H.
+  - Chae, K. Y.
+  - Ko, S.
+  - Mumpower, M. R.
+  - Smith, M. S.
+  author_count: 5
   year: '2026'
-  journal: Nuclear Data Sheets
-  url: https://ui.adsabs.harvard.edu/abs/2026NDS...210....1N/abstract
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260604491K/abstract
 
 - bibcode: 2026PhRvC.113e5802R
   title: Total absorption spectroscopy of two isomers in <inline-formula><mml:math><mml:mmultiscripts><mml:mi>Cu</mml:mi><mml:mn>70</mml:mn></mml:mmultiscripts></mml:math></inline-formula>
@@ -55,16 +54,3 @@
   year: '2026'
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1002L..24R/abstract
-
-- bibcode: 2026ADNDT.16801782M
-  title: Erratum to "Nuclear β−-decay with statistical de-excitation" [At. Data Nucl. Data Tables 165 (2025) 1─81]
-  authors:
-  - Mumpower, M. R.
-  - Kawano, T.
-  - Korobkin, O.
-  - Misch, G. W.
-  - Sprouse, T. M.
-  author_count: 5
-  year: '2026'
-  journal: Atomic Data and Nuclear Data Tables
-  url: https://ui.adsabs.harvard.edu/abs/2026ADNDT.16801782M/abstract

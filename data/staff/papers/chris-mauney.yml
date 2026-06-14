@@ -49,15 +49,3 @@
   year: '2022'
   journal: The Journal of Open Source Software
   url: https://ui.adsabs.harvard.edu/abs/2022JOSS....7.4367M/abstract
-
-- bibcode: 2022ApJ...931...85B
-  title: Dependence of Dust Formation on the Supernova Explosion
-  authors:
-  - Brooker, Ezra S.
-  - Stangl, Sarah M.
-  - Mauney, Christopher M.
-  - Fryer, C. L.
-  author_count: 4
-  year: '2022'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2022ApJ...931...85B/abstract

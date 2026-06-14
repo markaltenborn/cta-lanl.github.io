@@ -12,20 +12,6 @@
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2024ApJ...961....9F/abstract
 
-- bibcode: 2023SPIE12678E..12B
-  title: The mini astrophysical MeV background observatory (MAMBO) CubeSat mission for gamma-ray astronomy
-  authors:
-  - Bloser, Peter F.
-  - Vestrand, W. Thomas
-  - Hehlen, Markus P.
-  - Katko, Kimberly K.
-  - Parker, Lucas P.
-  - Beckman, Darrel T.
-  author_count: 20
-  year: '2023'
-  journal: UV, X-Ray, and Gamma-Ray Space Instrumentation for Astronomy XXIII
-  url: https://ui.adsabs.harvard.edu/abs/2023SPIE12678E..12B/abstract
-
 - bibcode: 2023ApJ...956...19F
   title: Multimessenger Diagnostics of the Engine behind Core-collapse Supernovae
   authors:
@@ -40,6 +26,20 @@
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2023ApJ...956...19F/abstract
 
+- bibcode: 2023SPIE12678E..12B
+  title: The mini astrophysical MeV background observatory (MAMBO) CubeSat mission for gamma-ray astronomy
+  authors:
+  - Bloser, Peter F.
+  - Vestrand, W. Thomas
+  - Hehlen, Markus P.
+  - Katko, Kimberly K.
+  - Parker, Lucas P.
+  - Beckman, Darrel T.
+  author_count: 20
+  year: '2023'
+  journal: UV, X-Ray, and Gamma-Ray Space Instrumentation for Astronomy XXIII
+  url: https://ui.adsabs.harvard.edu/abs/2023SPIE12678E..12B/abstract
+
 - bibcode: 2023HEAD...2010336B
   title: 'The Mini Astrophysical MeV Background Observatory (MAMBO): A CubeSat Mission for Gamma-Ray Astronomy'
   authors:
@@ -53,17 +53,3 @@
   year: '2023'
   journal: AAS/High Energy Astrophysics Division
   url: https://ui.adsabs.harvard.edu/abs/2023HEAD...2010336B/abstract
-
-- bibcode: 2023AAS...24223005B
-  title: A New Investigation of the Cosmic Gamma-Ray Background in the MeV Band
-  authors:
-  - Bloser, Peter
-  - Vestrand, W. Thomas
-  - Hehlen, Markus
-  - Katko, Kim
-  - Parker, Lucas
-  - Beckman, Darrel
-  author_count: 20
-  year: '2023'
-  journal: 'American Astronomical Society Meeting Abstracts #242'
-  url: https://ui.adsabs.harvard.edu/abs/2023AAS...24223005B/abstract

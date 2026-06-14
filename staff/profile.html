@@ -119,14 +119,11 @@
 		document.getElementById('profile-name').textContent = displayName;
 
 		// Rank line: role · group · At LANL since YYYY [+ badge].
-		// Legacy roster YAML uses `division` to hold the group code (e.g., CAI-2);
-		// form-driven entries split into group_code + longer division name. Prefer
-		// group_code, fall back to division.
+		// Display the full division name only; group codes are kept in the data
+		// but never shown.
 		const rankEl = document.getElementById('profile-rank');
 		const escapeHtml = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
-		const groupSrc = (person.group_code && String(person.group_code).trim())
-			|| (divSrc && String(divSrc).trim())
-			|| '';
+		const groupSrc = (divSrc && String(divSrc).trim()) || '';
 		const rankParts = [];
 		if (roleSrc && String(roleSrc).trim()) rankParts.push(String(roleSrc).trim());
 		if (groupSrc) rankParts.push(groupSrc);
@@ -136,12 +133,7 @@
 
 		rankEl.innerHTML = rankParts.map(escapeHtml).join(' <span class="sep">·</span> ');
 
-		if (retired) {
-			const b = document.createElement('span');
-			b.className = 'profile-badge is-retired';
-			b.textContent = 'Retired';
-			rankEl.appendChild(b);
-		} else if (String(person.accepting_students || '').toLowerCase().startsWith('y')) {
+		if (String(person.accepting_students || '').toLowerCase().startsWith('y')) {
 			const b = document.createElement('span');
 			b.className = 'profile-badge';
 			b.textContent = 'Accepting students';
@@ -179,6 +171,8 @@
 		const factPairs = [];
 		const unis = splitMulti(person.university);
 		if (unis.length) factPairs.push(['University', unis]);
+		const affil = splitMulti(person.affiliation);
+		if (affil.length) factPairs.push(['Affiliation', affil]);
 		if (!retired && person.accepting_students && String(person.accepting_students).trim()) {
 			factPairs.push(['Accepting students', [String(person.accepting_students).trim()]]);
 		}
