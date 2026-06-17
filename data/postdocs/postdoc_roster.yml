@@ -31,7 +31,7 @@
 - slug: makana-silva
   display_name: Makana Silva
   sort_key: silva, makana
-  photo: /postdocs/images/makana-silva.jpg
+  photo: /postdocs/images/2026/makana-silva.png
   email: k14masilv@gmail.com
   scholar: https://scholar.google.com/citations?hl=en&user=UbqEYOQAAAAJ
   ads: https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&p_=0&q=%20author%3A%22Silva%2C%20Makana%22%20%20aff%3A%22los%20alamos%22&sort=date%20desc%2C%20bibcode%20desc
@@ -43,8 +43,12 @@
     of community-based events where people can learn about the science of the stars from a Hawaiian culture and scientific
     perspective. When he is not working, he enjoys lifting stones, logs, kegs, and other heavy and awkward objects.
   interests:
-  - Studying the effects of resonance interactions around extreme mass ratio inspirals on their gravitational wave forms.
-    Studying plasma physics around black holes and other high energy systems.
+  - Extreme mass ratio inspirals
+  - Gravitational waveforms
+  - Resonance interactions
+  - Plasma physics
+  - Black holes
+  - High energy systems
   focus:
   - gravitational waves
   - black holes
@@ -465,7 +469,7 @@
 - slug: jarrett-johnson
   display_name: Jarrett Johnson
   sort_key: johnson, jarrett
-  photo: /postdocs/images/jarrett-johnson.jpg
+  photo: /postdocs/images/cta-default.jpg
   email: jlj@lanl.gov
   scholar: null
   ads: null

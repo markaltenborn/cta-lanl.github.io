@@ -49,14 +49,14 @@
   journal: Australian Forestry
   url: https://ui.adsabs.harvard.edu/abs/2025AuFor..88...89R/abstract
 
-- bibcode: 2024doe..soft..349R
-  title: lanl/jaybenne
+- bibcode: 2024doe..soft..350R
+  title: artemis
   authors:
   - Ryan, Ben
-  - Wallaeger, Ryan
-  - Long, Alex
+  - Dempsey, Adam M.
+  - Li, Shengtai
   - Mullen, Patrick
   author_count: 4
   year: '2024'
   journal: U.S. Department of Energy (DOE) Software
-  url: https://ui.adsabs.harvard.edu/abs/2024doe..soft..349R/abstract
+  url: https://ui.adsabs.harvard.edu/abs/2024doe..soft..350R/abstract

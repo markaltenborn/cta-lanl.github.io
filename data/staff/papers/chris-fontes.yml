@@ -1,3 +1,17 @@
+- bibcode: 2026ApJ..1003...89F
+  title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling
+  authors:
+  - Fontes, Christopher J.
+  - Vieira, Nicholas
+  - Fryer, Chris L.
+  - Kathirgamaraju, Adithan
+  - Korobkin, Oleg
+  - Ristić, Marko
+  author_count: 7
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003...89F/abstract
+
 - bibcode: 2026PhRvR...8b3117R
   title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
     ejecta predictions
@@ -25,20 +39,6 @@
   year: '2026'
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260503947F/abstract
-
-- bibcode: 2026ApJ..1003...89F
-  title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling
-  authors:
-  - Fontes, Christopher J.
-  - Vieira, Nicholas
-  - Fryer, Chris L.
-  - Kathirgamaraju, Adithan
-  - Korobkin, Oleg
-  - Ristić, Marko
-  author_count: 7
-  year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003...89F/abstract
 
 - bibcode: 2026PhRvA.113d2814G
   title: Close-coupling approach to electron scattering with multielectron targets

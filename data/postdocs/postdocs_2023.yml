@@ -1,7 +1,12 @@
 - slug: alexander-kaltenborn
-  university: 
+  university: null
   role: Postdoc
   division: Theoretical
   group_code: T-5
-  focus: 
-  card_image: "/postdocs/images/2023/alexander-kaltenborn.jpg"
+  focus: null
+  card_image: /postdocs/images/2023/alexander-kaltenborn.jpg
+
+- slug: makana-silva
+  university: The Ohio State University
+  division: Computing and Artificial Intelligence
+  focus: gravitational waves, black holes, QFT

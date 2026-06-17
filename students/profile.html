@@ -130,8 +130,9 @@
 		const role = person.student_level && String(person.student_level).trim()
 			? String(person.student_level).trim()
 			: 'Student';
-		const groupSrc = (person.group_code && String(person.group_code).trim())
-			|| (person.division && String(person.division).trim())
+		// Full division name only; group codes are kept in the data but never shown.
+		const groupSrc = (person.division && String(person.division).trim())
+			|| (latestStint && latestStint.division && String(latestStint.division).trim())
 			|| '';
 		let tenure = '';
 		if (myYears.length) {

@@ -17,7 +17,7 @@
 - slug: travis-court
   university: Allegheny College
   role: Post-Bac
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Binary mergers, common envelope evolution, supernova progenitors
   card_image: "/students/images/2018/travis-court.jpg"
@@ -41,7 +41,7 @@
 - slug: carl-fields
   university: Michigan State University
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-7
   focus: Core-collapse supernovae, nuclear astrophysics, gravitational waves, and stellar hydrodynamics
   card_image: "/students/images/2018/carl-fields.jpg"
@@ -57,7 +57,7 @@
 - slug: alexander-kaltenborn
   university: The George Washington University
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Compact object mergers, White Dwarfs, Neutron Stars, HPC, Radhydro  
   card_image: "/students/images/2018/alexander-kaltenborn.jpg"
@@ -65,7 +65,7 @@
 - slug: hyun-lim
   university: Brigham Young University
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Numerical relativity, binary compact object mergers, numerical methods and algorithms, and HPC
   card_image: "/students/images/2018/hyun-lim.jpg"
@@ -73,7 +73,7 @@
 - slug: quintin-mabanta
   university: Florida State University
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Core-collapse supernovae, cosmology, non-linear systems, radiation transport
   card_image: "/students/images/2018/quintin-mabanta.jpg"
@@ -81,7 +81,7 @@
 - slug: sarah-stangl
   university: University of Oklahoma
   role: Graduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Core-collapse supernova explosions, supernova dust formation, very massive Stars
   card_image: "/students/images/2018/sarah-stangl.jpg"
@@ -89,7 +89,7 @@
 - slug: morgan-taylor
   university: Southern Utah University
   role: Undergraduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: Galaxy evolution, supernovae, and transient light curves
   card_image: "/students/images/2018/morgan-taylor.jpg"
@@ -97,7 +97,7 @@
 - slug: chris-torres
   university: University of New Mexico Los Alamos
   role: Undergraduate
-  division: Computational and Statistical Sciences
+  division: Computer, Computational & Statistical Sciences
   group_code: CCS-2
   focus: 
   card_image: "/students/images/2018/chris-torres.jpg"

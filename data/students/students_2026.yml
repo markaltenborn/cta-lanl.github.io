@@ -1,0 +1,25 @@
+- slug: lydia-davis
+  role: High school
+  division: Theoretical
+  group_code: T-5
+  card_image: /students/images/2026/lydia-davis.jpg
+
+- slug: julia-ward-mulligan
+  role: Undergraduate
+  university: Rice University
+  division: Theoretical
+  group_code: T-5
+
+- slug: charlie-gardner
+  role: PhD
+  university: Rice University
+  division: Theoretical
+  group_code: 'T-2'
+  card_image: /students/images/2026/charlie-gardner.jpg
+
+- slug: claire-whitley
+  role: Undergraduate
+  university: University of New Mexico
+  division: Theoretical Design
+  group_code: NTA
+  card_image: /students/images/2026/claire-whitley.jpg

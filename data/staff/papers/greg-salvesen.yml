@@ -34,6 +34,15 @@
   journal: Nature
   url: https://ui.adsabs.harvard.edu/abs/2024Natur.634..804N/abstract
 
+- bibcode: 2023HEAD...2011618S
+  title: Spin-Orbit Misalignments in Black Hole X-ray Binaries
+  authors:
+  - Salvesen, Greg
+  author_count: 1
+  year: '2023'
+  journal: AAS/High Energy Astrophysics Division
+  url: https://ui.adsabs.harvard.edu/abs/2023HEAD...2011618S/abstract
+
 - bibcode: 2023HEAD...2011620S
   title: An Electron-Scattering Time Delay in Black Hole Accretion Disks
   authors:
@@ -42,14 +51,3 @@
   year: '2023'
   journal: AAS/High Energy Astrophysics Division
   url: https://ui.adsabs.harvard.edu/abs/2023HEAD...2011620S/abstract
-
-- bibcode: 2023HEAD...2011616T
-  title: 'Probing Black Hole Spin Orientations: the inner disk inclination angle in GRO J1655─40'
-  authors:
-  - Turonova, Zuzana
-  - Salvesen, Greg
-  - McGowan, Katherine
-  author_count: 3
-  year: '2023'
-  journal: AAS/High Energy Astrophysics Division
-  url: https://ui.adsabs.harvard.edu/abs/2023HEAD...2011616T/abstract

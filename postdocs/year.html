@@ -115,8 +115,7 @@
 						el('h4',{class:'postdoc-name'},name),
 						stint.university?el('span',{class:'postdoc-univ'},stint.university):null,
 						stint.role?el('span',{class:'postdoc-role'},stint.role):null,
-						(stint.division||stint.group_code)?el('span',{class:'postdoc-group'},
-							`${stint.division||''}${(stint.division&&stint.group_code)?', ':''}${stint.group_code||''}`):null,
+						stint.division?el('span',{class:'postdoc-group'},stint.division):null,
 						stint.focus?el('p',{class:'postdoc-focus'},stint.focus):null
 					])
 				])

@@ -205,9 +205,8 @@
 	                    stint.role
 	                        ? el('span', {class:'postdoc-role'}, stint.role)
 	                        : null,
-	                    (stint.division || stint.group_code)
-	                        ? el('span', {class:'postdoc-group'},
-	                            `${stint.division || ''}${(stint.division && stint.group_code)?', ':''}${stint.group_code || ''}`)
+	                    stint.division
+	                        ? el('span', {class:'postdoc-group'}, stint.division)
 	                        : null,
 	                    focusText
 	                        ? el('p', {class:'postdoc-focus'}, focusText)
