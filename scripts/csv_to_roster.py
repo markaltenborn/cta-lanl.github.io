@@ -31,8 +31,8 @@ merges a stint into each active year and bumps <section>_years.yml. A
 person's newest year overwrites its stint with the current submission;
 older years fill only empty fields (history/hand-edits preserved). The
 roster is always overwritten to latest regardless. Active years come
-from the multi-year form column if present (COL_YEARS_ACTIVE), else fall
-back to the single `year_joined`. --replace affects rosters only; stint
+from the per-block "Years in CTA" column (BLOCKS[cat]["years_active"]) when
+filled, else fall back to the single `year_joined`. --replace affects rosters only; stint
 files always follow the newest-overwrite / older-fill-if-empty rule.
 """
 
@@ -54,18 +54,18 @@ COL_DISPLAY_NAME = 3
 COL_EMAIL = 4
 COL_CATEGORY = 5
 
-COL_PHOTO_UPLOAD = 48
-COL_PHOTO_LINK = 49
-COL_ADDITIONAL = 50
+COL_PHOTO_UPLOAD = 50
+COL_PHOTO_LINK = 51
+COL_ADDITIONAL = 52
 
-EXPECTED_COLS = 52
+EXPECTED_COLS = 54
 
-# Future "years in CTA" column: a comma-separated list of active years
-# (e.g. "2024, 2025, 2026") that places a person into each year's stint file.
-# The form doesn't collect this yet — until it does, leave this None and the
-# script falls back to the single `year_joined` value. When the form gains the
-# column, set its index here and bump EXPECTED_COLS.
-COL_YEARS_ACTIVE: int | None = None
+# "Years in CTA" multi-year column: a comma-separated list of active years
+# (e.g. "2025, 2026") that places a person into each year's stint file. The
+# form now collects this once per multi-year category (postdocs, students), so
+# the column is *per-block* — its index lives in BLOCKS[category]["years_active"]
+# (None for categories the form doesn't ask). active_years() falls back to the
+# single `year_joined` value when the cell is empty.
 
 BLOCK_FIELDS_COMMON = [
     ("scholar", 0),
@@ -79,6 +79,7 @@ BLOCK_FIELDS_COMMON = [
 BLOCKS = {
     "staff": {
         "start": 6,
+        "years_active": None,
         "extras": [
             ("university", 6),
             ("role", 7),
@@ -91,7 +92,8 @@ BLOCKS = {
         "photo_root": "/staff/images",
     },
     "postdoc": {
-        "start": 17,
+        "start": 18,
+        "years_active": 17,
         "extras": [
             ("university", 6),
             ("division", 7),
@@ -105,7 +107,8 @@ BLOCKS = {
         "photo_root": "/postdocs/images",
     },
     "student": {
-        "start": 29,
+        "start": 31,
+        "years_active": 30,
         "extras": [
             ("university", 6),
             ("division", 7),
@@ -117,7 +120,8 @@ BLOCKS = {
         "photo_root": "/students/images",
     },
     "emeritus": {
-        "start": 39,
+        "start": 41,
+        "years_active": None,
         "extras": [
             ("former_role", 6),
             ("former_division", 7),
@@ -128,7 +132,8 @@ BLOCKS = {
         "photo_root": "/emeritus/images",
     },
     "retired": {
-        "start": 39,
+        "start": 41,
+        "years_active": None,
         "extras": [
             ("former_role", 6),
             ("former_division", 7),
@@ -394,12 +399,13 @@ def year_int(value: Any) -> int | None:
     return int(digits) if digits else None
 
 
-def active_years(row: list[str], entry: dict[str, Any]) -> list[int]:
-    """Years this person should appear in. Prefers the multi-year form column
-    (comma list); falls back to the single `year_joined`. Returns sorted ints."""
+def active_years(row: list[str], entry: dict[str, Any],
+                 years_col: int | None) -> list[int]:
+    """Years this person should appear in. Prefers the per-block "Years in CTA"
+    column (comma list); falls back to the single `year_joined`. Returns sorted ints."""
     years: list[int] = []
-    if COL_YEARS_ACTIVE is not None and len(row) > COL_YEARS_ACTIVE:
-        for y in split_list((row[COL_YEARS_ACTIVE] or "").strip()):
+    if years_col is not None and len(row) > years_col:
+        for y in split_list((row[years_col] or "").strip()):
             yi = year_int(y)
             if yi:
                 years.append(yi)
@@ -547,8 +553,11 @@ def main(argv: list[str] | None = None) -> int:
             print("ERROR: empty CSV", file=sys.stderr)
             return 1
         if len(header) != EXPECTED_COLS:
-            print(f"WARN: header has {len(header)} cols, expected {EXPECTED_COLS}. "
-                  "Field offsets may be wrong.", file=sys.stderr)
+            print(f"ERROR: header has {len(header)} cols, expected {EXPECTED_COLS}. "
+                  "The form layout changed; the BLOCKS column offsets are now wrong. "
+                  "Refusing to parse — update the offsets before re-running.",
+                  file=sys.stderr)
+            return 1
         for row_num, row in enumerate(reader, start=2):
             if not any(c.strip() for c in row):
                 continue
@@ -565,7 +574,7 @@ def main(argv: list[str] | None = None) -> int:
                 photo_warnings.append((category, entry["slug"], photo_src))
             by_category[category].append(entry)
             if category in STINT_BLOCKS:
-                years = active_years(row, entry)
+                years = active_years(row, entry, BLOCKS[category].get("years_active"))
                 if years:
                     newest = max(years)
                     stint = build_stint(entry, category)
@@ -582,7 +591,8 @@ def main(argv: list[str] | None = None) -> int:
 
     for path, entries in by_output.items():
         entries, actions = merge_roster(entries, path, replace_matched=args.replace)
-        if not args.dry_run:
+        touched = any(a["action"] != "preserved" for a in actions)
+        if not args.dry_run and touched:
             write_roster(entries, path)
         print_summary(path, entries, actions, dry_run=args.dry_run)
 
