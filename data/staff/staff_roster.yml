@@ -691,31 +691,6 @@
   additional: Based at Michigan SPARC in Ann Arbor
   recruiting_ok: true
 
-- slug: matthew-mumpower
-  display_name: Matthew Mumpower
-  sort_key: mumpower, matthew
-  research_groups:
-  - nucleosynthesis
-  email: mumpower@lanl.gov
-  photo: /staff/images/matthew-mumpower.jpg
-  scholar: https://scholar.google.com/citations?user=wYeD79MAAAAJ&hl=en
-  ads: https://ui.adsabs.harvard.edu/search/q=author%3A%22Mumpower%2C%20Matthew%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
-  bio: I'm a theoretical physicist working at Los Alamos National Lab. My research interests are in nuclear structure and
-    reaction mechanisms with applications to nuclear astrophysics. I received my PhD at North Carolina State University under
-    the direction of Gail McLaughlin. At the University of Notre Dame I worked under the direction of Ani Aprahamian and Rebecca
-    Surman. The study of nuclear models has a wide range of applicability from nuclear medicine, to stockpile stewardship
-    and even the cosmos.
-  interests:
-  - Nuclear physics
-  - Nucleosynthesis
-  - Beta-decay
-  - Fission
-  leadership: null
-  university: North Carolina State University
-  role: R&D Scientist
-  division: Theoretical
-  focus: null
-
 - slug: ben-ryan
   display_name: Ben Ryan
   sort_key: ryan, ben
