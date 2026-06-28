@@ -11,20 +11,46 @@
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260604491K/abstract
 
-- bibcode: 2026PhRvC.113e5802R
-  title: Total absorption spectroscopy of two isomers in <inline-formula><mml:math><mml:mmultiscripts><mml:mi>Cu</mml:mi><mml:mn>70</mml:mn></mml:mmultiscripts></mml:math></inline-formula>
-    influencing nucleosynthesis signatures
+- bibcode: 2026ApJ..1004...93G
+  title: Gamma-Ray Spectra of r-process Nuclei
   authors:
-  - Ronning, E. K.
-  - Richard, A. L.
-  - Liddick, S. N.
-  - Spyrou, A.
-  - Yandow, I.
-  - Ringle, R.
-  author_count: 27
+  - Gross, Axel
+  - Cupp, Samuel
+  - Mumpower, Matthew R.
+  author_count: 3
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1004...93G/abstract
+
+- bibcode: 2026PhRvC.113f5803V
+  title: Exploration for astromers near <inline-formula><mml:math><mml:mmultiscripts><mml:mi>Sn</mml:mi><mml:mn>132</mml:mn></mml:mmultiscripts></mml:math></inline-formula>
+    with the Canadian Penning Trap
+  authors:
+  - Valverde, A. A.
+  - Cupp, S.
+  - Gross, A.
+  - Liu, B.
+  - Mumpower, M. R.
+  - Misch, G. W.
+  author_count: 29
   year: '2026'
   journal: Physical Review C
-  url: https://ui.adsabs.harvard.edu/abs/2026PhRvC.113e5802R/abstract
+  url: https://ui.adsabs.harvard.edu/abs/2026PhRvC.113f5803V/abstract
+
+- bibcode: 2026PhRvL.136w2504M
+  title: Beta-Delayed Neutron Emission of <inline-formula><mml:math><mml:mrow><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:mn>84</mml:mn></mml:mrow></mml:math></inline-formula>
+    <inline-formula><mml:math><mml:mrow><mml:mmultiscripts><mml:mrow><mml:mi>Cd</mml:mi></mml:mrow><mml:mrow><mml:mn>132</mml:mn></mml:mrow></mml:mmultiscripts></mml:mrow></mml:math></inline-formula>
+  authors:
+  - Madurga, M.
+  - Xu, Z. Y.
+  - Grzywacz, R.
+  - Mumpower, M. R.
+  - Andreyev, A. N.
+  - Benzoni, G.
+  author_count: 57
+  year: '2026'
+  journal: Physical Review Letters
+  url: https://ui.adsabs.harvard.edu/abs/2026PhRvL.136w2504M/abstract
 
 - bibcode: 2026PhRvR...8b3117R
   title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
@@ -40,31 +66,3 @@
   year: '2026'
   journal: Physical Review Research
   url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
-
-- bibcode: 2026ApJ..1002L..24R
-  title: Kilonovae and Long-duration Gamma-Ray Bursts
-  authors:
-  - Ristić, Marko
-  - Barker, Brandon L.
-  - Cupp, Samuel
-  - Gross, Axel
-  - Lloyd-Ronning, Nicole
-  - Korobkin, Oleg
-  author_count: 8
-  year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1002L..24R/abstract
-
-- bibcode: 2026NDS...210....1N
-  title: 'ENDF/B-VIII.1: Updated Nuclear Reaction Data Library for Science and Applications'
-  authors:
-  - Nobre, G. P. A.
-  - Capote, R.
-  - Pigni, M. T.
-  - Trkov, A.
-  - Mattoon, C. M.
-  - Neudecker, D.
-  author_count: 109
-  year: '2026'
-  journal: Nuclear Data Sheets
-  url: https://ui.adsabs.harvard.edu/abs/2026NDS...210....1N/abstract

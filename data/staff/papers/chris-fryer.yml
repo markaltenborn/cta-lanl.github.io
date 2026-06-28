@@ -26,19 +26,16 @@
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260609992O/abstract
 
-- bibcode: 2026ApJ..1003...89F
-  title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling
+- bibcode: 2026ApJS..284....6C
+  title: 'Toward First-principles Multimessenger Predictions: Coupling Nuclear Networks with General Relativistic Radiation
+    Magnetohydrodynamics in Gmunu'
   authors:
-  - Fontes, Christopher J.
-  - Vieira, Nicholas
-  - Fryer, Chris L.
-  - Kathirgamaraju, Adithan
-  - Korobkin, Oleg
-  - Ristić, Marko
-  author_count: 7
+  - Cheong, Patrick Chi-Kit
+  - Fryer, Christopher L.
+  author_count: 2
   year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003...89F/abstract
+  journal: The Astrophysical Journal Supplement Series
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJS..284....6C/abstract
 
 - bibcode: 2026PhRvR...8b3117R
   title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
@@ -55,13 +52,16 @@
   journal: Physical Review Research
   url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
 
-- bibcode: 2026ApJS..284....6C
-  title: 'Toward First-principles Multimessenger Predictions: Coupling Nuclear Networks with General Relativistic Radiation
-    Magnetohydrodynamics in Gmunu'
+- bibcode: 2026ApJ..1003...89F
+  title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling
   authors:
-  - Cheong, Patrick Chi-Kit
-  - Fryer, Christopher L.
-  author_count: 2
+  - Fontes, Christopher J.
+  - Vieira, Nicholas
+  - Fryer, Chris L.
+  - Kathirgamaraju, Adithan
+  - Korobkin, Oleg
+  - Ristić, Marko
+  author_count: 7
   year: '2026'
-  journal: The Astrophysical Journal Supplement Series
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJS..284....6C/abstract
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003...89F/abstract

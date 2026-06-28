@@ -28,6 +28,20 @@
   journal: European Physical Journal C
   url: https://ui.adsabs.harvard.edu/abs/2026EPJC...86..598A/abstract
 
+- bibcode: 2026arXiv260624215C
+  title: Nonlinear Stability of Kerr-Sen Black Holes in Merging Binaries
+  authors:
+  - Carroll, Andrew
+  - Hirschmann, Eric W.
+  - Lim, Hyun
+  - Neilsen, David
+  - Van Komen, David F.
+  - Vander Ploeg Fallon, Sebastian
+  author_count: 6
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260624215C/abstract
+
 - bibcode: 2026ACSSe..11.3664L
   title: Three-Dimensional DNA Nanostructure-Assisted Multiplexed Aptamer Assay for Simultaneous Detection of Endocrine-Disrupting
     Chemical Clusters
@@ -53,16 +67,3 @@
   year: '2026'
   journal: Applied Water Science
   url: https://ui.adsabs.harvard.edu/abs/2026ApWS...16..150O/abstract
-
-- bibcode: 2026Fuel..40937654L
-  title: High-power proton exchange membrane fuel cell system with oxygen enrichment
-  authors:
-  - Lee, Yoo Il
-  - Lee, Yeong Ho
-  - Lim, Hyun Sung
-  - Lee, Sangwook
-  - Kim, Min Soo
-  author_count: 5
-  year: '2026'
-  journal: Fuel
-  url: https://ui.adsabs.harvard.edu/abs/2026Fuel..40937654L/abstract

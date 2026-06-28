@@ -25,20 +25,6 @@
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260608868K/abstract
 
-- bibcode: 2026GeoRL..5320780W
-  title: Prediction of Hydroclimatic Anomalies Using a New Isotope Precipitation Index
-  authors:
-  - Watson, A.
-  - Miller, J.
-  - Waal, J.
-  - Beckett, H.
-  - Vystavna, Y.
-  - Chikviladze, E.
-  author_count: 14
-  year: '2026'
-  journal: Geophysical Research Letters
-  url: https://ui.adsabs.harvard.edu/abs/2026GeoRL..5320780W/abstract
-
 - bibcode: 2026ApJ..1002L..24R
   title: Kilonovae and Long-duration Gamma-Ray Bursts
   authors:
@@ -52,6 +38,20 @@
   year: '2026'
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1002L..24R/abstract
+
+- bibcode: 2026GeoRL..5320780W
+  title: Prediction of Hydroclimatic Anomalies Using a New Isotope Precipitation Index
+  authors:
+  - Watson, A.
+  - Miller, J.
+  - Waal, J.
+  - Beckett, H.
+  - Vystavna, Y.
+  - Chikviladze, E.
+  author_count: 14
+  year: '2026'
+  journal: Geophysical Research Letters
+  url: https://ui.adsabs.harvard.edu/abs/2026GeoRL..5320780W/abstract
 
 - bibcode: 2026A&A...708A.130D
   title: A highly ionised outflow in the X-ray binary 4U 1624─49 detected with XRISM

@@ -55,16 +55,15 @@
   journal: Nature Communications
   url: https://ui.adsabs.harvard.edu/abs/2025NatCo..16.9819S/abstract
 
-- bibcode: 2025arXiv251015860C
-  title: Quantum Monte Carlo Calculations of Light Nuclei with Fully Propagated Theoretical Uncertainties
+- bibcode: 2025PhRvL.135n2501A
+  title: 'Emulators for Scarce and Noisy Data: Application to Auxiliary-Field Diffusion Monte Carlo for Neutron Matter'
   authors:
-  - Curry, Ryan
-  - Hebeler, Kai
-  - Gandolfi, Stefano
-  - Gezerlis, Alexandros
-  - Schwenk, Achim
+  - Armstrong, Cassandra L.
+  - Giuliani, Pablo
+  - Godbey, Kyle
   - Somasundaram, Rahul
-  author_count: 7
+  - Tews, Ingo
+  author_count: 5
   year: '2025'
-  journal: arXiv e-prints
-  url: https://ui.adsabs.harvard.edu/abs/2025arXiv251015860C/abstract
+  journal: Physical Review Letters
+  url: https://ui.adsabs.harvard.edu/abs/2025PhRvL.135n2501A/abstract
