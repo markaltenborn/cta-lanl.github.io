@@ -1,7 +1,9 @@
 - slug: lydia-davis
+  university: Los Alamos High School
   role: High school
   division: Theoretical
   group_code: T-5
+  focus: Air burst simulations
   card_image: /students/images/2026/lydia-davis.jpg
 
 - slug: julia-ward-mulligan
@@ -9,12 +11,15 @@
   university: Rice University
   division: Theoretical
   group_code: T-5
+  focus: null
+  card_image: null
 
 - slug: charlie-gardner
   role: PhD
   university: Rice University
   division: Theoretical
-  group_code: 'T-2'
+  group_code: T-2
+  focus: null
   card_image: /students/images/2026/charlie-gardner.jpg
 
 - slug: claire-whitley
@@ -22,4 +27,37 @@
   university: University of New Mexico
   division: Theoretical Design
   group_code: NTA
+  focus: null
   card_image: /students/images/2026/claire-whitley.jpg
+
+- slug: gavin-bent
+  university: Los Alamos High School
+  role: High school
+  division: Computational Physics
+  group_code: XCP-8
+  focus: null
+  card_image: null
+
+- slug: mariko-storey-matsutani
+  university: MIT
+  role: Masters
+  division: Theoretical
+  group_code: 'T-5'
+  focus: null
+  card_image: /students/images/2026/mariko-storey-matsutani.jpg
+
+- slug: noah-bane
+  university: Los Alamos High School
+  role: High school
+  division: Theoretical
+  group_code: T-5
+  focus: Air burst simulations
+  card_image: /students/images/2026/noah-bane.jpg
+
+- slug: laura-hernandez
+  university: University of California, Los Angeles
+  role: Undergraduate
+  division: Theoretical
+  group_code: T-5
+  focus: Binary white dwarf mergers
+  card_image: /students/images/2026/laura-hernandez.jpg

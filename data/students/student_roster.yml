@@ -17,8 +17,22 @@
   email: hernandez_l@lanl.gov
   scholar: ''
   ads: ''
-  interests:
+  focus:
   - Binary White Dwarf mergers
+  bio: Laura Hernandez is an astrophysics student at UCLA with research interests in astrophysics and epidemiology. She currently
+    conducts research at the lab on white dwarf binary systems and at UCLA Health on lupus mortality and health disparities.
+  interests:
+  - Binary White Dwarf Systems
+  - Cosmology
+  - Black Holes
+  - Epidemiology
+  - Health Advocacy
+  - Science Communication
+  division: Theoretical
+  group_code: T-5
+  student_level: Undergraduate
+  year_joined: '2025'
+  university: University of California, Los Angeles
 
 - slug: lucian-sahd
   display_name: Lucian Sahd
@@ -476,13 +490,13 @@
   interests:
   - Computational plasma physics
   - early universe physics & cosmology
-  focus: []
-  papers: []
+  focus: null
+  papers: null
   university: Rice University
   division: Theoretical
   group_code: T-5
   student_level: Undergraduate
-  recruiting_ok: true
+  year_joined: '2026'
 
 - slug: lydia-davis
   display_name: Lydia Davis
@@ -500,14 +514,13 @@
   - astrophysics
   - bioengineering
   - neuroscience
-  focus: []
-  papers: []
+  focus: null
+  papers: null
   university: null
   division: Theoretical
   group_code: T-5
   student_level: High school
   year_joined: '2026'
-  recruiting_ok: true
 
 - slug: charlie-gardner
   display_name: Charlie Gardner
@@ -526,12 +539,72 @@
   - Accretion Disks
   - Hydrodynamic Simulations
   - Radiative Transfer
-  focus: []
+  focus: null
   papers:
   - 'exoALMA. XI. ALMA Observations and Hydrodynamic Models of LkCa 15: Implications for Planetary Mass Companions in the
     Dust Continuum Cavity'
   university: Rice University
   division: Theoretical
-  group_code: 'T-2'
-  student_level: PhD
-  recruiting_ok: true
+  group_code: T-2
+  student_level: Graduate
+
+- slug: gavin-bent
+  display_name: Gavin Bent
+  sort_key: bent, gavin
+  email: gavinsbent@gmail.com
+  photo: /students/images/gavin-bent.jpg
+  scholar: null
+  ads: null
+  bio: null
+  interests: null
+  focus: null
+  papers: null
+  university: null
+  division: Computational Physics
+  group_code: XCP-8
+  student_level: High school
+  year_joined: '2026'
+
+- slug: mariko-storey-matsutani
+  display_name: Mariko Storey-Matsutani
+  sort_key: storey-matsutani, mariko
+  email: mariko@lanl.gov
+  photo: /students/images/mariko-storey-matsutani.jpg
+  ads: ''
+  scholar: https://scholar.google.com/citations?user=QqepppYAAAAJ&hl=en&oi=ao
+  bio: I am a MS/PhD student in the Astrodynamics, Robotics, and Control Lab (ARCLab) in the MIT AeroAstro Program. Outside
+    of research, I love hiking, karaoke, and dance!
+  interests:
+  - Spacecraft GNC
+  - Autonomy
+  - Robotics
+  focus: null
+  papers: null
+  university: MIT
+  division: Theoretical
+  group_code: 'T-5'
+  student_level: Masters
+  year_joined: '2026'
+
+- slug: noah-bane
+  display_name: Noah Bane
+  sort_key: bane, noah
+  email: nbane@lanl.gov
+  photo: /students/images/noah-bane.jpg
+  scholar: null
+  ads: null
+  bio: My name is Noah Bane, I am a senior at Los Alamos High School. I have been involved with the astronomy club at the
+    school since 2023, and I am the Vice President of the club. I am also involved in Science Bowl. I enjoy spending time
+    outdoors, spending time with my friends, and studying for Science Bowl. My other passions include marching band, ski racing,
+    and scuba diving.
+  focus: null
+  interests:
+  - Physics
+  - Astrophysics
+  - Marine Science
+  papers: null
+  university: Los Alamos High School
+  division: Theoretical
+  group_code: T-5
+  student_level: High school
+  year_joined: '2026'

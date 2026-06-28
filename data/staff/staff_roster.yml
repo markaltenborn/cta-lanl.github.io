@@ -94,9 +94,9 @@
     on the microphysics of shock development, particle acceleration, and emission mechanisms of relativistic jets, the jet
     launching processes from black hole-disk systems, and modeling the progenitor systems that create the most luminous events
     in our universe.  She also studies massive star formation and its evolution throughout cosmic time. She is the author
-    of <i>Great Mysteries in Astrophysics: A Guide to What We Don’t Know</i>, a book about the most pressing unsolved puzzles in
-    our universe. She helps facilitate and shares leadership of LANL’s APS-IDEA group, serves on the board of directors of
-    STEMArts Lab, has served as the Internship Coordinator for UNMLA’s Pathways to Achieve Student Excellence (PASE) program,
+    of <i>Great Mysteries in Astrophysics: A Guide to What We Don’t Know</i>, a book about the most pressing unsolved puzzles
+    in our universe. She helps facilitate and shares leadership of LANL’s APS-IDEA group, serves on the board of directors
+    of STEMArts Lab, has served as the Internship Coordinator for UNMLA’s Pathways to Achieve Student Excellence (PASE) program,
     and engages  in a number of outreach programs in the Northern NM community and beyond.'
   interests:
   - Transients
@@ -104,7 +104,7 @@
   - gamma-ray bursts
   - cosmological evolution of massive stars
   - black hole-disk systems
-  leadership: 
+  leadership:
   - Deputy Director
   - Outreach Coordinator
   university: Stanford University
@@ -118,26 +118,40 @@
   - jets
   - multi-scale modeling
   papers:
-  - title: "The GRB Intrinsic Duration Distribution: Progenitor Insights Across Cosmic Time"
-    authors: ["Lloyd-Ronning, Nicole M.", "Bromberg, Omer", "Piran, Tsvi"]
+  - title: 'The GRB Intrinsic Duration Distribution: Progenitor Insights Across Cosmic Time'
+    authors:
+    - Lloyd-Ronning, Nicole M.
+    - Bromberg, Omer
+    - Piran, Tsvi
     year: 2026
-    journal: "arXiv e-prints"
-    url: "https://arxiv.org/abs/2601.07928"
-  - title: "Cosmological versus Intrinsic: The Correlation between Intensity and the Peak of the nu F_nu Spectrum of Gamma Ray Bursts"
-    authors: ["Lloyd-Ronning, Nicole M.", "Petrosian, Vahe'", "Mallozzi, Robert S."]
+    journal: arXiv e-prints
+    url: https://arxiv.org/abs/2601.07928
+  - title: 'Cosmological versus Intrinsic: The Correlation between Intensity and the Peak of the nu F_nu Spectrum of Gamma
+      Ray Bursts'
+    authors:
+    - Lloyd-Ronning, Nicole M.
+    - Petrosian, Vahe'
+    - Mallozzi, Robert S.
     year: 1999
-    journal: "The Astrophysical Journal"
-    url: "https://iopscience.iop.org/article/10.1086/308742"
-  - title: "The evolution of gamma-ray burst jet opening angle through cosmic time"
-    authors: ["Lloyd-Ronning, Nicole M.", "Hurtado, Valeria U.", "Aykutalp, Aycin", "Johnson, Jarrett", "Ceccobello, Chiara"]
+    journal: The Astrophysical Journal
+    url: https://iopscience.iop.org/article/10.1086/308742
+  - title: The evolution of gamma-ray burst jet opening angle through cosmic time
+    authors:
+    - Lloyd-Ronning, Nicole M.
+    - Hurtado, Valeria U.
+    - Aykutalp, Aycin
+    - Johnson, Jarrett
+    - Ceccobello, Chiara
     year: 2020
-    journal: "Monthly Notices of the Royal Astronomical Society"
-    url: "https://academic.oup.com/mnras/article/494/3/4371/5823144?login=false"
-  - title: "Synchrotron Radiation as the Source of Gamma-Ray Burst Spectra"
-    authors: ["Lloyd-Ronning, Nicole M.", "Petrosian, Vahe'"]
+    journal: Monthly Notices of the Royal Astronomical Society
+    url: https://academic.oup.com/mnras/article/494/3/4371/5823144?login=false
+  - title: Synchrotron Radiation as the Source of Gamma-Ray Burst Spectra
+    authors:
+    - Lloyd-Ronning, Nicole M.
+    - Petrosian, Vahe'
     year: 2000
-    journal: "The Astrophysical Journal"
-    url: "https://iopscience.iop.org/article/10.1086/317125"
+    journal: The Astrophysical Journal
+    url: https://iopscience.iop.org/article/10.1086/317125
   accepting_students: Case-by-case
   year_joined: '2016'
   recruiting_ok: true
@@ -624,21 +638,53 @@
   division: Computing and Artificial Intelligence
   focus: null
   papers:
-  - title: "Full Transport Model of GW170817-Like Disk Produces a Blue Kilonova"
-    authors: ["Miller, Jonah M.", "Ryan, Benjamin R.", "Dolence, Joshua C.", "Burrows, Adam", "Fontes, Christopher J.", "Fryer, Christopher L.", "Korobkin, Oleg", "Lippuner, Jonas", "Mumpower, Matthew R.", "Wollaeger, Ryan T."]
+  - title: Full Transport Model of GW170817-Like Disk Produces a Blue Kilonova
+    authors:
+    - Miller, Jonah M.
+    - Ryan, Benjamin R.
+    - Dolence, Joshua C.
+    - Burrows, Adam
+    - Fontes, Christopher J.
+    - Fryer, Christopher L.
+    - Korobkin, Oleg
+    - Lippuner, Jonas
+    - Mumpower, Matthew R.
+    - Wollaeger, Ryan T.
     year: 2019
-    journal: "Physical Review D 100, 023008"
-    url: "https://ui.adsabs.harvard.edu/abs/2019PhRvD.100b3008M/abstract"
-  - title: "Parthenon -- a performance portable block-structured adaptive mesh refinement framework"
-    authors: ["Grete, Philipp", "Dolence, Joshua C.", "Miller, Jonah M.", "Brown, Joshua", "Ryan, Ben", "Gaspar, Andrew", "Glines, Forrest", "Swaminarayan, Sriram", "Lippuner, Jonas", "Solomon, Clell J.", "Shipman, Galen", "Junghans, Christoph", "Holladay, Daniel", "Stone, James M.", "Roberts, Luke F."]
+    journal: Physical Review D 100, 023008
+    url: https://ui.adsabs.harvard.edu/abs/2019PhRvD.100b3008M/abstract
+  - title: Parthenon -- a performance portable block-structured adaptive mesh refinement framework
+    authors:
+    - Grete, Philipp
+    - Dolence, Joshua C.
+    - Miller, Jonah M.
+    - Brown, Joshua
+    - Ryan, Ben
+    - Gaspar, Andrew
+    - Glines, Forrest
+    - Swaminarayan, Sriram
+    - Lippuner, Jonas
+    - Solomon, Clell J.
+    - Shipman, Galen
+    - Junghans, Christoph
+    - Holladay, Daniel
+    - Stone, James M.
+    - Roberts, Luke F.
     year: 2022
-    journal: "International Journal of High Performance Computing Applications"
-    url: "https://ui.adsabs.harvard.edu/abs/2022arXiv220212309G/abstract"
-  - title: "Thermal Radiation Transport with Tensor Trains"
-    authors: ["Gorodetsky, Alex A.", "Mullen, Patrick D.", "Deshpande, Aditya", "Dolence, Joshua C.", "Meyer, Chad D.", "Miller, Jonah M.", "Roberts, Luke F."]
+    journal: International Journal of High Performance Computing Applications
+    url: https://ui.adsabs.harvard.edu/abs/2022arXiv220212309G/abstract
+  - title: Thermal Radiation Transport with Tensor Trains
+    authors:
+    - Gorodetsky, Alex A.
+    - Mullen, Patrick D.
+    - Deshpande, Aditya
+    - Dolence, Joshua C.
+    - Meyer, Chad D.
+    - Miller, Jonah M.
+    - Roberts, Luke F.
     year: 2025
-    journal: "arXiv e-prints"
-    url: "https://arxiv.org/abs/2503.18056"
+    journal: arXiv e-prints
+    url: https://arxiv.org/abs/2503.18056
   group_code: CAI-2
   accepting_students: Case-by-case
   year_joined: '2019'
@@ -862,14 +908,19 @@
   - plasma dynamics
   - numerical simulations
   papers:
-  - title: "On the Stability Analysis of Astrophysical Cooling Functions"
-    authors: ["Stricklan, A.", "Waters, T.", "Klimchuk, J."]
+  - title: On the Stability Analysis of Astrophysical Cooling Functions
+    authors:
+    - Stricklan, A.
+    - Waters, T.
+    - Klimchuk, J.
     year: 2025
-    journal: "ApJ 992, 101"
-  - title: "Catastrophic Cooling Instability in Optically Thin Plasmas"
-    authors: ["Waters, T.", "Stricklan, A."]
+    journal: ApJ 992, 101
+  - title: Catastrophic Cooling Instability in Optically Thin Plasmas
+    authors:
+    - Waters, T.
+    - Stricklan, A.
     year: 2025
-    journal: "Solar Physics 300, 5"
+    journal: Solar Physics 300, 5
   university: New Mexico State University
   role: Scientist
   division: Computational Physics
@@ -959,74 +1010,177 @@
   - x-ray monitoring
   - ionospheric physics
   papers:
-  - title: "Hard X-Ray Measurements of 10.6 µm Laser-Irradiated Targets"
-    authors: ["Priedhorsky, W. C.", "Lier, D.", "Day, R.", "Gerke, D."]
+  - title: Hard X-Ray Measurements of 10.6 µm Laser-Irradiated Targets
+    authors:
+    - Priedhorsky, W. C.
+    - Lier, D.
+    - Day, R.
+    - Gerke, D.
     year: 1981
-    journal: "Phys. Rev. Lett. 47, 1661"
-  - title: "Long-Term X-Ray Observations of Cen X-3, GX301-2 (4U1223-62), GX304-1 (4U1258-61), and 4U1145-61"
-    authors: ["Priedhorsky, W. C.", "Terrell, J."]
+    journal: Phys. Rev. Lett. 47, 1661
+  - title: Long-Term X-Ray Observations of Cen X-3, GX301-2 (4U1223-62), GX304-1 (4U1258-61), and 4U1145-61
+    authors:
+    - Priedhorsky, W. C.
+    - Terrell, J.
     year: 1983
-    journal: "Astrophys. J. 273, 709"
-  - title: "Discovery of Rapid Quasi-Periodic Oscillations in Sco X-1"
-    authors: ["Middleditch, J.", "Priedhorsky, W. C."]
+    journal: Astrophys. J. 273, 709
+  - title: Discovery of Rapid Quasi-Periodic Oscillations in Sco X-1
+    authors:
+    - Middleditch, J.
+    - Priedhorsky, W. C.
     year: 1986
-    journal: "Ap. J. 306, 230"
-  - title: "The Discovery of a 685 Second Orbital Period from the X-Ray Source 4U 1820-30 in the Globular Cluster NGC6624"
-    authors: ["Stella, L.", "Priedhorsky, W. C.", "White, N."]
+    journal: Ap. J. 306, 230
+  - title: The Discovery of a 685 Second Orbital Period from the X-Ray Source 4U 1820-30 in the Globular Cluster NGC6624
+    authors:
+    - Stella, L.
+    - Priedhorsky, W. C.
+    - White, N.
     year: 1987
-    journal: "Ap. J. Lett. 315, L49"
-  - title: "All-Sky Monitors for X-Ray Astronomy"
-    authors: ["Holt, S. S.", "Priedhorsky, W. C."]
+    journal: Ap. J. Lett. 315, L49
+  - title: All-Sky Monitors for X-Ray Astronomy
+    authors:
+    - Holt, S. S.
+    - Priedhorsky, W. C.
     year: 1987
-    journal: "Space Science Reviews 45, 269"
-  - title: "The ALEXIS Small Satellite Project: Better, Cheaper, Faster Faces Reality"
-    authors: ["Priedhorsky, W. C.", "Bloch, J. J.", "Wallin, S. P.", "Armstrong, W. T.", "Siegmund, O. H. W.", "Griffee, J.", "Fleeter, R."]
+    journal: Space Science Reviews 45, 269
+  - title: 'The ALEXIS Small Satellite Project: Better, Cheaper, Faster Faces Reality'
+    authors:
+    - Priedhorsky, W. C.
+    - Bloch, J. J.
+    - Wallin, S. P.
+    - Armstrong, W. T.
+    - Siegmund, O. H. W.
+    - Griffee, J.
+    - Fleeter, R.
     year: 1993
-    journal: "IEEE Trans. Nucl. Sci. 40, 863"
-  - title: "Laser Ranging and Mapping with a Photon-Counting Detector"
-    authors: ["Priedhorsky, W. C.", "Smith, R. C.", "Ho, C."]
+    journal: IEEE Trans. Nucl. Sci. 40, 863
+  - title: Laser Ranging and Mapping with a Photon-Counting Detector
+    authors:
+    - Priedhorsky, W. C.
+    - Smith, R. C.
+    - Ho, C.
     year: 1996
-    journal: "Applied Optics 35, 441-452"
-  - title: "Contrast and Signal-to-Noise in Long-Distance Starlight Imaging"
-    authors: ["Priedhorsky, W. C."]
+    journal: Applied Optics 35, 441-452
+  - title: Contrast and Signal-to-Noise in Long-Distance Starlight Imaging
+    authors:
+    - Priedhorsky, W. C.
     year: 1996
-    journal: "Applied Optics 35, 4173-4179"
-  - title: "Discovery of Contemporaneous Optical Radiation from a Gamma-Ray Burst"
-    authors: ["Akerlof, C.", "Balsano, R.", "Barthelmy, S.", "Bloch, J.", "Butterworth, P.", "Casperson, D.", "Cline, T.", "Fletcher, S.", "Frontera, F.", "Gisler, G.", "Heise, J.", "Hills, J.", "Kehoe, R.", "Lee, B.", "Marshall, S.", "McKay, T.", "Miller, R.", "Piro, L.", "Priedhorsky, W.", "Szymanski, J.", "Wren, J."]
+    journal: Applied Optics 35, 4173-4179
+  - title: Discovery of Contemporaneous Optical Radiation from a Gamma-Ray Burst
+    authors:
+    - Akerlof, C.
+    - Balsano, R.
+    - Barthelmy, S.
+    - Bloch, J.
+    - Butterworth, P.
+    - Casperson, D.
+    - Cline, T.
+    - Fletcher, S.
+    - Frontera, F.
+    - Gisler, G.
+    - Heise, J.
+    - Hills, J.
+    - Kehoe, R.
+    - Lee, B.
+    - Marshall, S.
+    - McKay, T.
+    - Miller, R.
+    - Piro, L.
+    - Priedhorsky, W.
+    - Szymanski, J.
+    - Wren, J.
     year: 1999
-    journal: "Nature 398, 400-402"
-  - title: "On the Integrated Spectrum of the X-ray Binaries and the Origin of Soft X-ray Emission from the Bulge of M31"
-    authors: ["Borozdin, Konstantin N.", "Priedhorsky, William C."]
+    journal: Nature 398, 400-402
+  - title: On the Integrated Spectrum of the X-ray Binaries and the Origin of Soft X-ray Emission from the Bulge of M31
+    authors:
+    - Borozdin, Konstantin N.
+    - Priedhorsky, William C.
     year: 2000
-    journal: "Ap. J. Lett. 542, L13"
-  - title: "The XMM-Newton optical/UV monitor telescope"
-    authors: ["Mason, K. O.", "Breeveld, A.", "Much, R.", "Carter, M.", "Cordova, F. A.", "Cropper, M. S.", "Fordham, J.", "Huckle, H.", "Ho, C.", "Kawakami, H.", "Kennea, J.", "Kennedy, T.", "Mittaz, J.", "Pandel, D.", "Priedhorsky, W. C.", "Sasseen, T.", "Shirey, R.", "Smith, P.", "Vreux, J.-M."]
+    journal: Ap. J. Lett. 542, L13
+  - title: The XMM-Newton optical/UV monitor telescope
+    authors:
+    - Mason, K. O.
+    - Breeveld, A.
+    - Much, R.
+    - Carter, M.
+    - Cordova, F. A.
+    - Cropper, M. S.
+    - Fordham, J.
+    - Huckle, H.
+    - Ho, C.
+    - Kawakami, H.
+    - Kennea, J.
+    - Kennedy, T.
+    - Mittaz, J.
+    - Pandel, D.
+    - Priedhorsky, W. C.
+    - Sasseen, T.
+    - Shirey, R.
+    - Smith, P.
+    - Vreux, J.-M.
     year: 2001
-    journal: "Astronomy and Astrophysics 365, 36"
-  - title: "Radiographic Imaging with Cosmic Ray Muons"
-    authors: ["Borozdin, Konstantin N.", "Hogan, Gary E.", "Morris, Christopher", "Priedhorsky, William C.", "Saunders, Alexander", "Schultz, Larry J.", "Teasdale, Margaret E."]
+    journal: Astronomy and Astrophysics 365, 36
+  - title: Radiographic Imaging with Cosmic Ray Muons
+    authors:
+    - Borozdin, Konstantin N.
+    - Hogan, Gary E.
+    - Morris, Christopher
+    - Priedhorsky, William C.
+    - Saunders, Alexander
+    - Schultz, Larry J.
+    - Teasdale, Margaret E.
     year: 2003
-    journal: "Nature 422, 277"
-  - title: "Relativistic OVIII Emission and Ionized Outflow in NGC 4051 Measured with XMM-Newton"
-    authors: ["Ogle, P. M.", "Mason, K. O.", "Page, M. J.", "Salvi, N. J.", "Cordova, F. A.", "McHardy, I. M.", "Priedhorsky, W. C."]
+    journal: Nature 422, 277
+  - title: Relativistic OVIII Emission and Ionized Outflow in NGC 4051 Measured with XMM-Newton
+    authors:
+    - Ogle, P. M.
+    - Mason, K. O.
+    - Page, M. J.
+    - Salvi, N. J.
+    - Cordova, F. A.
+    - McHardy, I. M.
+    - Priedhorsky, W. C.
     year: 2004
-    journal: "Ap. J. 606, 151-167"
-  - title: "Detection of High-Z Objects using Multiple Scattering of Cosmic Ray Muons"
-    authors: ["Priedhorsky, William C.", "Borozdin, Konstantin N.", "Hogan, Gary E.", "Morris, Christopher", "Saunders, Alexander", "Schultz, Larry J.", "Teasdale, Margaret E."]
+    journal: Ap. J. 606, 151-167
+  - title: Detection of High-Z Objects using Multiple Scattering of Cosmic Ray Muons
+    authors:
+    - Priedhorsky, William C.
+    - Borozdin, Konstantin N.
+    - Hogan, Gary E.
+    - Morris, Christopher
+    - Saunders, Alexander
+    - Schultz, Larry J.
+    - Teasdale, Margaret E.
     year: 2003
-    journal: "Reviews of Scientific Instruments 74, 4294-4297"
-  - title: "Boost-Phase Intercept Systems for National Missile Defense"
-    authors: ["American Physical Society Study Group"]
+    journal: Reviews of Scientific Instruments 74, 4294-4297
+  - title: Boost-Phase Intercept Systems for National Missile Defense
+    authors:
+    - American Physical Society Study Group
     year: 2004
-    journal: "Reviews of Modern Physics supplement 76, S1"
-  - title: "Strategic ballistic missile defense: Challenges to defending the U.S."
-    authors: ["Lamb, F. K.", "Grego, L.", "Wells, J. D.", "Priedhorsky, W.", "Barton, D.", "Coyle, P. E.", "Fetter, S.", "Gallimore, A.", "Nitta, C.", "Tate, A."]
+    journal: Reviews of Modern Physics supplement 76, S1
+  - title: 'Strategic ballistic missile defense: Challenges to defending the U.S.'
+    authors:
+    - Lamb, F. K.
+    - Grego, L.
+    - Wells, J. D.
+    - Priedhorsky, W.
+    - Barton, D.
+    - Coyle, P. E.
+    - Fetter, S.
+    - Gallimore, A.
+    - Nitta, C.
+    - Tate, A.
     year: 2025
-    journal: "Report by the American Physical Society Panel on Public Affairs"
-  - title: "Acquisition of Objects in Cislunar Space with Small Spaceborne Telescope"
-    authors: ["Priedhorsky, W.", "Sechrest, Y.", "Vance, M.", "Ward, C.", "Wozniak, P."]
+    journal: Report by the American Physical Society Panel on Public Affairs
+  - title: Acquisition of Objects in Cislunar Space with Small Spaceborne Telescope
+    authors:
+    - Priedhorsky, W.
+    - Sechrest, Y.
+    - Vance, M.
+    - Ward, C.
+    - Wozniak, P.
     year: 2024
-    journal: "Journal of Spacecraft and Rockets 61:6, 1723-1728"
+    journal: Journal of Spacecraft and Rockets 61:6, 1723-1728
   university: Ph. D. Caltech Physics 1978
   role: Associate Fellow
   former_role: Los Alamos Laboratory Fellow, Scientist
