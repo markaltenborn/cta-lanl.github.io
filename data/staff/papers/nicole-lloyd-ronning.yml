@@ -1,3 +1,14 @@
+- bibcode: 2026ApJ..1004..129L
+  title: 'The Gamma-Ray Burst Intrinsic Duration Distribution: Progenitor Insights across Cosmic Time'
+  authors:
+  - Lloyd-Ronning, Nicole M.
+  - Bromberg, Omer
+  - Piran, Tsvi
+  author_count: 3
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1004..129L/abstract
+
 - bibcode: 2026ApJ..1003..233H
   title: Simulations of Interacting Binary Systems—Pathways to Radio-bright Gamma-Ray Burst Progenitors
   authors:
@@ -9,17 +20,6 @@
   year: '2026'
   journal: The Astrophysical Journal
   url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003..233H/abstract
-
-- bibcode: 2026ApJ..1004..129L
-  title: 'The Gamma-Ray Burst Intrinsic Duration Distribution: Progenitor Insights across Cosmic Time'
-  authors:
-  - Lloyd-Ronning, Nicole M.
-  - Bromberg, Omer
-  - Piran, Tsvi
-  author_count: 3
-  year: '2026'
-  journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1004..129L/abstract
 
 - bibcode: 2026ApJ..1002L..24R
   title: Kilonovae and Long-duration Gamma-Ray Bursts

@@ -1,0 +1,68 @@
+- bibcode: 2026ApJ..1004...93G
+  title: Gamma-Ray Spectra of r-process Nuclei
+  authors:
+  - Gross, Axel
+  - Cupp, Samuel
+  - Mumpower, Matthew R.
+  author_count: 3
+  year: '2026'
+  journal: The Astrophysical Journal
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1004...93G/abstract
+
+- bibcode: 2026PhRvC.113f5803V
+  title: Exploration for astromers near <inline-formula><mml:math><mml:mmultiscripts><mml:mi>Sn</mml:mi><mml:mn>132</mml:mn></mml:mmultiscripts></mml:math></inline-formula>
+    with the Canadian Penning Trap
+  authors:
+  - Valverde, A. A.
+  - Cupp, S.
+  - Gross, A.
+  - Liu, B.
+  - Mumpower, M. R.
+  - Misch, G. W.
+  author_count: 29
+  year: '2026'
+  journal: Physical Review C
+  url: https://ui.adsabs.harvard.edu/abs/2026PhRvC.113f5803V/abstract
+
+- bibcode: 2026PhRvL.136w2504M
+  title: Beta-Delayed Neutron Emission of <inline-formula><mml:math><mml:mrow><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:mn>84</mml:mn></mml:mrow></mml:math></inline-formula>
+    <inline-formula><mml:math><mml:mrow><mml:mmultiscripts><mml:mrow><mml:mi>Cd</mml:mi></mml:mrow><mml:mrow><mml:mn>132</mml:mn></mml:mrow></mml:mmultiscripts></mml:mrow></mml:math></inline-formula>
+  authors:
+  - Madurga, M.
+  - Xu, Z. Y.
+  - Grzywacz, R.
+  - Mumpower, M. R.
+  - Andreyev, A. N.
+  - Benzoni, G.
+  author_count: 57
+  year: '2026'
+  journal: Physical Review Letters
+  url: https://ui.adsabs.harvard.edu/abs/2026PhRvL.136w2504M/abstract
+
+- bibcode: 2026arXiv260604491K
+  title: 'NuGNN: a Graph Neural Network for Nuclear Reaction Network Equations'
+  authors:
+  - Kim, C. H.
+  - Chae, K. Y.
+  - Ko, S.
+  - Mumpower, M. R.
+  - Smith, M. S.
+  author_count: 5
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260604491K/abstract
+
+- bibcode: 2026PhRvR...8b3117R
+  title: Joint electromagnetic and gravitational wave inference of binary neutron star merger GW170817 using forward-modeling
+    ejecta predictions
+  authors:
+  - Ristić, Marko
+  - O'Shaughnessy, Richard
+  - Wagner, Kate
+  - Fontes, Christopher J.
+  - Fryer, Chris L.
+  - Korobkin, Oleg
+  author_count: 8
+  year: '2026'
+  journal: Physical Review Research
+  url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract

@@ -1,17 +1,3 @@
-- bibcode: 2026arXiv260610011R
-  title: A Multi-Wavelength View of the First Type Ic-BL Supernova with an Einstein Probe X-ray Shock Breakout
-  authors:
-  - Rastinejad, Jillian C.
-  - Srinivasaragavan, Gokul
-  - Sarin, Nikhil
-  - O'Dwyer, Tanner
-  - Cenko, S. Bradley
-  - Leung, James K.
-  author_count: 39
-  year: '2026'
-  journal: arXiv e-prints
-  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260610011R/abstract
-
 - bibcode: 2026arXiv260609992O
   title: 'EP260321a/SN 2026gzf: The Faintest Shock Breakout Associated with a Broad-Lined Supernova'
   authors:
@@ -25,6 +11,20 @@
   year: '2026'
   journal: arXiv e-prints
   url: https://ui.adsabs.harvard.edu/abs/2026arXiv260609992O/abstract
+
+- bibcode: 2026arXiv260610011R
+  title: A Multi-Wavelength View of the First Type Ic-BL Supernova with an Einstein Probe X-ray Shock Breakout
+  authors:
+  - Rastinejad, Jillian C.
+  - Srinivasaragavan, Gokul
+  - Sarin, Nikhil
+  - O'Dwyer, Tanner
+  - Cenko, S. Bradley
+  - Leung, James K.
+  author_count: 39
+  year: '2026'
+  journal: arXiv e-prints
+  url: https://ui.adsabs.harvard.edu/abs/2026arXiv260610011R/abstract
 
 - bibcode: 2026ApJS..284....6C
   title: 'Toward First-principles Multimessenger Predictions: Coupling Nuclear Networks with General Relativistic Radiation
@@ -52,16 +52,17 @@
   journal: Physical Review Research
   url: https://ui.adsabs.harvard.edu/abs/2026PhRvR...8b3117R/abstract
 
-- bibcode: 2026ApJ..1003...89F
-  title: A Comparison of Three Neodymium Atomic Data Sets for Kilonova Modeling
+- bibcode: 2026ApJ..1003L...2B
+  title: 'Production of Heavy α-Elements and <SUP>44</SUP>Ti in Cas A: Comparison to Abundances from 1D Core-collapse Supernova
+    Models and Evidence for Carbon─Oxygen Shell Mergers'
   authors:
-  - Fontes, Christopher J.
-  - Vieira, Nicholas
-  - Fryer, Chris L.
-  - Kathirgamaraju, Adithan
-  - Korobkin, Oleg
-  - Ristić, Marko
-  author_count: 7
+  - Boccioli, L.
+  - Roberti, L.
+  - Fryer, C.
+  - Safi-Harb, S.
+  - Jones, S.
+  - Pignatari, M.
+  author_count: 6
   year: '2026'
   journal: The Astrophysical Journal
-  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003...89F/abstract
+  url: https://ui.adsabs.harvard.edu/abs/2026ApJ..1003L...2B/abstract
