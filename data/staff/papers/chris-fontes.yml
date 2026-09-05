@@ -12,8 +12,8 @@
   journal: Review of Scientific Instruments
   url: https://ui.adsabs.harvard.edu/abs/2026RScI...97h5202W/abstract
 
-- bibcode: 2026AAS...24830310G
-  title: How Exchange Interactions Change the Broadening in DB White Dwarf Atmospheres
+- bibcode: 2026AAS...24810605G
+  title: Examining Line-Shape Models in DB White Dwarf Atmospheres
   authors:
   - Gomez, Thomas
   - Hobbs, Bryce
@@ -24,7 +24,7 @@
   author_count: 7
   year: '2026'
   journal: American Astronomical Society Meeting Abstracts
-  url: https://ui.adsabs.harvard.edu/abs/2026AAS...24830310G/abstract
+  url: https://ui.adsabs.harvard.edu/abs/2026AAS...24810605G/abstract
 
 - bibcode: 2026AAS...24811603G
   title: Using XRISM to Spectroscopically Determine Neutron Star Masses and Radii
@@ -39,8 +39,8 @@
   journal: American Astronomical Society Meeting Abstracts
   url: https://ui.adsabs.harvard.edu/abs/2026AAS...24811603G/abstract
 
-- bibcode: 2026AAS...24810605G
-  title: Examining Line-Shape Models in DB White Dwarf Atmospheres
+- bibcode: 2026AAS...24830310G
+  title: How Exchange Interactions Change the Broadening in DB White Dwarf Atmospheres
   authors:
   - Gomez, Thomas
   - Hobbs, Bryce
@@ -51,7 +51,7 @@
   author_count: 7
   year: '2026'
   journal: American Astronomical Society Meeting Abstracts
-  url: https://ui.adsabs.harvard.edu/abs/2026AAS...24810605G/abstract
+  url: https://ui.adsabs.harvard.edu/abs/2026AAS...24830310G/abstract
 
 - bibcode: 2026arXiv260701228A
   title: Beta-Particle Transport and Thermalization in Kilonova Ejecta with Detailed Atomic Microphysics

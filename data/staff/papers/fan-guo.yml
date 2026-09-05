@@ -12,6 +12,20 @@
   journal: Acta Astronautica
   url: https://ui.adsabs.harvard.edu/abs/2026AcAau.249..953Z/abstract
 
+- bibcode: 2026MolPE.22308650G
+  title: Genomic insights into nematode microbiomes reveal novel endosymbionts Rickettsiella
+  authors:
+  - Guo, Fan
+  - Fu, Weiqi
+  - Topalović, Olivera
+  - Zhang, Qi
+  - Li, Kemei
+  - Li, Hongmei
+  author_count: 7
+  year: '2026'
+  journal: Molecular Phylogenetics and Evolution
+  url: https://ui.adsabs.harvard.edu/abs/2026MolPE.22308650G/abstract
+
 - bibcode: 2026Txcn..28109203L
   title: Corrigendum to 'Cyclosporine A protects against wasp venom-induced rhabdomyolysis in rats by inhibiting the CypD-mPTP
     pathway' [Toxicon 281 (2026) 109187]
@@ -26,20 +40,6 @@
   year: '2026'
   journal: Toxicon
   url: https://ui.adsabs.harvard.edu/abs/2026Txcn..28109203L/abstract
-
-- bibcode: 2026MolPE.22308650G
-  title: Genomic insights into nematode microbiomes reveal novel endosymbionts Rickettsiella
-  authors:
-  - Guo, Fan
-  - Fu, Weiqi
-  - Topalović, Olivera
-  - Zhang, Qi
-  - Li, Kemei
-  - Li, Hongmei
-  author_count: 7
-  year: '2026'
-  journal: Molecular Phylogenetics and Evolution
-  url: https://ui.adsabs.harvard.edu/abs/2026MolPE.22308650G/abstract
 
 - bibcode: 2026Rhizo..3901394G
   title: Preservation methods affect community recovery in soil nematode metabarcoding
